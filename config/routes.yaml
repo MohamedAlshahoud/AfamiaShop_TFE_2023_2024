@@ -1,0 +1,12 @@
+controllers:
+    resource: ../src/Controller/
+    type: attribute
+
+connect_google_check:
+    path: /connect/google/check
+    controller: App\Controller\GoogleController::connectCheckAction
+
+search:
+    path: /search
+
+

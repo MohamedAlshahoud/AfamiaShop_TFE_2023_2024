@@ -1,0 +1,104 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AfamiaShop | {% trans %}Order Details{% endtrans %}  {% endblock %}
+
+{% block body %}
+<div class="main_content">
+<div class="section">
+	<div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-4">
+                <div class="dashboard_menu">
+                    <ul class="nav nav-tabs flex-column" role="">
+                        <li  class="nav-item"><a  routerlink="/"
+                            class="nav-link " ng-reflect-router-link="/" href="{{path('app_account')}}"><i class="ti-id-badge"></i>{% trans %}Account details{% endtrans %}</a>
+                        </li>
+                        <li  class="nav-item"><a  routerlink="/"
+                            class="nav-link active" ng-reflect-router-link="/" href="{{path('app_account_orders')}}"><i class="ti-shopping-cart-full"></i>{% trans %}Your Orders{% endtrans %}</a>
+                        </li>
+                        <li  class="nav-item"><a  routerlink="/"
+                            class="nav-link " ng-reflect-router-link="/" href="{{path('app_account_address')}}"><i class="ti-location-pin"></i>{% trans %}Your Addresses{% endtrans %}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-8">
+                <div class="tab-content dashboard_content">
+                  	<div class="tab-pane fade active show" id="orders" role="tabpanel" aria-labelledby="orders-tab">
+                    	<div class="card">
+                        	<div class="card-header">
+                                <h4>{%trans %}Order number {%endtrans %} {{orderDetails.reference}}</h4>
+                            </div>
+                            <div class="card-body">
+                                <form method="post" name="enq">
+                                    <div class="row">
+                                        <div class="form-group col-md-6 mb-3">
+                                        	<label>{% trans %}Transporter Name{%endtrans %} <span class="required"></span></label>
+                                        </div>
+                                        <div class="form-group col-md-6 mb-3">
+                                            {{orderDetails.transporterName}}
+                                        </div>
+
+                                        <div class="form-group col-md-6 mb-3">
+                                        	<label>{%trans %}Transporter Price {%endtrans %}<span class="required"></span></label>
+                                        </div>
+                                        <div class="form-group col-md-6 mb-3">
+                                            {{orderDetails.transporterPrice/100}}
+                                        </div>
+                                        
+                                        <div class="form-group col-md-6 mb-3">
+                                        	<label>{%trans %}Delivery Address {%endtrans %}<span class="required"></span></label>
+                                        </div>
+                                        <div class="form-group col-md-6 mb-3">
+                                            {{orderDetails.deliveryAddress}}
+                                        </div>
+
+                                        <div class="form-group col-md-6 mb-3">
+                                        	<label>{%trans %}Quantity {%endtrans %}<span class="required"></span></label>
+                                        </div>
+                                        <div class="form-group col-md-6 mb-3">
+                                            {{orderDetails.quantity}}
+                                        </div>
+
+                                        <div class="form-group col-md-6 mb-3">
+                                        	<label>{%trans %}SubTotal Htva {%endtrans %}<span class="required"></span></label>
+                                        </div>
+                                        <div class="form-group col-md-6 mb-3">
+                                            {{orderDetails.orderCost/100}}
+                                        </div>
+
+                                        <div class="form-group col-md-6 mb-3">
+                                        	<label>{%trans %}Tva {%endtrans %}<span class="required"></span></label>
+                                        </div>
+                                        <div class="form-group col-md-6 mb-3">
+                                            {{orderDetails.tva/100}}
+                                        </div>
+
+                                        <div class="form-group col-md-6 mb-3">
+                                        	<label>{%trans %}Total {%endtrans %}<span class="required"></span></label>
+                                        </div>
+                                        <div class="form-group col-md-6 mb-3">
+                                            {{orderDetails.orderCostTtc/100}}
+                                        </div>
+                                        <div class="form-group col-md-6 mb-3">
+                                        	<label>{%trans %}Date {%endtrans %}<span class="required"></span></label>
+                                        </div>
+                                        <div class="form-group col-md-6 mb-3">
+                                            {{orderDetails.createdAt | date('d/m/Y')}}
+                                        </div>
+                                        <div class="col-md-12">
+                                            <a href="{{ path('app_account_orders') }}" class="btn btn-fill-out">{% trans %}Retour page orders{%endtrans %}</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                  	</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+{% endblock %}

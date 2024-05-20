@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AfamiaShop | {% trans %}Change Profile{% endtrans %}{% endblock %}
+
+{% block body %}
+<div class="login_register_wrap section">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-md-10">
+                <div class="border_form">
+            		<div class="padding_eight_all bg-white">
+                        <div class="heading_s1">
+                            <h3>{%trans %}Change of profile of {% endtrans %} {{app.user.firstname}} {{app.user.lastname}} </h3>
+                        </div>
+                        {{ form_start(profileForm) }}
+                            <div class="form-group">
+                                {{ form_row(profileForm.username) }}
+                            </div>
+                            <div class="form-row">
+                                <div class="col-md-6"> {{ form_row(profileForm.firstname) }}</div>
+                                <div class="col-md-6">{{ form_row(profileForm.lastname) }}</div>
+                            </div>
+                            <div class="form-group">
+                                {{ form_row(profileForm.email) }}
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-fill-out btn-block" name="register">{% trans %}Change{% endtrans %}</button>
+                            </div>
+                            <div class="different_login">
+                                <span><a href="{{path('app_account')}}">{% trans %}Cancel{% endtrans %}</a></span>
+                            </div>
+                        {{ form_end(profileForm) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

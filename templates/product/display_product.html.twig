@@ -1,0 +1,12 @@
+<div  class="col-lg-3 col-md-4 col-6">
+    <div  class="product">
+        <div  class="product_img"><a href="#"><img alt="product_img1" src="/assets/images/products/{{ product.imageUrls[0] }}"></a>
+        </div>
+        <div  class="product_info">
+            <h6 class="product_title"><a href="/product/{{ product.name}}"> {{ product.name | trans }}</a></h6>
+            <div  class="product_price"><span class="price">{{ (product.price/100) | format_currency('EUR')}}</span></div>
+            <hr>
+            <a href="/product/{{product.name}}" class="btn btn-fill-out  btn-block">{% trans %}See{% endtrans %}</a>
+        </div>
+    </div>
+</div>

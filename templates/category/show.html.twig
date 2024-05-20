@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AfamiaShop | {% trans %}Detail of a category{% endtrans %}{% endblock %}
+
+{% block body %}
+    <div  class="main_content">
+        <div  class="section small_pt pb_70">
+            <div  class="container">
+                <div  class="row">
+                    <div  class="col-12">
+                        <div  class="tab-content bord">  
+                            <div  class="heading_s1">
+                                <h1>{{category.name | trans}}</h1>
+                            <div>
+                            <div class="text-description">
+                                <p>{% trans %}On this page you will find all the products related to {% endtrans %} {{category.name | trans}}. 
+                                {% trans %}For best results click on the shop page. You will also find all AfamiaShop products. 
+                                Browse the overview and find the right product or filter the products you are looking for.{% endtrans %}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div  class="row">
+                    <div  class="col-12">
+                        <div  class="tab-content">
+                            <div  id="arrival" role="tabpanel" aria-labelledby="arrival-tab"
+                                class="tab-pane fade show active">
+                                <div  class="row shop_container">
+                                    {% for product in products %} 
+                                        {% include "product/display_product.html.twig" %}
+                                    {% endfor %}  
+                                </div>   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="pagination-category">
+                        {{ knp_pagination_render(products) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

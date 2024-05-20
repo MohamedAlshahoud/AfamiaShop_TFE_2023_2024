@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AfamiaShop | {% trans %}Your Account{% endtrans %}  {% endblock %}
+
+{% block body %}
+<div class="main_content">
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4">
+                    <div class="dashboard_menu">
+                        <ul class="nav nav-tabs flex-column" role="">
+                            <li  class="nav-item"><a  routerlink="/"
+                                class="nav-link" ng-reflect-router-link="/" href="{{path('app_account')}}"><i class="ti-id-badge"></i>{% trans %}Account details{% endtrans %}</a>
+                            </li>
+                            <li  class="nav-item"><a  routerlink="/"
+                                class="nav-link" ng-reflect-router-link="/" href="{{path('app_account_orders')}}"><i class="ti-shopping-cart-full"></i>{% trans %}Your Orders{% endtrans %}</a>
+                            </li>
+                            <li  class="nav-item"><a  routerlink="/"
+                                class="nav-link active " ng-reflect-router-link="/" href="{{path('app_account_address')}}"><i class="ti-location-pin"></i>{% trans %}Your Addresses{% endtrans %}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-8">
+                    <div class="tab-content dashboard_content">
+                        <div class="tab-pane fade active show" id="address" role="tabpanel" aria-labelledby="address-tab">
+                        {% for message in app.flashes('address_message') %}
+                            <div class="alert alert-success alert-dismissible fade show" role="alert"> {{ message }}
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        {% endfor %}
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <a href="{{ path('address_new')}}" class="btn btn-fill-out mb-3">{% trans %}Add a new address {% endtrans %}</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                {% set index = 0 %}
+                                {% for address in app.user.addresses %}
+                                    {% set index = index +1 %}
+                                    <div class="col-lg-6">
+                                        <div class="card mb-3 mb-lg-0">
+                                            <div class="card-header">
+                                                <h4> {% trans %}Your Address n°{% endtrans %} {{ index }}</h4>
+                                            </div>
+                                            <div class="card-body">
+                                                <address>
+                                                    {{ address.firstName}} {{ address.lastName}}<br>
+                                                    {{ address.address}} <br>
+                                                    {{ address.codePostal }} <br>
+                                                    {{ address.city}} <br>
+                                                    {{ address.country}}<br>
+                                                    {{ address.phone }}
+                                                </address>
+                                                <div class="btns-group">
+                                                    <a href="{{ path('address_edit', {'id':address.id})}}" class="btn btn-fill-out ">{% trans %}Edit{% endtrans %}</a>
+                                                    <div class="btn-remove">
+                                                        {{ include('address/_delete_form.html.twig') }} 
+                                                    </div>            
+                                                </div>
+                                            </div>     
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

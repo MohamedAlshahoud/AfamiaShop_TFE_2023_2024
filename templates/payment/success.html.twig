@@ -1,0 +1,22 @@
+{% extends 'basePayment.html.twig' %}
+
+{% block title %}AfamiaShop | {% trans %}Payment success{% endtrans %} {% endblock %}
+
+{% block body %}
+<div class="section">
+	<div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="text-center order_complete">
+                	<i class="fas fa-check-circle"></i>
+                    <div class="heading_s1">
+                  	<h3>{% trans %}Your order number {% endtrans %} {{ order.reference}} {% trans %}is completed!{% endtrans %}</h3>
+                    </div>
+                  	<p>{% trans %}Thank you for your order!{% endtrans %}</p>
+                    <a href="/" class="btn btn-fill-out ">{% trans %}To the site AfamiaShop{% endtrans %}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

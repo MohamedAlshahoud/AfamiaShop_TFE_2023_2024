@@ -1,0 +1,102 @@
+{% extends 'baseCheckout.html.twig' %}
+
+{% block title %}Afamia | {% trans %}Checkout Confirmation {% endtrans %}{% endblock %}
+
+{% block body %}
+<div class="main_content">
+    <div  class="section">
+        <div  class="container">
+            <div  class="row">
+                <div  class="col-md-6">
+                   <div  class="order_review">
+                        <div class="heading_s1">
+                            <h4>{% trans %}Delivery Address{% endtrans %}</h4>
+                            <div class="content" id="address">
+                                <input class="form-check-input" type="radio" Checked>
+                                <label class="form-check-label d-flex justify-content-between">
+                                    <span class="d-block fs-base text-dark fw-medium mb-1">{{ delivery}}</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div  class="order_review">
+                        <div class="heading_s1">
+                            <h4>{% trans %}Transporter{% endtrans %}</h4>
+                            <div class="content" id="transporter">
+                                <input class="form-check-input" type="radio" name="shipping" Checked>
+                                <label class="form-check-label d-flex justify-content-between">
+                                    <span>
+                                        <span class="d-block fs-base text-dark fw-medium mb-1">{{ transporter.name }}</span>
+                                        <span class="text-body">{{ transporter.description}}</span>
+                                    </span>
+                                    <span class="fs-base text-dark fw-semibold">{{ (transporter.price/100)|number_format(2, ',', '.') }} €</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div  class="order_review">
+                        <div  class="heading_s1">
+                            <h4 >{% trans %}Your Order{% endtrans %}</h4>
+                        </div>
+                        <div  class="table-responsive order_table">
+                            <table  class="table">
+                                <thead >
+                                    <tr >
+                                        <th >{% trans %}Product{% endtrans %}</th>
+                                        <th >{% trans %}Total{% endtrans %}</th>
+                                    </tr>
+                                </thead>
+                                <tbody >
+                                    {% for item in cart.items %}
+                                    <tr >
+                                        <td >
+                                            {{ item.product.name | trans }} 
+                                            <span class="product-qty"> {{item.quantity}}</span>
+                                            <span class="product-price">x {{(item.product.price/100) |format_currency('EUR')}}</span>
+                                        </td>
+                                        <td >
+                                            {{(item.product.price*item.quantity/100) |format_currency('EUR')}}
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                                <tfoot >
+                                    <tr >
+                                        <th >{% trans %}SubTotal Htva{% endtrans %}</th>
+                                        <td  class="product-subtotal-htva">{{(cart.sub_total_htva/100) |format_currency('EUR')}}</td>
+                                    </tr>
+                                    <tr >
+                                        <th >{% trans %}Tva{% endtrans %}</th>
+                                        <td  class="product-tva">{{(cart.tva/100) |format_currency('EUR')}}</td>
+                                    </tr>
+                                    <tr >
+                                        <th >{% trans %}Shipping{% endtrans %}</th>
+                                        <td >{{(transporter.price/100) |format_currency('EUR')}}</td>
+                                    </tr>
+                                    <tr >
+                                        <th >{% trans %}Total{% endtrans %}</th>
+                                        <td  class="product-subtotal">{{(subTotalWithTransporter/100)|format_currency('EUR') }}</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <div  class="payment_method">
+                           
+                        </div>
+                        <div class="payment-button">
+                            <a href="{{ path('payment_stripe', {reference: reference})}}" class="btn btn-fill-out btn-block">
+                                {% trans %}Pay now {% endtrans %} ({{ (subTotalWithTransporter/100) |format_currency('EUR') }})
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="different_login">
+                <span><a href="{{path('app_home')}}">{% trans %}Cancel{% endtrans %}</a></span>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AfamiaShop | {% trans %}Reset your password{% endtrans %}{% endblock %}
+
+{% block body %}
+    
+<div class="login_register_wrap section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-md-10">
+                <div class="border_form">
+                    <div class="padding_eight_all bg-white">
+                        <div class="heading_s1">
+                            <h3>{% trans %}Reset Password{% endtrans %}</h3>
+                        </div>
+                        <div class="content">
+                            {{ form_start(resetForm) }}
+                                {{ form_row(resetForm.plainPassword) }}
+                                <button class="btn btn-fill-out btn-block">{% trans %}Reset password{% endtrans %}</button>
+                            {{ form_end(resetForm) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

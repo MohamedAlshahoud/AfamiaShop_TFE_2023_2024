@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Recapitulation commande{% endblock %}
+
+{% block body %}
+
+   <div class="section checkout">
+        <div class="container">
+            {{ form_start(checkout)}}
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="heading_s1">
+                                <h4>Vos adresses de livraison</h4>
+                                <div class="content">
+                                    {{ form_widget(checkout.address) | replace({'[spr]' : '<br>'}) | raw}}
+                                </div>
+                                <a href="{{ path('address_new')}}" class="btn btn-fill-out  btn-block mt-1">Nouvelle adresse</a>
+                                <a  routerlink="/checkout/confirm" class="btn btn-fill-out " ng-reflect-router-link="/checkout/confirm" href="/checkout/confirm">Proceed To CheckOut</a>
+                        </div>
+                    </div>
+                </div>
+           {{ form_end(checkout) }}
+        </div>
+    </div>
+
+{% endblock %}

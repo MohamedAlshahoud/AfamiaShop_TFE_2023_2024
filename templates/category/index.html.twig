@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AfamiaShop | {% trans %}categories{% endtrans %}{% endblock %}
+
+{% block body %}
+<div  class="main_content">
+        <div  class="section small_pt pb_70">
+            <div  class="container">
+                <div  class="row">
+                    <div  class="col-12">
+                        <div  class="heading_s1">
+                            <h2 >{% trans %}Our Categories{% endtrans %}</h2>
+                        </div>
+                    </div>
+                </div>
+                <div  class="row">
+                    <div  class="col-12">
+                        <div  class="tab-content">
+                            <div  id="arrival" role="tabpanel" aria-labelledby="arrival-tab"
+                                class="tab-pane fade show active">
+                                <div  class="row shop_container">
+                                    {% for categorie in categories %} 
+                                        {{include('category/partials/_intro_single.html.twig')}}
+                                    {% endfor %}  
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

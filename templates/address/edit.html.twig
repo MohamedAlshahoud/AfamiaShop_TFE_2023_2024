@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AfamiaShop | {% trans %}Edit Address{% endtrans %}{% endblock %}
+
+{% block body %}
+    <div class="login_register_wrap section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-md-10">
+                    <div class="border_form">
+                        <div class="padding_eight_all bg-white">
+                            <div class="heading_s1">
+                                <h3>{% trans %}Edit your address{% endtrans %}</h3>
+                            </div>
+                            <div class="content">
+                                {{ include('address/_form.html.twig', {'button_label': 'Save'}) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+{% endblock %}

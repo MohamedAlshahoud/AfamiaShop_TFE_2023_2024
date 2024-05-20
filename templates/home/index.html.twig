@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AfamiaShop | {% trans %}Home {% endtrans %} {% endblock %}
+
+{% block body %}
+    <div  class="main_content">
+        <div  class="section small_pt pb_70">
+            <div  class="container">
+                <div  class="row">
+                    <div class="col-12">
+                        <div  class="banner_section slide_medium shop_banner_slider staggered-animation-wrap">
+                            <div  id="carouselExampleControls" data-bs-ride="carousel"
+                                class="carousel slide carousel-fade light_arrow">
+                                <div  class="carousel-inner">
+                                    {% for slide in slider %}
+                                        <div class="carousel-item {{loop.index < 2 ? 'active' : ''}} background_bg"
+                                        data-img-src="/assets/images/slider/{{slide.image}}"
+                                        style="background-image: url(/assets/images/slider/{{slide.image}});"> 
+                                            <div  class="banner_slide_content">
+                                                <div  class="container">
+                                                    <div  class="row">
+                                                        <div  class="col-lg-7 col-9">
+                                                            <div  class="banner_content overflow-hidden">
+                                                                <h3>{{slide.title | trans}}</h3>
+                                                                <h4  data-animation="slideInLeft"
+                                                                    data-animation-delay="0.5s"
+                                                                    class="mb-3 staggered-animation font-weight-light animated slideInLeft"
+                                                                    style="animation-delay: 0.5s; opacity: 1;">{{slide.description | trans}}
+                                                                </h4>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor%}
+                                </div><a  href="#carouselExampleControls" role="button" data-bs-slide="prev"
+                                    class="carousel-control-prev"><i  class="ion-chevron-left"></i></a><a
+                                    href="#carouselExampleControls" role="button" data-bs-slide="next"
+                                    class="carousel-control-next"><i  class="ion-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div  class="col-12">
+                        <div  class="heading_s1">
+                            <h1 >{% trans %}The last four categories added{% endtrans %}</h1>
+                        </div>
+                        <div  class="tab-content">
+                            <div  id="arrival" role="tabpanel" aria-labelledby="arrival-tab"
+                                class="tab-pane fade show active">
+                                <div  class="row shop_container">
+                                    {% for categorie in categories%} 
+                                        {{include('category/partials/_intro_single.html.twig')}}
+                                    {% endfor %}  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-discover">
+                            <a href="{{ path('app_category') }}" class="btn btn-fill-out ">{% trans %}Discover all our categories{% endtrans %}</a>
+                        </div>
+                    </div>
+                    <div  class="col-12">
+                        <div  class="heading_s1">
+                            <h1 >{% trans %}New Products{% endtrans %}</h1>
+                        </div>
+                        <div  class="tab-content">
+                            <div class="tab-pane fade show active" id="arrival" role="tabpanel" aria-labelledby="arrival-tab">
+                                <div  class="row shop_container">
+                                    {% for product in newProduct%} 
+                                        {% include "product/display_product.html.twig" %}
+                                    {% endfor %}  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-discover">
+                            <a href="{{ path('app_shop') }}" class="btn btn-fill-out ">{% trans %}Discover all our products{% endtrans %}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

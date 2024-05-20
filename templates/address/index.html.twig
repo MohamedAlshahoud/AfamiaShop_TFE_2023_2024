@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AfamiaShop | Address index{% endblock %}
+
+{% block body %}
+    <h1>Address index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>CodePostal</th>
+                <th>City</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for address in addresses %}
+            <tr>
+                <td>{{ address.id }}</td>
+                <td>{{ address.firstName }}</td>
+                <td>{{ address.lastName }}</td>
+                <td>{{ address.codePostal }}</td>
+                <td>{{ address.city }}</td>
+                <td>{{ address.phone }}</td>
+                <td>{{ address.address }}</td>
+                <td>{{ address.country }}</td>
+                <td>
+                    <a href="{{ path('address_show', {'id': address.id}) }}">Show</a>
+                    <a href="{{ path('address_edit', {'id': address.id}) }}">Edite</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="10">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('address_new') }}">Add New Address</a>
+{% endblock %}

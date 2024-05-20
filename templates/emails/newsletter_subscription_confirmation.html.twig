@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AfamiaShop | {% trans %}newsletter subscription confirmation{% endtrans %}{% endblock %}
+
+{% block body %}
+<div class="login_register_wrap section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-md-10">
+                <div class="border_form">
+                    <div class="padding_eight_all bg-white">
+                        <div class="heading_s1">
+                            <h3>{% trans %}newsletter subscription confirmed{% endtrans %}</h3>
+                        </div>
+                        <div class="content">
+                            <p>
+                                {% trans %}Your newsletter subscription is successfully confirmed.{% endtrans %}
+                            </p>
+                            <p>{% trans %}Click here to visit our Afamia Shop website {% endtrans %} <a href="{{ path('app_home')}}">AfamiaShop</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>   
+{% endblock %}

@@ -1,0 +1,10 @@
+{% block title %}AfamiaShop | {% trans %}newsletter registration{% endtrans %}{% endblock %}
+
+{% block body %}
+<h1>{% trans %}Your registration{% endtrans %}</h1>
+
+<p>{% trans %}You are subscribed to the newsletter{% endtrans %}</p>
+
+<p>{% trans %}click on this link to confirm your subscription to the newsletters {% endtrans %} <a href="{{ absolute_url(path('newsletters_confirm', {id: user.id, token: token})) }}">{% trans %}Confirm{% endtrans %}</a></p>
+
+{% endblock %}

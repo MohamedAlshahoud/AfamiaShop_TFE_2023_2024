@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}AfamiaShop{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/assets/css/animate.css">
+        <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/assets/css/all.min.css" />
+        <link rel="stylesheet" href="/assets/css/ionicons.min.css" />
+        <link rel="stylesheet" href="/assets/css/themify-icons.css" />
+        <link rel="stylesheet" href="/assets/css/linearicons.css" />
+        <link rel="stylesheet" href="/assets/css/flaticon.css" />
+        <link rel="stylesheet" href="/assets/css/simple-line-icons.css" />
+        <link rel="stylesheet" href="/assets/owlcarousel/css/owl.carousel.min.css" />
+        <link rel="stylesheet" href="/assets/owlcarousel/css/owl.theme.css" />
+        <link rel="stylesheet" href="/assets/owlcarousel/css/owl.theme.default.min.css" />
+        <link rel="stylesheet" href="/assets/css/magnific-popup.css" />
+        <link rel="stylesheet" href="/assets/css/slick.css" />
+        <link rel="stylesheet" href="/assets/css/slick-theme.css" />
+        <link rel="stylesheet" href="/assets/css/style.css" />
+        <link rel="stylesheet" href="/assets/css/responsive.css" />
+        
+        {% block stylesheets %}
+        {% endblock %}
+        
+
+    </head>
+    <body>
+        {% include("header/index.html.twig") %}
+        {% block body %}{% endblock %}
+        {% include("footer/index.html.twig") %}
+
+        <script src="/assets/js/jquery-3.6.0.min.js"></script>
+        <script src="/assets/js/popper.min.js"></script>
+        <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/assets/owlcarousel/js/owl.carousel.min.js"></script>
+        <script src="/assets/js/magnific-popup.min.js"></script>
+        <script src="/assets/js/waypoints.min.js"></script>
+        <script src="/assets/js/parallax.js"></script>
+        <script src="/assets/js/jquery.countdown.min.js"></script>
+        <script src="/assets/js/imagesloaded.pkgd.min.js"></script>
+        <script src="/assets/js/isotope.min.js"></script>
+        <script src="/assets/js/jquery.dd.min.js"></script>
+        <script src="/assets/js/slick.min.js"></script>
+        <script src="/assets/js/jquery.elevatezoom.js"></script>
+        <script src="/assets/js/scripts.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+        {% block javascripts %}
+        <script type="module" src="/assets/js/main.js"></script>
+
+            
+        {% endblock %}
+    </body>
+</html>

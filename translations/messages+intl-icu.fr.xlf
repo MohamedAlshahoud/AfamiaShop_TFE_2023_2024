@@ -1,0 +1,2397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="fhsNVkH" resname="Account">
+        <source>Account</source>
+        <target>Compte</target>
+      </trans-unit>
+      <trans-unit id="CxhLxdU" resname="Sign Out">
+        <source>Sign Out</source>
+        <target>Se déconnecter</target>
+      </trans-unit>
+      <trans-unit id="wYmEDPf" resname="Log in">
+        <source>Log in</source>
+        <target>Se connecter</target>
+      </trans-unit>
+      <trans-unit id="u3I07BJ" resname="Register">
+        <source>Register</source>
+        <target>S'inscrire</target>
+      </trans-unit>
+      <trans-unit id="OnhpU4i" resname="Home">
+        <source>Home</source>
+        <target>Accueil</target>
+      </trans-unit>
+      <trans-unit id="wcIksDz" resname="Admin">
+        <source>Admin</source>
+        <target>Administrateur</target>
+      </trans-unit>
+      <trans-unit id="CEl437m" resname="Newsletters">
+        <source>Newsletters</source>
+        <target>Newsletters</target>
+      </trans-unit>
+      <trans-unit id="uLHYlMa" resname="Categories">
+        <source>Categories</source>
+        <target>Catégories</target>
+      </trans-unit>
+      <trans-unit id="0Aqua3_" resname="Shop">
+        <source>Shop</source>
+        <target>Boutique</target>
+      </trans-unit>
+      <trans-unit id="mLZwY8_" resname="Contact Us">
+        <source>Contact Us</source>
+        <target>Contactez-nous</target>
+      </trans-unit>
+      <trans-unit id="Gmzf8Dv" resname="The last 4 categories">
+        <source>The last 4 categories</source>
+        <target>Les 4 dernières catégories</target>
+      </trans-unit>
+      <trans-unit id="SzgHl2h" resname="Discover all our categories">
+        <source>Discover all our categories</source>
+        <target>Découvrez toutes nos catégories</target>
+      </trans-unit>
+      <trans-unit id="ujFRi0x" resname="New Products">
+        <source>New Products</source>
+        <target>Nouveaux Produits</target>
+      </trans-unit>
+      <trans-unit id="yLJ8J8B" resname="Discover all our products">
+        <source>Discover all our products</source>
+        <target>Découvrez tous nos produits</target>
+      </trans-unit>
+      <trans-unit id="_F_SCvH" resname="Our Categories">
+        <source>Our Categories</source>
+        <target>Nos Catégories</target>
+      </trans-unit>
+      <trans-unit id="1KM9W3i" resname="Discover">
+        <source>Discover</source>
+        <target>Découvrir</target>
+      </trans-unit>
+      <trans-unit id="BSrQAJv" resname="Welcome to this Category">
+        <source>Welcome to this Category</source>
+        <target>Bienvenue dans cette catégorie</target>
+      </trans-unit>
+      <trans-unit id="DfbxytN" resname="Show">
+        <source>Show</source>
+        <target>Montrer</target>
+      </trans-unit>
+      <trans-unit id="5NSwidB" resname="Filter our products...">
+        <source>Filter our products...</source>
+        <target>Filtrez nos produits...</target>
+      </trans-unit>
+      <trans-unit id="mY3dvXA" resname="No result found.">
+        <source>No result found.</source>
+        <target>Aucun résultat trouvé.</target>
+      </trans-unit>
+      <trans-unit id="Y44kn0o" resname="Filter">
+        <source>Filter</source>
+        <target>Filtrer</target>
+      </trans-unit>
+      <trans-unit id="KSwG8AR" resname="Category">
+        <source>Category</source>
+        <target>Catégorie</target>
+      </trans-unit>
+      <trans-unit id="oEYw74v" resname="Gender">
+        <source>Gender</source>
+        <target>Genre</target>
+      </trans-unit>
+      <trans-unit id="a3MZGgp" resname="Color">
+        <source>Color</source>
+        <target>Couleur</target>
+      </trans-unit>
+      <trans-unit id="Vu_PIJV" resname="Address">
+        <source>Address</source>
+        <target>Adresse</target>
+      </trans-unit>
+      <trans-unit id="Cb8l7zC" resname="Email Address">
+        <source>Email Address</source>
+        <target>Adresse e-mail</target>
+      </trans-unit>
+      <trans-unit id="Y9zriAC" resname="Phone">
+        <source>Phone</source>
+        <target>Téléphone</target>
+      </trans-unit>
+      <trans-unit id="n1Moz43" resname="A question, a remark, a suggestion?&#10;                We will be happy to respond to you as soon as possible.">
+        <source>A question, a remark, a suggestion?
+                We will be happy to respond to you as soon as possible.</source>
+        <target>Une question, une remarque, une suggestion ?
+                 Nous nous ferons un plaisir de vous répondre dans les plus brefs délais.</target>
+      </trans-unit>
+      <trans-unit id="3NHVIj9" resname="Name">
+        <source>Name</source>
+        <target>Nom</target>
+      </trans-unit>
+      <trans-unit id="lpzL089" resname="Email">
+        <source>Email</source>
+        <target>E-mail</target>
+      </trans-unit>
+      <trans-unit id="aJcSg4Q" resname="Subject">
+        <source>Subject</source>
+        <target>Sujet</target>
+      </trans-unit>
+      <trans-unit id="D_BXH6z" resname="Send Message">
+        <source>Send Message</source>
+        <target>Envoyer le message</target>
+      </trans-unit>
+      <trans-unit id="zy1mI8l" resname="Advanced search...">
+        <source>Advanced search...</source>
+        <target>Recherche Avancée...</target>
+      </trans-unit>
+      <trans-unit id="ScJmuqq" resname="Search">
+        <source>Search</source>
+        <target>Rechercher</target>
+      </trans-unit>
+      <trans-unit id="c2wXYdu" resname="product name , description or keyword">
+        <source>product name , description or keyword</source>
+        <target>Nom du produit, description ou mot-clé</target>
+      </trans-unit>
+      <trans-unit id="mhxU9V5" resname="Picture">
+        <source>Picture</source>
+        <target>Image</target>
+      </trans-unit>
+      <trans-unit id="_574lBd" resname="Product">
+        <source>Product</source>
+        <target>Produit</target>
+      </trans-unit>
+      <trans-unit id="k8kchR5" resname="Price">
+        <source>Price</source>
+        <target>Prix</target>
+      </trans-unit>
+      <trans-unit id="giurjUG" resname="Quantity">
+        <source>Quantity</source>
+        <target>Quantité</target>
+      </trans-unit>
+      <trans-unit id="w4EvxKy" resname="Remove">
+        <source>Remove</source>
+        <target>Retirer</target>
+      </trans-unit>
+      <trans-unit id="W9LkaV0" resname="Your cart is empty">
+        <source>Your cart is empty</source>
+        <target>Votre panier est vide</target>
+      </trans-unit>
+      <trans-unit id="w7t9GIt" resname="Cart Totals">
+        <source>Cart Totals</source>
+        <target>Totaux du panier</target>
+      </trans-unit>
+      <trans-unit id="Md6TW6Z" resname="Cart Subtotal">
+        <source>Cart Subtotal</source>
+        <target>Sous-total du panier</target>
+      </trans-unit>
+      <trans-unit id="sJpO_9p" resname="Continue Shopping">
+        <source>Continue Shopping</source>
+        <target>Continuer vos achats</target>
+      </trans-unit>
+      <trans-unit id="iId4EtQ" resname="Proceed To CheckOut">
+        <source>Proceed To CheckOut</source>
+        <target>Passer la commande</target>
+      </trans-unit>
+      <trans-unit id="ybPDgkf" resname="Total">
+        <source>Total</source>
+        <target>Total</target>
+      </trans-unit>
+      <trans-unit id="acVpEs4" resname="You are logged in as">
+        <source>You are logged in as</source>
+        <target>Vous êtes connecté en tant que</target>
+      </trans-unit>
+      <trans-unit id="0FJ_Sz1" resname="Logout">
+        <source>Logout</source>
+        <target>Se déconnecter</target>
+      </trans-unit>
+      <trans-unit id="MMHY0_k" resname="Forgot password?">
+        <source>Forgot password?</source>
+        <target>Mot de passe oublié?</target>
+      </trans-unit>
+      <trans-unit id="cXVRejc" resname="or">
+        <source>or</source>
+        <target>ou</target>
+      </trans-unit>
+      <trans-unit id="mtt6Yr5" resname="Don't Have an Account?">
+        <source>Don't Have an Account?</source>
+        <target>Vous n'avez pas de compte ?</target>
+      </trans-unit>
+      <trans-unit id="vkFCURL" resname="Sign up&#10;                                    now">
+        <source>Sign up
+                                    now</source>
+        <target>S'inscrire 
+                                  maintenant</target>
+      </trans-unit>
+      <trans-unit id="IWej4Er" resname="Your Email">
+        <source>Your Email</source>
+        <target>Votre E-mail</target>
+      </trans-unit>
+      <trans-unit id="588_9PF" resname="Password">
+        <source>Password</source>
+        <target>Mot de passe</target>
+      </trans-unit>
+      <trans-unit id="O.bdQdy" resname="Create an Account">
+        <source>Create an Account</source>
+        <target>Créer un compte</target>
+      </trans-unit>
+      <trans-unit id="53.qk20" resname="Already have an account?">
+        <source>Already have an account?</source>
+        <target>Vous avez déjà un compte?</target>
+      </trans-unit>
+      <trans-unit id="Hkmh4Tp" resname="Repeat Password">
+        <source>Repeat Password</source>
+        <target>Confirmer le mot de passe</target>
+      </trans-unit>
+      <trans-unit id="47ienTP" resname="Username">
+        <source>Username</source>
+        <target>Nom d'utilisateur</target>
+      </trans-unit>
+      <trans-unit id="ZHz6kbI" resname="Firstname">
+        <source>Firstname</source>
+        <target>Prénom</target>
+      </trans-unit>
+      <trans-unit id="htiPHRy" resname="Lastname">
+        <source>Lastname</source>
+        <target>Nom</target>
+      </trans-unit>
+      <trans-unit id="TnDx.SS" resname="Reset Password">
+        <source>Reset Password</source>
+        <target>Réinitialiser le mot de passe</target>
+      </trans-unit>
+      <trans-unit id="4O3_s6c" resname="Reset password">
+        <source>Reset password</source>
+        <target>Réinitialiser le mot de passe</target>
+      </trans-unit>
+      <trans-unit id="8zciKgH" resname="Enter your email address and we will send you a&#10;                                        link to reset your password.">
+        <source>Enter your email address and we will send you a
+                                        link to reset your password.</source>
+        <target>Entrez votre adresse email et nous vous enverrons un
+                                        lien pour réinitialiser votre mot de passe.</target>
+      </trans-unit>
+      <trans-unit id="y2XxXvP" resname="Send password reset email">
+        <source>Send password reset email</source>
+        <target>Envoyer un e-mail de réinitialisation du mot de passe</target>
+      </trans-unit>
+      <trans-unit id="Z7aWRoY" resname="Dashboard">
+        <source>Dashboard</source>
+        <target>Tableau de bord</target>
+      </trans-unit>
+      <trans-unit id="t_is3VI" resname="Orders">
+        <source>Orders</source>
+        <target>Commandes</target>
+      </trans-unit>
+      <trans-unit id="4uePpxK" resname="My Address">
+        <source>My Address</source>
+        <target>Mon adresse</target>
+      </trans-unit>
+      <trans-unit id="F76V4aG" resname="Account details">
+        <source>Account details</source>
+        <target>Détails du compte</target>
+      </trans-unit>
+      <trans-unit id="GF_NsyJ" resname="Hello">
+        <source>Hello</source>
+        <target>Bonjour</target>
+      </trans-unit>
+      <trans-unit id="moO8nUo" resname="From your account dashboard. you can easily check and view your">
+        <source>From your account dashboard. you can easily check and view your</source>
+        <target>Depuis le tableau de bord de votre compte. vous pouvez facilement vérifier et visualiser vos</target>
+      </trans-unit>
+      <trans-unit id="HBaK2wD" resname="orders">
+        <source>orders</source>
+        <target>commandes</target>
+      </trans-unit>
+      <trans-unit id="RJa4azL" resname="manage your">
+        <source>manage your</source>
+        <target> modifier vos</target>
+      </trans-unit>
+      <trans-unit id=".nnX1Pc" resname="addresses">
+        <source>addresses</source>
+        <target>adresses</target>
+      </trans-unit>
+      <trans-unit id="YgERG4O" resname="and">
+        <source>and</source>
+        <target>et</target>
+      </trans-unit>
+      <trans-unit id="2ZGvY06" resname="change your account details.">
+        <source>change your account details.</source>
+        <target>modifier les détails de votre compte.</target>
+      </trans-unit>
+      <trans-unit id="xeBX2X2" resname="Order Id">
+        <source>Order Id</source>
+        <target>Numéro de commande</target>
+      </trans-unit>
+      <trans-unit id="cb_Qk1." resname="Reference">
+        <source>Reference</source>
+        <target>Référence</target>
+      </trans-unit>
+      <trans-unit id="dDAgOWA" resname="Transporter Name">
+        <source>Transporter Name</source>
+        <target>Nom du transporteur</target>
+      </trans-unit>
+      <trans-unit id="4HwPGFk" resname="Transporter Price">
+        <source>Transporter Price</source>
+        <target>Prix ​​du transporteur	</target>
+      </trans-unit>
+      <trans-unit id="zPLEPvJ" resname="Delivery Address">
+        <source>Delivery Address</source>
+        <target>Adresse de livraison</target>
+      </trans-unit>
+      <trans-unit id="a2L5ahD" resname="Is Paid">
+        <source>Is Paid</source>
+        <target>Est payé</target>
+      </trans-unit>
+      <trans-unit id="yTezmVX" resname="Sub Total">
+        <source>Sub Total</source>
+        <target>Sous-total</target>
+      </trans-unit>
+      <trans-unit id="tGnaOU2" resname="Add New Address">
+        <source>Add New Address</source>
+        <target>Ajouter une nouvelle adresse</target>
+      </trans-unit>
+      <trans-unit id="2Ayb_RD" resname="address">
+        <source>address</source>
+        <target>adresse</target>
+      </trans-unit>
+      <trans-unit id="_VnCzsF" resname="Code Postal">
+        <source>Code Postal</source>
+        <target>Code Postal</target>
+      </trans-unit>
+      <trans-unit id=".DP3Mkb" resname="City">
+        <source>City</source>
+        <target>Ville</target>
+      </trans-unit>
+      <trans-unit id="cB0CHQj" resname="Country">
+        <source>Country</source>
+        <target>Pays</target>
+      </trans-unit>
+      <trans-unit id="FQn1YfJ" resname="Save">
+        <source>Save</source>
+        <target>Enregistrer</target>
+      </trans-unit>
+      <trans-unit id="dhear8Q" resname="Addresses">
+        <source>Addresses</source>
+        <target>Adresses</target>
+      </trans-unit>
+      <trans-unit id="EhVukhv" resname="Id">
+        <source>Id</source>
+        <target>Identifiant</target>
+      </trans-unit>
+      <trans-unit id="RkxP.QG" resname="Edit">
+        <source>Edit</source>
+        <target>Modifier</target>
+      </trans-unit>
+      <trans-unit id="4tClSWj" resname="Delete">
+        <source>Delete</source>
+        <target>Supprimer</target>
+      </trans-unit>
+      <trans-unit id="GXZu1sy" resname="Cancel">
+        <source>Cancel</source>
+        <target>Annuler</target>
+      </trans-unit>
+      <trans-unit id="wcEAnT8" resname="Update">
+        <source>Update</source>
+        <target> Enregistrer les modifications</target>
+      </trans-unit>
+      <trans-unit id="glguEgZ" resname="Profile of">
+        <source>Profile of</source>
+        <target>Profil de</target>
+      </trans-unit>
+      <trans-unit id="qWnQTsL" resname="User Name">
+        <source>User Name</source>
+        <target>Nom d'utilisateur</target>
+      </trans-unit>
+      <trans-unit id="ls5uYZO" resname="First Name">
+        <source>First Name</source>
+        <target>Prénom</target>
+      </trans-unit>
+      <trans-unit id="9VVjs4a" resname="Last Name">
+        <source>Last Name</source>
+        <target>Nom de famille</target>
+      </trans-unit>
+      <trans-unit id="YSlwRFR" resname="Change your profile">
+        <source>Change your profile</source>
+        <target>Changez votre profil</target>
+      </trans-unit>
+      <trans-unit id="imodqOy" resname="Change your password">
+        <source>Change your password</source>
+        <target>Changez votre mot de passe</target>
+      </trans-unit>
+      <trans-unit id="Yv6fJM3" resname="Change of profile of">
+        <source>Change of profile of</source>
+        <target>Changement De Profil De</target>
+      </trans-unit>
+      <trans-unit id="wL91vXi" resname="Change">
+        <source>Change</source>
+        <target>Changer</target>
+      </trans-unit>
+      <trans-unit id="_uTWWEO" resname="Change confirmed of">
+        <source>Change confirmed of</source>
+        <target>Changement Confirmé De</target>
+      </trans-unit>
+      <trans-unit id="VJjAT_v" resname="Your change is successfully confirmed.">
+        <source>Your change is successfully confirmed.</source>
+        <target>Votre modification est confirmée avec succès.</target>
+      </trans-unit>
+      <trans-unit id="1K7ocOl" resname="Click here to visit your profile">
+        <source>Click here to visit your profile</source>
+        <target>Cliquez ici pour visiter votre profil</target>
+      </trans-unit>
+      <trans-unit id="HtK3UhF" resname="Change confirmation">
+        <source>Change confirmation</source>
+        <target>Confirmation du changement</target>
+      </trans-unit>
+      <trans-unit id="qUn0YjB" resname="Change Password">
+        <source>Change Password</source>
+        <target>Changer Le Mot De Passe</target>
+      </trans-unit>
+      <trans-unit id="00fBBoR" resname="Your password has been changed">
+        <source>Your password has been changed</source>
+        <target>Votre mot de passe a été changé</target>
+      </trans-unit>
+      <trans-unit id="DoU3roC" resname="Your old password">
+        <source>Your old password</source>
+        <target>Votre ancien mot de passe</target>
+      </trans-unit>
+      <trans-unit id="1AU9lH." resname="old password">
+        <source>old password</source>
+        <target>ancien mot de passe</target>
+      </trans-unit>
+      <trans-unit id="PdnfREH" resname="New password">
+        <source>New password</source>
+        <target>Nouveau mot de passe</target>
+      </trans-unit>
+      <trans-unit id=".rGdluA" resname="Confirm new Password">
+        <source>Confirm new Password</source>
+        <target>Confirmer le nouveau mot de passe</target>
+      </trans-unit>
+      <trans-unit id="U28cTzJ" resname="Password Reset Email Sent">
+        <source>Password Reset Email Sent</source>
+        <target>E-mail de réinitialisation du mot de passe envoyé</target>
+      </trans-unit>
+      <trans-unit id="QttT1SZ" resname="If an account matching your email exists, then an email was just sent that contains a link that you can use to reset your password.&#10;                                This link will expire in">
+        <source>If an account matching your email exists, then an email was just sent that contains a link that you can use to reset your password.
+                                This link will expire in</source>
+        <target>S'il existe un compte correspondant à votre adresse e-mail, un e-mail vient d'être envoyé contenant un lien que vous pouvez utiliser pour réinitialiser votre mot de passe.
+                               Ce lien expirera dans </target>
+      </trans-unit>
+      <trans-unit id="bs9avOq" resname="If you don't receive an email please check your spam folder or">
+        <source>If you don't receive an email please check your spam folder or</source>
+        <target>Si vous ne recevez pas d'e-mail, veuillez vérifier votre dossier spam ou</target>
+      </trans-unit>
+      <trans-unit id="W13t7jL" resname="try again">
+        <source>try again</source>
+        <target>réessayer .</target>
+      </trans-unit>
+      <trans-unit id="7Nasl.X" resname="Sign up now">
+        <source>Sign up now</source>
+        <target>S'inscrire maintenant</target>
+      </trans-unit>
+      <trans-unit id="vQH5j0c" resname="To reset your password, please visit the following link">
+        <source>To reset your password, please visit the following link</source>
+        <target>Pour réinitialiser votre mot de passe, veuillez visiter le lien suivant</target>
+      </trans-unit>
+      <trans-unit id="87wG9uu" resname="This link will expire in">
+        <source>This link will expire in</source>
+        <target>Ce lien expirera dans</target>
+      </trans-unit>
+      <trans-unit id="F7WctIl" resname="Cheers!">
+        <source>Cheers!</source>
+        <target>Acclamations!</target>
+      </trans-unit>
+      <trans-unit id="WfpDeb4" resname="Reset your password">
+        <source>Reset your password</source>
+        <target>Réinitialisation de votre mot de passe</target>
+      </trans-unit>
+      <trans-unit id="ylHOH7F" resname="Hi!">
+        <source>Hi!</source>
+        <target>Bonjour!</target>
+      </trans-unit>
+      <trans-unit id="klt9MKa" resname="Registration email sent">
+        <source>Registration email sent</source>
+        <target>Email d'inscription envoyé</target>
+      </trans-unit>
+      <trans-unit id="gV.HOUX" resname="Registration Email Sent">
+        <source>Registration Email Sent</source>
+        <target>Email d'inscription envoyé</target>
+      </trans-unit>
+      <trans-unit id="YaANAIG" resname="If there is an account matching your email address, an email has just been sent containing a link you can use to confirm your registration .">
+        <source>If there is an account matching your email address, an email has just been sent containing a link you can use to confirm your registration .</source>
+        <target>S'il existe un compte correspondant à votre adresse email, un email vient d'être envoyé contenant un lien que vous pouvez utiliser pour confirmer votre inscription.</target>
+      </trans-unit>
+      <trans-unit id="vSTb9IR" resname="Hi! Please confirm your email!">
+        <source>Hi! Please confirm your email!</source>
+        <target>Bonjour! Veuillez confirmer votre email!</target>
+      </trans-unit>
+      <trans-unit id="Ry3Xo6w" resname="Please confirm your email address by clicking the following link:">
+        <source>Please confirm your email address by clicking the following link:</source>
+        <target>Veuillez confirmer votre adresse e-mail en cliquant sur le lien suivant :</target>
+      </trans-unit>
+      <trans-unit id="ITaQX9q" resname="Confirm my Email">
+        <source>Confirm my Email</source>
+        <target>Confirmer mon email</target>
+      </trans-unit>
+      <trans-unit id="mou_CXq" resname="Registration confirmation">
+        <source>Registration confirmation</source>
+        <target>Confirmation d'inscription</target>
+      </trans-unit>
+      <trans-unit id="omUuUdc" resname="Registration confirmed">
+        <source>Registration confirmed</source>
+        <target>Inscription confirmée</target>
+      </trans-unit>
+      <trans-unit id="8N_DpRv" resname="Your registration is successfully confirmed .">
+        <source>Your registration is successfully confirmed .</source>
+        <target>Votre inscription est confirmée avec succès.</target>
+      </trans-unit>
+      <trans-unit id="KdJwKsv" resname="Click here to log in to your account">
+        <source>Click here to log in to your account</source>
+        <target>Cliquez ici pour vous connecter à votre compte</target>
+      </trans-unit>
+      <trans-unit id="hpWlheT" resname="Please Confirm your Email">
+        <source>Please Confirm your Email</source>
+        <target>Veuillez confirmer votre email</target>
+      </trans-unit>
+      <trans-unit id="yCwM9VP" resname="\&quot;Afamia Contact\&quot;">
+        <source>\"Afamia Contact\"</source>
+        <target>" Contact Afamia "</target>
+      </trans-unit>
+      <trans-unit id="ATJ8qA9" resname="Your password reset request">
+        <source>Your password reset request</source>
+        <target>Votre demande de réinitialisation de mot de passe</target>
+      </trans-unit>
+      <trans-unit id="R9R.l8b" resname="Afamia Contact">
+        <source>Afamia Contact</source>
+        <target>" Contact Afamia "</target>
+      </trans-unit>
+      <trans-unit id="nWMiwfT" resname="Login">
+        <source>Login</source>
+        <target>Se connecter</target>
+      </trans-unit>
+      <trans-unit id="5KqxOXy" resname="List of Newsletters">
+        <source>List of Newsletters</source>
+        <target>Liste des newsletters</target>
+      </trans-unit>
+      <trans-unit id="OEOXHc." resname="ID">
+        <source>ID</source>
+        <target>Identifiant</target>
+      </trans-unit>
+      <trans-unit id="eOeSABC" resname="Titre">
+        <source>Titre</source>
+        <target>Titre</target>
+      </trans-unit>
+      <trans-unit id="mcQKtAW" resname="Date">
+        <source>Date</source>
+        <target>Date</target>
+      </trans-unit>
+      <trans-unit id="I1HumSY" resname="Registered">
+        <source>Registered</source>
+        <target>Inscrits</target>
+      </trans-unit>
+      <trans-unit id=".4BZ3Gd" resname="Actions">
+        <source>Actions</source>
+        <target>Actions</target>
+      </trans-unit>
+      <trans-unit id="9vRoj.I" resname="Send">
+        <source>Send</source>
+        <target>Envoyer</target>
+      </trans-unit>
+      <trans-unit id="WGau.9Z" resname="Subscribe to our nexsletters">
+        <source>Subscribe to our nexsletters</source>
+        <target>Abonnez-vous à nos nexsletters</target>
+      </trans-unit>
+      <trans-unit id=".3lzDWy" resname="Choose your newsletters">
+        <source>Choose your newsletters</source>
+        <target>Choisissez Vos Newsletters</target>
+      </trans-unit>
+      <trans-unit id="3mhm8Iw" resname="I accept the collection of my personal data">
+        <source>I accept the collection of my personal data</source>
+        <target>J'accepte la collecte de mes données personnelles</target>
+      </trans-unit>
+      <trans-unit id="t2Hx3qx" resname="New products">
+        <source>New products</source>
+        <target>Nouveaux produits</target>
+      </trans-unit>
+      <trans-unit id="jkA5Yky" resname="Your subscription to the newsletter">
+        <source>Your subscription to the newsletter</source>
+        <target>Votre inscription à la newsletter</target>
+      </trans-unit>
+      <trans-unit id="pL9SctQ" resname="Newsletter subscription email sent">
+        <source>Newsletter subscription email sent</source>
+        <target>Email d'inscription à la newsletter envoyé</target>
+      </trans-unit>
+      <trans-unit id="RaCGPjY" resname="Newsletter subscription">
+        <source>Newsletter subscription</source>
+        <target>Inscription à la Newsletter</target>
+      </trans-unit>
+      <trans-unit id="nSc6rRN" resname="If there is an account matching your email address, an email has just been sent containing a link you can use to confirm your newsletter subscription .">
+        <source>If there is an account matching your email address, an email has just been sent containing a link you can use to confirm your newsletter subscription .</source>
+        <target>S'il existe un compte correspondant à votre adresse email, un email vient d'être envoyé contenant un lien que vous pouvez utiliser pour confirmer votre inscription à la newsletter.</target>
+      </trans-unit>
+      <trans-unit id="4JSCS2j" resname="newsletter registration">
+        <source>newsletter registration</source>
+        <target>inscription à la newsletter</target>
+      </trans-unit>
+      <trans-unit id="yAgbVbX" resname="Your registration">
+        <source>Your registration</source>
+        <target>Votre inscription</target>
+      </trans-unit>
+      <trans-unit id="oJk7rJ5" resname="You are subscribed to the newsletter">
+        <source>You are subscribed to the newsletter</source>
+        <target>Vous êtes inscrit à la newsletter</target>
+      </trans-unit>
+      <trans-unit id="59fo_E9" resname="click on this link to confirm your subscription to the newsletters">
+        <source>click on this link to confirm your subscription to the newsletters</source>
+        <target>cliquez sur ce lien pour confirmer votre inscription aux newsletters</target>
+      </trans-unit>
+      <trans-unit id="n8nMyKm" resname="newsletter subscription confirmation">
+        <source>newsletter subscription confirmation</source>
+        <target>Confirmation d'inscription à la newsletter</target>
+      </trans-unit>
+      <trans-unit id="Moc9aop" resname="newsletter subscription confirmed">
+        <source>newsletter subscription confirmed</source>
+        <target>Inscription à la newsletter confirmée</target>
+      </trans-unit>
+      <trans-unit id="PmbBydN" resname="Your newsletter subscription is successfully confirmed.">
+        <source>Your newsletter subscription is successfully confirmed.</source>
+        <target>Votre inscription à la newsletter est confirmée avec succès.</target>
+      </trans-unit>
+      <trans-unit id="yp7AbjY" resname="Click here to visit our Afamia Shop website">
+        <source>Click here to visit our Afamia Shop website</source>
+        <target>Cliquez ici pour visiter notre site Afamia Shop</target>
+      </trans-unit>
+      <trans-unit id="piFuoD5" resname="categories">
+        <source>categories</source>
+        <target>Catégories</target>
+      </trans-unit>
+      <trans-unit id="0XqvLHi" resname="Detail of a category">
+        <source>Detail of a category</source>
+        <target>Détail d'une catégorie</target>
+      </trans-unit>
+      <trans-unit id="P_JjU40" resname="New Contact">
+        <source>New Contact</source>
+        <target>Nouveau Contact</target>
+      </trans-unit>
+      <trans-unit id="bS1ZrtR" resname="Cart">
+        <source>Cart</source>
+        <target>Panier</target>
+      </trans-unit>
+      <trans-unit id="ieYL_2U" resname="Your Account">
+        <source>Your Account</source>
+        <target>Votre Compte</target>
+      </trans-unit>
+      <trans-unit id="0w1cjMj" resname="Change Profile">
+        <source>Change Profile</source>
+        <target>Changement de Profil</target>
+      </trans-unit>
+      <trans-unit id="hGl5dEK" resname="Show Product">
+        <source>Show Product</source>
+        <target>Description du produit</target>
+      </trans-unit>
+      <trans-unit id="DpQINTx" resname="Add to cart">
+        <source>Add to cart</source>
+        <target>Ajouter au panier</target>
+      </trans-unit>
+      <trans-unit id="MlJPKp7" resname="Category :">
+        <source>Category :</source>
+        <target>Catégorie :</target>
+      </trans-unit>
+      <trans-unit id="V14gn9t" resname="Color :">
+        <source>Color :</source>
+        <target>Couleur :</target>
+      </trans-unit>
+      <trans-unit id="so2oRN5" resname="More Informations">
+        <source>More Informations</source>
+        <target>Plus d'informations</target>
+      </trans-unit>
+      <trans-unit id="UGj2mxh" resname="List of comments">
+        <source>List of comments</source>
+        <target>Liste des commentaires</target>
+      </trans-unit>
+      <trans-unit id="ZqryVx2" resname="Add a comment">
+        <source>Add a comment</source>
+        <target>Ajouter un commentaire</target>
+      </trans-unit>
+      <trans-unit id="RPXj__x" resname="Comment">
+        <source>Comment</source>
+        <target>Commentaire</target>
+      </trans-unit>
+      <trans-unit id="p_LSbo0" resname="by">
+        <source>by</source>
+        <target>par</target>
+      </trans-unit>
+      <trans-unit id="QAthy6T" resname="Published the">
+        <source>Published the</source>
+        <target>Publié le</target>
+      </trans-unit>
+      <trans-unit id="BHSlIKk" resname="----------No comments----------">
+        <source>----------No comments----------</source>
+        <target>----------Aucun commentaire----------</target>
+      </trans-unit>
+      <trans-unit id="M.6VzgI" resname="Your email">
+        <source>Your email</source>
+        <target>Votre e-mail</target>
+      </trans-unit>
+      <trans-unit id="LGsuJTw" resname="Your name">
+        <source>Your name</source>
+        <target>Votre nom</target>
+      </trans-unit>
+      <trans-unit id="n8cy_PA" resname="Your comment">
+        <source>Your comment</source>
+        <target>Votre commentaire</target>
+      </trans-unit>
+      <trans-unit id="NNnuzVH" resname="Description of product :">
+        <source>Description of product :</source>
+        <target>Description du produit :</target>
+      </trans-unit>
+      <trans-unit id="MPbC3mm" resname="Checkout Confirmation">
+        <source>Checkout Confirmation</source>
+        <target>Confirmation de paiement</target>
+      </trans-unit>
+      <trans-unit id="N6Op5NY" resname="Transporter">
+        <source>Transporter</source>
+        <target>Transporteur</target>
+      </trans-unit>
+      <trans-unit id="9E2f7k." resname="Your Order">
+        <source>Your Order</source>
+        <target>Votre commande</target>
+      </trans-unit>
+      <trans-unit id="2J5FrzH" resname="SubTotal">
+        <source>SubTotal</source>
+        <target>Sous Total</target>
+      </trans-unit>
+      <trans-unit id="rVdRQw4" resname="Shipping">
+        <source>Shipping</source>
+        <target>Expédition</target>
+      </trans-unit>
+      <trans-unit id="pj3q24u" resname="Pay now">
+        <source>Pay now</source>
+        <target>Payer maintenant</target>
+      </trans-unit>
+      <trans-unit id="mecfSMS" resname="Checkout">
+        <source>Checkout</source>
+        <target>Vérifier</target>
+      </trans-unit>
+      <trans-unit id="XlcWFYJ" resname="Add new address">
+        <source>Add new address</source>
+        <target>Ajouter une nouvelle adresse</target>
+      </trans-unit>
+      <trans-unit id="mUJ3Y7M" resname="Validate my order">
+        <source>Validate my order</source>
+        <target>Valider ma commande</target>
+      </trans-unit>
+      <trans-unit id="TVBk3AE" resname="Payment success">
+        <source>Payment success</source>
+        <target>Succès du paiement</target>
+      </trans-unit>
+      <trans-unit id="Fdgwb1G" resname="Your order number">
+        <source>Your order number</source>
+        <target>Votre commande numéro </target>
+      </trans-unit>
+      <trans-unit id="rD1pMgq" resname="is completed!">
+        <source>is completed!</source>
+        <target>est terminé !</target>
+      </trans-unit>
+      <trans-unit id="VbQ6V73" resname="Thank you for your order! Your order number">
+        <source>Thank you for your order! Your order number</source>
+        <target>Nous vous remercions de votre commande! Votre numéro de commande</target>
+      </trans-unit>
+      <trans-unit id="cVz_9WB" resname="is being processed and will be completed within 3-6 hours. You will receive an email confirmation when your order is completed.">
+        <source>is being processed and will be completed within 3-6 hours. You will receive an email confirmation when your order is completed.</source>
+        <target>est en cours de traitement et sera complété dans un délai de 3 à 6 heures. Vous recevrez un e-mail de confirmation lorsque votre commande sera terminée.</target>
+      </trans-unit>
+      <trans-unit id="U2rgY9u" resname="Charms">
+        <source>Charms</source>
+        <target>Charmes</target>
+      </trans-unit>
+      <trans-unit id="C1UTAo3" resname="Necklaces">
+        <source>Necklaces</source>
+        <target>Colliers</target>
+      </trans-unit>
+      <trans-unit id="qai_0vx" resname="Bracelets">
+        <source>Bracelets</source>
+        <target>Bracelets</target>
+      </trans-unit>
+      <trans-unit id="pTLpgK4" resname="Earrings">
+        <source>Earrings</source>
+        <target>Boucles d'oreilles</target>
+      </trans-unit>
+      <trans-unit id="3u6fWEh" resname="Medals">
+        <source>Medals</source>
+        <target>Médailles</target>
+      </trans-unit>
+      <trans-unit id="KV.hkdG" resname="White Silver Single Ear Ring">
+        <source>White Silver Single Ear Ring</source>
+        <target>Boucle D'oreille en argent blanc</target>
+      </trans-unit>
+      <trans-unit id="rH5QUqk" resname="White Silver Earrings">
+        <source>White Silver Earrings</source>
+        <target>Boucles d'oreilles en argent blanc</target>
+      </trans-unit>
+      <trans-unit id="QHhcC20" resname="Yellow Gold Earrings">
+        <source>Yellow Gold Earrings</source>
+        <target>Boucles d'oreilles en or jaune</target>
+      </trans-unit>
+      <trans-unit id="9p0yQRL" resname="Silver Multi Tassel Bracelet">
+        <source>Silver Multi Tassel Bracelet</source>
+        <target>Bracelet argenté multiples</target>
+      </trans-unit>
+      <trans-unit id="YHirr5D" resname="Disney Gold Steel Bracelet">
+        <source>Disney Gold Steel Bracelet</source>
+        <target>Bracelet en acier doré Disney</target>
+      </trans-unit>
+      <trans-unit id="7PXA0Sn" resname="White Steel Cuff Bracelet">
+        <source>White Steel Cuff Bracelet</source>
+        <target>Bracelet manchette en acier blanc</target>
+      </trans-unit>
+      <trans-unit id="NjF2.xX" resname="Yellow Gold Plated Bracelet">
+        <source>Yellow Gold Plated Bracelet</source>
+        <target>Bracelet Plaqué Or Jaune</target>
+      </trans-unit>
+      <trans-unit id="zofygQ2" resname="Double White Steel Bracelet">
+        <source>Double White Steel Bracelet</source>
+        <target>Bracelet Double Acier Blanc</target>
+      </trans-unit>
+      <trans-unit id="fqKXoF7" resname="White Steel And Gold Bracelet">
+        <source>White Steel And Gold Bracelet</source>
+        <target>Bracelet En Acier Blanc Et Or</target>
+      </trans-unit>
+      <trans-unit id="FtZUjJf" resname="Gold Plated Fancy Mesh Bracelet">
+        <source>Gold Plated Fancy Mesh Bracelet</source>
+        <target>Bracelet Maille Fantaisie Or</target>
+      </trans-unit>
+      <trans-unit id="k56z5sr" resname="Yellow Gold Charm">
+        <source>Yellow Gold Charm</source>
+        <target>Charme en or jaune</target>
+      </trans-unit>
+      <trans-unit id="LeHFMZZ" resname="Amethyst Yellow Gold Necklace">
+        <source>Amethyst Yellow Gold Necklace</source>
+        <target>Collier Améthyste Or Jaune</target>
+      </trans-unit>
+      <trans-unit id="z4P3iG8" resname="White Steel Plate Necklace">
+        <source>White Steel Plate Necklace</source>
+        <target>Collier en plaque d'acier blanc</target>
+      </trans-unit>
+      <trans-unit id="OzOaFck" resname="No results for your search.">
+        <source>No results for your search.</source>
+        <target>Aucun résultat pour votre recherche.</target>
+      </trans-unit>
+      <trans-unit id="UCqqKzK" resname="White Silver Single Ear Ring Double Domed Rows Diameter 10mm-1">
+        <source>White Silver Single Ear Ring Double Domed Rows Diameter 10mm-1</source>
+        <target>Boucle d'oreille simple en argent blanc, rangées doubles bombées, diamètre 10mm</target>
+      </trans-unit>
+      <trans-unit id="vtlC8.T" resname="The best looking accessory anytime and anywhere for men and women">
+        <source>The best looking accessory anytime and anywhere for men and women</source>
+        <target>Le meilleur accessoire à tout moment et en tout lieu pour hommes et femmes</target>
+      </trans-unit>
+      <trans-unit id="iIfCB4V" resname="Address And Contact">
+        <source>Address And Contact</source>
+        <target>Adresse et contact</target>
+      </trans-unit>
+      <trans-unit id="OcFHg37" resname="You Have A Question ?">
+        <source>You Have A Question ?</source>
+        <target>Une question ?</target>
+      </trans-unit>
+      <trans-unit id="fZD0vlX" resname="Find your answer by clicking on the button below , filling out the form and sending it to us">
+        <source>Find your answer by clicking on the button below , filling out the form and sending it to us</source>
+        <target>Trouvez votre réponse en cliquant sur le bouton ci-dessous, en remplissant le formulaire et en nous l'envoyant</target>
+      </trans-unit>
+      <trans-unit id="Tr_djDO" resname="Subscribe Our Newsletters">
+        <source>Subscribe Our Newsletters</source>
+        <target>Abonnez-vous à nos newsletters</target>
+      </trans-unit>
+      <trans-unit id="EYZMItG" resname="Subscribe to our newsletters by clicking on the button below">
+        <source>Subscribe to our newsletters by clicking on the button below</source>
+        <target>Abonnez-vous à nos newsletters en cliquant sur le bouton ci-dessous</target>
+      </trans-unit>
+      <trans-unit id="zA442px" resname="Subscribe">
+        <source>Subscribe</source>
+        <target>Abonnez-vous</target>
+      </trans-unit>
+      <trans-unit id="iQl41ag" resname="You haven't placed an order yet!">
+        <source>You haven't placed an order yet!</source>
+        <target>Vous n'avez pas encore passé de commande !</target>
+      </trans-unit>
+      <trans-unit id="zcn4yir" resname="We couldn't find an address for you, please create one!">
+        <source>We couldn't find an address for you, please create one!</source>
+        <target>Nous n'avons pas trouvé d'adresse pour vous, veuillez en créer une !</target>
+      </trans-unit>
+      <trans-unit id="zbjrT8C" resname="Your Orders">
+        <source>Your Orders</source>
+        <target>Vos commandes</target>
+      </trans-unit>
+      <trans-unit id="84Bibb9" resname="Your Addresses">
+        <source>Your Addresses</source>
+        <target>Vos adresses</target>
+      </trans-unit>
+      <trans-unit id="m1yvpiK" resname="Edit your profile">
+        <source>Edit your profile</source>
+        <target>Modifier votre profil</target>
+      </trans-unit>
+      <trans-unit id="eMZ2B2A" resname="Edit your password">
+        <source>Edit your password</source>
+        <target>Modifier votre mots de passe</target>
+      </trans-unit>
+      <trans-unit id="xxgX.Ek" resname="Add a new address">
+        <source>Add a new address</source>
+        <target>Ajouter une nouvelle adresse</target>
+      </trans-unit>
+      <trans-unit id="ao_ha8C" resname="Edit Address">
+        <source>Edit Address</source>
+        <target>Modifier une adresse</target>
+      </trans-unit>
+      <trans-unit id="tDWYdmD" resname="Edit your address">
+        <source>Edit your address</source>
+        <target>Modifier votre adresse</target>
+      </trans-unit>
+      <trans-unit id="HHgIs5E" resname="Retour page compte">
+        <source>Retour page compte</source>
+        <target>Retourner vers votre compte</target>
+      </trans-unit>
+      <trans-unit id="AGSlRN1" resname="New Address">
+        <source>New Address</source>
+        <target>Nouvelle adresse</target>
+      </trans-unit>
+      <trans-unit id="GCmSmQb" resname="Your address has been registered successfully">
+        <source>Your address has been registered successfully</source>
+        <target>Votre adresse a bien été enregistrée</target>
+      </trans-unit>
+      <trans-unit id="41V1aW." resname="Your address has been changed">
+        <source>Your address has been changed</source>
+        <target>Votre adresse a bien été modifiée</target>
+      </trans-unit>
+      <trans-unit id="UmILe8E" resname="Your address has been deleted">
+        <source>Your address has been deleted</source>
+        <target>Votre adresse a bien été supprimée</target>
+      </trans-unit>
+      <trans-unit id="tRLZfny" resname="User">
+        <source>User</source>
+        <target>Utilisateur</target>
+      </trans-unit>
+      <trans-unit id="Bg9_oJu" resname="Your Address n°">
+        <source>Your Address n°</source>
+        <target>Votre adresse n°</target>
+      </trans-unit>
+      <trans-unit id="27T_KEg" resname="Your profile has been changed">
+        <source>Your profile has been changed</source>
+        <target>Votre profil a bien été modifiée</target>
+      </trans-unit>
+      <trans-unit id=".jrA1Dx" resname="Order Details">
+        <source>Order Details</source>
+        <target>Détails de la commande</target>
+      </trans-unit>
+      <trans-unit id="nXxIa0z" resname="Order number">
+        <source>Order number</source>
+        <target>Commande numéro</target>
+      </trans-unit>
+      <trans-unit id="Qiqq9I1" resname="Retour page orders">
+        <source>Retour page orders</source>
+        <target>Retourner à la liste des commandes</target>
+      </trans-unit>
+      <trans-unit id="RTG5sXN" resname="Your comment has been sent">
+        <source>Your comment has been sent</source>
+        <target>Votre commentaire a été envoyé</target>
+      </trans-unit>
+      <trans-unit id="u0Zc.Oq" resname="The form contains errors . please correct and try again .">
+        <source>The form contains errors . please correct and try again .</source>
+        <target>Le formulaire contient des erreurs. veuillez corriger et réessayer.</target>
+      </trans-unit>
+      <trans-unit id="SWFhRVF" resname="Log out">
+        <source>Log out</source>
+        <target>Déconnexion</target>
+      </trans-unit>
+      <trans-unit id="rQGHrde" resname="My Account">
+        <source>My Account</source>
+        <target>Mon Compte</target>
+      </trans-unit>
+      <trans-unit id="aGMGfrC" resname="See">
+        <source>See</source>
+        <target>Voir</target>
+      </trans-unit>
+      <trans-unit id="CBxn4MX" resname="Return to address list">
+        <source>Return to address list</source>
+        <target>Retour à la liste d'adresses</target>
+      </trans-unit>
+      <trans-unit id="yLB40z4" resname="The last four categories added">
+        <source>The last four categories added</source>
+        <target>Les quatre dernières catégories ajoutées</target>
+      </trans-unit>
+      <trans-unit id="6Rjthbf" resname="terms and conditions">
+        <source>terms and conditions</source>
+        <target>Conditions générales</target>
+      </trans-unit>
+      <trans-unit id="1G1ru5j" resname="Article 1 - Identity of the seller">
+        <source>Article 1 - Identity of the seller</source>
+        <target>Article 1 - Identité de AfamiaShop</target>
+      </trans-unit>
+      <trans-unit id="EZ2UeZb" resname="AfamiaShop België trades under the name: AfamiaShop.be">
+        <source>AfamiaShop België trades under the name: AfamiaShop.be</source>
+        <target>AfamiaShop Belgique exerce ses activités sous le nom : AfamiaShop.be</target>
+      </trans-unit>
+      <trans-unit id="G0T1FDM" resname="Registered address :">
+        <source>Registered address :</source>
+        <target>Adresse d'établissement :</target>
+      </trans-unit>
+      <trans-unit id="Zs6nWO." resname="_ Belgium">
+        <source>_ Belgium</source>
+        <target>_Belgique</target>
+      </trans-unit>
+      <trans-unit id="vfOTNfU" resname="Availibility :">
+        <source>Availibility :</source>
+        <target>Accessibilité :</target>
+      </trans-unit>
+      <trans-unit id="mTJlQq." resname="_ Monday to Friday from 8:00 until 19:59">
+        <source>_ Monday to Friday from 8:00 until 19:59</source>
+        <target>_ Du lundi au vendredi de 8:00 à 19:59</target>
+      </trans-unit>
+      <trans-unit id="QKqBYfW" resname="_ Telephone number 0489 47 08 53">
+        <source>_ Telephone number 0489 47 08 53</source>
+        <target>_Numéro de téléphone : 0489 47 08 53</target>
+      </trans-unit>
+      <trans-unit id="WodX6x_" resname="_ Email address: ay1665ay@gmail.com">
+        <source>_ Email address: ay1665ay@gmail.com</source>
+        <target>_Adresse mail : ay1665ay@gmail.com</target>
+      </trans-unit>
+      <trans-unit id="UUa6mv5" resname="_ Company number: BE 0000 222 444">
+        <source>_ Company number: BE 0000 222 444</source>
+        <target>_ Numéro d'entreprise: BE 0000 222 444</target>
+      </trans-unit>
+      <trans-unit id="WBQ2rXC" resname="_ Bank account number: BE00000000000000">
+        <source>_ Bank account number: BE00000000000000</source>
+        <target>Numéro de compte bancaire : BE00000000000000</target>
+      </trans-unit>
+      <trans-unit id="pIzmXS5" resname="Article 2 - Applicability">
+        <source>Article 2 - Applicability</source>
+        <target>Article 2 - Champ d'application</target>
+      </trans-unit>
+      <trans-unit id="qLyBXJ8" resname="Article 3 - Our assortment and your order">
+        <source>Article 3 - Our assortment and your order</source>
+        <target>Article 3 - Notre offre et votre commande</target>
+      </trans-unit>
+      <trans-unit id="Kxunz4D" resname="Article 4 - The price">
+        <source>Article 4 - The price</source>
+        <target>Article 4 - Le prix</target>
+      </trans-unit>
+      <trans-unit id=".EJEWLd" resname="Article 5 - Payment">
+        <source>Article 5 - Payment</source>
+        <target>Article 5 - Paiement</target>
+      </trans-unit>
+      <trans-unit id="juXm413" resname="Article 6 - Conformity and warranty">
+        <source>Article 6 - Conformity and warranty</source>
+        <target>Article 6 - Conformité et garantie</target>
+      </trans-unit>
+      <trans-unit id="wTv.baT" resname="Article 7 - Delivery and implementation">
+        <source>Article 7 - Delivery and implementation</source>
+        <target>Article 7 - Livraison et exécution</target>
+      </trans-unit>
+      <trans-unit id="JKG6zJa" resname="Article 8 - Force majeure">
+        <source>Article 8 - Force majeure</source>
+        <target>Article 8 - Force majeure</target>
+      </trans-unit>
+      <trans-unit id="AuHa0SZ" resname="Article 9 -  Intellectual property">
+        <source>Article 9 -  Intellectual property</source>
+        <target>Article 9 -  Propriété intellectuelle</target>
+      </trans-unit>
+      <trans-unit id="MVBhXLz" resname="Article 10 -  Complaints procedure and disputes">
+        <source>Article 10 -  Complaints procedure and disputes</source>
+        <target>Article 10 -  Règlement en matière de réclamations et litiges</target>
+      </trans-unit>
+      <trans-unit id="zImgRnk" resname="Our Terms and Conditions apply to all offers by us as Online Retailer, &#10;                                to you as Consumer (any natural person who, for non-professional purposes only, acquires or uses products or services on the market)">
+        <source>Our Terms and Conditions apply to all offers by us as Online Retailer, 
+                                to you as Consumer (any natural person who, for non-professional purposes only, acquires or uses products or services on the market)</source>
+        <target>Les présentes conditions générales s'appliquent à chaque offre/proposition entre AfamiaShop en tant que webshop et vous en tant que Consommateur (toute personne physique qui acquiert ou utilise, à des fins excluant tout professionnel, des produits ou des services mis sur le marché)</target>
+      </trans-unit>
+      <trans-unit id="yIGwceD" resname="We only deliver in Belgium. If you select a shipping address in a different country, we can refuse your order">
+        <source>We only deliver in Belgium. If you select a shipping address in a different country, we can refuse your order</source>
+        <target>Nous ne livrons qu'en Belgique. Si votre adresse de livraison se situe dans un autre pays, nous nous réservons le droit de refuser votre commande.</target>
+      </trans-unit>
+      <trans-unit id="olNFlU8" resname="You need to be at least 18 years of age to place an order. If you're not 18 yet, we'd like to ask you to have your parents or a legal guardian place the order. &#10;                                If we notice that an order has been placed by a minor, we can refuse this order">
+        <source>You need to be at least 18 years of age to place an order. If you're not 18 yet, we'd like to ask you to have your parents or a legal guardian place the order. 
+                                If we notice that an order has been placed by a minor, we can refuse this order</source>
+        <target>Pour placer une commande, vous devez être âgé d'au moins 18 ans. Si vous n'avez pas encore 18 ans, nous demandons que vos parents ou un tuteur légal placent la commande. Si nous remarquons qu'une commande a été placée par un mineur, nous sommes en droit de refuser cette commande</target>
+      </trans-unit>
+      <trans-unit id="umB3Kzh" resname="Placing an order on the website counts as explicit acceptance of our Terms and Conditions, which can be accessed at all times through our website">
+        <source>Placing an order on the website counts as explicit acceptance of our Terms and Conditions, which can be accessed at all times through our website</source>
+        <target>En plaçant une commande sur notre site, vous acceptez explicitement nos conditions générales qui sont disponibles sur notre site web à tout moment</target>
+      </trans-unit>
+      <trans-unit id="erd4cmG" resname="If you order online, we will attach a copy of these Terms and Conditions in a format that can be saved or printed to your order confirmation or, at the latest, to your delivery. &#10;                                We urge you to always save or print the Terms and Conditions">
+        <source>If you order online, we will attach a copy of these Terms and Conditions in a format that can be saved or printed to your order confirmation or, at the latest, to your delivery. 
+                                We urge you to always save or print the Terms and Conditions</source>
+        <target>Si vous commandez en ligne, une copie de ces conditions générales vous sera fournie lors de la confirmation de votre commande ou au plus tard lors de la livraison, sous un format que vous pouvez enregistrer ou imprimer, ce que nous vous recommandons de faire dans tous les cas</target>
+      </trans-unit>
+      <trans-unit id="GNf2qoM" resname="In the event that, in addition to these general Terms and Conditions, specific product or service conditions also apply, the above also applies to those special conditions. In the event of conflicting conditions, &#10;                                the consumer can always invoke the applicable condition that is most favorable to them">
+        <source>In the event that, in addition to these general Terms and Conditions, specific product or service conditions also apply, the above also applies to those special conditions. In the event of conflicting conditions, 
+                                the consumer can always invoke the applicable condition that is most favorable to them</source>
+        <target>Dans l'hypothèse où, outre les présentes conditions générales, des conditions spécifiques aux produits ou aux services sont d'application, ce qui précède s'applique également à ces conditions particulières. En cas de dispositions contradictoires entre les conditions, le consommateur peut toujours invoquer l'application de la disposition lui étant la plus favorable</target>
+      </trans-unit>
+      <trans-unit id="6ALC6AL" resname="If an offer has a limited validity period, or is made under conditions, this will be explicitly stated in the offer">
+        <source>If an offer has a limited validity period, or is made under conditions, this will be explicitly stated in the offer</source>
+        <target>Lorsqu'une offre a une durée de validité limitée ou est soumise à conditions, ceci est toujours mentionné expressément dans l'offre</target>
+      </trans-unit>
+      <trans-unit id="cpaXpep" resname="We'll describe what we sell and how the order process will proceed as fully and accurately as possible. The description will &#10;                                be sufficiently detailed to enable a good evaluation of the offer by the consumer. If we use images, these will be a true representation &#10;                                of the offered products, digital content, and/or services. Oversights happen, and if we've clearly made a mistake, we're not &#10;                                required to deliver afterwards">
+        <source>We'll describe what we sell and how the order process will proceed as fully and accurately as possible. The description will 
+                                be sufficiently detailed to enable a good evaluation of the offer by the consumer. If we use images, these will be a true representation 
+                                of the offered products, digital content, and/or services. Oversights happen, and if we've clearly made a mistake, we're not 
+                                required to deliver afterwards</source>
+        <target>Notre offre contient toujours une description complète et précise des produits proposés et de la méthode de commande. La description est suffisamment détaillée pour vous permettre d'évaluer adéquatement le contenu de l'offre. Si AfamiaShop a recours à des images/photos, celles-ci sont une représentation fidèle des produits et/ou services proposés. Cependant, l'erreur est humaine et dans le cas où nous nous sommes manifestement trompés, nous ne nous trouvons pas dans l'obligation de quand même vous livrer les produits demandés</target>
+      </trans-unit>
+      <trans-unit id="4AosQeo" resname="If you order from us, you'll receive a confirmation by email. Your order will be complete and the agreement between us will be definitive &#10;                                as soon as we've received approval from the card company for your transaction with debit or credit cards. We accept Bancontact, Paypal, Visa, &#10;                                MasterCard, money transfers, and cash. If the card company does not approve of your payment to us, we cannot be held responsible for delays in &#10;                                shipping and/or non-delivery of your order. Orders without a valid payment in the name of the registered cardholder will not be accepted or processed">
+        <source>If you order from us, you'll receive a confirmation by email. Your order will be complete and the agreement between us will be definitive 
+                                as soon as we've received approval from the card company for your transaction with debit or credit cards. We accept Bancontact, Paypal, Visa, 
+                                MasterCard, money transfers, and cash. If the card company does not approve of your payment to us, we cannot be held responsible for delays in 
+                                shipping and/or non-delivery of your order. Orders without a valid payment in the name of the registered cardholder will not be accepted or processed</source>
+        <target>Votre commande est complète et l'accord entre nous définitif dès que nous avons confirmé votre commande par mail et dès que nous avons reçu la validation de votre transaction financière avec une carte de crédit ou de débit par l'organisme émetteur de cette carte. Nous acceptons les paiements par Visa, MasterCard, et les paiements en espèces ainsi que par carte de paiement dans un des magasins AfamiaShop. Dans le cas où l'organisme émetteur de votre carte refuse votre paiement à destination de AfamiaShop, nous ne pouvons pas être tenus responsables des retards et/ou de la non-livraison de votre commande. Les commandes sans paiement valide au nom du titulaire enregistré de la carte ne seront pas acceptées ou traitées</target>
+      </trans-unit>
+      <trans-unit id="Dt9VO4D" resname="To purchase a product, you add the product to your shopping cart. Afterwards, you provide your contact information and invoice information. Next, you &#10;                                choose your delivery method: delivery on your chosen address, send to a chosen pickup point, or pickup in one of our AfamiaShop store. During the last step, you'll &#10;                                see an overview page where you can accept our Terms and Conditions and where you can confirm the payment by clicking the order button ¿I'm going to order¿. &#10;                                Once you've completed these steps, your purchase is final">
+        <source>To purchase a product, you add the product to your shopping cart. Afterwards, you provide your contact information and invoice information. Next, you 
+                                choose your delivery method: delivery on your chosen address, send to a chosen pickup point, or pickup in one of our AfamiaShop store. During the last step, you'll 
+                                see an overview page where you can accept our Terms and Conditions and where you can confirm the payment by clicking the order button ¿I'm going to order¿. 
+                                Once you've completed these steps, your purchase is final</source>
+        <target>Pour acheter un produit, ajoutez-le à votre panier. Ensuite, remplissez le formulaire avec vos données personnelles ainsi que vos données de facturation et choisissez votre mode de livraison : livraison à l'adresse choisie, retrait au point de retrait de votre choix ou retrait dans un de nos magasins AfamiaShop. Dans la dernière étape du procédé de commande, vous verrez une page de résumé où il vous sera demandé d'accepter nos Conditions Générales et de confirmer votre paiement par l'activation du bouton « Je commande ». Si vous avez parcouru toutes ces étapes, votre achat est définitif</target>
+      </trans-unit>
+      <trans-unit id="nilFkIq" resname="During the period we mention in our offer, our prices do not change, with the exception of price changes due to changes in VAT rates">
+        <source>During the period we mention in our offer, our prices do not change, with the exception of price changes due to changes in VAT rates</source>
+        <target>Pendant la durée de validité mentionnée dans l'offre, les prix des produits et/ou services proposés ne seront pas augmentés, sauf les modifications de prix résultant d'une évolution des taux de TVA</target>
+      </trans-unit>
+      <trans-unit id="hay971." resname="Our prices include all taxes, VAT, taxes and services. You will never face surprises here. Shipping is free. If you choose time slot delivery &#10;                                we will charge shipping costs. In that case, we always let you know before you place your order">
+        <source>Our prices include all taxes, VAT, taxes and services. You will never face surprises here. Shipping is free. If you choose time slot delivery 
+                                we will charge shipping costs. In that case, we always let you know before you place your order</source>
+        <target>Nos prix incluent l'ensemble des taxes, impôts et services. Il n'y aura donc jamais de surprise pour vous. La livraison est gratuite. Cependant, si vous choisissez l'option de livraison LivréAujourd'hui® ou la livraison sur rendez-vous dans le créneau horaire de votre choix, les frais d'envoi seront à votre charge. Dans ce cas, nous vous en notifierons avant la confirmation de votre commande</target>
+      </trans-unit>
+      <trans-unit id="InNan3Y" resname="If you order from us, you'll receive a confirmation by email. Your order will be complete and the agreement between us will be definitive &#10;                                as soon as we've received approval from the card company for your transaction with debit or credit cards. We accept Visa, &#10;                                MasterCard and cash. If the card company does not approve of your payment to us, we cannot be held responsible for delays in &#10;                                shipping and/or non-delivery of your order. Orders without a valid payment in the name of the registered cardholder will not be accepted or processed">
+        <source>If you order from us, you'll receive a confirmation by email. Your order will be complete and the agreement between us will be definitive 
+                                as soon as we've received approval from the card company for your transaction with debit or credit cards. We accept Visa, 
+                                MasterCard and cash. If the card company does not approve of your payment to us, we cannot be held responsible for delays in 
+                                shipping and/or non-delivery of your order. Orders without a valid payment in the name of the registered cardholder will not be accepted or processed</source>
+        <target>Votre commande est complète et l'accord entre nous définitif dès que nous avons confirmé votre commande par mail et dès que nous avons reçu la validation de votre transaction financière avec une carte de crédit ou de débit par l'organisme émetteur de cette carte. Nous acceptons les paiements par Visa, MasterCard et les paiements en espèces ainsi que par carte de paiement dans un des magasins AfamiaShop. Dans le cas où l'organisme émetteur de votre carte refuse votre paiement à destination de AfamiaShop, nous ne pouvons pas être tenus responsables des retards et/ou de la non-livraison de votre commande. Les commandes sans paiement valide au nom du titulaire enregistré de la carte ne seront pas acceptées ou traitées</target>
+      </trans-unit>
+      <trans-unit id="iWFuFEs" resname="We can only accept payment via the payment modules on our website for online orders">
+        <source>We can only accept payment via the payment modules on our website for online orders</source>
+        <target>Pour les commandes placées en ligne, le paiement est limité aux modes de paiement proposés sur notre site internet</target>
+      </trans-unit>
+      <trans-unit id="qxMPx.h" resname="In order to guarantee secure online payments and the security of your personal data, &#10;                                the transaction data is transmitted via the internet, encrypted with SSL technology. To pay with SSL, &#10;                                you do not need special software. You can recognize a secure SSL connection by the &quot;lock&quot; in your browser's status bar">
+        <source>In order to guarantee secure online payments and the security of your personal data, 
+                                the transaction data is transmitted via the internet, encrypted with SSL technology. To pay with SSL, 
+                                you do not need special software. You can recognize a secure SSL connection by the "lock" in your browser's status bar</source>
+        <target>Afin de garantir un paiement en ligne sécurisé ainsi que la confidentialité de vos données à caractère personnel, les données de transaction seront cryptées avec une technologie SSL et envoyées sur internet. Vous n'avez pas besoin de logiciel spécial pour faire des transactions avec SSL. Vous reconnaitrez une connexion sécurisée SSL au petit cadenas dans la barre de recherche de votre navigateur</target>
+      </trans-unit>
+      <trans-unit id="8qAxkTC" resname="We guarantee that our goods are in accordance with your order and meet the normal expectations that you may have, taking into account &#10;                                the specifications of the product. We also guarantee that our goods comply with all laws existing at the time of your order.">
+        <source>We guarantee that our goods are in accordance with your order and meet the normal expectations that you may have, taking into account 
+                                the specifications of the product. We also guarantee that our goods comply with all laws existing at the time of your order.</source>
+        <target>Nous garantissons que nos produits sont conformes à votre commande et répondent aux attentes normales que vous pouvez avoir tenant compte des spécifications du produit. Évidemment, nous garantissons également que nos biens répondent à l'ensemble des lois existantes au moment de votre commande.</target>
+      </trans-unit>
+      <trans-unit id="kiHRyhr" resname="In addition, with regard to the delivery of goods, we also apply the statutory minimum warranty period of two years if the good is &#10;                                not in conformity with the order placed. This means that, in case of defects or defects to the good, this good will be repaired free of &#10;                                charge or replaced for up to 2 years after delivery.">
+        <source>In addition, with regard to the delivery of goods, we also apply the statutory minimum warranty period of two years if the good is 
+                                not in conformity with the order placed. This means that, in case of defects or defects to the good, this good will be repaired free of 
+                                charge or replaced for up to 2 years after delivery.</source>
+        <target>En outre, concernant la livraison de biens, vous jouissez du délai de garantie légale minimum de deux ans en cas de non-conformité du bien de consommation. Ceci signifie qu'en cas de défaut ou de vice du bien, vous avez le droit à la réparation ou au remplacement sans frais du bien, et ce jusque 2 ans après la livraison.</target>
+      </trans-unit>
+      <trans-unit id="UHPLWhP" resname="Sometimes AfamiaShop or its supplier offers a longer or more extensive warranty than the legal minimum warranty of 2 years; this is a &#10;                                commercial warranty. The commercial warranty does not affect the statutory minimum warranty. Whether a commercial warranty is offered differs per product. &#10;                                The characteristics of the commercial warranty are stated on the product web page and the proof of warranty. AfamiaShop is responsible for handling the commercial warranty, &#10;                                unless stated otherwise on the product's web page. Commercial warranties apply in Belgium and for the period stated on the product's web page.">
+        <source>Sometimes AfamiaShop or its supplier offers a longer or more extensive warranty than the legal minimum warranty of 2 years; this is a 
+                                commercial warranty. The commercial warranty does not affect the statutory minimum warranty. Whether a commercial warranty is offered differs per product. 
+                                The characteristics of the commercial warranty are stated on the product web page and the proof of warranty. AfamiaShop is responsible for handling the commercial warranty, 
+                                unless stated otherwise on the product's web page. Commercial warranties apply in Belgium and for the period stated on the product's web page.</source>
+        <target>Il arrive que AfamiaShop ou ses fournisseurs proposent une garantie plus longue ou plus étendue que la garantie légale minimum : c'est la garantie commerciale. La garantie commerciale ne réduit pas la garantie minimum légale. Dans le cas d'une garantie commerciale, celle-ci varie en fonction du produit. Les caractéristiques de la garantie commerciale sont mentionnées sur la page internet du produit ainsi que sur la preuve de garantie. AfamiaShop se tient responsable du traitement de la garantie commerciale, sauf indication contraire sur la page internet du produit. Les garanties commerciales sont valables en Belgique et durant le délai indiqué sur la page internet du produit.</target>
+      </trans-unit>
+      <trans-unit id="vXqCdUu" resname="All goods and services are delivered on the address you supplied in your order">
+        <source>All goods and services are delivered on the address you supplied in your order</source>
+        <target>Les livraisons de produits et services prennent place à l'adresse de livraison communiquée lors de votre commande</target>
+      </trans-unit>
+      <trans-unit id="54WscT8" resname="We will take the greatest possible care when receiving and implementing product orders, &#10;                                and when assessing applications for the provision of services">
+        <source>We will take the greatest possible care when receiving and implementing product orders, 
+                                and when assessing applications for the provision of services</source>
+        <target>Nous ferons preuve de la plus grande diligence possible lors de la réception des commandes de produits et lors de l'exécution de celles-ci et à l'occasion de l'appréciation des demandes de fourniture de services</target>
+      </trans-unit>
+      <trans-unit id="WIqchHS" resname="We will execute accepted orders expeditiously but no later than 30 days, unless another delivery period has been agreed upon. If the delivery&#10;                                is delayed, or if an order cannot or only partially be executed, we will always inform you before the expiration of the planned delivery period. If we &#10;                                do not, you can cancel your order, free of charge. In that case, we will refund you within 30 days after termination">
+        <source>We will execute accepted orders expeditiously but no later than 30 days, unless another delivery period has been agreed upon. If the delivery
+                                is delayed, or if an order cannot or only partially be executed, we will always inform you before the expiration of the planned delivery period. If we 
+                                do not, you can cancel your order, free of charge. In that case, we will refund you within 30 days after termination</source>
+        <target>Nous exécutons les commandes acceptées dans les meilleurs délais et, en toutes circonstances, dans les 30 jours, à moins qu'un autre délai de livraison n'ait été convenu. Dans le cas où la livraison subit un retard ou lorsqu'une commande ne peut être exécutée, même partiellement, nous vous en informons toujours avant la fin du délai de livraison prévu. Si nous ne vous informons pas à temps, vous avez le droit d'annuler votre commande sans frais. Dans ce cas, nous vous rembourserons dans les 30 jours suivant l'annulation</target>
+      </trans-unit>
+      <trans-unit id="bCnH6hD" resname="Our shipments are always at our risk until the time of delivery to you or a representative appointed by you. You do not have to worry about goods &#10;                                that are lost in the mail. However, if you return us goods within 30 days of purchase because you would rather not keep them, you &#10;                                are responsible for transportation.">
+        <source>Our shipments are always at our risk until the time of delivery to you or a representative appointed by you. You do not have to worry about goods 
+                                that are lost in the mail. However, if you return us goods within 30 days of purchase because you would rather not keep them, you 
+                                are responsible for transportation.</source>
+        <target>Jusqu'au moment de réception de la commande par vous ou un représentant désigné préalablement, les envois ont toujours lieu à notre risque. Vous ne devrez jamais vous soucier d'éventuelles pertes de marchandises dans la poste. Cependant, l'envoi de retour de marchandises que vous nous retournez dans les 30 jours suivant l'achat parce que vous ne souhaitez pas les conserver, a toujours lieu à votre propre risque.</target>
+      </trans-unit>
+      <trans-unit id="_CW7Po8" resname="If the goods delivered by us during the transport were damaged, do not correspond with the items stated on the delivery note, or do not correspond to the &#10;                                items you ordered, you must report this as soon as possible and return the items to us">
+        <source>If the goods delivered by us during the transport were damaged, do not correspond with the items stated on the delivery note, or do not correspond to the 
+                                items you ordered, you must report this as soon as possible and return the items to us</source>
+        <target>Si les marchandises livrées par nos soins ont été endommagées pendant le transport, ne correspondent pas aux articles figurant sur le bon de livraison ou ne correspondent pas aux articles que vous avez commandés, vous devez le signaler le plus tôt possible et nous renvoyer les articles en question</target>
+      </trans-unit>
+      <trans-unit id="wZYFUB9" resname="We can not be held responsible for any consequential damages due to late delivery or non-delivery by the carrier that the company has appointed. Our liability &#10;                                in such cases is limited to the value of the items that are shown not to have been received by the customer">
+        <source>We can not be held responsible for any consequential damages due to late delivery or non-delivery by the carrier that the company has appointed. Our liability 
+                                in such cases is limited to the value of the items that are shown not to have been received by the customer</source>
+        <target>Nous ne pouvons être tenus responsables de tout dommage indirect à la suite d'une livraison tardive ou d'une non-livraison par le transporteur désigné par l'entreprise. Dans ces cas-là, notre responsabilité se limite à la valeur des biens dont il peut être démontré qu'ils n'ont pas été reçus par le client</target>
+      </trans-unit>
+      <trans-unit id="TrMTKHM" resname="In the event of force majeure, we are not required to carry out our obligations. In the case of force majeure, we can either postpone our &#10;                                obligations for the duration of the force majeure, or terminate the agreement permanently.">
+        <source>In the event of force majeure, we are not required to carry out our obligations. In the case of force majeure, we can either postpone our 
+                                obligations for the duration of the force majeure, or terminate the agreement permanently.</source>
+        <target>En cas de force majeure, nous ne sommes pas tenus de respecter nos obligations. Dans ce cas, nous nous réservons le droit de suspendre nos obligations pour la durée de la force majeure ou d'annuler définitivement votre commande.</target>
+      </trans-unit>
+      <trans-unit id="m1sF.x2" resname="Force majeure includes any situation outside of our will and control which prevents us from fulfilling our promises to you. This includes strikes, &#10;                                fire, malfunctions, power failures, network failures in, for instance, telecommunication networks, connections, or used systems of communication, or the unavailability of our website at any time, non-timely delivery by suppliers or other third parties">
+        <source>Force majeure includes any situation outside of our will and control which prevents us from fulfilling our promises to you. This includes strikes, 
+                                fire, malfunctions, power failures, network failures in, for instance, telecommunication networks, connections, or used systems of communication, or the unavailability of our website at any time, non-timely delivery by suppliers or other third parties</source>
+        <target>On entend par force majeure toute circonstance indépendante de notre volonté et de notre contrôle qui empêche entièrement ou partiellement le respect de nos obligations à votre égard. Ces circonstances sont entre autres : les grèves, les incendies, le chômage technique, les pannes de courant, les perturbations dans un réseau (de télécommunication) ou dans la connexion ou les systèmes de communication utilisés et/ou la non disponibilité de notre site internet à un moment donné, l'absence de livraison ou la livraison tardive par nos sous-traitants ou d'autres tiers concernés</target>
+      </trans-unit>
+      <trans-unit id="mP._XCs" resname="Our website, logos, texts, photos, names, and all our communication in general are protected by intellectual property rights known to us, or to our suppliers or other beneficiaries.">
+        <source>Our website, logos, texts, photos, names, and all our communication in general are protected by intellectual property rights known to us, or to our suppliers or other beneficiaries.</source>
+        <target>Notre site web, nos logos, textes, photos, noms et en général toute notre communication, sont protégés par des droits d'auteur appartenant soit à nous, soit à nos sous-traitants ou d'autres ayants droits.</target>
+      </trans-unit>
+      <trans-unit id="xcI6_sN" resname="It is prohibited to use and/or make changes to the intellectual property rights as described in this article. For example, you may not copy or reproduce drawings, photographs, texts, logos, &#10;                                color combinations, etc ... without our prior written consent.">
+        <source>It is prohibited to use and/or make changes to the intellectual property rights as described in this article. For example, you may not copy or reproduce drawings, photographs, texts, logos, 
+                                color combinations, etc ... without our prior written consent.</source>
+        <target>Il est interdit de faire usage de et/ou d'apporter des modifications aux droits de propriété intellectuelle tels que décrits dans cet article. Par exemple, les dessins, photos, noms, textes, logos, combinaison de couleurs etc. ne peuvent en aucune manière être copiés ou reproduits sans autorisation expresse préalable et écrite de AfamiaShop.</target>
+      </trans-unit>
+      <trans-unit id="TySIoHa" resname="We hope that our customers are 100% satisfied. If you do have a complaint, please let us know as soon as possible via ay1665ay@gmail.com, phone number 0489 47 08 53, or via a letter &#10;                                addressed to: AfamiaShop Belgium , Rue des Rivageois 7 , 4000 Liège . We'll do everything we can to help you within 5 working days.">
+        <source>We hope that our customers are 100% satisfied. If you do have a complaint, please let us know as soon as possible via ay1665ay@gmail.com, phone number 0489 47 08 53, or via a letter 
+                                addressed to: AfamiaShop Belgium , Rue des Rivageois 7 , 4000 Liège . We'll do everything we can to help you within 5 working days.</source>
+        <target>Bien évidemment, nous espérons toujours que tous nos clients soient satisfaits à 100 %. Au cas où vous auriez néanmoins des plaintes sur la qualité de nos services, vous pouvez nous contacter via ay1665ay@AfamiaShop.be, par téléphone au 0489 47 08 53, ou par lettre adressée à : AfamiaShop Belgique , Rue des Rivageois 7 , 4000 Liège . Nous ferons tout notre possible pour traiter votre plainte dans les 5 jours ouvrables.</target>
+      </trans-unit>
+      <trans-unit id="i.g1.UE" resname="All agreements that we conclude with our clients, regardless of their place of residence, are governed exclusively by Belgian law, and in case of a dispute, only the competent Belgian courts &#10;                                are competent. If, for reasons of international law, another law applies, Book VI of the Belgian Economic Law Code will be referenced when interpreting the current Terms and Conditions.">
+        <source>All agreements that we conclude with our clients, regardless of their place of residence, are governed exclusively by Belgian law, and in case of a dispute, only the competent Belgian courts 
+                                are competent. If, for reasons of international law, another law applies, Book VI of the Belgian Economic Law Code will be referenced when interpreting the current Terms and Conditions.</source>
+        <target>Le droit belge est exclusivement d'application sur tous les contrats avec nos clients, quel que soit leur lieu de résidence. Tous les litiges sont soumis à la compétence exclusive des cours et tribunaux belges. Si, pour des motifs de droit international, il s'avérait malgré tout qu'un autre droit s'applique, il faudra dans un premier temps, à l'occasion de l'interprétation des conditions générales actuelles, se référer au Livre VI du Code de droit économique belge.</target>
+      </trans-unit>
+      <trans-unit id="mwKbRzO" resname="The Consumer Mediation Service of the FOD Economie is qualified to process any request to settle extrajudicial consumer disputes. They will, in turn, process the request themselves or send it to a &#10;                                qualified entity. You can reach the Consumer Mediation Service via this link: https://www.consumentenombudsdienst.be/en">
+        <source>The Consumer Mediation Service of the FOD Economie is qualified to process any request to settle extrajudicial consumer disputes. They will, in turn, process the request themselves or send it to a 
+                                qualified entity. You can reach the Consumer Mediation Service via this link: https://www.consumentenombudsdienst.be/en</source>
+        <target>En cas de règlement extrajudiciaire d'un litige, le Service de Médiation pour le Consommateur mis en place par le Gouvernement fédéral est compétent pour recevoir toute demande de règlement extrajudiciaire de litiges avec des consommateurs. Celui-ci décidera alors de traiter lui-même la requête ou de la transmettre à une entité qualifiée. Vous pouvez contacter le Service de Médiation pour le Consommateur via le lien suivant : https://www.mediationconsommateur.be/fr</target>
+      </trans-unit>
+      <trans-unit id="bhHSV2P" resname="If there is a cross-border dispute, the consumer can rely on the Online Dispute Resolution platform of the European Union via this link: https://ec.europa.eu/odr.">
+        <source>If there is a cross-border dispute, the consumer can rely on the Online Dispute Resolution platform of the European Union via this link: https://ec.europa.eu/odr.</source>
+        <target>En cas de litige ayant un caractère transfrontalier, le consommateur peut, en outre, recourir à la plateforme « Online Dispute Resolution » de l'Union européenne par le biais du lien suivant : https://ec.europa.eu/odr.</target>
+      </trans-unit>
+      <trans-unit id="1fCdLeI" resname="My Accounts">
+        <source>My Accounts</source>
+        <target>Mon Compte</target>
+      </trans-unit>
+      <trans-unit id="jELmgmO" resname="_ Bank account number: BE00000000000000&lt;">
+        <source>_ Bank account number: BE00000000000000&lt;</source>
+        <target><![CDATA[___ Bank account number: BE00000000000000<]]></target>
+      </trans-unit>
+      <trans-unit id="vTabhGY" resname="Monday - Friday : 8:00 - 20:00">
+        <source>Monday - Friday : 8:00 - 20:00</source>
+        <target>Lundi - Vendredi : 8:00 - 20:00</target>
+      </trans-unit>
+      <trans-unit id="gQ7QnVg" resname="Thank you for your order!">
+        <source>Thank you for your order!</source>
+        <target>Nous vous remercions de votre commande!</target>
+      </trans-unit>
+      <trans-unit id="2tjw7P9" resname="To the site AfamiaShop">
+        <source>To the site AfamiaShop</source>
+        <target>Vers le site AfamiaShop</target>
+      </trans-unit>
+      <trans-unit id="lsUYcqi" resname="name, description or keyword">
+        <source>name, description or keyword</source>
+        <target>nom, description ou mot-clé</target>
+      </trans-unit>
+      <trans-unit id="ocp4Tde" resname="A question, a remark, a suggestion?&#10;                        We will be happy to respond to you as soon as possible.">
+        <source>A question, a remark, a suggestion?
+                        We will be happy to respond to you as soon as possible.</source>
+        <target>Une question, une remarque, une suggestion ?
+                        Nous nous ferons un plaisir de vous répondre dans les plus brefs délais.</target>
+      </trans-unit>
+      <trans-unit id="cC75Ie0" resname="First name">
+        <source>First name</source>
+        <target>Prénom</target>
+      </trans-unit>
+      <trans-unit id="e0iIBJR" resname="Last name">
+        <source>Last name</source>
+        <target>Nom</target>
+      </trans-unit>
+      <trans-unit id="pYVm6_E" resname="Advanced search ...">
+        <source>Advanced search ...</source>
+        <target>Recherche Avancée ...</target>
+      </trans-unit>
+      <trans-unit id="MCMR89C" resname="Your message has been sent, An advisor will answer uoy very quickly">
+        <source>Your message has been sent, An advisor will answer uoy very quickly</source>
+        <target>Votre message a été envoyé, un conseiller vous répondra très rapidement</target>
+      </trans-unit>
+      <trans-unit id="tcOzPaO" resname="Product categories">
+        <source>Product categories</source>
+        <target>Nos Catégories</target>
+      </trans-unit>
+      <trans-unit id="_zZkNoK" resname="On this page you will find all the products related to">
+        <source>On this page you will find all the products related to</source>
+        <target>Sur cette page vous trouverez tous les produits liés à</target>
+      </trans-unit>
+      <trans-unit id="Slpsf_C" resname="For best results click on the shop page. You will also find all AfamiaShop products. &#10;                            Browse the overview and find the right product or filter the products you are looking for.">
+        <source>For best results click on the shop page. You will also find all AfamiaShop products. 
+                            Browse the overview and find the right product or filter the products you are looking for.</source>
+        <target>Pour de meilleurs résultats, cliquez sur la page de la boutique. Vous trouverez également tous les produits AfamiaShop.
+                            Parcourez l'aperçu et trouvez le bon produit ou filtrez les produits que vous recherchez.</target>
+      </trans-unit>
+      <trans-unit id="ku9kZKw" resname="For best results click on the shop page. You will also find all AfamiaShop products. &#10;                                Browse the overview and find the right product or filter the products you are looking for.">
+        <source>For best results click on the shop page. You will also find all AfamiaShop products. 
+                                Browse the overview and find the right product or filter the products you are looking for.</source>
+        <target>Pour de meilleurs résultats, cliquez sur la page de la boutique. Vous trouverez également tous les produits AfamiaShop.
+                                Parcourez l'aperçu et trouvez le bon produit ou filtrez les produits que vous recherchez.</target>
+      </trans-unit>
+      <trans-unit id="rg0lEO3" resname="New Categories">
+        <source>New Categories</source>
+        <target>Nouvelles Catégories</target>
+      </trans-unit>
+      <trans-unit id="7.I6EIv" resname="Secure Payment">
+        <source>Secure Payment</source>
+        <target>Paiement Sécurisé</target>
+      </trans-unit>
+      <trans-unit id="eQidPU4" resname="Come and discover our new products">
+        <source>Come and discover our new products</source>
+        <target>Venez découvrir nos nouveaux produits</target>
+      </trans-unit>
+      <trans-unit id="_31qUHK" resname="It's time to discover our new categories">
+        <source>It's time to discover our new categories</source>
+        <target>C'est le moment de découvrir nos nouvelles catégories</target>
+      </trans-unit>
+      <trans-unit id="CSIaHYf" resname="Enjoy your purchase with secure payment">
+        <source>Enjoy your purchase with secure payment</source>
+        <target>Profitez de votre achat avec paiement sécurisé</target>
+      </trans-unit>
+      <trans-unit id="NTigtph" resname=", the">
+        <source>, the</source>
+        <target>, le </target>
+      </trans-unit>
+      <trans-unit id="SuWVIjA" resname="products found">
+        <source>products found</source>
+        <target>Produits trouvés</target>
+      </trans-unit>
+      <trans-unit id="FmrKLWr" resname="Fast delivery">
+        <source>Fast delivery</source>
+        <target>Livraison rapide</target>
+      </trans-unit>
+      <trans-unit id="mPaidIQ" resname="newsletter unsubscription confirmation">
+        <source>newsletter unsubscription confirmation</source>
+        <target>__newsletter unsubscription confirmation</target>
+      </trans-unit>
+      <trans-unit id="rPH_vIR" resname="newsletter Unsubscription Confirmed">
+        <source>newsletter Unsubscription Confirmed</source>
+        <target>Confirmation de désinscription à la newsletter</target>
+      </trans-unit>
+      <trans-unit id="f4VDUCx" resname="You are unsubscribed from the newsletters.">
+        <source>You are unsubscribed from the newsletters.</source>
+        <target>Vous êtes désabonné des newsletters.</target>
+      </trans-unit>
+      <trans-unit id="k3kMWRd" resname="To subscribe for a level, please click on this link">
+        <source>To subscribe for a level, please click on this link</source>
+        <target>Pour vous réinscrire, veuillez cliquer sur ce lien</target>
+      </trans-unit>
+      <trans-unit id="y8afUy0" resname="Novelty alert">
+        <source>Novelty alert</source>
+        <target>Alerte nouveauté </target>
+      </trans-unit>
+      <trans-unit id="v8.Lknu" resname="Dear subscribers, The wait is over!">
+        <source>Dear subscribers, The wait is over!</source>
+        <target>Chers abonnés,l'attente est terminée !</target>
+      </trans-unit>
+      <trans-unit id="6N9E73r" resname="Our newsletters">
+        <source>Our newsletters</source>
+        <target>Nos newsletters</target>
+      </trans-unit>
+      <trans-unit id="j1IepG1" resname="Be among the first to get your hands on our latest finds! Our new products are here, ready to enhance your daily life. Be quick, Don't wait to add them to your cart before it's too late! . We are waiting for you on our website">
+        <source>Be among the first to get your hands on our latest finds! Our new products are here, ready to enhance your daily life. Be quick, Don't wait to add them to your cart before it's too late! . We are waiting for you on our website</source>
+        <target>Soyez parmi les premiers à mettre la main sur nos dernières trouvailles ! Nos nouveaux produits sont là, prêts à embellir votre quotidien. Faites-vite,
+          Ne tardez pas à les ajouter à votre panier avant qu'il ne soit trop tard ! .
+          Nous vous attendons sur notre site </target>
+      </trans-unit>
+      <trans-unit id="7r3SSnf" resname="Confirm">
+        <source>Confirm</source>
+        <target>Confirmer</target>
+      </trans-unit>
+      <trans-unit id="PpLvt2Z" resname="Unsubscribe">
+        <source>Unsubscribe</source>
+        <target>Se désabonner</target>
+      </trans-unit>
+      <trans-unit id="4QFd5pG" resname="Any question ? Click here to contact us">
+        <source>Any question ? Click here to contact us</source>
+        <target>Des questions ? Cliquez ici pour nous contacter</target>
+      </trans-unit>
+      <trans-unit id="c1AHV_s" resname="To unsubscribe, click on this link">
+        <source>To unsubscribe, click on this link</source>
+        <target>Pour vous désinscrire, cliquez sur ce lien</target>
+      </trans-unit>
+      <trans-unit id="rKqdE8F" resname="The team of">
+        <source>The team of</source>
+        <target>L'équipe de </target>
+      </trans-unit>
+      <trans-unit id="GAo.XL8" resname="I Shop">
+        <source>I Shop</source>
+        <target>J'achete</target>
+      </trans-unit>
+      <trans-unit id="5p_tC05" resname="New things are upon us! In three days, you will be able to explore new horizons on our site. Be ready to discover the best we have concocted for you!">
+        <source>New things are upon us! In three days, you will be able to explore new horizons on our site. Be ready to discover the best we have concocted for you!</source>
+        <target>La nouveauté est à nos portes ! Dans trois jours, vous pourrez explorer de nouveaux horizons sur notre site. Soyez prêts à découvrir ce que nous avons concocté de mieux pour vous !</target>
+      </trans-unit>
+      <trans-unit id="T.tt9j6" resname="Broaden your horizons! We are pleased to announce the arrival of new categories on our site, to better meet all your needs and desires. Take the first step towards discovery by exploring our site now!">
+        <source>Broaden your horizons! We are pleased to announce the arrival of new categories on our site, to better meet all your needs and desires. Take the first step towards discovery by exploring our site now!</source>
+        <target>Élargir vos horizons! Nous sommes heureux de vous annoncer l'arrivée de nouvelles catégories sur notre site, pour mieux répondre à tous vos besoins et envies. Faites le premier pas vers la découverte en explorant notre site dès maintenant !</target>
+      </trans-unit>
+      <trans-unit id="l3h.TDi" resname="Event Announcements">
+        <source>Event Announcements</source>
+        <target>Annonces d'événements</target>
+      </trans-unit>
+      <trans-unit id="bVBbwUk" resname="AfamiaShop">
+        <source>AfamiaShop</source>
+        <target>AfamiaShop</target>
+      </trans-unit>
+      <trans-unit id="EK72.Og" resname="You haven't created a newsletter yet!">
+        <source>You haven't created a newsletter yet!</source>
+        <target>Vous n'avez pas encore créé de newsletter !</target>
+      </trans-unit>
+      <trans-unit id="Gd2D8Rd" resname="Yellow">
+        <source>Yellow</source>
+        <target>Jaune</target>
+      </trans-unit>
+      <trans-unit id="NJXnV4V" resname="White">
+        <source>White</source>
+        <target>Blanc</target>
+      </trans-unit>
+      <trans-unit id="spDvb0z" resname="White Silver">
+        <source>White Silver</source>
+        <target>Argent Blanc</target>
+      </trans-unit>
+      <trans-unit id="F7CXxzl" resname="White Black">
+        <source>White Black</source>
+        <target>Blanc Noir</target>
+      </trans-unit>
+      <trans-unit id="xs.m5PE" resname="Black">
+        <source>Black</source>
+        <target>Noir</target>
+      </trans-unit>
+      <trans-unit id="oLQ98G9" resname="Silver">
+        <source>Silver</source>
+        <target>Argent</target>
+      </trans-unit>
+      <trans-unit id="XWiDp_b" resname="Gender :">
+        <source>Gender :</source>
+        <target>Genre :</target>
+      </trans-unit>
+      <trans-unit id="IP4b0gH" resname="Man">
+        <source>Man</source>
+        <target>Homme</target>
+      </trans-unit>
+      <trans-unit id="gcUR6.h" resname="Women">
+        <source>Women</source>
+        <target>Femme</target>
+      </trans-unit>
+      <trans-unit id="_uzaZHD" resname="Double Row White Steel Bracelet Black Agate Beads 21.5cm-2">
+        <source>Double Row White Steel Bracelet Black Agate Beads 21.5cm-2</source>
+        <target>Bracelet Double Rang Acier Blanc Perles Agate Noire 21.5cm-2</target>
+      </trans-unit>
+      <trans-unit id="ySBOaDZ" resname="Please select one of these options.">
+        <source>Please select one of these options.</source>
+        <target>Veuillez sélectionner l'une de ces options.</target>
+      </trans-unit>
+      <trans-unit id="YXZ26gK" resname="Please enter a password">
+        <source>Please enter a password</source>
+        <target>Veuillez entrer un mot de passe</target>
+      </trans-unit>
+      <trans-unit id="5T_q8fP" resname="Your password should be at least">
+        <source>Your password should be at least</source>
+        <target>Votre mot de passe doit comporter au moins</target>
+      </trans-unit>
+      <trans-unit id="ewvDs25" resname="Temporarily out of stock">
+        <source>Temporarily out of stock</source>
+        <target>Temporairement en rupture de stock</target>
+      </trans-unit>
+      <trans-unit id="Vux9uT6" resname="SubTotal Htva">
+        <source>SubTotal Htva</source>
+        <target>SousTotal Htva</target>
+      </trans-unit>
+      <trans-unit id="34AUOlA" resname="Tva">
+        <source>Tva</source>
+        <target>Tva</target>
+      </trans-unit>
+      <trans-unit id="I3y0Udq" resname="Cart Subtotal Htva">
+        <source>Cart Subtotal Htva</source>
+        <target>Sous-total du panier Htva</target>
+      </trans-unit>
+      <trans-unit id="rl9SopG" resname="TVA">
+        <source>TVA</source>
+        <target>TVA</target>
+      </trans-unit>
+      <trans-unit id="lgMO4RW" resname="Your AfamiaShop Cart is empty">
+        <source>Your AfamiaShop Cart is empty</source>
+        <target>Votre panier AfamiaShop est vide</target>
+      </trans-unit>
+      <trans-unit id="AuDryR4" resname="Press the button and discover our products">
+        <source>Press the button and discover our products</source>
+        <target>Appuyez sur le bouton et découvrez nos produits</target>
+      </trans-unit>
+      <trans-unit id="kr3O7lK" resname="Discover our products">
+        <source>Discover our products</source>
+        <target>Découvrez nos produits</target>
+      </trans-unit>
+      <trans-unit id="XIdr002" resname="Fancy Yellow Gold Earrings">
+        <source>Fancy Yellow Gold Earrings</source>
+        <target>Boucles d'Oreilles Or Jaune</target>
+      </trans-unit>
+      <trans-unit id="KzDSbwZ" resname="Head Tassel Steel Bracelet">
+        <source>Head Tassel Steel Bracelet</source>
+        <target>Bracelet en acier à pompon tête</target>
+      </trans-unit>
+      <trans-unit id="5XuuJWd" resname="White Steel yellow Bracelet">
+        <source>White Steel yellow Bracelet</source>
+        <target>Bracelet Jaune Acier Blanc</target>
+      </trans-unit>
+      <trans-unit id="NXNmb5b" resname="Yellow Gold Feather Charm">
+        <source>Yellow Gold Feather Charm</source>
+        <target>Charm plume en or jaune</target>
+      </trans-unit>
+      <trans-unit id="CQrwo1B" resname="Topaz Yellow Half Hoop Earrings">
+        <source>Topaz Yellow Half Hoop Earrings</source>
+        <target>Boucles d'oreilles d-créoles jaune</target>
+      </trans-unit>
+      <trans-unit id="nLNp511" resname="Silver White Earrings Hexagonal">
+        <source>Silver White Earrings Hexagonal</source>
+        <target>Boucles d'Oreilles Argent Blanc</target>
+      </trans-unit>
+      <trans-unit id="xWHugzx" resname="Engraved Pastille Silver Bracelet">
+        <source>Engraved Pastille Silver Bracelet</source>
+        <target>Bracelet Argent Pastille Gravée</target>
+      </trans-unit>
+      <trans-unit id="4KgZQv8" resname="Yellow Emerald Solitaire Bracelet">
+        <source>Yellow Emerald Solitaire Bracelet</source>
+        <target>Bracelet Solitaire Émeraude Jaune</target>
+      </trans-unit>
+      <trans-unit id="qYLxMXT" resname="Jourdan Men's Bracelet Steel">
+        <source>Jourdan Men's Bracelet Steel</source>
+        <target>Bracelet Homme Jourdan Acier</target>
+      </trans-unit>
+      <trans-unit id="2lxuJ4T" resname="White Round Medal Thinking">
+        <source>White Round Medal Thinking</source>
+        <target>Pensée Médaille Ronde Blanche</target>
+      </trans-unit>
+      <trans-unit id="S3sIm3z" resname="Yellow Medal Virgin Pattern">
+        <source>Yellow Medal Virgin Pattern</source>
+        <target>Motif Vierge Médaille Jaune</target>
+      </trans-unit>
+      <trans-unit id="F7IZPzf" resname="Silver White Medal Pendant">
+        <source>Silver White Medal Pendant</source>
+        <target>Pendentif Médaille Blanc Argent</target>
+      </trans-unit>
+      <trans-unit id="m5enk_O" resname="White Silver Necklace">
+        <source>White Silver Necklace</source>
+        <target>Collier en argent blanc</target>
+      </trans-unit>
+      <trans-unit id="dMRfYHq" resname="Yellow Solitaire Necklace">
+        <source>Yellow Solitaire Necklace</source>
+        <target>Collier Solitaire Jaune</target>
+      </trans-unit>
+      <trans-unit id="tOfxJTD" resname="Yellow Necklace Oxides Shape">
+        <source>Yellow Necklace Oxides Shape</source>
+        <target>Collier Jaune Forme Oxydes</target>
+      </trans-unit>
+      <trans-unit id="BNTsJAF" resname="White And Oxide Necklace">
+        <source>White And Oxide Necklace</source>
+        <target>Collier Blanc Et Oxyde</target>
+      </trans-unit>
+      <trans-unit id="gEhYtwL" resname="Black Fancy Mesh Necklace">
+        <source>Black Fancy Mesh Necklace</source>
+        <target>Collier Maille Fantaisie Noir</target>
+      </trans-unit>
+      <trans-unit id="7igcTli" resname="Yellow Charm Letter E">
+        <source>Yellow Charm Letter E</source>
+        <target>Lettre de charme jaune E</target>
+      </trans-unit>
+      <trans-unit id="Xu_r4kz" resname="Silver White Heart Earrings">
+        <source>Silver White Heart Earrings</source>
+        <target>Boucles d'oreilles coeur blanc argenté</target>
+      </trans-unit>
+      <trans-unit id="9ig.uFC" resname="Yellow Gold Stud Earrings">
+        <source>Yellow Gold Stud Earrings</source>
+        <target>Boucles d'oreilles clous en or jaune</target>
+      </trans-unit>
+      <trans-unit id="GQESgA5" resname="Yellow Plated Bracelet Oval">
+        <source>Yellow Plated Bracelet Oval</source>
+        <target>Bracelet Plaqué Jaune Ovale</target>
+      </trans-unit>
+      <trans-unit id="g.1iL9R" resname="Plated Articulated Mesh Bracelet">
+        <source>Plated Articulated Mesh Bracelet</source>
+        <target>Bracelet en maille articulée plaquée</target>
+      </trans-unit>
+      <trans-unit id="7daajpg" resname="Yellow Clothilde Amethyst Necklace">
+        <source>Yellow Clothilde Amethyst Necklace</source>
+        <target>Collier d'améthyste Clothilde jaune</target>
+      </trans-unit>
+      <trans-unit id="cLlxtZV" resname="White Chiseled Plate Necklace">
+        <source>White Chiseled Plate Necklace</source>
+        <target>Collier plaque ciselée blanche</target>
+      </trans-unit>
+      <trans-unit id="bAmN3dy" resname="Silver white Drop Earrings">
+        <source>Silver white Drop Earrings</source>
+        <target>Boucles d'oreilles pendantes blanc argenté</target>
+      </trans-unit>
+      <trans-unit id="UrHe13." resname="Black Earrings Infinite Shapes">
+        <source>Black Earrings Infinite Shapes</source>
+        <target>Boucles D'oreilles Noires Formes Infinies</target>
+      </trans-unit>
+      <trans-unit id="eyxA6Od" resname="Yellow Oxide Bar Earrings">
+        <source>Yellow Oxide Bar Earrings</source>
+        <target>Boucles d'oreilles barre en oxyde jaune</target>
+      </trans-unit>
+      <trans-unit id="fS8y14K" resname="Yellow Oriental Pearl Earrings">
+        <source>Yellow Oriental Pearl Earrings</source>
+        <target>Boucles d'oreilles perles orientales jaunes</target>
+      </trans-unit>
+      <trans-unit id="39UzEGQ" resname="Silver White Dangling Earrings">
+        <source>Silver White Dangling Earrings</source>
+        <target>Boucles d'oreilles blanches argentées</target>
+      </trans-unit>
+      <trans-unit id="dXWirhh" resname="Silver White Hoop Earrings">
+        <source>Silver White Hoop Earrings</source>
+        <target>Boucles d'oreilles blanches argentées</target>
+      </trans-unit>
+      <trans-unit id="496Itp7" resname="Silver White Cross Bracelet">
+        <source>Silver White Cross Bracelet</source>
+        <target>Bracelet Croix Blanche Argent</target>
+      </trans-unit>
+      <trans-unit id="o4mKm3m" resname="Silver White Openwork Bracelet">
+        <source>Silver White Openwork Bracelet</source>
+        <target>Bracelet Argent Blanc Ajouré</target>
+      </trans-unit>
+      <trans-unit id="wGLXsUr" resname="Faceted Black Ceramic Bracelet">
+        <source>Faceted Black Ceramic Bracelet</source>
+        <target>Bracelet Céramique Noire Facetté</target>
+      </trans-unit>
+      <trans-unit id="5wiv_sp" resname="Black Faceted Ceramic Bangle">
+        <source>Black Faceted Ceramic Bangle</source>
+        <target>Bracelet Jonc Céramique Facetté Noir</target>
+      </trans-unit>
+      <trans-unit id="d0fkFki" resname="White Bracelet Openwork Waves">
+        <source>White Bracelet Openwork Waves</source>
+        <target>Bracelet Blanc Vagues Ajourées</target>
+      </trans-unit>
+      <trans-unit id="kHQYLYf" resname="White Entourage Bracelet">
+        <source>White Entourage Bracelet</source>
+        <target>Bracelet Entourage Blanc</target>
+      </trans-unit>
+      <trans-unit id="cP_SkvP" resname="Yellow Hollow Circle bracelet">
+        <source>Yellow Hollow Circle bracelet</source>
+        <target>Bracelet Cercle Creux Jaune</target>
+      </trans-unit>
+      <trans-unit id="dFT3Mgj" resname="Yellow Bracelet Flexible Bangle">
+        <source>Yellow Bracelet Flexible Bangle</source>
+        <target>Bracelet Flexible Jaune B</target>
+      </trans-unit>
+      <trans-unit id="CeFxOz0" resname="White Steel ball Bracelet">
+        <source>White Steel ball Bracelet</source>
+        <target>Bracelet boule en acier blanc</target>
+      </trans-unit>
+      <trans-unit id="vMUFpck" resname="Elastic White Steel Bracelet">
+        <source>Elastic White Steel Bracelet</source>
+        <target>Bracelet élastique en acier blanc</target>
+      </trans-unit>
+      <trans-unit id="2PFfMmU" resname="Double Yellow Plated Bracelet">
+        <source>Double Yellow Plated Bracelet</source>
+        <target>Bracelet Double Plaqué Jaune</target>
+      </trans-unit>
+      <trans-unit id="s8PJoO4" resname="Black Steel Bracelet">
+        <source>Black Steel Bracelet</source>
+        <target>Bracelet Double en acier noir</target>
+      </trans-unit>
+      <trans-unit id="IFM7kKQ" resname="White Tree Charm">
+        <source>White Tree Charm</source>
+        <target>Charme d'arbre blanc</target>
+      </trans-unit>
+      <trans-unit id="WD4oLok" resname="White Engravable Heart Charm">
+        <source>White Engravable Heart Charm</source>
+        <target>Charm coeur blanc à graver</target>
+      </trans-unit>
+      <trans-unit id="LLIyJ6w" resname="Yellow Dream Catcher Charm">
+        <source>Yellow Dream Catcher Charm</source>
+        <target>Charme Attrape-rêves Jaune</target>
+      </trans-unit>
+      <trans-unit id="NdZyR5H" resname="Yellow Cubic Key Charm">
+        <source>Yellow Cubic Key Charm</source>
+        <target>Charm clé cubique jaune</target>
+      </trans-unit>
+      <trans-unit id="jXk82Gt" resname="Yellow Letter L Charm">
+        <source>Yellow Letter L Charm</source>
+        <target>Charm Lettre L Jaune</target>
+      </trans-unit>
+      <trans-unit id="4Ftiq56" resname="Engravable Yellow Pastille Charm">
+        <source>Engravable Yellow Pastille Charm</source>
+        <target>Charm Pastille Jaune Gravable</target>
+      </trans-unit>
+      <trans-unit id=".Um2hcY" resname="Yellow Oval Enamel Medal">
+        <source>Yellow Oval Enamel Medal</source>
+        <target>Médaille ovale jaune en émail</target>
+      </trans-unit>
+      <trans-unit id="G2tai.N" resname="Yellow Openwork Dove Medal">
+        <source>Yellow Openwork Dove Medal</source>
+        <target>Médaille Colombe Jaune Ajourée</target>
+      </trans-unit>
+      <trans-unit id="9jGobwf" resname="White Silver Pendant Medal">
+        <source>White Silver Pendant Medal</source>
+        <target>Médaille Pendentif Argent Blanc</target>
+      </trans-unit>
+      <trans-unit id="d4ZDV8H" resname="Black Steel Necklace Stones">
+        <source>Black Steel Necklace Stones</source>
+        <target>Collier Acier Noir Pierres</target>
+      </trans-unit>
+      <trans-unit id="p7D2RHX" resname="Silver White Ball Necklace">
+        <source>Silver White Ball Necklace</source>
+        <target>Collier boule blanche argentée</target>
+      </trans-unit>
+      <trans-unit id="GVsjNO4" resname="White Necklace Forçat Blue">
+        <source>White Necklace Forçat Blue</source>
+        <target>Collier Blanc Forçat Bleu</target>
+      </trans-unit>
+      <trans-unit id="VAvgw0t" resname="White Solitaire Mesh Necklace">
+        <source>White Solitaire Mesh Necklace</source>
+        <target>Collier en maille solitaire blanc</target>
+      </trans-unit>
+      <trans-unit id="9ZGemcF" resname="Yellow Plated Diamond Necklace">
+        <source>Yellow Plated Diamond Necklace</source>
+        <target>Collier Diamant Plaqué Jaune</target>
+      </trans-unit>
+      <trans-unit id="xYxXvdg" resname="Yellow Pearl Necklace 2strands">
+        <source>Yellow Pearl Necklace 2strands</source>
+        <target>Collier de perles jaunes 2 brins</target>
+      </trans-unit>
+      <trans-unit id="8jzpxH3" resname="Convict Yellow Diam Necklace">
+        <source>Convict Yellow Diam Necklace</source>
+        <target>Collier Diam Jaune Forçat</target>
+      </trans-unit>
+      <trans-unit id="bR_SqoI" resname="White Silver Navy Anchor Necklace">
+        <source>White Silver Navy Anchor Necklace</source>
+        <target>Collier d'ancre marine en argent blanc</target>
+      </trans-unit>
+      <trans-unit id="crip3Ox" resname="Yellow Engraved Plaque Necklace">
+        <source>Yellow Engraved Plaque Necklace</source>
+        <target>Collier plaque gravée jaune</target>
+      </trans-unit>
+      <trans-unit id="hu.N9iA" resname="Yellow Christ Child Medal">
+        <source>Yellow Christ Child Medal</source>
+        <target>Médaille Enfant Christ Jaune</target>
+      </trans-unit>
+      <trans-unit id="i78nZQd" resname="Yellow Round Medal Pendant">
+        <source>Yellow Round Medal Pendant</source>
+        <target>Pendentif Médaille Ronde Jaune</target>
+      </trans-unit>
+      <trans-unit id="vXc5IaF" resname="Saint Christopher Yellow Medal">
+        <source>Saint Christopher Yellow Medal</source>
+        <target>Médaille Jaune Saint Christophe</target>
+      </trans-unit>
+      <trans-unit id="eVTHrxv" resname="Silver White Heart Earrings for women">
+        <source>Silver White Heart Earrings for women</source>
+        <target>Boucles d'oreilles coeur blanc argenté pour femme</target>
+      </trans-unit>
+      <trans-unit id="90yMW81" resname="Silver White">
+        <source>Silver White</source>
+        <target> Argent Blanc</target>
+      </trans-unit>
+      <trans-unit id="A3HKyol" resname="Silver White Heart Earrings for women of 2 pieces right and left of very good quality">
+        <source>Silver White Heart Earrings for women of 2 pieces right and left of very good quality</source>
+        <target>Boucles d'oreilles coeur blanc argenté pour femme de 2 pièces droite et gauche de très bonne qualité</target>
+      </trans-unit>
+      <trans-unit id="EJFZ3fY" resname="Yellow Gold Fancy Drop Earrings-1 for women">
+        <source>Yellow Gold Fancy Drop Earrings-1 for women</source>
+        <target>Boucles d'oreilles pendantes fantaisie en or jaune-1 pour femme</target>
+      </trans-unit>
+      <trans-unit id="O3MSCWL" resname="Fancy Yellow Gold Dangling Earrings-1 for women of very good quality and in two pieces right and left">
+        <source>Fancy Yellow Gold Dangling Earrings-1 for women of very good quality and in two pieces right and left</source>
+        <target>Boucles d'oreilles pendantes fantaisie Or jaune-1 pour femme de très bonne qualité et en deux pièces droite et gauche</target>
+      </trans-unit>
+      <trans-unit id="05wsB3_" resname="Yellow Gold Stud Earrings Leaf Shapes Paving for women">
+        <source>Yellow Gold Stud Earrings Leaf Shapes Paving for women</source>
+        <target>Boucles d'oreilles clous en or jaune formes de feuilles pavage pour femme</target>
+      </trans-unit>
+      <trans-unit id="HYSPH24" resname="Yellow Gold Stud Earrings Leaf Shapes Paving Cubic Zirconia-1 for women of 2 pieces right and left and very good quality">
+        <source>Yellow Gold Stud Earrings Leaf Shapes Paving Cubic Zirconia-1 for women of 2 pieces right and left and very good quality</source>
+        <target>Boucles d'oreilles clous or jaune formes feuilles pavage zircone cubique-1 pour femme de 2 pièces droite et gauche et de très bonne qualité</target>
+      </trans-unit>
+      <trans-unit id="VGA0zz7" resname="Silver Bracelet Multi Tassels Pastilles for women">
+        <source>Silver Bracelet Multi Tassels Pastilles for women</source>
+        <target>Bracelet Argent Multi Pompons Pastilles pour femme</target>
+      </trans-unit>
+      <trans-unit id="sartHXj" resname="Silver Multi Pampilles Pastilles Bracelet for women in one piece which contains several rounded pieces">
+        <source>Silver Multi Pampilles Pastilles Bracelet for women in one piece which contains several rounded pieces</source>
+        <target>Bracelet Argent Multi Pampilles Pastilles pour femme en une seule pièce qui contient plusieurs pièces arrondies</target>
+      </trans-unit>
+      <trans-unit id="AXTBleL" resname="Head Tassel Steel Bracelet for women">
+        <source>Head Tassel Steel Bracelet for women</source>
+        <target>Bracelet en acier à pompon tête pour femme</target>
+      </trans-unit>
+      <trans-unit id="0fIMVil" resname="Bracelet gold Steel Mickey Head Tassel Paving Crystals And Zirconium Oxides Forçat Mesh 16cm for women in one piece">
+        <source>Bracelet gold Steel Mickey Head Tassel Paving Crystals And Zirconium Oxides Forçat Mesh 16cm for women in one piece</source>
+        <target>Bracelet Acier doré Tête de Mickey Pompon Pavage Cristaux Et Oxydes de Zirconium Maille Forçat 16cm pour femme en une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="rgPRqVk" resname="White Steel Cuff Bracelet for women">
+        <source>White Steel Cuff Bracelet for women</source>
+        <target>Bracelet manchette en acier blanc pour femme</target>
+      </trans-unit>
+      <trans-unit id="1pJE2WI" resname="White Steel Cuff Bracelet Diameter 66mm for women of beautiful and normal model in one piece">
+        <source>White Steel Cuff Bracelet Diameter 66mm for women of beautiful and normal model in one piece</source>
+        <target>Bracelet manchette en acier blanc diamètre 66 mm pour femme de modèle beau et normal en une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="HCPgiOL" resname="Double Row White Steel Bracelet Black Agate Beads for men">
+        <source>Double Row White Steel Bracelet Black Agate Beads for men</source>
+        <target>Bracelet Double Rang Acier Blanc Perles Agate Noire pour homme</target>
+      </trans-unit>
+      <trans-unit id="Mgg9.77" resname="Double Row White Steel Bracelet Black Agate Beads 21.5cm-2 for men">
+        <source>Double Row White Steel Bracelet Black Agate Beads 21.5cm-2 for men</source>
+        <target>Bracelet Double Rang Acier Blanc Perles Agate Noire 21.5cm pour homme</target>
+      </trans-unit>
+      <trans-unit id="Nc3Cf0Y" resname="Plated Articulated Mesh Bracelet for men">
+        <source>Plated Articulated Mesh Bracelet for men</source>
+        <target>Bracelet Maille Articulé Plaqué pour homme</target>
+      </trans-unit>
+      <trans-unit id="5bIPkhh" resname="Plated Articulated Mesh Bracelet 20.5cm-1 for men in one piece">
+        <source>Plated Articulated Mesh Bracelet 20.5cm-1 for men in one piece</source>
+        <target>Bracelet Maille Articulé Plaqué 20,5cm-1 pour homme en une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="bOjylza" resname="Yellow Gold Feather Charm for women in one piece">
+        <source>Yellow Gold Feather Charm for women in one piece</source>
+        <target>Charm plume en or jaune pour femme en une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="5f_..NS" resname="Yellow Gold Feather Charm of very good quality and in one piece for women">
+        <source>Yellow Gold Feather Charm of very good quality and in one piece for women</source>
+        <target>Charm Plume en Or Jaune de très belle qualité et en une seule pièce pour femme</target>
+      </trans-unit>
+      <trans-unit id="XArtYOa" resname="Yellow Clothilde Amethyst Heart Shape And Cubic Zirconia Necklace for a woman">
+        <source>Yellow Clothilde Amethyst Heart Shape And Cubic Zirconia Necklace for a woman</source>
+        <target>Collier Forme Coeur Améthyste Clothilde Jaune Et Zircon Cubique pour femme</target>
+      </trans-unit>
+      <trans-unit id="L0ZJUTF" resname="Yellow Clothilde Amethyst Heart Shape And Cubic Zirconia Necklace 42cm for a woman of very good quality and in one piece">
+        <source>Yellow Clothilde Amethyst Heart Shape And Cubic Zirconia Necklace 42cm for a woman of very good quality and in one piece</source>
+        <target>Collier Forme Coeur Améthyste Clothilde Jaune Et Zircon Cubique 42cm pour femme de très bonne qualité et en une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="W9ghHth" resname="White Steel normal Bracelet">
+        <source>White Steel normal Bracelet</source>
+        <target>Bracelet normal en acier blanc</target>
+      </trans-unit>
+      <trans-unit id="11JrWkS" resname="White Steel normal Bracelet for women">
+        <source>White Steel normal Bracelet for women</source>
+        <target>Bracelet normal en acier blanc pour femme</target>
+      </trans-unit>
+      <trans-unit id="FWSs6fG" resname="White Steel normal Bracelet Diameter for women of beautiful and normal model in one piece">
+        <source>White Steel normal Bracelet Diameter for women of beautiful and normal model in one piece</source>
+        <target>Bracelet en Acier Blanc Diamètre normal pour femme de modèle beau et normal en une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="7mr6QMo" resname="White Steel Cuff Bracelet of very good quality for women of one piece">
+        <source>White Steel Cuff Bracelet of very good quality for women of one piece</source>
+        <target>Bracelet manchette en acier blanc de très bonne qualité pour femme d'une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="o_exw0E" resname="White Steel Cuff Bracelet of one piece">
+        <source>White Steel Cuff Bracelet of one piece</source>
+        <target>Bracelet manchette en acier blanc d'une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="QWZpuLd" resname="White Steel Necklace Chiseled Venetian Mesh Plate for women">
+        <source>White Steel Necklace Chiseled Venetian Mesh Plate for women</source>
+        <target>Collier en acier blanc plaque maille vénitienne ciselée pour femme</target>
+      </trans-unit>
+      <trans-unit id="fSpJGGc" resname="White Steel Necklace Chiseled Venetian Mesh Plate for women of very good quality and in one piece">
+        <source>White Steel Necklace Chiseled Venetian Mesh Plate for women of very good quality and in one piece</source>
+        <target>Collier en Acier Blanc Plaque Maille Vénitienne Ciselée pour femme de très bonne qualité et en une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="5AYjGnS" resname="Silver white Twisted Drop Earrings for women">
+        <source>Silver white Twisted Drop Earrings for women</source>
+        <target>Boucles d'oreilles pendantes torsadées en argent blanc pour femme</target>
+      </trans-unit>
+      <trans-unit id="yR03GZy" resname="Silver white Earrings Twisted Drop Shapes Interlaced Paving Cubic Zirconia-1 for women of 2 pieces right and left and very good quality">
+        <source>Silver white Earrings Twisted Drop Shapes Interlaced Paving Cubic Zirconia-1 for women of 2 pieces right and left and very good quality</source>
+        <target>Boucles d'oreilles Argent Blanc Formes Gouttes Torsadées Pavage Entrelacé Zircone Cubique-1 pour femme de 2 pièces droite et gauche et de très bonne qualité</target>
+      </trans-unit>
+      <trans-unit id="T1ZjoT0" resname="Black Infinite Shapes Earrings for women">
+        <source>Black Infinite Shapes Earrings for women</source>
+        <target>Boucles d'oreilles Formes Infinies noires pour femme</target>
+      </trans-unit>
+      <trans-unit id="XIMrGBB" resname="Black Earrings Infinite Shapes Black Ceramic-1 for women of 2 pieces right and left and very good quality">
+        <source>Black Earrings Infinite Shapes Black Ceramic-1 for women of 2 pieces right and left and very good quality</source>
+        <target>Boucles d'oreilles noires Formes Infinies Céramique Noire-1 pour femme de 2 pièces droite et gauche et de très bonne qualité</target>
+      </trans-unit>
+      <trans-unit id="m7eWhdr" resname="Topaz Yellow Sky Blue 4 Half Hoop Earrings for women">
+        <source>Topaz Yellow Sky Blue 4 Half Hoop Earrings for women</source>
+        <target>Boucles d'oreilles 4 demi-créoles topaze jaune ciel bleu pour femme</target>
+      </trans-unit>
+      <trans-unit id="0sc6HrX" resname="Half Hoop Earrings Yellow Topaz Sky Blue 4 Claws-1 for women of 2 pieces right and left and very good quality">
+        <source>Half Hoop Earrings Yellow Topaz Sky Blue 4 Claws-1 for women of 2 pieces right and left and very good quality</source>
+        <target>Boucles d'Oreilles Demi Créoles Topaze Jaune Bleu Ciel 4 Griffes-1 pour femme de 2 pièces droite et gauche et de très bonne qualité</target>
+      </trans-unit>
+      <trans-unit id="iUkj5W_" resname="Silver White Earrings Hexagonal Patterns Semi Paving Oxides for women">
+        <source>Silver White Earrings Hexagonal Patterns Semi Paving Oxides for women</source>
+        <target>Boucles d'oreilles argent blanc motifs hexagonaux oxydes semi pavage pour femme</target>
+      </trans-unit>
+      <trans-unit id="wzRlYN4" resname="Silver White Earrings Hexagonal Patterns Semi Paving Black Cubic Zirconia-1 for women of 2 pieces right and left and very good quality">
+        <source>Silver White Earrings Hexagonal Patterns Semi Paving Black Cubic Zirconia-1 for women of 2 pieces right and left and very good quality</source>
+        <target>Boucles d'oreilles Argent Blanc Motifs Hexagonaux Semi Pavage Zircone Cubique Noir-1 pour femme de 2 pièces droite et gauche et de très bonne qualité</target>
+      </trans-unit>
+      <trans-unit id=".xHnW_K" resname="Yellow Gold Cubic Zirconia-1 Bar Earrings for women">
+        <source>Yellow Gold Cubic Zirconia-1 Bar Earrings for women</source>
+        <target>Boucles d'oreilles barre en or jaune avec zircons cubiques-1 pour femme</target>
+      </trans-unit>
+      <trans-unit id="76yDzx9" resname="Yellow Gold Earrings Bars Cubic Zirconia-1 for women of very good quality and contains 2 right and left pieces">
+        <source>Yellow Gold Earrings Bars Cubic Zirconia-1 for women of very good quality and contains 2 right and left pieces</source>
+        <target>Boucles d'oreilles Barres Or Jaune Zircone Cubique-1 pour femme de très bonne qualité et contient 2 pièces droite et gauche</target>
+      </trans-unit>
+      <trans-unit id="edE2BwT" resname="Oriental Yellow Earrings with Cultured Pearls and Oxides for women">
+        <source>Oriental Yellow Earrings with Cultured Pearls and Oxides for women</source>
+        <target>Boucles d'oreilles orientales jaunes avec perles de culture et oxydes pour femme</target>
+      </trans-unit>
+      <trans-unit id="zGv3Ztq" resname="Oriental Yellow Earrings Cultured Pearls And Cubic Zirconia-1 for women in 2 right and left pieces and very good quality">
+        <source>Oriental Yellow Earrings Cultured Pearls And Cubic Zirconia-1 for women in 2 right and left pieces and very good quality</source>
+        <target>Boucles d'oreilles orientales jaunes perles de culture et zircone cubique-1 pour femme en 2 pièces droite et gauche et de très bonne qualité</target>
+      </trans-unit>
+      <trans-unit id="bvZXa0h" resname="Silver White Openwork Hearts White Mother-of-Pearl Dangling Earrings for women">
+        <source>Silver White Openwork Hearts White Mother-of-Pearl Dangling Earrings for women</source>
+        <target>Boucles d'oreilles pendantes pendantes argent blanc coeurs ajourés nacre blanche pour femme</target>
+      </trans-unit>
+      <trans-unit id="VFA.UfG" resname="Silver White Openwork Hearts White Mother-of-Pearl Dangling Earrings-1 for women of very good quality and 2 pieces right and left">
+        <source>Silver White Openwork Hearts White Mother-of-Pearl Dangling Earrings-1 for women of very good quality and 2 pieces right and left</source>
+        <target>Boucles d'oreilles pendantes argent blanc coeurs ajourés nacre blanche-1 pour femme de très bonne qualité et 2 pièces droite et gauche</target>
+      </trans-unit>
+      <trans-unit id="3Bz98Be" resname="Silver White Double Wire Hoop Earrings for women">
+        <source>Silver White Double Wire Hoop Earrings for women</source>
+        <target>Boucles d'oreilles créoles double fil blanc argenté pour femme</target>
+      </trans-unit>
+      <trans-unit id="TeEPnb8" resname="Silver White Double Wire Hoop Earrings 1 Smooth 1 Diamond Width 1.5mm Diameter 40mm-1 for women of very good quality and 2 pieces">
+        <source>Silver White Double Wire Hoop Earrings 1 Smooth 1 Diamond Width 1.5mm Diameter 40mm-1 for women of very good quality and 2 pieces</source>
+        <target>Boucles d'oreilles Créoles Double Fil Argent Blanc 1 Lisse 1 Diamant Largeur 1,5mm Diamètre 40mm-1 pour femme de très bonne qualité et 2 pièces</target>
+      </trans-unit>
+      <trans-unit id="i9iZN1T" resname="Silver White Cross Bracelet with White Cultured Pearls and Oxides for women">
+        <source>Silver White Cross Bracelet with White Cultured Pearls and Oxides for women</source>
+        <target>Bracelet Croix Blanche en Argent avec Perles de Culture Blanches et Oxydes pour femme</target>
+      </trans-unit>
+      <trans-unit id="QpUyMqj" resname="Silver White Cross Bracelet White Cultured Pearls And Zirconium Oxides Maille Forçat for women in one piece">
+        <source>Silver White Cross Bracelet White Cultured Pearls And Zirconium Oxides Maille Forçat for women in one piece</source>
+        <target>Bracelet Croix Blanche Argent Perles de Culture Blanches Et Oxydes de Zirconium Maille Forçat pour femme en une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="vaeB_QA" resname="Silver White Openwork Flower Mesh Bracelet for women">
+        <source>Silver White Openwork Flower Mesh Bracelet for women</source>
+        <target>Bracelet maille fleur ajourée argent blanc pour femme</target>
+      </trans-unit>
+      <trans-unit id="wJw9xux" resname="Silver White Openwork Flower Bracelet Forcat Mesh 19cm - for women in one piece">
+        <source>Silver White Openwork Flower Bracelet Forcat Mesh 19cm - for women in one piece</source>
+        <target>Bracelet Fleur Ajourée Argent Blanc Maille Forcat 19cm - pour femme en une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="lDbazcS" resname="Silver Bracelet Engraved Pastille Mon Amour Pampille Glitter Silver Forçat Mesh for women">
+        <source>Silver Bracelet Engraved Pastille Mon Amour Pampille Glitter Silver Forçat Mesh for women</source>
+        <target>Bracelet Argent Gravé Pastille Mon Amour Pampille Glitter Argent Forçat Maille pour femme</target>
+      </trans-unit>
+      <trans-unit id="6oLXWCw" resname="Silver Bracelet Engraved Pastille Mon Amour Pampille Glitter Silver Forçat Mesh 45cm-1 for women in one piece">
+        <source>Silver Bracelet Engraved Pastille Mon Amour Pampille Glitter Silver Forçat Mesh 45cm-1 for women in one piece</source>
+        <target>Bracelet Argent Gravé Pastille Mon Amour Pampille Glitter Argent Forçat Maille 45cm-1 pour femme en une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="0Nl5Ekm" resname="Faceted Black Ceramic Bracelet for women">
+        <source>Faceted Black Ceramic Bracelet for women</source>
+        <target>Bracelet facetté en céramique noire pour femme</target>
+      </trans-unit>
+      <trans-unit id="gMdmr03" resname="Faceted Black Ceramic Bracelet 5mm-1 for women in one complete piece">
+        <source>Faceted Black Ceramic Bracelet 5mm-1 for women in one complete piece</source>
+        <target>Bracelet à facettes en céramique noire 5mm-1 pour femme en une seule pièce complète</target>
+      </trans-unit>
+      <trans-unit id="Npt_zR." resname="Black Faceted Ceramic Bangle Eleastic Bracelet for Women">
+        <source>Black Faceted Ceramic Bangle Eleastic Bracelet for Women</source>
+        <target>Bracelet élastique en céramique à facettes noires pour femmes</target>
+      </trans-unit>
+      <trans-unit id="1O7IjhI" resname="Eleastic bracelet Black Faceted Ceramic Bangle Row White Stones for women in one piece">
+        <source>Eleastic bracelet Black Faceted Ceramic Bangle Row White Stones for women in one piece</source>
+        <target>Bracelet élastique en céramique à facettes noires, rangée de pierres blanches pour femme en une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="7iKJ48u" resname="Yellow Hollow Circle Pave Cubic Zirconia Bracelet for women">
+        <source>Yellow Hollow Circle Pave Cubic Zirconia Bracelet for women</source>
+        <target>Bracelet en zircone cubique pavé de cercles creux jaunes pour femmes</target>
+      </trans-unit>
+      <trans-unit id="tkb0r9I" resname="Yellow Hollow Circle Pave Cubic Zirconia Bracelet 18cm-1 for women in one piece">
+        <source>Yellow Hollow Circle Pave Cubic Zirconia Bracelet 18cm-1 for women in one piece</source>
+        <target>Bracelet en zircone cubique pavé de cercles creux jaunes 18cm-1 pour femme en une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="TYGfXhT" resname="Yellow Bracelet Flexible Bangle With Smooth for women">
+        <source>Yellow Bracelet Flexible Bangle With Smooth for women</source>
+        <target>Bracelet jaune flexible avec lisse pour femme</target>
+      </trans-unit>
+      <trans-unit id="QGxq5Ri" resname="Yellow Bracelet Flexible Bangle With Smooth for women in one piece of very good quality">
+        <source>Yellow Bracelet Flexible Bangle With Smooth for women in one piece of very good quality</source>
+        <target>Bracelet Jaune Jonc Souple Avec Lisse pour femme en une seule pièce de très bonne qualité</target>
+      </trans-unit>
+      <trans-unit id="3OZdTUR" resname="Yellow Emerald Solitaire Bracelet Set for women">
+        <source>Yellow Emerald Solitaire Bracelet Set for women</source>
+        <target>Ensemble de bracelets solitaire émeraude jaune pour femme</target>
+      </trans-unit>
+      <trans-unit id="sq0w_pi" resname="Yellow Emerald Solitaire Bracelet Set with Claws Mesh 18cm-1 for women in one piece">
+        <source>Yellow Emerald Solitaire Bracelet Set with Claws Mesh 18cm-1 for women in one piece</source>
+        <target>Bracelet Solitaire Émeraude Jaune Serti de Griffes Maille 18cm-1 pour femme en une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="Af3JAmi" resname="White Steel Bracelet for men">
+        <source>White Steel Bracelet for men</source>
+        <target>Bracelet en acier blanc pour homme</target>
+      </trans-unit>
+      <trans-unit id="wbSOY4C" resname="White Steel Bracelet Balls 5.9mm 22cm-1 for men in one piece">
+        <source>White Steel Bracelet Balls 5.9mm 22cm-1 for men in one piece</source>
+        <target>Bracelet Boules en Acier Blanc 5.9mm 22cm-1 pour homme en une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="Gnqrl9b" resname="Elastic White Steel Bracelet Smooth Black And Red Balls for men">
+        <source>Elastic White Steel Bracelet Smooth Black And Red Balls for men</source>
+        <target>Bracelet Élastique Acier Blanc Boules Lisses Noires Et Rouges pour homme</target>
+      </trans-unit>
+      <trans-unit id="YdUjxi4" resname="Elastic White Steel Bracelet Smooth Black And Red Balls Rudder Pattern-1 for men in one piece">
+        <source>Elastic White Steel Bracelet Smooth Black And Red Balls Rudder Pattern-1 for men in one piece</source>
+        <target>Bracelet élastique en acier blanc, boules lisses noires et rouges, motif de gouvernail-1 pour homme en une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="zma9amH" resname="Jourdan Men's Bracelet Steel Forcat Chains + Black Rubber for men">
+        <source>Jourdan Men's Bracelet Steel Forcat Chains + Black Rubber for men</source>
+        <target>Bracelet Homme Jourdan Acier Chaînes Forcat + Caoutchouc Noir pour homme</target>
+      </trans-unit>
+      <trans-unit id="rTmjkVr" resname="Jourdan Men's Bracelet Steel Forcat Chains + Black Rubber Wire 21cm for men in one piece">
+        <source>Jourdan Men's Bracelet Steel Forcat Chains + Black Rubber Wire 21cm for men in one piece</source>
+        <target>Jourdan Bracelet Homme Acier Chaînes Forcat + Fil Caoutchouc Noir 21cm pour homme en une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="5Vfmw8H" resname="Yellow Plated Double Circles Alternating Mesh Bracelet for men">
+        <source>Yellow Plated Double Circles Alternating Mesh Bracelet for men</source>
+        <target>Bracelet maille alternée double cercles plaqué jaune pour homme</target>
+      </trans-unit>
+      <trans-unit id="ZOAXQgb" resname="Yellow Plated Double Circles Alternating Mesh Bracelet 21cm-1 for men in one piece">
+        <source>Yellow Plated Double Circles Alternating Mesh Bracelet 21cm-1 for men in one piece</source>
+        <target>Bracelet Maille Alternée Double Cercles Plaqué Jaune 21cm-1 pour homme en une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="djuClAc" resname="Black Steel Bracelet for men">
+        <source>Black Steel Bracelet for men</source>
+        <target>Bracelet en acier noir pour homme</target>
+      </trans-unit>
+      <trans-unit id=".rwvTP8" resname="Black Steel Bracelet for men in one piece">
+        <source>Black Steel Bracelet for men in one piece</source>
+        <target>Bracelet en acier noir pour homme en une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="cTRaGGb" resname="White Tree of Life Charm for women">
+        <source>White Tree of Life Charm for women</source>
+        <target>Charm arbre de vie blanc pour femme</target>
+      </trans-unit>
+      <trans-unit id="Dnd58hy" resname="White Tree of Life Charm for women in one piece">
+        <source>White Tree of Life Charm for women in one piece</source>
+        <target>Charm Arbre de Vie Blanc pour femme en une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="sxakYZt" resname="White Engravable Heart Charm for women">
+        <source>White Engravable Heart Charm for women</source>
+        <target>Charm coeur blanc à graver pour femme</target>
+      </trans-unit>
+      <trans-unit id="YPKX89k" resname="White Engravable Heart Charm for women in one piece">
+        <source>White Engravable Heart Charm for women in one piece</source>
+        <target>Charm coeur à graver blanc pour femme en une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="mc.7OZE" resname="Yellow Dream Catcher Charm for women">
+        <source>Yellow Dream Catcher Charm for women</source>
+        <target>Charm attrape-rêves jaune pour femme</target>
+      </trans-unit>
+      <trans-unit id="vNjU46T" resname="Yellow Dream Catcher Charm for women in one piece">
+        <source>Yellow Dream Catcher Charm for women in one piece</source>
+        <target>Charm attrape-rêves jaune pour femme en une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="c3q3MO_" resname="Yellow Cubic Zirconia Key Charm for women">
+        <source>Yellow Cubic Zirconia Key Charm for women</source>
+        <target>Charm clé en zircone cubique jaune pour femme</target>
+      </trans-unit>
+      <trans-unit id="V1qRwmf" resname="Yellow Cubic Zirconia Key Charm for women in one piece">
+        <source>Yellow Cubic Zirconia Key Charm for women in one piece</source>
+        <target>Charm clé en zircone cubique jaune pour femme en une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="FS8K1AZ" resname="Yellow Letter L Charm for women">
+        <source>Yellow Letter L Charm for women</source>
+        <target>Charm lettre L jaune pour femme</target>
+      </trans-unit>
+      <trans-unit id="bPnK2f_" resname="Yellow Letter L Charm for women in one piece">
+        <source>Yellow Letter L Charm for women in one piece</source>
+        <target>Charm lettre L jaune pour femme en une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="f.hG1kd" resname="Engravable Yellow Pastille Charm for women">
+        <source>Engravable Yellow Pastille Charm for women</source>
+        <target>Charm Pastille Jaune à Graver pour femme</target>
+      </trans-unit>
+      <trans-unit id="wcu85tw" resname="Engravable Yellow Pastille Charm for women in one piece">
+        <source>Engravable Yellow Pastille Charm for women in one piece</source>
+        <target>Charm Pastille jaune à graver pour femme d'une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="p7oYK_H" resname="White Round Medal Thinking Angel Pattern for women">
+        <source>White Round Medal Thinking Angel Pattern for women</source>
+        <target>Médaille ronde blanche motif Ange Pensant pour femme</target>
+      </trans-unit>
+      <trans-unit id="JyEaIX8" resname="White Round Medal Thinking Angel Pattern in one-piece for women">
+        <source>White Round Medal Thinking Angel Pattern in one-piece for women</source>
+        <target>Médaille ronde blanche Motif Ange Pensé en une seule pièce pour femme</target>
+      </trans-unit>
+      <trans-unit id="yIVzgVr" resname="Yellow Oval Enamel Medal Virgin and Child Pattern for one-piece women">
+        <source>Yellow Oval Enamel Medal Virgin and Child Pattern for one-piece women</source>
+        <target>Médaille ovale jaune en émail motif Vierge à l'Enfant pour femme une pièce</target>
+      </trans-unit>
+      <trans-unit id="sJDRQEK" resname="Yellow Oval Enamel Medal Virgin and Child for women">
+        <source>Yellow Oval Enamel Medal Virgin and Child for women</source>
+        <target>Médaille ovale émail jaune Vierge à l'Enfant pour femme</target>
+      </trans-unit>
+      <trans-unit id="BrybfPA" resname="Yellow Medal Virgin Mary Pattern Openwork Paving Cubic Zirconia for women of one piece">
+        <source>Yellow Medal Virgin Mary Pattern Openwork Paving Cubic Zirconia for women of one piece</source>
+        <target>Médaille Jaune Motif Vierge Marie Pavage Ajouré Zircone Cubique pour femme d'une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="zrfx1er" resname="Silver White Pendant Round Medal Lion Pattern for men">
+        <source>Silver White Pendant Round Medal Lion Pattern for men</source>
+        <target>Pendentif Médaille Ronde Argent Blanc Motif Lion pour homme</target>
+      </trans-unit>
+      <trans-unit id="Bq3Vgyt" resname="Silver White Pendant Round Medal Lion Pattern for men in one piece">
+        <source>Silver White Pendant Round Medal Lion Pattern for men in one piece</source>
+        <target>Pendentif Médaille Ronde Argent Blanc Motif Lion pour homme en une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="43eASqt" resname="White Silver Pendant Round Medal Aries Pattern for men">
+        <source>White Silver Pendant Round Medal Aries Pattern for men</source>
+        <target>Pendentif Argent Blanc Médaille Ronde Motif Bélier pour homme</target>
+      </trans-unit>
+      <trans-unit id="M9L3iSj" resname="White Silver Pendant Round Medal Aries Pattern for men in one piece">
+        <source>White Silver Pendant Round Medal Aries Pattern for men in one piece</source>
+        <target>Pendentif Argent Blanc Médaille Ronde Motif Bélier pour homme en une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="HI__K1M" resname="Silver White Pendant Round Medal Sagittarius Pattern for women in one piece">
+        <source>Silver White Pendant Round Medal Sagittarius Pattern for women in one piece</source>
+        <target>Pendentif Médaille Ronde Argent Blanc Motif Sagittaire pour femme en une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="CBlP1rx" resname="Black Steel Necklace Ornamental Stones Spinel And Onyx for women">
+        <source>Black Steel Necklace Ornamental Stones Spinel And Onyx for women</source>
+        <target>Collier Acier Noir Pierres Ornementales Spinelle Et Onyx pour femme</target>
+      </trans-unit>
+      <trans-unit id="6OWS5Y4" resname="Black Steel Necklace Ornamental Stones Spinel And Onyx 45cm for women in one piece">
+        <source>Black Steel Necklace Ornamental Stones Spinel And Onyx 45cm for women in one piece</source>
+        <target>Collier Acier Noir Pierres Ornementales Spinelle Et Onyx 45cm pour femme en une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="bW8WJIt" resname="Silver White Ball Necklace for women">
+        <source>Silver White Ball Necklace for women</source>
+        <target>Collier boule blanche argentée pour femme</target>
+      </trans-unit>
+      <trans-unit id="WUkPOyF" resname="Silver White Ball Necklace Diamond Effect Forçat Mesh 45cm for women in one piece">
+        <source>Silver White Ball Necklace Diamond Effect Forçat Mesh 45cm for women in one piece</source>
+        <target>Collier Boule Argent Blanc Effet Diamant Maille Forçat 45cm pour femme en une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="MKx_LnR" resname="White Necklace Forçat Blue Topaz Pear Prong for women">
+        <source>White Necklace Forçat Blue Topaz Pear Prong for women</source>
+        <target>Collier blanc Forçat topaze bleue griffe poire pour femme</target>
+      </trans-unit>
+      <trans-unit id="A2XtC8K" resname="White Necklace Forçat Blue Topaz Pear Prong Setting 45cm in one piece for women">
+        <source>White Necklace Forçat Blue Topaz Pear Prong Setting 45cm in one piece for women</source>
+        <target>Collier Blanc Forçat Topaze Bleue Serti Poire 45cm en une seule pièce pour femme</target>
+      </trans-unit>
+      <trans-unit id="CNwDG4V" resname="White Solitaire Mesh Forcat Diamond Necklace">
+        <source>White Solitaire Mesh Forcat Diamond Necklace</source>
+        <target>Collier diamant forcat maille solitaire blanc</target>
+      </trans-unit>
+      <trans-unit id="6nm4DtA" resname="White Solitaire Mesh Forcat Diamond Necklace 45cm in one piece for women">
+        <source>White Solitaire Mesh Forcat Diamond Necklace 45cm in one piece for women</source>
+        <target>Collier Diamant Forcat Maille Solitaire Blanc 45cm en une seule pièce pour femme</target>
+      </trans-unit>
+      <trans-unit id="F12HLwW" resname="Yellow Solitaire Synthetic Diamond Necklace for women">
+        <source>Yellow Solitaire Synthetic Diamond Necklace for women</source>
+        <target>Collier diamant synthétique solitaire jaune pour femme</target>
+      </trans-unit>
+      <trans-unit id="XIEQwK." resname="Yellow Solitaire Synthetic Diamond Necklace 45cm for women in one piece and very good quality">
+        <source>Yellow Solitaire Synthetic Diamond Necklace 45cm for women in one piece and very good quality</source>
+        <target>Collier Diamant Synthétique Solitaire Jaune 45cm pour femme en une seule pièce et de très bonne qualité</target>
+      </trans-unit>
+      <trans-unit id="fPnyubE" resname="Yellow V Shape Zirconium Oxide Necklace for women">
+        <source>Yellow V Shape Zirconium Oxide Necklace for women</source>
+        <target>Collier en oxyde de zirconium jaune en forme de V pour femme</target>
+      </trans-unit>
+      <trans-unit id="VmusEZv" resname="Yellow V Shape Zirconium Oxide Necklace 42cm for women, very good quality and one piece">
+        <source>Yellow V Shape Zirconium Oxide Necklace 42cm for women, very good quality and one piece</source>
+        <target>Collier Oxyde de Zirconium Forme V Jaune 42cm pour femme, de très bonne qualité et monobloc</target>
+      </trans-unit>
+      <trans-unit id="NnVZVqz" resname="Yellow Plated Necklace for a woman">
+        <source>Yellow Plated Necklace for a woman</source>
+        <target>Collier plaqué jaune pour femme</target>
+      </trans-unit>
+      <trans-unit id="RHiWCw7" resname="Yellow Plated Necklace with Striated Diamonds and Black Spinels for a woman of very good quality and in one piece">
+        <source>Yellow Plated Necklace with Striated Diamonds and Black Spinels for a woman of very good quality and in one piece</source>
+        <target>Collier Plaqué Jaune avec Diamants Striés et Spinelles Noirs pour femme de très belle qualité et en une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="8q3RR4a" resname="Yellow Cultured Pearl Necklace for women">
+        <source>Yellow Cultured Pearl Necklace for women</source>
+        <target>Collier de perles de culture jaunes pour femme</target>
+      </trans-unit>
+      <trans-unit id="lSjpYz2" resname="Yellow Cultured Pearl Necklace 2 Strands for women of very good quality and in one piece">
+        <source>Yellow Cultured Pearl Necklace 2 Strands for women of very good quality and in one piece</source>
+        <target>Collier de Perles de Culture Jaunes 2 Rangs pour femme de très bonne qualité et en une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="FInPB1h" resname="Yellow Forçat Diamond Chain 0.85mm for men">
+        <source>Yellow Forçat Diamond Chain 0.85mm for men</source>
+        <target>Chaîne Diamant Forçat Jaune 0.85mm pour homme</target>
+      </trans-unit>
+      <trans-unit id="M4x0i16" resname="Yellow Forçat Diamond Chain 0.85mm for men of very good quality and in one piece">
+        <source>Yellow Forçat Diamond Chain 0.85mm for men of very good quality and in one piece</source>
+        <target>Chaîne Diamant Forçat Jaune 0,85mm pour homme de très bonne qualité et en une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="Pt_CWRJ" resname="White And Oxide Maille Forçat Necklace for men">
+        <source>White And Oxide Maille Forçat Necklace for men</source>
+        <target>Collier Maille Forçat Blanc Et Oxyde pour homme</target>
+      </trans-unit>
+      <trans-unit id="YEeHNBf" resname="White And Oxide Maille Forçat Necklace 55cm for men of very good quality and in one piece">
+        <source>White And Oxide Maille Forçat Necklace 55cm for men of very good quality and in one piece</source>
+        <target>Collier Maille Forçat Blanc Et Oxyde 55cm pour homme de très bonne qualité et en une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="Xq67hkT" resname="Jourdan Men's Necklace Black Steel Fancy Mesh for men">
+        <source>Jourdan Men's Necklace Black Steel Fancy Mesh for men</source>
+        <target>Collier Jourdan Homme Acier Noir Maille Fantaisie pour homme</target>
+      </trans-unit>
+      <trans-unit id="XYrADui" resname="Jourdan Men's Necklace Black Steel Fancy Sodalite Blue Mesh 60cm for men of very good quality and in one piece">
+        <source>Jourdan Men's Necklace Black Steel Fancy Sodalite Blue Mesh 60cm for men of very good quality and in one piece</source>
+        <target>Collier Homme Jourdan Acier Noir Fantaisie Sodalite Maille Bleue 60cm pour homme de très bonne qualité et en une seule pièce</target>
+      </trans-unit>
+      <trans-unit id=".PG1_cn" resname="Yellow Plated Necklace Engraved Plate for men">
+        <source>Yellow Plated Necklace Engraved Plate for men</source>
+        <target>Collier Plaqué Jaune Plaque Gravée pour homme</target>
+      </trans-unit>
+      <trans-unit id="P1deoXR" resname="Yellow Plated Necklace Engraved Plate Astrological Sign Taurus Forcat Mesh for men of very good quality and in one piece">
+        <source>Yellow Plated Necklace Engraved Plate Astrological Sign Taurus Forcat Mesh for men of very good quality and in one piece</source>
+        <target>Collier Plaqué Jaune Plaque Gravée Signe Astrologique Taureau Forcat Maille pour homme de très bonne qualité et en une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="TJNXT0P" resname="White Silver Necklace Bar Multichains Zirconia Oxides Closed Setting Forçat Mesh for women">
+        <source>White Silver Necklace Bar Multichains Zirconia Oxides Closed Setting Forçat Mesh for women</source>
+        <target>Collier Argent Blanc Barre Multichaînes Oxydes de Zircone Serti Fermé Maille Forçat pour femme</target>
+      </trans-unit>
+      <trans-unit id="n4a0goc" resname="White Silver Necklace Bar Multichains Zirconia Oxides Closed Setting Forçat Mesh 44cm for women in one piece">
+        <source>White Silver Necklace Bar Multichains Zirconia Oxides Closed Setting Forçat Mesh 44cm for women in one piece</source>
+        <target>Collier Argent Blanc Barre Multichaines Oxydes de Zircone Serti Fermé Maille Forçat 44cm pour femme en une seule pièce</target>
+      </trans-unit>
+      <trans-unit id="UZ.dn.3" resname="Lettre de charme jaune E">
+        <source>Lettre de charme jaune E</source>
+        <target>Lettre de charme jaune E</target>
+      </trans-unit>
+      <trans-unit id="ToLxUBw" resname="Yellow Charm Letter E for women">
+        <source>Yellow Charm Letter E for women</source>
+        <target>Charm jaune lettre E pour femme</target>
+      </trans-unit>
+      <trans-unit id="JCM1NDa" resname="Yellow Charm Letter E for women in one piece of good quality">
+        <source>Yellow Charm Letter E for women in one piece of good quality</source>
+        <target>Charm jaune lettre E pour femme en une seule pièce de bonne qualité</target>
+      </trans-unit>
+      <trans-unit id="Adzji7U" resname="Saint Christopher Yellow Medal for men">
+        <source>Saint Christopher Yellow Medal for men</source>
+        <target>Médaille Jaune Saint Christophe pour homme</target>
+      </trans-unit>
+      <trans-unit id="XAKT.xZ" resname="Yellow Saint Christopher Medal of very good quality and in one piece for men">
+        <source>Yellow Saint Christopher Medal of very good quality and in one piece for men</source>
+        <target>Médaille Saint Christophe Jaune de très belle qualité et en une seule pièce pour homme</target>
+      </trans-unit>
+      <trans-unit id="5fOnG7Z" resname="Yellow Round Lion Medal Pendant for Men">
+        <source>Yellow Round Lion Medal Pendant for Men</source>
+        <target>Pendentif Médaille Lion Rond Jaune pour Homme</target>
+      </trans-unit>
+      <trans-unit id=".xC3w6n" resname="Yellow Round Medal Pendant Lion Pattern with a beautiful model in one piece for men">
+        <source>Yellow Round Medal Pendant Lion Pattern with a beautiful model in one piece for men</source>
+        <target>Pendentif Médaille Ronde Jaune Motif Lion avec un beau modèle en une seule pièce pour homme</target>
+      </trans-unit>
+      <trans-unit id="Y8V09rH" resname="Yellow Plaque Identity Bracelet">
+        <source>Yellow Plaque Identity Bracelet</source>
+        <target>Bracelet d'Identité Plaque Jaune</target>
+      </trans-unit>
+      <trans-unit id="qamLjd5" resname="Yellow Plate Identity Bracelet Alternate for men">
+        <source>Yellow Plate Identity Bracelet Alternate for men</source>
+        <target>Bracelet Identité Plaque Jaune Alternatif pour homme</target>
+      </trans-unit>
+      <trans-unit id="Yvnfixv" resname="Yellow Plate Identity Bracelet Alternate Mesh 20cm for men of very good quality">
+        <source>Yellow Plate Identity Bracelet Alternate Mesh 20cm for men of very good quality</source>
+        <target>Bracelet Identité Plaque Jaune Maille Alternée 20cm pour homme de très bonne qualité</target>
+      </trans-unit>
+      <trans-unit id="zYc3nBN" resname="White Snake Bangle Bracelet">
+        <source>White Snake Bangle Bracelet</source>
+        <target>Bracelet jonc serpent blanc</target>
+      </trans-unit>
+      <trans-unit id="cloBXc8" resname="White Snake Bangle Bracelet for women">
+        <source>White Snake Bangle Bracelet for women</source>
+        <target>Bracelet jonc serpent blanc pour femme</target>
+      </trans-unit>
+      <trans-unit id="A5h6hAU" resname="White Snake Bangle Bracelet Width 7mm for women of very good quality and new model">
+        <source>White Snake Bangle Bracelet Width 7mm for women of very good quality and new model</source>
+        <target>Bracelet Jonc Serpent Blanc Largeur 7mm pour femme de très bonne qualité et nouveau modèle</target>
+      </trans-unit>
+      <trans-unit id="cMe9GVU" resname="White Openwork Waves Trilogy Bracelet">
+        <source>White Openwork Waves Trilogy Bracelet</source>
+        <target>Bracelet Trilogie Vagues Ajourées Blanc</target>
+      </trans-unit>
+      <trans-unit id="RlmEfjt" resname="White Openwork Waves Trilogy for women">
+        <source>White Openwork Waves Trilogy for women</source>
+        <target>Bracelet Trilogie Vagues Ajourées Blanches pour femme</target>
+      </trans-unit>
+      <trans-unit id="WAPrDt." resname="White Openwork Waves Trilogy Diamond Bracelet 18.5cm for women of very good quality in one piece and beautiful design">
+        <source>White Openwork Waves Trilogy Diamond Bracelet 18.5cm for women of very good quality in one piece and beautiful design</source>
+        <target>Bracelet Diamant Trilogie Vagues Ajourées Blanches 18,5cm pour femme de très bonne qualité en une seule pièce et beau design</target>
+      </trans-unit>
+      <trans-unit id="Nk57DPV" resname="Yellow Gold Bracelet Infinite Pattern">
+        <source>Yellow Gold Bracelet Infinite Pattern</source>
+        <target>Bracelet Or Jaune Motif Infini</target>
+      </trans-unit>
+      <trans-unit id="iWl2kE1" resname="Yellow Gold Bracelet Infinite Pattern Forçat Mesh for women">
+        <source>Yellow Gold Bracelet Infinite Pattern Forçat Mesh for women</source>
+        <target>Bracelet Or jaune Motif Infini Maille Forçat pour femme</target>
+      </trans-unit>
+      <trans-unit id="xxhPxWr" resname="Yellow Gold Bracelet Infinite Pattern Forçat Mesh 18cm in one piece for women and very good quality">
+        <source>Yellow Gold Bracelet Infinite Pattern Forçat Mesh 18cm in one piece for women and very good quality</source>
+        <target>Bracelet Or Jaune Motif Infini Maille Forçat 18cm en une seule pièce pour femme et de très bonne qualité</target>
+      </trans-unit>
+      <trans-unit id="BTAfUQt" resname="Yellow Oval Miraculous Virgin medal">
+        <source>Yellow Oval Miraculous Virgin medal</source>
+        <target>Médaille Vierge Ovale Jaune</target>
+      </trans-unit>
+      <trans-unit id="nq9uQ3R" resname="Yellow Oval Miraculous Virgin Contours Effect Medal for women">
+        <source>Yellow Oval Miraculous Virgin Contours Effect Medal for women</source>
+        <target>Médaille Ovale Jaune Effet Contours Vierge Miraculeuse pour femme</target>
+      </trans-unit>
+      <trans-unit id="WNa5.Q0" resname="Yellow Oval Miraculous Virgin Contours Effect Medal for women in one piece and of good quality">
+        <source>Yellow Oval Miraculous Virgin Contours Effect Medal for women in one piece and of good quality</source>
+        <target>Médaille Ovale Jaune Effet Contours Vierge Miraculeuse pour femme en une seule pièce et de bonne qualité</target>
+      </trans-unit>
+      <trans-unit id="YkIN8UT" resname="White Silver Pendant Round Medal">
+        <source>White Silver Pendant Round Medal</source>
+        <target>Pendentif Médaille Ronde Argent Blanc</target>
+      </trans-unit>
+      <trans-unit id="M5m7Rs0" resname="White Silver Pendant Round Medal Capricorn for women">
+        <source>White Silver Pendant Round Medal Capricorn for women</source>
+        <target>Pendentif Argent Blanc Médaille Ronde Capricorne pour femme
+        </target>
+      </trans-unit>
+      <trans-unit id="VOb4M1i" resname="White Silver Pendant Round Medal Capricorn Pattern for women in one piece with a beautiful model">
+        <source>White Silver Pendant Round Medal Capricorn Pattern for women in one piece with a beautiful model</source>
+        <target>Pendentif médaille ronde en argent blanc motif Capricorne pour femme d'une seule pièce avec un beau modèle</target>
+      </trans-unit>
+      <trans-unit id="5djpxeg" resname="White Silver Round Medal">
+        <source>White Silver Round Medal</source>
+        <target>Médaille ronde en argent blanc</target>
+      </trans-unit>
+      <trans-unit id="0yvBVE_" resname="White Silver Pendant Round Medal Taurus for men">
+        <source>White Silver Pendant Round Medal Taurus for men</source>
+        <target>Pendentif Argent Blanc Médaille Ronde Taureau pour homme</target>
+      </trans-unit>
+      <trans-unit id="XsfDdql" resname="White Silver Pendant Round Medal Taurus Pattern for men in one piece and beautiful model">
+        <source>White Silver Pendant Round Medal Taurus Pattern for men in one piece and beautiful model</source>
+        <target>Pendentif Argent Blanc Médaille Ronde Taureau pour homme</target>
+      </trans-unit>
+      <trans-unit id="QBhzjjL" resname="Yellow Necklace Double Circles">
+        <source>Yellow Necklace Double Circles</source>
+        <target>Collier Double Cercles Jaune</target>
+      </trans-unit>
+      <trans-unit id="y34H0TN" resname="Yellow Double Circles Paving Cubic Zirconia Necklace for women">
+        <source>Yellow Double Circles Paving Cubic Zirconia Necklace for women</source>
+        <target>Collier jaune à double cercles pavage de zircons cubiques pour femmes</target>
+      </trans-unit>
+      <trans-unit id="X4X0HXb" resname="Yellow Double Circles Paving Cubic Zirconia Necklace 42cm for women in one piece and with a beautiful model">
+        <source>Yellow Double Circles Paving Cubic Zirconia Necklace 42cm for women in one piece and with a beautiful model</source>
+        <target>Collier Double Cercles Jaune Pavage Zircone Cubique 42cm pour femme en une seule pièce et avec un beau modèle</target>
+      </trans-unit>
+      <trans-unit id="0nbl1SN" resname="Silver White Long Necklace">
+        <source>Silver White Long Necklace</source>
+        <target>Collier Sautoir Blanc Argenté</target>
+      </trans-unit>
+      <trans-unit id="Gp0LLc3" resname="White Silver Long Necklace Openwork Circle Pattern for women">
+        <source>White Silver Long Necklace Openwork Circle Pattern for women</source>
+        <target>Sautoir Argent Blanc Motif Cercle Ajouré pour femme</target>
+      </trans-unit>
+      <trans-unit id="_zQ6InM" resname="White Silver Long Necklace Openwork Circle Pattern And Bar 85+5cm for women in one piece and good quality">
+        <source>White Silver Long Necklace Openwork Circle Pattern And Bar 85+5cm for women in one piece and good quality</source>
+        <target>Sautoir Argent Blanc Motif Cercle Ajouré Et Barre 85+5cm pour femme en une seule pièce et de bonne qualité</target>
+      </trans-unit>
+      <trans-unit id="h5jBfVW" resname="Silver White Compass Chain Necklace">
+        <source>Silver White Compass Chain Necklace</source>
+        <target>Collier chaîne boussole blanc argenté</target>
+      </trans-unit>
+      <trans-unit id="woUkaPf" resname="Silver White Compass Chain Necklace for men">
+        <source>Silver White Compass Chain Necklace for men</source>
+        <target>Collier chaîne boussole blanc argent pour homme</target>
+      </trans-unit>
+      <trans-unit id="CXWx9xa" resname="Silver White Compass Chain Necklace 45cm for men in two pieces and of good quality">
+        <source>Silver White Compass Chain Necklace 45cm for men in two pieces and of good quality</source>
+        <target>Collier chaîne boussole blanc argenté 45cm pour homme en deux pièces et de bonne qualité</target>
+      </trans-unit>
+      <trans-unit id="nTIIUVm" resname="DHL , Fast delivery - 1 day - 6,99€">
+        <source>DHL , Fast delivery - 1 day - 6,99€</source>
+        <target>DHL , raprid- 1 jour - 6,99€</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

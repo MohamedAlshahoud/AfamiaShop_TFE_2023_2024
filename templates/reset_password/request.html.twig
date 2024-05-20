@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AfamiaShop | {% trans %}Reset your password{% endtrans %}{% endblock %}
+
+{% block body %}
+<div class="login_register_wrap section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-md-10">
+                <div class="border_form">
+                    <div class="padding_eight_all bg-white">
+                        <div class="heading_s1">
+                            <h3>{% trans %}Reset Password{% endtrans %}</h3>
+                        </div>
+                        <div class="content">
+                        <div class="message-flash">
+                            {% for flash_error in app.flashes('reset_password_error') %}
+                                <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+                            {% endfor %}
+                        </div>
+                            {{ form_start(requestForm) }}
+                                {{ form_row(requestForm.email) }}
+                                <div>
+                                    <small>
+                                        {% trans %}Enter your email address and we will send you a
+                                        link to reset your password.{% endtrans %}
+                                    </small>
+                                </div>
+
+                                <button class="btn btn-fill-out btn-block">{% trans %}Send password reset email{% endtrans %}</button>
+                            {{ form_end(requestForm) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  
+{% endblock %}

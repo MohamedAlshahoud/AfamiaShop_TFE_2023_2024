@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AfamiaShop | {% trans %}Newsletter subscription email sent{% endtrans %}{% endblock %}
+
+{% block body %}
+<div class="login_register_wrap section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-md-10">
+                <div class="border_form">
+                    <div class="padding_eight_all bg-white">
+                        <div class="heading_s1">
+                            <h3>{% trans %}Newsletter subscription{% endtrans %}</h3>
+                        </div>
+                        <div class="content">
+                            <p>
+                                {% trans %}If there is an account matching your email address, an email has just been sent containing a link you can use to confirm your newsletter subscription .{% endtrans %}
+                            </p>
+                            <p>{% trans %}If you don't receive an email please check your spam folder or {% endtrans %}<a href="{{ path('app_newsletters')}}"> {% trans %}try again{% endtrans %}</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>   
+{% endblock %}

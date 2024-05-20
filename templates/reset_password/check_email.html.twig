@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AfamiaShop | {% trans %}Password Reset Email Sent{% endtrans %}{% endblock %}
+
+{% block body %}
+<div class="login_register_wrap section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-md-10">
+                <div class="border_form">
+                    <div class="padding_eight_all bg-white">
+                        <div class="heading_s1">
+                            <h3>{% trans %}Reset Password{% endtrans %}</h3>
+                        </div>
+                        <div class="content">
+                            <p>
+                                {% trans %}If an account matching your email exists, then an email was just sent that contains a link that you can use to reset your password.
+                                This link will expire in {% endtrans %}{{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}.
+                            </p>
+                            <p>{% trans %}If you don't receive an email please check your spam folder or {% endtrans %} <a href="{{ path('app_forgot_password_request') }}">{% trans %}try again{% endtrans %}</a>.</p>
+                        </div>
+                        <div class="form-note text-center">{% trans %}Don't Have an Account? {% endtrans %} <a href="{{ path('app_register')}}">{% trans %} Sign up now{% endtrans %}</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>   
+{% endblock %}

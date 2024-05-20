@@ -1,0 +1,11 @@
+# config/packages/lexik_jwt_authentication.yaml
+
+lexik_jwt_authentication:
+    secret_key: 'kernel.project_dir%/config/jwt/private.pem'
+    public_key: 'kernel.project_dir%/config/jwt/public.pem'
+    pass_phrase: '97fb232e70502960fb9ef205bfb41f33bab6e676a08ff2edfae561e3fa5b8ea8'
+    token_ttl: 3600
+
+# JWT_SECRET_KEY=%kernel.project_dir%/config/jwt/private.pem
+# JWT_PUBLIC_KEY=%kernel.project_dir%/config/jwt/public.pem
+# JWT_PASSPHRASE=97fb232e70502960fb9ef205bfb41f33bab6e676a08ff2edfae561e3fa5b8ea8
