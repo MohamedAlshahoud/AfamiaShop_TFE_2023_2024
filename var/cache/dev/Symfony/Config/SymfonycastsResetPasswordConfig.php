@@ -15,7 +15,7 @@ class SymfonycastsResetPasswordConfig implements \Symfony\Component\Config\Build
     private $throttleLimit;
     private $enableGarbageCollection;
     private $_usedProperties = [];
-
+    
     /**
      * A class that implements ResetPasswordRequestRepositoryInterface - usually your ResetPasswordRequestRepository.
      * @default null
@@ -26,10 +26,10 @@ class SymfonycastsResetPasswordConfig implements \Symfony\Component\Config\Build
     {
         $this->_usedProperties['requestPasswordRepository'] = true;
         $this->requestPasswordRepository = $value;
-
+    
         return $this;
     }
-
+    
     /**
      * The length of time in seconds that a password reset request is valid for after it is created.
      * @default 3600
@@ -40,10 +40,10 @@ class SymfonycastsResetPasswordConfig implements \Symfony\Component\Config\Build
     {
         $this->_usedProperties['lifetime'] = true;
         $this->lifetime = $value;
-
+    
         return $this;
     }
-
+    
     /**
      * Another password reset cannot be made faster than this throttle time in seconds.
      * @default 3600
@@ -54,10 +54,10 @@ class SymfonycastsResetPasswordConfig implements \Symfony\Component\Config\Build
     {
         $this->_usedProperties['throttleLimit'] = true;
         $this->throttleLimit = $value;
-
+    
         return $this;
     }
-
+    
     /**
      * Enable/Disable automatic garbage collection.
      * @default true
@@ -68,15 +68,15 @@ class SymfonycastsResetPasswordConfig implements \Symfony\Component\Config\Build
     {
         $this->_usedProperties['enableGarbageCollection'] = true;
         $this->enableGarbageCollection = $value;
-
+    
         return $this;
     }
-
+    
     public function getExtensionAlias(): string
     {
         return 'symfonycasts_reset_password';
     }
-
+    
     public function __construct(array $value = [])
     {
         if (array_key_exists('request_password_repository', $value)) {
@@ -84,30 +84,30 @@ class SymfonycastsResetPasswordConfig implements \Symfony\Component\Config\Build
             $this->requestPasswordRepository = $value['request_password_repository'];
             unset($value['request_password_repository']);
         }
-
+    
         if (array_key_exists('lifetime', $value)) {
             $this->_usedProperties['lifetime'] = true;
             $this->lifetime = $value['lifetime'];
             unset($value['lifetime']);
         }
-
+    
         if (array_key_exists('throttle_limit', $value)) {
             $this->_usedProperties['throttleLimit'] = true;
             $this->throttleLimit = $value['throttle_limit'];
             unset($value['throttle_limit']);
         }
-
+    
         if (array_key_exists('enable_garbage_collection', $value)) {
             $this->_usedProperties['enableGarbageCollection'] = true;
             $this->enableGarbageCollection = $value['enable_garbage_collection'];
             unset($value['enable_garbage_collection']);
         }
-
+    
         if ([] !== $value) {
             throw new InvalidConfigurationException(sprintf('The following keys are not supported by "%s": ', __CLASS__).implode(', ', array_keys($value)));
         }
     }
-
+    
     public function toArray(): array
     {
         $output = [];
@@ -123,7 +123,7 @@ class SymfonycastsResetPasswordConfig implements \Symfony\Component\Config\Build
         if (isset($this->_usedProperties['enableGarbageCollection'])) {
             $output['enable_garbage_collection'] = $this->enableGarbageCollection;
         }
-
+    
         return $output;
     }
 

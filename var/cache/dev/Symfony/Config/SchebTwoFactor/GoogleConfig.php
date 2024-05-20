@@ -19,7 +19,7 @@ class GoogleConfig
     private $window;
     private $leeway;
     private $_usedProperties = [];
-
+    
     /**
      * @default false
      * @param ParamConfigurator|mixed $value
@@ -29,10 +29,10 @@ class GoogleConfig
     {
         $this->_usedProperties['enabled'] = true;
         $this->enabled = $value;
-
+    
         return $this;
     }
-
+    
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -42,10 +42,10 @@ class GoogleConfig
     {
         $this->_usedProperties['formRenderer'] = true;
         $this->formRenderer = $value;
-
+    
         return $this;
     }
-
+    
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -55,10 +55,10 @@ class GoogleConfig
     {
         $this->_usedProperties['issuer'] = true;
         $this->issuer = $value;
-
+    
         return $this;
     }
-
+    
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -68,10 +68,10 @@ class GoogleConfig
     {
         $this->_usedProperties['serverName'] = true;
         $this->serverName = $value;
-
+    
         return $this;
     }
-
+    
     /**
      * @default '@SchebTwoFactor/Authentication/form.html.twig'
      * @param ParamConfigurator|mixed $value
@@ -81,10 +81,10 @@ class GoogleConfig
     {
         $this->_usedProperties['template'] = true;
         $this->template = $value;
-
+    
         return $this;
     }
-
+    
     /**
      * @default 6
      * @param ParamConfigurator|int $value
@@ -94,10 +94,10 @@ class GoogleConfig
     {
         $this->_usedProperties['digits'] = true;
         $this->digits = $value;
-
+    
         return $this;
     }
-
+    
     /**
      * @default 1
      * @param ParamConfigurator|int $value
@@ -108,10 +108,10 @@ class GoogleConfig
     {
         $this->_usedProperties['window'] = true;
         $this->window = $value;
-
+    
         return $this;
     }
-
+    
     /**
      * @default null
      * @param ParamConfigurator|int $value
@@ -121,10 +121,10 @@ class GoogleConfig
     {
         $this->_usedProperties['leeway'] = true;
         $this->leeway = $value;
-
+    
         return $this;
     }
-
+    
     public function __construct(array $value = [])
     {
         if (array_key_exists('enabled', $value)) {
@@ -132,54 +132,54 @@ class GoogleConfig
             $this->enabled = $value['enabled'];
             unset($value['enabled']);
         }
-
+    
         if (array_key_exists('form_renderer', $value)) {
             $this->_usedProperties['formRenderer'] = true;
             $this->formRenderer = $value['form_renderer'];
             unset($value['form_renderer']);
         }
-
+    
         if (array_key_exists('issuer', $value)) {
             $this->_usedProperties['issuer'] = true;
             $this->issuer = $value['issuer'];
             unset($value['issuer']);
         }
-
+    
         if (array_key_exists('server_name', $value)) {
             $this->_usedProperties['serverName'] = true;
             $this->serverName = $value['server_name'];
             unset($value['server_name']);
         }
-
+    
         if (array_key_exists('template', $value)) {
             $this->_usedProperties['template'] = true;
             $this->template = $value['template'];
             unset($value['template']);
         }
-
+    
         if (array_key_exists('digits', $value)) {
             $this->_usedProperties['digits'] = true;
             $this->digits = $value['digits'];
             unset($value['digits']);
         }
-
+    
         if (array_key_exists('window', $value)) {
             $this->_usedProperties['window'] = true;
             $this->window = $value['window'];
             unset($value['window']);
         }
-
+    
         if (array_key_exists('leeway', $value)) {
             $this->_usedProperties['leeway'] = true;
             $this->leeway = $value['leeway'];
             unset($value['leeway']);
         }
-
+    
         if ([] !== $value) {
             throw new InvalidConfigurationException(sprintf('The following keys are not supported by "%s": ', __CLASS__).implode(', ', array_keys($value)));
         }
     }
-
+    
     public function toArray(): array
     {
         $output = [];
@@ -207,7 +207,7 @@ class GoogleConfig
         if (isset($this->_usedProperties['leeway'])) {
             $output['leeway'] = $this->leeway;
         }
-
+    
         return $output;
     }
 

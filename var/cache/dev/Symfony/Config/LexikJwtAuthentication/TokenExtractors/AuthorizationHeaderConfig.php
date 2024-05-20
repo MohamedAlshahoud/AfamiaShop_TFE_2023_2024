@@ -14,7 +14,7 @@ class AuthorizationHeaderConfig
     private $prefix;
     private $name;
     private $_usedProperties = [];
-
+    
     /**
      * @default true
      * @param ParamConfigurator|bool $value
@@ -24,10 +24,10 @@ class AuthorizationHeaderConfig
     {
         $this->_usedProperties['enabled'] = true;
         $this->enabled = $value;
-
+    
         return $this;
     }
-
+    
     /**
      * @default 'Bearer'
      * @param ParamConfigurator|mixed $value
@@ -37,10 +37,10 @@ class AuthorizationHeaderConfig
     {
         $this->_usedProperties['prefix'] = true;
         $this->prefix = $value;
-
+    
         return $this;
     }
-
+    
     /**
      * @default 'Authorization'
      * @param ParamConfigurator|mixed $value
@@ -50,10 +50,10 @@ class AuthorizationHeaderConfig
     {
         $this->_usedProperties['name'] = true;
         $this->name = $value;
-
+    
         return $this;
     }
-
+    
     public function __construct(array $value = [])
     {
         if (array_key_exists('enabled', $value)) {
@@ -61,24 +61,24 @@ class AuthorizationHeaderConfig
             $this->enabled = $value['enabled'];
             unset($value['enabled']);
         }
-
+    
         if (array_key_exists('prefix', $value)) {
             $this->_usedProperties['prefix'] = true;
             $this->prefix = $value['prefix'];
             unset($value['prefix']);
         }
-
+    
         if (array_key_exists('name', $value)) {
             $this->_usedProperties['name'] = true;
             $this->name = $value['name'];
             unset($value['name']);
         }
-
+    
         if ([] !== $value) {
             throw new InvalidConfigurationException(sprintf('The following keys are not supported by "%s": ', __CLASS__).implode(', ', array_keys($value)));
         }
     }
-
+    
     public function toArray(): array
     {
         $output = [];
@@ -91,7 +91,7 @@ class AuthorizationHeaderConfig
         if (isset($this->_usedProperties['name'])) {
             $output['name'] = $this->name;
         }
-
+    
         return $output;
     }
 
