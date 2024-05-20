@@ -1878,6 +1878,9 @@ button:focus:not(:focus-visible) {
 	vertical-align: middle;
 	color: #fff;
 }
+.social_icons {
+	padding-left: 0;
+}
 .header_wrap .social_icons li {
 	padding-bottom: 0;
 }
@@ -4105,8 +4108,14 @@ footer {
 .footer_top {
 	padding: 30px 0 20px;
 }
+
 .footer_logo {
 	margin-bottom: 20px;
+}
+.bottom_footer .container .row {
+	text-align: center;
+	align-items: center;
+	
 }
 footer p {
 	font-size: 14px;
@@ -4130,6 +4139,9 @@ footer .widget_title {
 .widget_links li a {
 	font-size: 14px;
 	color: #687188;
+}
+.contact_info {
+	padding-left: 0;
 }
 .contact_info > li {
 	margin-bottom: 15px;
@@ -4214,24 +4226,8 @@ footer .widget_title {
 .bottom_footer .social_icons li {
 	padding-bottom: 0;
 }
-.footer_payment li,
-.app_list li {
-	display: inline-block;
-	list-style: none;
-}
-.footer_call {
-	border-radius: 40px;
-	padding: 15px;
-	text-align: center;
-	background-color: rgba(0,0,0,0.2);
-}
-.footer_call * {
-	margin: 0;
-	font-size: 22px;
-}
-.footer_call i {
-	margin-right: 10px;
-}
+
+
 
 
 

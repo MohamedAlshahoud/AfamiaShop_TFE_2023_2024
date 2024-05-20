@@ -45,14 +45,14 @@ class __TwigTemplate_ad4f159eed5426e34d164091f44096fd extends Template
     <div  class=\"footer_top\">
         <div  class=\"container\">
             <div  class=\"row\">
-                <div  class=\"col-lg-3 col-md-6 col-sm-12\">
+                <div  class=\"col-lg-2 col-md-5 col-sm-12\">
                     <div  class=\"widget\">
-                        <div  class=\"footer_logo\"><a  href=\"#\">
-                                <h2 >";
+                        <div class=\"footer_logo\">
+                            <h2 >";
         // line 8
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 8, $this->source); })()), "session", [], "any", false, false, false, 8), "get", ["siteInformation"], "method", false, false, false, 8), "name", [], "any", false, false, false, 8), "html", null, true);
         yield "</h2>
-                            </a></div>
+                        </div>
                         <p >";
         // line 10
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 10, $this->source); })()), "session", [], "any", false, false, false, 10), "get", ["siteInformation"], "method", false, false, false, 10), "description", [], "any", false, false, false, 10)), "html", null, true);
@@ -99,15 +99,15 @@ class __TwigTemplate_ad4f159eed5426e34d164091f44096fd extends Template
                         </ul>
                     </div>
                 </div>
-                <div  class=\"col-lg-3 col-md-4 col-sm-6\">
+                <div  class=\"col-lg-2 col-md-4 col-sm-6\">
                     <div  class=\"widget\">
                         <h6  class=\"widget_title\">";
         // line 27
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 27, $this->source); })()), "session", [], "any", false, false, false, 27), "get", ["siteInformation"], "method", false, false, false, 27), "nameAddress", [], "any", false, false, false, 27)), "html", null, true);
         yield "</h6>
                         <ul  class=\"contact_info contact_info_light\">
-                            <li ><i 
-                                    class=\"ti-location-pin\"></i>
+                            <li >
+                                <i class=\"ti-location-pin\"></i>
                                 <p>";
         // line 31
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 31, $this->source); })()), "session", [], "any", false, false, false, 31), "get", ["siteInformation"], "method", false, false, false, 31), "street", [], "any", false, false, false, 31), "html", null, true);
@@ -131,7 +131,7 @@ class __TwigTemplate_ad4f159eed5426e34d164091f44096fd extends Template
                         </ul>
                     </div>
                 </div>
-                <div  class=\"col-lg-2 col-md-3 col-sm-6\">
+                <div  class=\"col-lg-3 col-md-6 col-sm-6\">
                     <div  class=\"widget\">
                         <h6 class=\"widget_title\">";
         // line 44
@@ -151,7 +151,7 @@ class __TwigTemplate_ad4f159eed5426e34d164091f44096fd extends Template
                         </form>
                     </div>
                 </div>
-                <div  class=\"col-lg-2 col-md-3 col-sm-6\">
+                <div  class=\"col-lg-3 col-md-4 col-sm-6\">
                     <div  class=\"widget\">
                         <h6  class=\"widget_title\">";
         // line 53
@@ -177,49 +177,51 @@ class __TwigTemplate_ad4f159eed5426e34d164091f44096fd extends Template
     <div  class=\"bottom_footer border-top-tran\">
         <div  class=\"container\">
             <div  class=\"row\">
-                <div  class=\"col-md-6\">
+                <div  class=\"col-lg-4 col-md-3 col-sm-4\">
                     <p  class=\"mb-md-0 text-center text-md-start\">";
         // line 67
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 67, $this->source); })()), "session", [], "any", false, false, false, 67), "get", ["siteInformation"], "method", false, false, false, 67), "copyright", [], "any", false, false, false, 67), "html", null, true);
         yield "</p>
                 </div>
                 
-                <div  class=\"col-lg-3 col-md-6 col-sm-12\">
-                    <div  class=\"text-center text-md-start\">
-                        <ul  class=\"social_icons social_white\">
-                            <li ><a  target=\"_blank\"
-                                    href=\"";
-        // line 74
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 74, $this->source); })()), "session", [], "any", false, false, false, 74), "get", ["siteInformation"], "method", false, false, false, 74), "facebookLink", [], "any", false, false, false, 74), "html", null, true);
-        yield "\"><i 
-                                        class=\"ion-social-facebook\"></i></a>
-                            </li>
+                <div  class=\"col-lg-4 col-md-3 col-sm-4\">
+                    <ul  class=\"social_icons social_white\">
+                        <li >
+                            <a  target=\"_blank\" href=\"";
+        // line 73
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 73, $this->source); })()), "session", [], "any", false, false, false, 73), "get", ["siteInformation"], "method", false, false, false, 73), "facebookLink", [], "any", false, false, false, 73), "html", null, true);
+        yield "\">
+                                <i class=\"ion-social-facebook\"></i>
+                            </a>
+                        </li>
                             
-                            <li ><a  target=\"_blank\"
-                                    href=\"";
+                        <li >
+                            <a  target=\"_blank\" href=\"";
         // line 79
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 79, $this->source); })()), "session", [], "any", false, false, false, 79), "get", ["siteInformation"], "method", false, false, false, 79), "youtube", [], "any", false, false, false, 79), "html", null, true);
-        yield "\"><i
-                                         class=\"ion-social-youtube-outline\"></i></a>
-                            </li>
-                            <li ><a  target=\"_blank\"
-                                    href=\"";
-        // line 83
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 83, $this->source); })()), "session", [], "any", false, false, false, 83), "get", ["siteInformation"], "method", false, false, false, 83), "instagram", [], "any", false, false, false, 83), "html", null, true);
-        yield "\"><i 
-                                        class=\"ion-social-instagram-outline\"></i></a>
-                            </li>
-                        </ul>
-                    </div>
+        yield "\">
+                                <i class=\"ion-social-youtube-outline\"></i>
+                            </a>
+                        </li>
+                        <li >
+                            <a  target=\"_blank\" href=\"";
+        // line 84
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 84, $this->source); })()), "session", [], "any", false, false, false, 84), "get", ["siteInformation"], "method", false, false, false, 84), "instagram", [], "any", false, false, false, 84), "html", null, true);
+        yield "\">
+                                <i class=\"ion-social-instagram-outline\"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    
                 </div>
-                <div  class=\"col-lg-3 col-md-6 col-sm-12\">
+                <div  class=\"col-lg-4 col-md-3 col-sm-4\">
                     <a  href=\"";
-        // line 90
+        // line 92
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("terms_conditions");
         yield "\"> 
-                        <p  class=\"mb-md-0 text-center text-md-start\">";
-        // line 91
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 91, $this->source); })()), "session", [], "any", false, false, false, 91), "get", ["siteInformation"], "method", false, false, false, 91), "termsConditions", [], "any", false, false, false, 91), "html", null, true);
+                        <p  class=\"mb-md-0 text-center text-md-end\">";
+        // line 93
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 93, $this->source); })()), "session", [], "any", false, false, false, 93), "get", ["siteInformation"], "method", false, false, false, 93), "termsConditions", [], "any", false, false, false, 93), "html", null, true);
         yield "</p>
                     </a>
                 </div>
@@ -257,7 +259,7 @@ class __TwigTemplate_ad4f159eed5426e34d164091f44096fd extends Template
      */
     public function getDebugInfo()
     {
-        return array (  222 => 91,  218 => 90,  208 => 83,  201 => 79,  193 => 74,  183 => 67,  167 => 56,  162 => 54,  158 => 53,  147 => 47,  142 => 45,  138 => 44,  128 => 37,  122 => 34,  113 => 31,  106 => 27,  95 => 21,  89 => 20,  83 => 19,  77 => 18,  71 => 17,  66 => 15,  58 => 10,  53 => 8,  44 => 1,);
+        return array (  224 => 93,  220 => 92,  209 => 84,  201 => 79,  192 => 73,  183 => 67,  167 => 56,  162 => 54,  158 => 53,  147 => 47,  142 => 45,  138 => 44,  128 => 37,  122 => 34,  113 => 31,  106 => 27,  95 => 21,  89 => 20,  83 => 19,  77 => 18,  71 => 17,  66 => 15,  58 => 10,  53 => 8,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -266,11 +268,11 @@ class __TwigTemplate_ad4f159eed5426e34d164091f44096fd extends Template
     <div  class=\"footer_top\">
         <div  class=\"container\">
             <div  class=\"row\">
-                <div  class=\"col-lg-3 col-md-6 col-sm-12\">
+                <div  class=\"col-lg-2 col-md-5 col-sm-12\">
                     <div  class=\"widget\">
-                        <div  class=\"footer_logo\"><a  href=\"#\">
-                                <h2 >{{app.session.get('siteInformation').name}}</h2>
-                            </a></div>
+                        <div class=\"footer_logo\">
+                            <h2 >{{app.session.get('siteInformation').name}}</h2>
+                        </div>
                         <p >{{app.session.get('siteInformation').description | trans}}</p>
                     </div>
                 </div>
@@ -286,12 +288,12 @@ class __TwigTemplate_ad4f159eed5426e34d164091f44096fd extends Template
                         </ul>
                     </div>
                 </div>
-                <div  class=\"col-lg-3 col-md-4 col-sm-6\">
+                <div  class=\"col-lg-2 col-md-4 col-sm-6\">
                     <div  class=\"widget\">
                         <h6  class=\"widget_title\">{{app.session.get('siteInformation').nameAddress | trans}}</h6>
                         <ul  class=\"contact_info contact_info_light\">
-                            <li ><i 
-                                    class=\"ti-location-pin\"></i>
+                            <li >
+                                <i class=\"ti-location-pin\"></i>
                                 <p>{{app.session.get('siteInformation').street}},{{app.session.get('siteInformation').codePostal}}{{app.session.get('siteInformation').city}}</p>
                             </li>
                             <li ><i  class=\"ti-email\"></i><a
@@ -303,7 +305,7 @@ class __TwigTemplate_ad4f159eed5426e34d164091f44096fd extends Template
                         </ul>
                     </div>
                 </div>
-                <div  class=\"col-lg-2 col-md-3 col-sm-6\">
+                <div  class=\"col-lg-3 col-md-6 col-sm-6\">
                     <div  class=\"widget\">
                         <h6 class=\"widget_title\">{{app.session.get('siteInformation').question | trans}}</h6>
                         <p>{{app.session.get('siteInformation').descrrptionQuestion | trans}}</p   >
@@ -312,7 +314,7 @@ class __TwigTemplate_ad4f159eed5426e34d164091f44096fd extends Template
                         </form>
                     </div>
                 </div>
-                <div  class=\"col-lg-2 col-md-3 col-sm-6\">
+                <div  class=\"col-lg-3 col-md-4 col-sm-6\">
                     <div  class=\"widget\">
                         <h6  class=\"widget_title\">{{app.session.get('siteInformation').nameSubscribe | trans}}</h6>
                         <p>{{app.session.get('siteInformation').descriptionSubscribe | trans}}</p>
@@ -327,32 +329,34 @@ class __TwigTemplate_ad4f159eed5426e34d164091f44096fd extends Template
     <div  class=\"bottom_footer border-top-tran\">
         <div  class=\"container\">
             <div  class=\"row\">
-                <div  class=\"col-md-6\">
+                <div  class=\"col-lg-4 col-md-3 col-sm-4\">
                     <p  class=\"mb-md-0 text-center text-md-start\">{{app.session.get('siteInformation').copyright}}</p>
                 </div>
                 
-                <div  class=\"col-lg-3 col-md-6 col-sm-12\">
-                    <div  class=\"text-center text-md-start\">
-                        <ul  class=\"social_icons social_white\">
-                            <li ><a  target=\"_blank\"
-                                    href=\"{{app.session.get('siteInformation').facebookLink}}\"><i 
-                                        class=\"ion-social-facebook\"></i></a>
-                            </li>
+                <div  class=\"col-lg-4 col-md-3 col-sm-4\">
+                    <ul  class=\"social_icons social_white\">
+                        <li >
+                            <a  target=\"_blank\" href=\"{{app.session.get('siteInformation').facebookLink}}\">
+                                <i class=\"ion-social-facebook\"></i>
+                            </a>
+                        </li>
                             
-                            <li ><a  target=\"_blank\"
-                                    href=\"{{app.session.get('siteInformation').youtube}}\"><i
-                                         class=\"ion-social-youtube-outline\"></i></a>
-                            </li>
-                            <li ><a  target=\"_blank\"
-                                    href=\"{{app.session.get('siteInformation').instagram}}\"><i 
-                                        class=\"ion-social-instagram-outline\"></i></a>
-                            </li>
-                        </ul>
-                    </div>
+                        <li >
+                            <a  target=\"_blank\" href=\"{{app.session.get('siteInformation').youtube}}\">
+                                <i class=\"ion-social-youtube-outline\"></i>
+                            </a>
+                        </li>
+                        <li >
+                            <a  target=\"_blank\" href=\"{{app.session.get('siteInformation').instagram}}\">
+                                <i class=\"ion-social-instagram-outline\"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    
                 </div>
-                <div  class=\"col-lg-3 col-md-6 col-sm-12\">
+                <div  class=\"col-lg-4 col-md-3 col-sm-4\">
                     <a  href=\"{{ path('terms_conditions')}}\"> 
-                        <p  class=\"mb-md-0 text-center text-md-start\">{{app.session.get('siteInformation').termsConditions}}</p>
+                        <p  class=\"mb-md-0 text-center text-md-end\">{{app.session.get('siteInformation').termsConditions}}</p>
                     </a>
                 </div>
             </div>

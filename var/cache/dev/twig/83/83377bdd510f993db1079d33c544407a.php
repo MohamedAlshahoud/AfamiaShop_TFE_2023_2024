@@ -41,7 +41,7 @@ class __TwigTemplate_ba9289cfcde37a137864070b32812d2f extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@EasyAdmin/flash_messages.html.twig"));
 
         // line 5
-        $context["__internal_e432109a0cd1079c9634132db4dc93e1c4a37aed25d0e5d8d16a99d9b29a7bdf"] = ((array_key_exists("ea", $context)) ? (CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 5, $this->source); })()), "i18n", [], "any", false, false, false, 5), "translationDomain", [], "any", false, false, false, 5)) : (((array_key_exists("translation_domain", $context)) ? ((($context["translation_domain"]) ?? ("messages"))) : (""))));
+        $context["__internal_468c3c037d2fe85d3ba039edd77c153d787ad620424a344fd9d08d140cc93ffb"] = ((array_key_exists("ea", $context)) ? (CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["ea"]) || array_key_exists("ea", $context) ? $context["ea"] : (function () { throw new RuntimeError('Variable "ea" does not exist.', 5, $this->source); })()), "i18n", [], "any", false, false, false, 5), "translationDomain", [], "any", false, false, false, 5)) : (((array_key_exists("translation_domain", $context)) ? ((($context["translation_domain"]) ?? ("messages"))) : (""))));
         // line 6
         yield "
 ";
@@ -72,7 +72,7 @@ class __TwigTemplate_ba9289cfcde37a137864070b32812d2f extends Template
                     ";
                     // line 15
                     yield $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans($context["message"], [],                     // line 5
-(isset($context["__internal_e432109a0cd1079c9634132db4dc93e1c4a37aed25d0e5d8d16a99d9b29a7bdf"]) || array_key_exists("__internal_e432109a0cd1079c9634132db4dc93e1c4a37aed25d0e5d8d16a99d9b29a7bdf", $context) ? $context["__internal_e432109a0cd1079c9634132db4dc93e1c4a37aed25d0e5d8d16a99d9b29a7bdf"] : (function () { throw new RuntimeError('Variable "__internal_e432109a0cd1079c9634132db4dc93e1c4a37aed25d0e5d8d16a99d9b29a7bdf" does not exist.', 5, $this->source); })()));
+(isset($context["__internal_468c3c037d2fe85d3ba039edd77c153d787ad620424a344fd9d08d140cc93ffb"]) || array_key_exists("__internal_468c3c037d2fe85d3ba039edd77c153d787ad620424a344fd9d08d140cc93ffb", $context) ? $context["__internal_468c3c037d2fe85d3ba039edd77c153d787ad620424a344fd9d08d140cc93ffb"] : (function () { throw new RuntimeError('Variable "__internal_468c3c037d2fe85d3ba039edd77c153d787ad620424a344fd9d08d140cc93ffb" does not exist.', 5, $this->source); })()));
                     // line 15
                     yield "
                 </div>
