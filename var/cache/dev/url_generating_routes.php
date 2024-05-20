@@ -64,7 +64,6 @@ return [
     'payment_stripe' => [['reference'], ['_controller' => 'App\\Controller\\PaymentController::index'], [], [['variable', '/', '[^/]++', 'reference', true], ['text', '/order/create-session-stripe']], [], [], []],
     'payment_success' => [['reference'], ['_controller' => 'App\\Controller\\PaymentController::stripeSuccess'], [], [['variable', '/', '[^/]++', 'reference', true], ['text', '/order/success']], [], [], []],
     'payment_error' => [['reference'], ['_controller' => 'App\\Controller\\PaymentController::paymentcancel'], [], [['variable', '/', '[^/]++', 'reference', true], ['text', '/order/error']], [], [], []],
-    'orderconfirm' => [[], ['_controller' => 'App\\Controller\\PaymentController::orderConirm'], [], [['text', '/orderconfirm']], [], [], []],
     'app_register' => [[], ['_controller' => 'App\\Controller\\RegistrationController::register'], [], [['text', '/register']], [], [], []],
     'app_verify_email' => [[], ['_controller' => 'App\\Controller\\RegistrationController::verifyUserEmail'], [], [['text', '/verify/email']], [], [], []],
     'send_email_register' => [[], ['_controller' => 'App\\Controller\\RegistrationController::unsubscribeNewsletters'], [], [['text', '/send_email']], [], [], []],

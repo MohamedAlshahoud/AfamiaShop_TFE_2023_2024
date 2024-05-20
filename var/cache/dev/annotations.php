@@ -462,16 +462,10 @@ return [[
 '[C]App%5CController%5CPaymentController%23stripeSuccess' => 1,
 'App%5CController%5CPaymentController%23paymentcancel' => 0,
 '[C]App%5CController%5CPaymentController%23paymentcancel' => 1,
-'App%5CController%5CPaymentController%23orderConirm' => 0,
-'[C]App%5CController%5CPaymentController%23orderConirm' => 1,
 'App%5CController%5CPaymentController%24entityManagerInterface' => 0,
 '[C]App%5CController%5CPaymentController%24entityManagerInterface' => 1,
 'App%5CController%5CPaymentController%24urlGeneratorInterface' => 0,
 '[C]App%5CController%5CPaymentController%24urlGeneratorInterface' => 1,
-'App%5CController%5CPaymentController%24emailOrderConfirmation' => 0,
-'[C]App%5CController%5CPaymentController%24emailOrderConfirmation' => 1,
-'App%5CController%5CPaymentController%24emailVerifier' => 0,
-'[C]App%5CController%5CPaymentController%24emailVerifier' => 1,
 'App%5CController%5CRegistrationController' => 0,
 '[C]App%5CController%5CRegistrationController' => 1,
 'App%5CController%5CRegistrationController%23__construct' => 0,
@@ -2240,7 +2234,7 @@ return [[
 ], [
 
 0 => [],
-1 => 1716239686,
+1 => 1716240603,
 2 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [

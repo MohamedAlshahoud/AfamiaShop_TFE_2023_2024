@@ -43,7 +43,6 @@ return [
         '/check-email' => [[['_route' => 'check_email', '_controller' => 'App\\Controller\\NewslettersController::checkEmail'], null, null, null, false, false, null]],
         '/subscription_confirm' => [[['_route' => 'newsletter_subscription_confirm', '_controller' => 'App\\Controller\\NewslettersController::subscriptionConfirm'], null, null, null, false, false, null]],
         '/unsubscribe_newsletters' => [[['_route' => 'unsubscribe_newsletters', '_controller' => 'App\\Controller\\NewslettersController::unsubscribeNewsletters'], null, null, null, false, false, null]],
-        '/orderconfirm' => [[['_route' => 'orderconfirm', '_controller' => 'App\\Controller\\PaymentController::orderConirm'], null, null, null, false, false, null]],
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
         '/verify/email' => [[['_route' => 'app_verify_email', '_controller' => 'App\\Controller\\RegistrationController::verifyUserEmail'], null, null, null, false, false, null]],
         '/send_email' => [[['_route' => 'send_email_register', '_controller' => 'App\\Controller\\RegistrationController::unsubscribeNewsletters'], null, null, null, false, false, null]],
