@@ -16,7 +16,6 @@ use DateTime;
 use Doctrine\ORM\EntityManagerInterface;
 use Knp\Component\Pager\PaginatorInterface;
 use League\OAuth2\Client\Provider\Github;
-use League\OAuth2\Client\Provider\Facebook;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -32,13 +31,6 @@ class HomeController extends AbstractController
         public function __construct(ProductRepository $productRepository)
         {
             $this->productRepository = $productRepository;
-
-            $this->provider=new Facebook([
-                'clientId'          => $_ENV['FCB_ID'],
-                'clientSecret'      => $_ENV['FCB_SECRET'],
-                'redirectUri'       => $_ENV['FCB_CALLBACK'],
-                'graphApiVersion'   => 'v15.0',
-            ]);
         }
 
     #[Route('/', name: 'app_home')]
@@ -117,86 +109,6 @@ class HomeController extends AbstractController
         ]);
     }
 
-    #[Route('/fcb-login', name: 'fcb_login')]
-    public function fcbLogin(): Response
-    {
-
-        $helper_url=$this->provider->getAuthorizationUrl();
-
-        return $this->redirect($helper_url);
-    }
-
-    #[Route('/fcb-callback', name: 'fcb_callback')]
-    public function fcbCallback(UserRepository $userDb, EntityManagerInterface $manager): Response
-    {
-        //Récupérer le token
-       $token = $this->provider->getAccessToken('authorization_code', [
-        'code' => $_GET['code']
-        ]);
-
-        try {
-            //Récupérer les informations de l'utilisateur
- 
-            $user=$this->provider->getResourceOwner($token);
- 
-            $user=$user->toArray();
- 
-            $email=$user['email'];
- 
-            $firstname=$user['firstname'];
-            $lastname=$user['lastname'];
- 
-            //Vérifier si l'utilisateur existe dans la base des données
- 
-            $user_exist=$userDb->findOneByEmail($email);
- 
-            if($user_exist)
-            {
-                 $user_exist->setLastname($lastname)
-                            ->setFirstname($firstname);
- 
-                 $manager->flush();
- 
- 
-                 return $this->render('facebook/index.html.twig', [
-                     'lastname'=>$lastname,
-                     'firstname'=>$firstname,
-
-                 ]);
- 
- 
-            }
-            else
-           {
-                $new_user=new User();
-
-                $new_user->setLastname($lastname)
-                         ->setFirstname($firstname)
-                         ->setEmail($email)
-                         ->setPassword(sha1(str_shuffle('abscdop123390hHHH;:::OOOI')));
-              
-                $manager->persist($new_user);
-
-                $manager->flush();
-
-
-                return $this->render('facebook/index.html.twig', [
-                    'lastname'=>$lastname,
-                    'firtname'=>$firstname,
-                ]);
-
-
-           }
-
-
-       } catch (\Throwable $th) {
-        //throw $th;
-
-          return $th->getMessage();
-       }
-
- 
-    }
     
     #[Route('/product/{name}', name: 'show')]
     public function show(string $name, Product $produc, Request $request, EntityManagerInterface $entityManager,  TranslationTranslatorInterface $translator, PaginatorInterface $paginator): Response

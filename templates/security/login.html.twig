@@ -33,18 +33,20 @@
                                 </div>
                                 <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
                                 <div class="form-group mb-3"><button type="submit" name="login"
-                                        class="btn btn-fill-out btn-block">{% trans %}Log in{% endtrans %}</button></div>
-                                <ul class="btn-login list_none text-center">
-                                    <li><a href="{{path('fcb_login')}}" class="btn btn-facebook"><i class="ion-social-facebook"></i>Facebook</a></li>
-                                    <li><a href="{{path('connect_google')}}" class="btn btn-google"><i class="ion-social-google"></i>Google</a></li>
+                                    class="btn btn-fill-out btn-block">{% trans %}Log in{% endtrans %}</button>
+                                </div>
+                                <ul class="btn btn-fill btn-block list_none">
+                                    <li><a href="{{ path('app_oauth_login', {service: 'google'}) }}" class="btn btn-google"><i class="ion-social-google"></i>Google</a></li>
                                 </ul>
                                 <a href="{{ path('app_forgot_password_request')}}">{% trans %}Forgot password?{% endtrans %}</a>
                             </form>
-                            <div class="different_login"><span>
-                                    {% trans %}or{% endtrans %}</span></div>
+                            <div class="different_login">
+                                <span>{% trans %}or{% endtrans %}</span>
+                            </div>
                             
                             <div class="form-note text-center">{% trans %}Don't Have an Account?{% endtrans %} <a href="/register">{% trans %}Sign up
-                                    now{% endtrans %}</a></div>
+                                now{% endtrans %}</a>
+                            </div>
                         </div>
                     </div>
                 </div>

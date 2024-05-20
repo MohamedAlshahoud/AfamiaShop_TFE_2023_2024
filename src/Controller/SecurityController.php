@@ -5,7 +5,9 @@ namespace App\Controller;
 use App\Entity\Product;
 use App\Form\SearchProductType;
 use Doctrine\ORM\EntityManagerInterface;
+use KnpU\OAuth2ClientBundle\Client\ClientRegistry;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -13,6 +15,10 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class SecurityController extends AbstractController
 {
+    public const SCOPES = [
+      'google' => []
+    ];
+
     #[Route(path: '/login', name: 'app_login')]
     public function login(AuthenticationUtils $authenticationUtils, EntityManagerInterface $entityManagerInterface, Request $request): Response
     {
@@ -69,5 +75,21 @@ class SecurityController extends AbstractController
     public function logout(): void
     {
         throw new \LogicException('This method can be blank - it will be intercepted by the logout key on your firewall.');
+    }
+
+    #[Route(path: '/oauth/login/{service}', name: 'app_oauth_login', methods: ["GET"])]
+    public function connect(string $service, ClientRegistry $registry): RedirectResponse
+    {
+      if(!in_array($service, array_keys(self::SCOPES), true)) {
+        throw $this->createNotFoundException();
+      }
+
+      return $registry->getClient($service)->redirect(self::SCOPES[$service], []);
+    }
+
+    #[Route(path: '/oauth/check/{service}', name: 'auth_oauth_check', methods: ["GET", "POST"], schemes:["https"])]
+    public function check(): Response
+    {
+      return new Response(status: 200);
     }
 }

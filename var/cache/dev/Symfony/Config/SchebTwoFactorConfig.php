@@ -21,7 +21,7 @@ class SchebTwoFactorConfig implements \Symfony\Component\Config\Builder\ConfigBu
     private $twoFactorCondition;
     private $google;
     private $_usedProperties = [];
-    
+
     /**
      * @default 'scheb_two_factor.persister.doctrine'
      * @param ParamConfigurator|mixed $value
@@ -31,10 +31,10 @@ class SchebTwoFactorConfig implements \Symfony\Component\Config\Builder\ConfigBu
     {
         $this->_usedProperties['persister'] = true;
         $this->persister = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -44,10 +44,10 @@ class SchebTwoFactorConfig implements \Symfony\Component\Config\Builder\ConfigBu
     {
         $this->_usedProperties['modelManagerName'] = true;
         $this->modelManagerName = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @param ParamConfigurator|list<ParamConfigurator|mixed> $value
      *
@@ -57,10 +57,10 @@ class SchebTwoFactorConfig implements \Symfony\Component\Config\Builder\ConfigBu
     {
         $this->_usedProperties['securityTokens'] = true;
         $this->securityTokens = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @param ParamConfigurator|list<ParamConfigurator|mixed> $value
      *
@@ -70,10 +70,10 @@ class SchebTwoFactorConfig implements \Symfony\Component\Config\Builder\ConfigBu
     {
         $this->_usedProperties['ipWhitelist'] = true;
         $this->ipWhitelist = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default 'scheb_two_factor.default_ip_whitelist_provider'
      * @param ParamConfigurator|mixed $value
@@ -83,10 +83,10 @@ class SchebTwoFactorConfig implements \Symfony\Component\Config\Builder\ConfigBu
     {
         $this->_usedProperties['ipWhitelistProvider'] = true;
         $this->ipWhitelistProvider = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default 'scheb_two_factor.default_token_factory'
      * @param ParamConfigurator|mixed $value
@@ -96,10 +96,10 @@ class SchebTwoFactorConfig implements \Symfony\Component\Config\Builder\ConfigBu
     {
         $this->_usedProperties['twoFactorTokenFactory'] = true;
         $this->twoFactorTokenFactory = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -109,10 +109,10 @@ class SchebTwoFactorConfig implements \Symfony\Component\Config\Builder\ConfigBu
     {
         $this->_usedProperties['twoFactorCondition'] = true;
         $this->twoFactorCondition = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default {"enabled":false,"form_renderer":null,"issuer":null,"server_name":null,"template":"@SchebTwoFactor\/Authentication\/form.html.twig","digits":6,"window":1,"leeway":null}
      * @return \Symfony\Config\SchebTwoFactor\GoogleConfig|$this
@@ -122,25 +122,25 @@ class SchebTwoFactorConfig implements \Symfony\Component\Config\Builder\ConfigBu
         if (!\is_array($value)) {
             $this->_usedProperties['google'] = true;
             $this->google = $value;
-    
+
             return $this;
         }
-    
+
         if (!$this->google instanceof \Symfony\Config\SchebTwoFactor\GoogleConfig) {
             $this->_usedProperties['google'] = true;
             $this->google = new \Symfony\Config\SchebTwoFactor\GoogleConfig($value);
         } elseif (0 < \func_num_args()) {
             throw new InvalidConfigurationException('The node created by "google()" has already been initialized. You cannot pass values the second time you call google().');
         }
-    
+
         return $this->google;
     }
-    
+
     public function getExtensionAlias(): string
     {
         return 'scheb_two_factor';
     }
-    
+
     public function __construct(array $value = [])
     {
         if (array_key_exists('persister', $value)) {
@@ -148,54 +148,54 @@ class SchebTwoFactorConfig implements \Symfony\Component\Config\Builder\ConfigBu
             $this->persister = $value['persister'];
             unset($value['persister']);
         }
-    
+
         if (array_key_exists('model_manager_name', $value)) {
             $this->_usedProperties['modelManagerName'] = true;
             $this->modelManagerName = $value['model_manager_name'];
             unset($value['model_manager_name']);
         }
-    
+
         if (array_key_exists('security_tokens', $value)) {
             $this->_usedProperties['securityTokens'] = true;
             $this->securityTokens = $value['security_tokens'];
             unset($value['security_tokens']);
         }
-    
+
         if (array_key_exists('ip_whitelist', $value)) {
             $this->_usedProperties['ipWhitelist'] = true;
             $this->ipWhitelist = $value['ip_whitelist'];
             unset($value['ip_whitelist']);
         }
-    
+
         if (array_key_exists('ip_whitelist_provider', $value)) {
             $this->_usedProperties['ipWhitelistProvider'] = true;
             $this->ipWhitelistProvider = $value['ip_whitelist_provider'];
             unset($value['ip_whitelist_provider']);
         }
-    
+
         if (array_key_exists('two_factor_token_factory', $value)) {
             $this->_usedProperties['twoFactorTokenFactory'] = true;
             $this->twoFactorTokenFactory = $value['two_factor_token_factory'];
             unset($value['two_factor_token_factory']);
         }
-    
+
         if (array_key_exists('two_factor_condition', $value)) {
             $this->_usedProperties['twoFactorCondition'] = true;
             $this->twoFactorCondition = $value['two_factor_condition'];
             unset($value['two_factor_condition']);
         }
-    
+
         if (array_key_exists('google', $value)) {
             $this->_usedProperties['google'] = true;
             $this->google = \is_array($value['google']) ? new \Symfony\Config\SchebTwoFactor\GoogleConfig($value['google']) : $value['google'];
             unset($value['google']);
         }
-    
+
         if ([] !== $value) {
             throw new InvalidConfigurationException(sprintf('The following keys are not supported by "%s": ', __CLASS__).implode(', ', array_keys($value)));
         }
     }
-    
+
     public function toArray(): array
     {
         $output = [];
@@ -223,7 +223,7 @@ class SchebTwoFactorConfig implements \Symfony\Component\Config\Builder\ConfigBu
         if (isset($this->_usedProperties['google'])) {
             $output['google'] = $this->google instanceof \Symfony\Config\SchebTwoFactor\GoogleConfig ? $this->google->toArray() : $this->google;
         }
-    
+
         return $output;
     }
 

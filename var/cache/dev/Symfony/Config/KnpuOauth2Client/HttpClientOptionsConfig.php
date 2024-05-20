@@ -14,7 +14,7 @@ class HttpClientOptionsConfig
     private $proxy;
     private $verify;
     private $_usedProperties = [];
-    
+
     /**
      * @default null
      * @param ParamConfigurator|int $value
@@ -24,10 +24,10 @@ class HttpClientOptionsConfig
     {
         $this->_usedProperties['timeout'] = true;
         $this->timeout = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -37,10 +37,10 @@ class HttpClientOptionsConfig
     {
         $this->_usedProperties['proxy'] = true;
         $this->proxy = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * Use only with proxy option set
      * @default null
@@ -51,10 +51,10 @@ class HttpClientOptionsConfig
     {
         $this->_usedProperties['verify'] = true;
         $this->verify = $value;
-    
+
         return $this;
     }
-    
+
     public function __construct(array $value = [])
     {
         if (array_key_exists('timeout', $value)) {
@@ -62,24 +62,24 @@ class HttpClientOptionsConfig
             $this->timeout = $value['timeout'];
             unset($value['timeout']);
         }
-    
+
         if (array_key_exists('proxy', $value)) {
             $this->_usedProperties['proxy'] = true;
             $this->proxy = $value['proxy'];
             unset($value['proxy']);
         }
-    
+
         if (array_key_exists('verify', $value)) {
             $this->_usedProperties['verify'] = true;
             $this->verify = $value['verify'];
             unset($value['verify']);
         }
-    
+
         if ([] !== $value) {
             throw new InvalidConfigurationException(sprintf('The following keys are not supported by "%s": ', __CLASS__).implode(', ', array_keys($value)));
         }
     }
-    
+
     public function toArray(): array
     {
         $output = [];
@@ -92,7 +92,7 @@ class HttpClientOptionsConfig
         if (isset($this->_usedProperties['verify'])) {
             $output['verify'] = $this->verify;
         }
-    
+
         return $output;
     }
 

@@ -408,12 +408,6 @@ return [[
 '[C]App%5CController%5CDeliveryAddressController%24cartServices' => 1,
 'App%5CController%5CDeliveryAddressController%24requestStack' => 0,
 '[C]App%5CController%5CDeliveryAddressController%24requestStack' => 1,
-'App%5CController%5CGoogleController' => 0,
-'[C]App%5CController%5CGoogleController' => 1,
-'App%5CController%5CGoogleController%23connectAction' => 2,
-'[C]App%5CController%5CGoogleController%23connectAction' => 1,
-'App%5CController%5CGoogleController%23connectCheckAction' => 3,
-'[C]App%5CController%5CGoogleController%23connectCheckAction' => 1,
 'App%5CController%5CHomeController' => 0,
 '[C]App%5CController%5CHomeController' => 1,
 'App%5CController%5CHomeController%23__construct' => 0,
@@ -422,13 +416,9 @@ return [[
 '[C]App%5CController%5CHomeController%23index' => 1,
 'App%5CController%5CHomeController%23search_result' => 0,
 '[C]App%5CController%5CHomeController%23search_result' => 1,
-'App%5CController%5CHomeController%23fcbLogin' => 0,
-'[C]App%5CController%5CHomeController%23fcbLogin' => 1,
-'App%5CController%5CHomeController%23fcbCallback' => 0,
-'[C]App%5CController%5CHomeController%23fcbCallback' => 1,
 'App%5CController%5CHomeController%23show' => 0,
 '[C]App%5CController%5CHomeController%23show' => 1,
-'App%5CController%5CHomeController%23detail' => 4,
+'App%5CController%5CHomeController%23detail' => 2,
 '[C]App%5CController%5CHomeController%23detail' => 1,
 'App%5CController%5CHomeController%23changeLocale' => 0,
 '[C]App%5CController%5CHomeController%23changeLocale' => 1,
@@ -1064,7 +1054,7 @@ return [[
 '[C]App%5CEntity%5CPayment%24prod_private_api_key' => 1,
 'App%5CEntity%5CPayment%24createdAt' => 0,
 '[C]App%5CEntity%5CPayment%24createdAt' => 1,
-'App%5CEntity%5CProduct' => 5,
+'App%5CEntity%5CProduct' => 3,
 '[C]App%5CEntity%5CProduct' => 1,
 'App%5CEntity%5CProduct%23__construct' => 0,
 '[C]App%5CEntity%5CProduct%23__construct' => 1,
@@ -1174,13 +1164,13 @@ return [[
 '[C]App%5CEntity%5CResetPasswordRequest%24id' => 1,
 'App%5CEntity%5CResetPasswordRequest%24user' => 0,
 '[C]App%5CEntity%5CResetPasswordRequest%24user' => 1,
-'App%5CEntity%5CResetPasswordRequest%24selector' => 6,
+'App%5CEntity%5CResetPasswordRequest%24selector' => 4,
 '[C]App%5CEntity%5CResetPasswordRequest%24selector' => 1,
-'App%5CEntity%5CResetPasswordRequest%24hashedToken' => 7,
+'App%5CEntity%5CResetPasswordRequest%24hashedToken' => 5,
 '[C]App%5CEntity%5CResetPasswordRequest%24hashedToken' => 1,
-'App%5CEntity%5CResetPasswordRequest%24requestedAt' => 8,
+'App%5CEntity%5CResetPasswordRequest%24requestedAt' => 6,
 '[C]App%5CEntity%5CResetPasswordRequest%24requestedAt' => 1,
-'App%5CEntity%5CResetPasswordRequest%24expiresAt' => 8,
+'App%5CEntity%5CResetPasswordRequest%24expiresAt' => 6,
 '[C]App%5CEntity%5CResetPasswordRequest%24expiresAt' => 1,
 'App%5CEntity%5CSearchProduct' => 0,
 '[C]App%5CEntity%5CSearchProduct' => 1,
@@ -2240,106 +2230,8 @@ return [[
 ], [
 
 0 => [],
-1 => 1715959126,
+1 => 1716149823,
 2 => static function () {
-    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
-        $o = [
-            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
-        ],
-        null,
-        [
-            'Symfony\\Component\\Routing\\Annotation\\Route' => [
-                'path' => [
-                    '/connect/google',
-                ],
-                'methods' => [
-                    [],
-                ],
-                'schemes' => [
-                    [],
-                ],
-                'name' => [
-                    'connect_google',
-                ],
-                'requirements' => [
-                    [],
-                ],
-                'options' => [
-                    [],
-                ],
-                'defaults' => [
-                    [],
-                ],
-                'host' => [
-                    null,
-                ],
-                'condition' => [
-                    null,
-                ],
-                'priority' => [
-                    null,
-                ],
-                'env' => [
-                    null,
-                ],
-            ],
-        ],
-        [
-            $o[0],
-        ],
-        []
-    );
-},
-3 => static function () {
-    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
-        $o = [
-            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
-        ],
-        null,
-        [
-            'Symfony\\Component\\Routing\\Annotation\\Route' => [
-                'path' => [
-                    '/connect/google/check',
-                ],
-                'methods' => [
-                    [],
-                ],
-                'schemes' => [
-                    [],
-                ],
-                'name' => [
-                    'connect_google_check',
-                ],
-                'requirements' => [
-                    [],
-                ],
-                'options' => [
-                    [],
-                ],
-                'defaults' => [
-                    [],
-                ],
-                'host' => [
-                    null,
-                ],
-                'condition' => [
-                    null,
-                ],
-                'priority' => [
-                    null,
-                ],
-                'env' => [
-                    null,
-                ],
-            ],
-        ],
-        [
-            $o[0],
-        ],
-        []
-    );
-},
-4 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Symfony\\Component\\Routing\\Annotation\\Route'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Routing\\Annotation\\Route')),
@@ -2388,7 +2280,7 @@ return [[
         []
     );
 },
-5 => static function () {
+3 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\Entity'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Entity')),
@@ -2432,7 +2324,7 @@ return [[
         []
     );
 },
-6 => static function () {
+4 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\Column'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Column')),
@@ -2460,7 +2352,7 @@ return [[
         []
     );
 },
-7 => static function () {
+5 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\Column'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Column')),
@@ -2488,7 +2380,7 @@ return [[
         []
     );
 },
-8 => static function () {
+6 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\Column'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Column')),
