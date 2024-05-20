@@ -87,7 +87,7 @@ class SecurityController extends AbstractController
       return $registry->getClient($service)->redirect(self::SCOPES[$service], []);
     }
 
-    #[Route(path: '/oauth/check/{service}', name: 'auth_oauth_check', methods: ["GET", "POST"], schemes:["https"])]
+    #[Route(path: '/oauth/check/{service}', name: 'auth_oauth_check', methods: ["GET", "POST"])]
     public function check(): Response
     {
       return new Response(status: 200);

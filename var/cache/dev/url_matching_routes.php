@@ -131,7 +131,7 @@ return [
         262 => [[['_route' => 'payment_success', '_controller' => 'App\\Controller\\PaymentController::stripeSuccess'], ['reference'], null, null, false, true, null]],
         284 => [[['_route' => 'payment_error', '_controller' => 'App\\Controller\\PaymentController::paymentcancel'], ['reference'], null, null, false, true, null]],
         315 => [[['_route' => 'app_oauth_login', '_controller' => 'App\\Controller\\SecurityController::connect'], ['service'], ['GET' => 0], null, false, true, null]],
-        337 => [[['_route' => 'auth_oauth_check', '_controller' => 'App\\Controller\\SecurityController::check'], ['service'], ['GET' => 0, 'POST' => 1], ['https' => 0], false, true, null]],
+        337 => [[['_route' => 'auth_oauth_check', '_controller' => 'App\\Controller\\SecurityController::check'], ['service'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
         383 => [[['_route' => 'app_reset_password', 'token' => null, '_controller' => 'App\\Controller\\Account\\ResetPasswordController::reset'], ['token'], null, null, false, true, null]],
         414 => [[['_route' => 'address_show', '_controller' => 'App\\Controller\\AddressController::show'], ['id'], ['GET' => 0], null, false, true, null]],
         427 => [[['_route' => 'address_edit', '_controller' => 'App\\Controller\\AddressController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],

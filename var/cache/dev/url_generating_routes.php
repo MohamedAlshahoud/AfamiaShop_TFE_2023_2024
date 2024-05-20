@@ -73,7 +73,7 @@ return [
     'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], [], []],
     'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], [], []],
     'app_oauth_login' => [['service'], ['_controller' => 'App\\Controller\\SecurityController::connect'], [], [['variable', '/', '[^/]++', 'service', true], ['text', '/oauth/login']], [], [], []],
-    'auth_oauth_check' => [['service'], ['_controller' => 'App\\Controller\\SecurityController::check'], [], [['variable', '/', '[^/]++', 'service', true], ['text', '/oauth/check']], [], ['https'], []],
+    'auth_oauth_check' => [['service'], ['_controller' => 'App\\Controller\\SecurityController::check'], [], [['variable', '/', '[^/]++', 'service', true], ['text', '/oauth/check']], [], [], []],
     'app_send_email' => [[], ['_controller' => 'App\\Controller\\SendEmailController::index'], [], [['text', '/send']], [], [], []],
     'app_shop' => [[], ['_controller' => 'App\\Controller\\ShopController::index'], [], [['text', '/shop']], [], [], []],
     'user_show' => [['id'], ['_controller' => 'App\\Controller\\UserController::index'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/user']], [], [], []],
