@@ -500,6 +500,10 @@ return [[
 '[C]App%5CController%5CSecurityController%23login' => 1,
 'App%5CController%5CSecurityController%23logout' => 0,
 '[C]App%5CController%5CSecurityController%23logout' => 1,
+'App%5CController%5CSecurityController%23connect' => 0,
+'[C]App%5CController%5CSecurityController%23connect' => 1,
+'App%5CController%5CSecurityController%23check' => 0,
+'[C]App%5CController%5CSecurityController%23check' => 1,
 'App%5CController%5CSendEmailController' => 0,
 '[C]App%5CController%5CSendEmailController' => 1,
 'App%5CController%5CSendEmailController%23index' => 0,
@@ -1516,6 +1520,10 @@ return [[
 '[C]App%5CEntity%5CUser%23addOrder' => 1,
 'App%5CEntity%5CUser%23removeOrder' => 0,
 '[C]App%5CEntity%5CUser%23removeOrder' => 1,
+'App%5CEntity%5CUser%23getGoogleId' => 0,
+'[C]App%5CEntity%5CUser%23getGoogleId' => 1,
+'App%5CEntity%5CUser%23setGoogleId' => 0,
+'[C]App%5CEntity%5CUser%23setGoogleId' => 1,
 'App%5CEntity%5CUser%24id' => 0,
 '[C]App%5CEntity%5CUser%24id' => 1,
 'App%5CEntity%5CUser%24email' => 0,
@@ -1536,6 +1544,8 @@ return [[
 '[C]App%5CEntity%5CUser%24addresses' => 1,
 'App%5CEntity%5CUser%24orders' => 0,
 '[C]App%5CEntity%5CUser%24orders' => 1,
+'App%5CEntity%5CUser%24googleId' => 0,
+'[C]App%5CEntity%5CUser%24googleId' => 1,
 'Doctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController' => 0,
 '[C]Doctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController' => 1,
 'Doctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController%23__construct' => 0,
@@ -2230,7 +2240,7 @@ return [[
 ], [
 
 0 => [],
-1 => 1716149823,
+1 => 1716238476,
 2 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [

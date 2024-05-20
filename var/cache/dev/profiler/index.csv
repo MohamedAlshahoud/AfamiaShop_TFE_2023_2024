@@ -265,3 +265,8 @@ f198bd,127.0.0.1,GET,https://localhost:8000/assets/js/main.js,1716194495,f5c1f8,
 f5c1f8,127.0.0.1,GET,https://localhost:8000/assets/js/main.js,1716194495,,404
 9aa412,127.0.0.1,GET,https://localhost:8000/assets/css/responsive.css,1716194495,04cd55,404
 04cd55,127.0.0.1,GET,https://localhost:8000/assets/css/responsive.css,1716194495,,404
+9f90bc,127.0.0.1,GET,http://127.0.0.1:8000/,1716238524,,200
+96d62e,127.0.0.1,GET,http://127.0.0.1:8000/assets/js/main.js,1716238525,216133,404
+216133,127.0.0.1,GET,http://127.0.0.1:8000/assets/js/main.js,1716238525,,404
+1205e4,127.0.0.1,GET,http://127.0.0.1:8000/assets/css/responsive.css,1716238526,e38b3b,404
+e38b3b,127.0.0.1,GET,http://127.0.0.1:8000/assets/css/responsive.css,1716238526,,404

@@ -16,17 +16,17 @@ return [
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/xdebug' => [[['_route' => '_profiler_xdebug', '_controller' => 'web_profiler.controller.profiler::xdebugAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
-        '/reset-password' => [[['_route' => 'app_forgot_password_request', '_controller' => 'App\\Controller\\Account\\ResetPasswordController::request'], null, null, null, false, false, null]],
-        '/reset-password/check-email' => [[['_route' => 'app_check_email', '_controller' => 'App\\Controller\\Account\\ResetPasswordController::checkEmail'], null, null, null, false, false, null]],
         '/account' => [[['_route' => 'app_account', '_controller' => 'App\\Controller\\AccountController::index'], null, null, null, false, false, null]],
         '/account-address' => [[['_route' => 'app_account_address', '_controller' => 'App\\Controller\\AccountController::indexAddress'], null, null, null, false, false, null]],
         '/orders' => [[['_route' => 'app_account_orders', '_controller' => 'App\\Controller\\AccountController::accountOrders'], null, null, null, false, false, null]],
         '/account/profile/change' => [[['_route' => 'change_profile', '_controller' => 'App\\Controller\\AccountController::changeProfile'], null, null, null, false, false, null]],
         '/account/password/change' => [[['_route' => 'change_password', '_controller' => 'App\\Controller\\AccountController::changePassword'], null, null, null, false, false, null]],
+        '/reset-password' => [[['_route' => 'app_forgot_password_request', '_controller' => 'App\\Controller\\Account\\ResetPasswordController::request'], null, null, null, false, false, null]],
+        '/reset-password/check-email' => [[['_route' => 'app_check_email', '_controller' => 'App\\Controller\\Account\\ResetPasswordController::checkEmail'], null, null, null, false, false, null]],
         '/address' => [[['_route' => 'address_index', '_controller' => 'App\\Controller\\AddressController::index'], null, ['GET' => 0], null, true, false, null]],
         '/address/new' => [[['_route' => 'address_new', '_controller' => 'App\\Controller\\AddressController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        '/admin' => [[['_route' => 'admin', '_controller' => 'App\\Controller\\Admin\\DashboardController::index'], null, null, null, false, false, null]],
         '/admin-m' => [[['_route' => 'app_admin', '_controller' => 'App\\Controller\\AdminController::index'], null, null, null, false, false, null]],
+        '/admin' => [[['_route' => 'admin', '_controller' => 'App\\Controller\\Admin\\DashboardController::index'], null, null, null, false, false, null]],
         '/api/order' => [[['_route' => 'app_api_api_order', '_controller' => 'App\\Controller\\Api\\ApiOrderController::update'], null, ['POST' => 0], null, false, false, null]],
         '/cart' => [[['_route' => 'app_cart', '_controller' => 'App\\Controller\\CartController::index'], null, null, null, false, false, null]],
         '/cart/get' => [[['_route' => 'app_get_cart', '_controller' => 'App\\Controller\\CartController::getCart'], null, null, null, false, false, null]],
@@ -74,19 +74,19 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
-                .'|/reset\\-password/reset(?:/([^/]++))?(*:205)'
                 .'|/o(?'
                     .'|rder/(?'
-                        .'|details/([^/]++)(*:242)'
-                        .'|create\\-session\\-stripe/([^/]++)(*:282)'
-                        .'|success/([^/]++)(*:306)'
-                        .'|error/([^/]++)(*:328)'
+                        .'|details/([^/]++)(*:198)'
+                        .'|create\\-session\\-stripe/([^/]++)(*:238)'
+                        .'|success/([^/]++)(*:262)'
+                        .'|error/([^/]++)(*:284)'
                     .')'
                     .'|auth/(?'
-                        .'|login/([^/]++)(*:359)'
-                        .'|check/([^/]++)(*:381)'
+                        .'|login/([^/]++)(*:315)'
+                        .'|check/([^/]++)(*:337)'
                     .')'
                 .')'
+                .'|/reset\\-password/reset(?:/([^/]++))?(*:383)'
                 .'|/a(?'
                     .'|ddress/([^/]++)(?'
                         .'|(*:414)'
@@ -126,13 +126,13 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        205 => [[['_route' => 'app_reset_password', 'token' => null, '_controller' => 'App\\Controller\\Account\\ResetPasswordController::reset'], ['token'], null, null, false, true, null]],
-        242 => [[['_route' => 'order_details', '_controller' => 'App\\Controller\\AccountController::detailsOrder'], ['reference'], null, null, false, true, null]],
-        282 => [[['_route' => 'payment_stripe', '_controller' => 'App\\Controller\\PaymentController::index'], ['reference'], null, null, false, true, null]],
-        306 => [[['_route' => 'payment_success', '_controller' => 'App\\Controller\\PaymentController::stripeSuccess'], ['reference'], null, null, false, true, null]],
-        328 => [[['_route' => 'payment_error', '_controller' => 'App\\Controller\\PaymentController::paymentcancel'], ['reference'], null, null, false, true, null]],
-        359 => [[['_route' => 'app_oauth_login', '_controller' => 'App\\Controller\\SecurityController::connect'], ['service'], ['GET' => 0], null, false, true, null]],
-        381 => [[['_route' => 'auth_oauth_check', '_controller' => 'App\\Controller\\SecurityController::check'], ['service'], ['GET' => 0, 'POST' => 1], ['https' => 0], false, true, null]],
+        198 => [[['_route' => 'order_details', '_controller' => 'App\\Controller\\AccountController::detailsOrder'], ['reference'], null, null, false, true, null]],
+        238 => [[['_route' => 'payment_stripe', '_controller' => 'App\\Controller\\PaymentController::index'], ['reference'], null, null, false, true, null]],
+        262 => [[['_route' => 'payment_success', '_controller' => 'App\\Controller\\PaymentController::stripeSuccess'], ['reference'], null, null, false, true, null]],
+        284 => [[['_route' => 'payment_error', '_controller' => 'App\\Controller\\PaymentController::paymentcancel'], ['reference'], null, null, false, true, null]],
+        315 => [[['_route' => 'app_oauth_login', '_controller' => 'App\\Controller\\SecurityController::connect'], ['service'], ['GET' => 0], null, false, true, null]],
+        337 => [[['_route' => 'auth_oauth_check', '_controller' => 'App\\Controller\\SecurityController::check'], ['service'], ['GET' => 0, 'POST' => 1], ['https' => 0], false, true, null]],
+        383 => [[['_route' => 'app_reset_password', 'token' => null, '_controller' => 'App\\Controller\\Account\\ResetPasswordController::reset'], ['token'], null, null, false, true, null]],
         414 => [[['_route' => 'address_show', '_controller' => 'App\\Controller\\AddressController::show'], ['id'], ['GET' => 0], null, false, true, null]],
         427 => [[['_route' => 'address_edit', '_controller' => 'App\\Controller\\AddressController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
         435 => [[['_route' => 'address_delete', '_controller' => 'App\\Controller\\AddressController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
