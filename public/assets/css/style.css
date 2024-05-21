@@ -1931,8 +1931,9 @@ button:focus:not(:focus-visible) {
 	color: #fff;
 	border-color: #fff;
 }
+
 .social_white .social_icons li a:hover, .social_white.social_icons li a:hover {
-	color: #0090e3;
+	color: #000;
 }
 .border_social .social_icons li a:hover, .border_social.social_icons li a:hover {
 	background-color: #0090e3;
@@ -4229,7 +4230,7 @@ footer .widget_title {
 	color: #fff;
 }
 .footer_dark a:hover, .footer_dark .widget_links li a:hover, .widget_links li a:hover, .footer_dark .footer_link li a:hover,.footer_link li a:hover {
-	color: #0090e3;
+	color: #000;
 }
 .widget_contact_form {
 	background-color: #fff;
