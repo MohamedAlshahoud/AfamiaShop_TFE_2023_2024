@@ -93,84 +93,70 @@ class __TwigTemplate_ebd99573317f5c85913044c37e3486cc extends Template
         <div class=\"container\">
             <div class=\"row\">
                     <div class=\"col-lg-12\"> 
-                        ";
-        // line 11
-        if ((isset($context["products"]) || array_key_exists("products", $context) ? $context["products"] : (function () { throw new RuntimeError('Variable "products" does not exist.', 11, $this->source); })())) {
-            // line 12
-            yield "                            <div  class=\"row\">
-                                <div  class=\"col-12\">
-                                    <div  class=\"heading_s1\">
-                                        <h2 >";
-            // line 15
-            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("products found", [], "messages");
-            yield "</h2>
-                                    </div>
+                        <div  class=\"row\">
+                            <div  class=\"col-12\">
+                                <div  class=\"heading_s1\">
+                                    <h2 >";
+        // line 14
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["products"]) || array_key_exists("products", $context) ? $context["products"] : (function () { throw new RuntimeError('Variable "products" does not exist.', 14, $this->source); })()), "getTotalItemCount", [], "any", false, false, false, 14), "html", null, true);
+        yield " ";
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("products found", [], "messages");
+        yield "</h2>
                                 </div>
                             </div>
-                            <div  class=\"tab-content\">
-                                <div  id=\"arrival\" role=\"tabpanel\" aria-labelledby=\"arrival-tab\"
-                                    class=\"tab-pane fade show active\">
-                                    <div  class=\"row shop_container\">
+                        </div>
+                        <div  class=\"tab-content\">
+                            <div  id=\"arrival\" role=\"tabpanel\" aria-labelledby=\"arrival-tab\"
+                                class=\"tab-pane fade show active\">
+                                <div  class=\"row shop_container\">
+                                    ";
+        // line 22
+        $context['_parent'] = $context;
+        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["products"]) || array_key_exists("products", $context) ? $context["products"] : (function () { throw new RuntimeError('Variable "products" does not exist.', 22, $this->source); })()));
+        $context['loop'] = [
+          'parent' => $context['_parent'],
+          'index0' => 0,
+          'index'  => 1,
+          'first'  => true,
+        ];
+        if (is_array($context['_seq']) || (is_object($context['_seq']) && $context['_seq'] instanceof \Countable)) {
+            $length = count($context['_seq']);
+            $context['loop']['revindex0'] = $length - 1;
+            $context['loop']['revindex'] = $length;
+            $context['loop']['length'] = $length;
+            $context['loop']['last'] = 1 === $length;
+        }
+        foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
+            yield " 
                                         ";
             // line 23
-            $context['_parent'] = $context;
-            $context['_seq'] = CoreExtension::ensureTraversable((isset($context["products"]) || array_key_exists("products", $context) ? $context["products"] : (function () { throw new RuntimeError('Variable "products" does not exist.', 23, $this->source); })()));
-            $context['loop'] = [
-              'parent' => $context['_parent'],
-              'index0' => 0,
-              'index'  => 1,
-              'first'  => true,
-            ];
-            if (is_array($context['_seq']) || (is_object($context['_seq']) && $context['_seq'] instanceof \Countable)) {
-                $length = count($context['_seq']);
-                $context['loop']['revindex0'] = $length - 1;
-                $context['loop']['revindex'] = $length;
-                $context['loop']['length'] = $length;
-                $context['loop']['last'] = 1 === $length;
+            yield from             $this->loadTemplate("product/display_product.html.twig", "search/index.html.twig", 23)->unwrap()->yield($context);
+            // line 24
+            yield "                                    ";
+            ++$context['loop']['index0'];
+            ++$context['loop']['index'];
+            $context['loop']['first'] = false;
+            if (isset($context['loop']['length'])) {
+                --$context['loop']['revindex0'];
+                --$context['loop']['revindex'];
+                $context['loop']['last'] = 0 === $context['loop']['revindex0'];
             }
-            foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
-                yield " 
-                                            ";
-                // line 24
-                yield from                 $this->loadTemplate("product/display_product.html.twig", "search/index.html.twig", 24)->unwrap()->yield($context);
-                // line 25
-                yield "                                        ";
-                ++$context['loop']['index0'];
-                ++$context['loop']['index'];
-                $context['loop']['first'] = false;
-                if (isset($context['loop']['length'])) {
-                    --$context['loop']['revindex0'];
-                    --$context['loop']['revindex'];
-                    $context['loop']['last'] = 0 === $context['loop']['revindex0'];
-                }
-            }
-            $_parent = $context['_parent'];
-            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['product'], $context['_parent'], $context['loop']);
-            $context = array_intersect_key($context, $_parent) + $_parent;
-            yield " 
-                                    </div>
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['product'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        yield " 
                                 </div>
                             </div>
-                        ";
-        } else {
-            // line 30
-            yield "                            <div class=\"col-lg-12 text-center\"> 
-                                <p>";
-            // line 31
-            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("No results for your search.", [], "messages");
-            yield "</p>
-                            </div>
-                        ";
-        }
-        // line 34
-        yield "                    </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class=\"row\">
                 <div class=\"pagination\">
                     ";
-        // line 39
-        yield $this->env->getRuntime('Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationRuntime')->render($this->env, (isset($context["products"]) || array_key_exists("products", $context) ? $context["products"] : (function () { throw new RuntimeError('Variable "products" does not exist.', 39, $this->source); })()));
+        // line 33
+        yield $this->env->getRuntime('Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationRuntime')->render($this->env, (isset($context["products"]) || array_key_exists("products", $context) ? $context["products"] : (function () { throw new RuntimeError('Variable "products" does not exist.', 33, $this->source); })()));
         yield "
                 </div>
             </div>
@@ -209,7 +195,7 @@ class __TwigTemplate_ebd99573317f5c85913044c37e3486cc extends Template
      */
     public function getDebugInfo()
     {
-        return array (  173 => 39,  166 => 34,  160 => 31,  157 => 30,  137 => 25,  135 => 24,  116 => 23,  105 => 15,  100 => 12,  98 => 11,  91 => 6,  81 => 5,  60 => 3,  37 => 1,);
+        return array (  159 => 33,  135 => 24,  133 => 23,  114 => 22,  101 => 14,  91 => 6,  81 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -224,29 +210,23 @@ class __TwigTemplate_ebd99573317f5c85913044c37e3486cc extends Template
         <div class=\"container\">
             <div class=\"row\">
                     <div class=\"col-lg-12\"> 
-                        {% if products %}
-                            <div  class=\"row\">
-                                <div  class=\"col-12\">
-                                    <div  class=\"heading_s1\">
-                                        <h2 >{% trans %}products found{% endtrans %}</h2>
-                                    </div>
+                        <div  class=\"row\">
+                            <div  class=\"col-12\">
+                                <div  class=\"heading_s1\">
+                                    <h2 >{{ products.getTotalItemCount }} {% trans %}products found{% endtrans %}</h2>
                                 </div>
                             </div>
-                            <div  class=\"tab-content\">
-                                <div  id=\"arrival\" role=\"tabpanel\" aria-labelledby=\"arrival-tab\"
-                                    class=\"tab-pane fade show active\">
-                                    <div  class=\"row shop_container\">
-                                        {% for product in products %} 
-                                            {% include \"product/display_product.html.twig\" %}
-                                        {% endfor %} 
-                                    </div>
+                        </div>
+                        <div  class=\"tab-content\">
+                            <div  id=\"arrival\" role=\"tabpanel\" aria-labelledby=\"arrival-tab\"
+                                class=\"tab-pane fade show active\">
+                                <div  class=\"row shop_container\">
+                                    {% for product in products %} 
+                                        {% include \"product/display_product.html.twig\" %}
+                                    {% endfor %} 
                                 </div>
                             </div>
-                        {% else %}
-                            <div class=\"col-lg-12 text-center\"> 
-                                <p>{% trans %}No results for your search. {% endtrans %}</p>
-                            </div>
-                        {% endif %}
+                        </div>
                     </div>
                 </div>
             </div>
