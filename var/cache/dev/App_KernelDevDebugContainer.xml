@@ -110,9 +110,10 @@
     <parameter key="kernel.charset">UTF-8</parameter>
     <parameter key="kernel.container_class">App_KernelDevDebugContainer</parameter>
     <parameter key="app.locales" type="collection">
-      <parameter>en</parameter>
-      <parameter>fr</parameter>
+      <parameter>EN</parameter>
+      <parameter>FR</parameter>
     </parameter>
+    <parameter key="locale">en</parameter>
     <parameter key="event_dispatcher.event_aliases" type="collection">
       <parameter key="Symfony\Component\Console\Event\ConsoleCommandEvent">console.command</parameter>
       <parameter key="Symfony\Component\Console\Event\ConsoleErrorEvent">console.error</parameter>
@@ -891,6 +892,7 @@
       <argument type="service" id="doctrine.orm.default_entity_manager"/>
       <argument type="service" id="security.user_password_hasher"/>
       <argument type="service" id="App\Repository\UserRepository"/>
+      <argument type="service" id="translator.data_collector"/>
     </service>
     <service id="App\Services\Stripe" class="App\Services\Stripe" autowire="true" autoconfigure="true">
       <argument type="service" id="request_stack"/>
@@ -5602,8 +5604,8 @@
       <call method="addGlobal">
         <argument>locales</argument>
         <argument type="collection">
-          <argument>en</argument>
-          <argument>fr</argument>
+          <argument>EN</argument>
+          <argument>FR</argument>
         </argument>
       </call>
       <call method="registerUndefinedFilterCallback">
@@ -10035,10 +10037,10 @@
     <service id="EasyCorp\Bundle\EasyAdminBundle\Registry\DashboardControllerRegistry" class="EasyCorp\Bundle\EasyAdminBundle\Registry\DashboardControllerRegistry">
       <argument>C:\WEB_DEVELOPER\AFAMIA\AfamiaShop_TFE_2023_2024\var\cache\dev</argument>
       <argument type="collection">
-        <argument key="App\Controller\Admin\DashboardController">c32b885</argument>
+        <argument key="App\Controller\Admin\DashboardController">7fba94c</argument>
       </argument>
       <argument type="collection">
-        <argument key="c32b885">App\Controller\Admin\DashboardController</argument>
+        <argument key="7fba94c">App\Controller\Admin\DashboardController</argument>
       </argument>
     </service>
     <service id="EasyCorp\Bundle\EasyAdminBundle\Registry\CrudControllerRegistry" class="EasyCorp\Bundle\EasyAdminBundle\Registry\CrudControllerRegistry">
@@ -10062,23 +10064,23 @@
         <argument key="App\Controller\Admin\UsersCrudController">App\Entity\Newsletters\Users</argument>
       </argument>
       <argument type="collection">
-        <argument key="App\Controller\Admin\AddressCrudController">30aabb8</argument>
-        <argument key="App\Controller\Admin\CategoriesCrudController">176bc85</argument>
-        <argument key="App\Controller\Admin\CategoryCrudController">4fb2e07</argument>
-        <argument key="App\Controller\Admin\ColorCrudController">5e85d3e</argument>
-        <argument key="App\Controller\Admin\CommentsCrudController">035fb7c</argument>
-        <argument key="App\Controller\Admin\ContactCrudController">f594011</argument>
-        <argument key="App\Controller\Admin\GenderCrudController">0f7c2ed</argument>
-        <argument key="App\Controller\Admin\NewslettersCrudController">de04786</argument>
-        <argument key="App\Controller\Admin\OrderCrudController" type="string">6941376</argument>
-        <argument key="App\Controller\Admin\OrderDetailCrudController">b434620</argument>
-        <argument key="App\Controller\Admin\PaymentCrudController">40128bc</argument>
-        <argument key="App\Controller\Admin\ProductCrudController">80a917e</argument>
-        <argument key="App\Controller\Admin\SiteInformationCrudController">8ea7418</argument>
-        <argument key="App\Controller\Admin\SliderCrudController">6a68274</argument>
-        <argument key="App\Controller\Admin\TransporterCrudController">a40c71b</argument>
-        <argument key="App\Controller\Admin\UserCrudController">71bd3a4</argument>
-        <argument key="App\Controller\Admin\UsersCrudController">005a68e</argument>
+        <argument key="App\Controller\Admin\AddressCrudController">1bddd5a</argument>
+        <argument key="App\Controller\Admin\CategoriesCrudController">89a0b2b</argument>
+        <argument key="App\Controller\Admin\CategoryCrudController">8cb2d2d</argument>
+        <argument key="App\Controller\Admin\ColorCrudController" type="string">2730277</argument>
+        <argument key="App\Controller\Admin\CommentsCrudController">f4c4b71</argument>
+        <argument key="App\Controller\Admin\ContactCrudController" type="string">8663611</argument>
+        <argument key="App\Controller\Admin\GenderCrudController">cf74622</argument>
+        <argument key="App\Controller\Admin\NewslettersCrudController">d98aaf2</argument>
+        <argument key="App\Controller\Admin\OrderCrudController">e014f93</argument>
+        <argument key="App\Controller\Admin\OrderDetailCrudController">4a9377b</argument>
+        <argument key="App\Controller\Admin\PaymentCrudController">5084c77</argument>
+        <argument key="App\Controller\Admin\ProductCrudController">d44c9ac</argument>
+        <argument key="App\Controller\Admin\SiteInformationCrudController">ebee94e</argument>
+        <argument key="App\Controller\Admin\SliderCrudController">9c45529</argument>
+        <argument key="App\Controller\Admin\TransporterCrudController">07cdba2</argument>
+        <argument key="App\Controller\Admin\UserCrudController">e56e2c7</argument>
+        <argument key="App\Controller\Admin\UsersCrudController">1b4c93f</argument>
       </argument>
       <argument type="collection">
         <argument key="App\Entity\Address">App\Controller\Admin\AddressCrudController</argument>
@@ -10100,23 +10102,23 @@
         <argument key="App\Entity\Newsletters\Users">App\Controller\Admin\UsersCrudController</argument>
       </argument>
       <argument type="collection">
-        <argument key="30aabb8">App\Controller\Admin\AddressCrudController</argument>
-        <argument key="176bc85">App\Controller\Admin\CategoriesCrudController</argument>
-        <argument key="4fb2e07">App\Controller\Admin\CategoryCrudController</argument>
-        <argument key="5e85d3e">App\Controller\Admin\ColorCrudController</argument>
-        <argument key="035fb7c">App\Controller\Admin\CommentsCrudController</argument>
-        <argument key="f594011">App\Controller\Admin\ContactCrudController</argument>
-        <argument key="0f7c2ed">App\Controller\Admin\GenderCrudController</argument>
-        <argument key="de04786">App\Controller\Admin\NewslettersCrudController</argument>
-        <argument key="6941376">App\Controller\Admin\OrderCrudController</argument>
-        <argument key="b434620">App\Controller\Admin\OrderDetailCrudController</argument>
-        <argument key="40128bc">App\Controller\Admin\PaymentCrudController</argument>
-        <argument key="80a917e">App\Controller\Admin\ProductCrudController</argument>
-        <argument key="8ea7418">App\Controller\Admin\SiteInformationCrudController</argument>
-        <argument key="6a68274">App\Controller\Admin\SliderCrudController</argument>
-        <argument key="a40c71b">App\Controller\Admin\TransporterCrudController</argument>
-        <argument key="71bd3a4">App\Controller\Admin\UserCrudController</argument>
-        <argument key="005a68e">App\Controller\Admin\UsersCrudController</argument>
+        <argument key="1bddd5a">App\Controller\Admin\AddressCrudController</argument>
+        <argument key="89a0b2b">App\Controller\Admin\CategoriesCrudController</argument>
+        <argument key="8cb2d2d">App\Controller\Admin\CategoryCrudController</argument>
+        <argument key="2730277">App\Controller\Admin\ColorCrudController</argument>
+        <argument key="f4c4b71">App\Controller\Admin\CommentsCrudController</argument>
+        <argument key="8663611">App\Controller\Admin\ContactCrudController</argument>
+        <argument key="cf74622">App\Controller\Admin\GenderCrudController</argument>
+        <argument key="d98aaf2">App\Controller\Admin\NewslettersCrudController</argument>
+        <argument key="e014f93">App\Controller\Admin\OrderCrudController</argument>
+        <argument key="4a9377b">App\Controller\Admin\OrderDetailCrudController</argument>
+        <argument key="5084c77">App\Controller\Admin\PaymentCrudController</argument>
+        <argument key="d44c9ac">App\Controller\Admin\ProductCrudController</argument>
+        <argument key="ebee94e">App\Controller\Admin\SiteInformationCrudController</argument>
+        <argument key="9c45529">App\Controller\Admin\SliderCrudController</argument>
+        <argument key="07cdba2">App\Controller\Admin\TransporterCrudController</argument>
+        <argument key="e56e2c7">App\Controller\Admin\UserCrudController</argument>
+        <argument key="1b4c93f">App\Controller\Admin\UsersCrudController</argument>
       </argument>
     </service>
     <service id=".service_locator.yY.p4P7" class="Symfony\Component\DependencyInjection\ServiceLocator">

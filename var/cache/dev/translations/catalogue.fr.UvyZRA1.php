@@ -938,6 +938,8 @@ $catalogue = new MessageCatalogue('fr', array (
     'Silver White Compass Chain Necklace for men' => 'Collier chaîne boussole blanc argent pour homme',
     'Silver White Compass Chain Necklace 45cm for men in two pieces and of good quality' => 'Collier chaîne boussole blanc argenté 45cm pour homme en deux pièces et de bonne qualité',
     'DHL , Fast delivery - 1 day - 6,99€' => 'DHL , raprid- 1 jour - 6,99€',
+    'You already have an account. Reset your password if you forgot it.' => 'Vous avez déjà un compte. Réinitialisez votre mot de passe si vous l\'avez oublié.',
+    'You already have an account' => 'Vous avez déjà un compte',
   ),
 ));
 

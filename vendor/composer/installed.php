@@ -3,7 +3,7 @@
         'name' => '__root__',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '4eff9ac2eefecdab0cebae8cd2456472d0525e37',
+        'reference' => '50d0e6959a5aa9975cdc513fdb2c47b47239fd1b',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         '__root__' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '4eff9ac2eefecdab0cebae8cd2456472d0525e37',
+            'reference' => '50d0e6959a5aa9975cdc513fdb2c47b47239fd1b',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -182,9 +182,9 @@
             'dev_requirement' => false,
         ),
         'easycorp/easyadmin-bundle' => array(
-            'pretty_version' => 'v4.10.1',
-            'version' => '4.10.1.0',
-            'reference' => '020192e4d935a5aec43cca52a4d81a478688de65',
+            'pretty_version' => 'v4.10.2',
+            'version' => '4.10.2.0',
+            'reference' => 'a2775352f5e0f0a778516eb7d6c62ff8eb417ecb',
             'type' => 'symfony-bundle',
             'install_path' => __DIR__ . '/../easycorp/easyadmin-bundle',
             'aliases' => array(),
@@ -410,9 +410,9 @@
             'dev_requirement' => false,
         ),
         'phpdocumentor/reflection-docblock' => array(
-            'pretty_version' => '5.4.0',
-            'version' => '5.4.0.0',
-            'reference' => '298d2febfe79d03fe714eb871d5538da55205b1a',
+            'pretty_version' => '5.4.1',
+            'version' => '5.4.1.0',
+            'reference' => '9d07b3f7fdcf5efec5d1609cba3c19c5ea2bdc9c',
             'type' => 'library',
             'install_path' => __DIR__ . '/../phpdocumentor/reflection-docblock',
             'aliases' => array(),
@@ -622,8 +622,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0|3.0',
-                1 => '3.0.0',
+                0 => '3.0.0',
+                1 => '1.0|2.0|3.0',
             ),
         ),
         'psr/simple-cache-implementation' => array(

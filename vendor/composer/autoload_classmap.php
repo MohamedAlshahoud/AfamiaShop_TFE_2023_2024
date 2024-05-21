@@ -65,6 +65,7 @@ return array(
     'App\\Entity\\Slider' => $baseDir . '/src/Entity/Slider.php',
     'App\\Entity\\Transporter' => $baseDir . '/src/Entity/Transporter.php',
     'App\\Entity\\User' => $baseDir . '/src/Entity/User.php',
+    'App\\EventSubscriber\\AuthenticationExceptionSubscriber' => $baseDir . '/src/EventSubscriber/AuthenticationExceptionSubscriber.php',
     'App\\EventSubscriber\\DatabaseActivitySubscriber' => $baseDir . '/src/EventSubscriber/DatabaseActivitySubscriber.php',
     'App\\EventSubscriber\\LocaleSubscriber' => $baseDir . '/src/EventSubscriber/LocaleSubscriber.php',
     'App\\Extensions\\Doctrine\\MatchAgainst' => $baseDir . '/src/Extensions/Doctrine/MatchAgainst.php',

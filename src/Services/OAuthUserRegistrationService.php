@@ -10,12 +10,24 @@ use League\OAuth2\Client\Provider\ResourceOwnerInterface;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 final readonly class OAuthUserRegistrationService
 {
-  public function __construct(private EntityManagerInterface $em, private UserPasswordHasherInterface $passwordHasher, private UserRepository $userRepository)
+  private EntityManagerInterface $em;
+  private UserPasswordHasherInterface $passwordHasher;
+  private UserRepository $userRepository;
+  private TranslatorInterface $translator;
+
+  public function __construct(EntityManagerInterface $em, 
+  UserPasswordHasherInterface $passwordHasher, 
+  UserRepository $userRepository,
+  TranslatorInterface $translator)
   {
-    
+    $this->em = $em;
+    $this->passwordHasher = $passwordHasher;
+    $this->userRepository = $userRepository;
+    $this->translator = $translator;
   }
 
   /**
@@ -27,8 +39,9 @@ final readonly class OAuthUserRegistrationService
     
     if($userExist) {
       $session = new Session();
-      $session->getFlashBag()->add("loginError", "You already have an account. Reset your password if you forgot it.");
-      throw new AuthenticationException("You already have an account");
+      $translatedMessage = $this->translator->trans("You already have an account. Reset your password if you forgot it.");
+      $session->getFlashBag()->add("loginError", $translatedMessage);
+      throw new AuthenticationException($translatedMessage);
     }
 
     $user = (new User())

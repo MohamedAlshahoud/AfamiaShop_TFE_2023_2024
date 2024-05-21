@@ -200,11 +200,8 @@ class __TwigTemplate_214671070438b61d7dc55259ec5b8e39 extends Template
         // line 52
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Don't Have an Account?", [], "messages");
         yield " <a href=\"/register\">";
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Sign up
-                                now", [], "messages");
-        // line 53
-        yield "</a>
-                            </div>
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Sign up now", [], "messages");
+        yield "</a></div>
                         </div>
                     </div>
                 </div>
@@ -243,7 +240,7 @@ class __TwigTemplate_214671070438b61d7dc55259ec5b8e39 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  206 => 53,  201 => 52,  195 => 49,  187 => 46,  182 => 44,  176 => 41,  171 => 39,  165 => 36,  159 => 33,  155 => 32,  152 => 31,  143 => 28,  140 => 27,  135 => 26,  123 => 23,  120 => 22,  118 => 21,  115 => 20,  109 => 18,  107 => 17,  101 => 14,  91 => 6,  81 => 5,  60 => 3,  37 => 1,);
+        return array (  201 => 52,  195 => 49,  187 => 46,  182 => 44,  176 => 41,  171 => 39,  165 => 36,  159 => 33,  155 => 32,  152 => 31,  143 => 28,  140 => 27,  135 => 26,  123 => 23,  120 => 22,  118 => 21,  115 => 20,  109 => 18,  107 => 17,  101 => 14,  91 => 6,  81 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -299,9 +296,7 @@ class __TwigTemplate_214671070438b61d7dc55259ec5b8e39 extends Template
                                 <span>{% trans %}or{% endtrans %}</span>
                             </div>
                             
-                            <div class=\"form-note text-center\">{% trans %}Don't Have an Account?{% endtrans %} <a href=\"/register\">{% trans %}Sign up
-                                now{% endtrans %}</a>
-                            </div>
+                            <div class=\"form-note text-center\">{% trans %}Don't Have an Account?{% endtrans %} <a href=\"/register\">{% trans %}Sign up now{% endtrans %}</a></div>
                         </div>
                     </div>
                 </div>

@@ -204,8 +204,8 @@ class ComposerStaticInit27361f27a6000cc69f5b1329d959dbc7
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'Webmozart\\Assert\\' => 
         array (
@@ -534,8 +534,8 @@ class ComposerStaticInit27361f27a6000cc69f5b1329d959dbc7
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -689,8 +689,8 @@ class ComposerStaticInit27361f27a6000cc69f5b1329d959dbc7
         ),
         'Doctrine\\Common\\' => 
         array (
-            0 => __DIR__ . '/..' . '/doctrine/event-manager/src',
-            1 => __DIR__ . '/..' . '/doctrine/common/src',
+            0 => __DIR__ . '/..' . '/doctrine/common/src',
+            1 => __DIR__ . '/..' . '/doctrine/event-manager/src',
         ),
         'Doctrine\\Bundle\\MigrationsBundle\\' => 
         array (
@@ -778,6 +778,7 @@ class ComposerStaticInit27361f27a6000cc69f5b1329d959dbc7
         'App\\Entity\\Slider' => __DIR__ . '/../..' . '/src/Entity/Slider.php',
         'App\\Entity\\Transporter' => __DIR__ . '/../..' . '/src/Entity/Transporter.php',
         'App\\Entity\\User' => __DIR__ . '/../..' . '/src/Entity/User.php',
+        'App\\EventSubscriber\\AuthenticationExceptionSubscriber' => __DIR__ . '/../..' . '/src/EventSubscriber/AuthenticationExceptionSubscriber.php',
         'App\\EventSubscriber\\DatabaseActivitySubscriber' => __DIR__ . '/../..' . '/src/EventSubscriber/DatabaseActivitySubscriber.php',
         'App\\EventSubscriber\\LocaleSubscriber' => __DIR__ . '/../..' . '/src/EventSubscriber/LocaleSubscriber.php',
         'App\\Extensions\\Doctrine\\MatchAgainst' => __DIR__ . '/../..' . '/src/Extensions/Doctrine/MatchAgainst.php',
