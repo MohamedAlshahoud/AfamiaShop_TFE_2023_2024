@@ -44,29 +44,27 @@ class __TwigTemplate_261a611a770a1cf1f5e79484e35cbc13 extends Template
         yield "<header  class=\"header_wrap fixed-top header_with_topbar active\">
     <div  class=\"top-header\" style=\"\">
         <div  class=\"container\">
-            <div  class=\"row align-items-center\">
-                <div  class=\"col-md-6\">
-                    <div  class=\"text-center text-md-start\">
-                        <ul  class=\"header_list\">
-                            <li ><i  class=\"ti-time\"></i><span>";
-        // line 8
+            <div  class=\"row\">
+                <div  class=\"col-lg-6 col-md-6 col-sm-12\">
+                    <ul  class=\"header_list\">
+                        <li ><i class=\"ti-time\"></i><span>";
+        // line 7
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Monday - Friday : 8:00 - 20:00", [], "messages");
         yield "</span></li>
-                        </ul>
-                    </div>
+                    </ul>
                 </div>
-                <div  class=\"col-md-6\">
-                    <div class=\"d-flex align-items-center justify-content-center justify-content-md-end\">
+                <div  class=\"col-lg-4 col-md-4 col-sm-12\">
+                    <div class=\"d-flex\">
                         ";
-        // line 14
+        // line 12
         $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["locales"]) || array_key_exists("locales", $context) ? $context["locales"] : (function () { throw new RuntimeError('Variable "locales" does not exist.', 14, $this->source); })()));
+        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["locales"]) || array_key_exists("locales", $context) ? $context["locales"] : (function () { throw new RuntimeError('Variable "locales" does not exist.', 12, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["locale"]) {
-            // line 15
+            // line 13
             yield "                            <div class=\"lng_dropdown mr-2\">
                                 <a class=\"";
-            // line 16
-            if ((CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 16, $this->source); })()), "request", [], "any", false, false, false, 16), "locale", [], "any", false, false, false, 16) == $context["locale"])) {
+            // line 14
+            if ((CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 14, $this->source); })()), "request", [], "any", false, false, false, 14), "locale", [], "any", false, false, false, 14) == $context["locale"])) {
                 yield "active";
             }
             yield "\" href=\"";
@@ -80,11 +78,11 @@ class __TwigTemplate_261a611a770a1cf1f5e79484e35cbc13 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['locale'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 19
-        yield "                        <ul  class=\"contact_detail text-center text-lg-start\">
+        // line 17
+        yield "                        <ul  class=\"contact_detail\">
                             <li ><i  class=\"ti-mobile\"></i><span>";
-        // line 20
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 20, $this->source); })()), "session", [], "any", false, false, false, 20), "get", ["siteInformation"], "method", false, false, false, 20), "phone", [], "any", false, false, false, 20), "html", null, true);
+        // line 18
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 18, $this->source); })()), "session", [], "any", false, false, false, 18), "get", ["siteInformation"], "method", false, false, false, 18), "phone", [], "any", false, false, false, 18), "html", null, true);
         yield "</span></li>
                         </ul>
                     </div>
@@ -97,8 +95,8 @@ class __TwigTemplate_261a611a770a1cf1f5e79484e35cbc13 extends Template
             <nav  class=\"navbar navbar-expand-lg\"><a 
                     routerlink=\"/\" class=\"navbar-brand\" ng-reflect-router-link=\"/\" href=\"/\">
                     <h1 class=\"name\">";
-        // line 31
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 31, $this->source); })()), "session", [], "any", false, false, false, 31), "get", ["siteInformation"], "method", false, false, false, 31), "name", [], "any", false, false, false, 31), "html", null, true);
+        // line 29
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 29, $this->source); })()), "session", [], "any", false, false, false, 29), "get", ["siteInformation"], "method", false, false, false, 29), "name", [], "any", false, false, false, 29), "html", null, true);
         yield "</h1>
                 </a><button  type=\"button\" data-bs-toggle=\"collapse\"
                     data-bs-target=\"#navbarSupportedContent\" aria-expanded=\"false\"
@@ -109,14 +107,14 @@ class __TwigTemplate_261a611a770a1cf1f5e79484e35cbc13 extends Template
                     <ul  class=\"navbar-nav\">
                         <li  class=\"dropdown\"><a  routerlink=\"/\"
                             class=\"nav-link\" ng-reflect-router-link=\"/\" href=\"/\">";
-        // line 40
+        // line 38
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Home", [], "messages");
         yield "</a></li>
                         <li  class=\"dropdown\">
                             ";
-        // line 42
+        // line 40
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-            // line 43
+            // line 41
             yield "                                <a  routerlink=\"/\" class=\"nav-link\" ng-reflect-router-link=\"/\" href=\"";
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin");
             yield "\">";
@@ -124,12 +122,12 @@ class __TwigTemplate_261a611a770a1cf1f5e79484e35cbc13 extends Template
             yield "</a></li>
                             ";
         }
-        // line 45
+        // line 43
         yield "                        <li  class=\"dropdown\">
                             ";
-        // line 46
+        // line 44
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-            // line 47
+            // line 45
             yield "                                <a  routerlink=\"/\" class=\"nav-link\" ng-reflect-router-link=\"/\" href=\"";
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("newsletters_list");
             yield "\">";
@@ -137,48 +135,48 @@ class __TwigTemplate_261a611a770a1cf1f5e79484e35cbc13 extends Template
             yield "</a></li>
                             ";
         }
-        // line 49
+        // line 47
         yield "                        <li  class=\"dropdown\"><a  routerlink=\"/\"
                             class=\"nav-link\" ng-reflect-router-link=\"/\" href=\"";
-        // line 50
+        // line 48
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_category");
         yield "\">";
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Categories", [], "messages");
         yield "</a></li>
                         <li  class=\"dropdown\"><a  routerlink=\"/\"
                             class=\"nav-link\" ng-reflect-router-link=\"/\" href=\"";
-        // line 52
+        // line 50
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_shop");
         yield "\">";
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Shop", [], "messages");
         yield "</a></li>
                         <li ><a  routerlink=\"/contact\"
                             class=\"nav-link nav_item\" ng-reflect-router-link=\"/contact\" href=\"";
-        // line 54
+        // line 52
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_contact");
         yield "\">";
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Contact Us", [], "messages");
         yield "</a></li>
                         ";
-        // line 55
-        if (CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 55, $this->source); })()), "user", [], "any", false, false, false, 55)) {
-            // line 56
+        // line 53
+        if (CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 53, $this->source); })()), "user", [], "any", false, false, false, 53)) {
+            // line 54
             yield "                            <li class=\"nav-item dropdown\">
                                 <a class=\"nav-link dropdown-toggle href=\"#\" id=\"navbarDropdownMenuLink\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">
                                 ";
-            // line 58
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 58, $this->source); })()), "user", [], "any", false, false, false, 58), "username", [], "any", false, false, false, 58), "html", null, true);
+            // line 56
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 56, $this->source); })()), "user", [], "any", false, false, false, 56), "username", [], "any", false, false, false, 56), "html", null, true);
             yield "
                                 </a>
                                 <ul class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">
                                     <li><a class=\"dropdown-item\" href=\"";
-            // line 61
+            // line 59
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_account");
             yield "\">";
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Your Account", [], "messages");
             yield "</a></li>
                                     <li><a class=\"dropdown-item\" href=\"";
-            // line 62
+            // line 60
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             yield "\">";
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Log out", [], "messages");
@@ -187,23 +185,23 @@ class __TwigTemplate_261a611a770a1cf1f5e79484e35cbc13 extends Template
                             </li> 
                         ";
         } else {
-            // line 66
+            // line 64
             yield "                            <li class=\"nav-item dropdown\">
                                 <a class=\"nav-link dropdown-toggle href=\"#\" id=\"navbarDropdownMenuLink\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">
                                 ";
-            // line 68
+            // line 66
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Account", [], "messages");
-            // line 69
+            // line 67
             yield "                                </a>
                                 <ul class=\"dropdown-menu\" aria-labelledby=\"navbarDropdownMenuLink\">
                                     <li><a class=\"dropdown-item\" href=\"";
-            // line 71
+            // line 69
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
             yield "\">";
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Log in", [], "messages");
             yield "</a></li>
                                     <li><a class=\"dropdown-item\" href=\"";
-            // line 72
+            // line 70
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
             yield "\">";
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Register", [], "messages");
@@ -212,7 +210,7 @@ class __TwigTemplate_261a611a770a1cf1f5e79484e35cbc13 extends Template
                             </li> 
                         ";
         }
-        // line 76
+        // line 74
         yield "                    </ul>
                     <ul class=\"navbar-nav attr-nav align-items-center\">          
                         <li><a href=\"javascript:void(0);\" class=\"nav-link search_trigger\"><i class=\"linearicons-magnifier\"></i></a>
@@ -221,7 +219,7 @@ class __TwigTemplate_261a611a770a1cf1f5e79484e35cbc13 extends Template
                                     <div class=\"box-collapse\">
                                         <div class=\"title-box-d\">
                                             <h3 class=\"title-d\">";
-        // line 83
+        // line 81
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Advanced search ...", [], "messages");
         yield "</h3>
                                         </div>
@@ -229,8 +227,8 @@ class __TwigTemplate_261a611a770a1cf1f5e79484e35cbc13 extends Template
                                         <div class=\"box-collapse-wrap form\">
                                             <div class=\"row\">
                                                 ";
-        // line 88
-        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["search"]) || array_key_exists("search", $context) ? $context["search"] : (function () { throw new RuntimeError('Variable "search" does not exist.', 88, $this->source); })()), 'form');
+        // line 86
+        yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["search"]) || array_key_exists("search", $context) ? $context["search"] : (function () { throw new RuntimeError('Variable "search" does not exist.', 86, $this->source); })()), 'form');
         yield "
                                             </div>
                                         </div>
@@ -264,7 +262,7 @@ class __TwigTemplate_261a611a770a1cf1f5e79484e35cbc13 extends Template
                             <div class=\"search_overlay\"></div>
                         </li>
                         <a class=\"nav-link\" href=\"";
-        // line 120
+        // line 118
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cart");
         yield "\"><span><i class=\"linearicons-cart\"></i></a>
                     </ul>
@@ -303,7 +301,7 @@ class __TwigTemplate_261a611a770a1cf1f5e79484e35cbc13 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  268 => 120,  233 => 88,  225 => 83,  216 => 76,  207 => 72,  201 => 71,  197 => 69,  195 => 68,  191 => 66,  182 => 62,  176 => 61,  170 => 58,  166 => 56,  164 => 55,  158 => 54,  151 => 52,  144 => 50,  141 => 49,  133 => 47,  131 => 46,  128 => 45,  120 => 43,  118 => 42,  113 => 40,  101 => 31,  87 => 20,  84 => 19,  69 => 16,  66 => 15,  62 => 14,  53 => 8,  44 => 1,);
+        return array (  266 => 118,  231 => 86,  223 => 81,  214 => 74,  205 => 70,  199 => 69,  195 => 67,  193 => 66,  189 => 64,  180 => 60,  174 => 59,  168 => 56,  164 => 54,  162 => 53,  156 => 52,  149 => 50,  142 => 48,  139 => 47,  131 => 45,  129 => 44,  126 => 43,  118 => 41,  116 => 40,  111 => 38,  99 => 29,  85 => 18,  82 => 17,  67 => 14,  64 => 13,  60 => 12,  52 => 7,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -311,22 +309,20 @@ class __TwigTemplate_261a611a770a1cf1f5e79484e35cbc13 extends Template
         return new Source("<header  class=\"header_wrap fixed-top header_with_topbar active\">
     <div  class=\"top-header\" style=\"\">
         <div  class=\"container\">
-            <div  class=\"row align-items-center\">
-                <div  class=\"col-md-6\">
-                    <div  class=\"text-center text-md-start\">
-                        <ul  class=\"header_list\">
-                            <li ><i  class=\"ti-time\"></i><span>{% trans %} Monday - Friday : 8:00 - 20:00{% endtrans %}</span></li>
-                        </ul>
-                    </div>
+            <div  class=\"row\">
+                <div  class=\"col-lg-6 col-md-6 col-sm-12\">
+                    <ul  class=\"header_list\">
+                        <li ><i class=\"ti-time\"></i><span>{% trans %} Monday - Friday : 8:00 - 20:00{% endtrans %}</span></li>
+                    </ul>
                 </div>
-                <div  class=\"col-md-6\">
-                    <div class=\"d-flex align-items-center justify-content-center justify-content-md-end\">
+                <div  class=\"col-lg-4 col-md-4 col-sm-12\">
+                    <div class=\"d-flex\">
                         {% for locale in locales %}
                             <div class=\"lng_dropdown mr-2\">
                                 <a class=\"{% if app.request.locale == locale %}active{% endif %}\" href=\"{{ path('change_locale', {'locale': locale})}}\">{{locale}}</a>
                             </div>
                         {% endfor %}
-                        <ul  class=\"contact_detail text-center text-lg-start\">
+                        <ul  class=\"contact_detail\">
                             <li ><i  class=\"ti-mobile\"></i><span>{{app.session.get('siteInformation').phone}}</span></li>
                         </ul>
                     </div>
