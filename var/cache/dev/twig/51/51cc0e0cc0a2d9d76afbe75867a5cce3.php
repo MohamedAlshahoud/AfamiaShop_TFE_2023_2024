@@ -132,41 +132,58 @@ class __TwigTemplate_214671070438b61d7dc55259ec5b8e39 extends Template
                                 ";
         }
         // line 26
+        yield "                                ";
+        $context['_parent'] = $context;
+        $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 26, $this->source); })()), "flashes", ["loginError"], "method", false, false, false, 26));
+        foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
+            // line 27
+            yield "                                    <div class=\"alert alert-danger\">
+                                        ";
+            // line 28
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($context["message"], "html", null, true);
+            yield "
+                                    </div>
+                                ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 31
         yield "                                <div class=\"form-group mb-3\"><input type=\"text\" required=\"\" name=\"email\"
                                         formcontrolname=\"email\" placeholder=\"";
-        // line 27
+        // line 32
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Your Email", [], "messages");
         yield "\"
                                         class=\"form-control ng-untouched ng-pristine ng-invalid\" autocomplete=\"email\" value=\"";
-        // line 28
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 28, $this->source); })()), "html", null, true);
+        // line 33
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 33, $this->source); })()), "html", null, true);
         yield "\" required autofocus>
                                 </div>
                                 <div class=\"form-group mb-3\"><input required=\"\" type=\"password\"
                                         formcontrolname=\"password\" name=\"password\" placeholder=\"";
-        // line 31
+        // line 36
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Password", [], "messages");
         yield "\"
                                         class=\"form-control ng-untouched ng-pristine ng-invalid\" autocomplete=\"current-password\" required>
                                 </div>
                                 <input type=\"hidden\" name=\"_csrf_token\" value=\"";
-        // line 34
+        // line 39
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
         yield "\">
                                 <div class=\"form-group mb-3\"><button type=\"submit\" name=\"login\"
                                     class=\"btn btn-fill-out btn-block\">";
-        // line 36
+        // line 41
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Log in", [], "messages");
         yield "</button>
                                 </div>
                                 <ul class=\"btn btn-fill btn-block list_none\">
                                     <li><a href=\"";
-        // line 39
+        // line 44
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_oauth_login", ["service" => "google"]);
         yield "\" class=\"btn btn-google\"><i class=\"ion-social-google\"></i>Google</a></li>
                                 </ul>
                                 <a href=\"";
-        // line 41
+        // line 46
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_forgot_password_request");
         yield "\">";
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Forgot password?", [], "messages");
@@ -174,18 +191,18 @@ class __TwigTemplate_214671070438b61d7dc55259ec5b8e39 extends Template
                             </form>
                             <div class=\"different_login\">
                                 <span>";
-        // line 44
+        // line 49
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("or", [], "messages");
         yield "</span>
                             </div>
                             
                             <div class=\"form-note text-center\">";
-        // line 47
+        // line 52
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Don't Have an Account?", [], "messages");
         yield " <a href=\"/register\">";
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Sign up
                                 now", [], "messages");
-        // line 48
+        // line 53
         yield "</a>
                             </div>
                         </div>
@@ -226,7 +243,7 @@ class __TwigTemplate_214671070438b61d7dc55259ec5b8e39 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  189 => 48,  184 => 47,  178 => 44,  170 => 41,  165 => 39,  159 => 36,  154 => 34,  148 => 31,  142 => 28,  138 => 27,  135 => 26,  123 => 23,  120 => 22,  118 => 21,  115 => 20,  109 => 18,  107 => 17,  101 => 14,  91 => 6,  81 => 5,  60 => 3,  37 => 1,);
+        return array (  206 => 53,  201 => 52,  195 => 49,  187 => 46,  182 => 44,  176 => 41,  171 => 39,  165 => 36,  159 => 33,  155 => 32,  152 => 31,  143 => 28,  140 => 27,  135 => 26,  123 => 23,  120 => 22,  118 => 21,  115 => 20,  109 => 18,  107 => 17,  101 => 14,  91 => 6,  81 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -256,6 +273,11 @@ class __TwigTemplate_214671070438b61d7dc55259ec5b8e39 extends Template
                                         {% trans %}You are logged in as{% endtrans %} {{ app.user.userIdentifier}}, <a href=\"{{ path('app_logout') }}\">{% trans %}Logout{% endtrans %}</a>
                                     </div>
                                 {% endif %}
+                                {% for message in app.flashes('loginError') %}
+                                    <div class=\"alert alert-danger\">
+                                        {{ message }}
+                                    </div>
+                                {% endfor %}
                                 <div class=\"form-group mb-3\"><input type=\"text\" required=\"\" name=\"email\"
                                         formcontrolname=\"email\" placeholder=\"{% trans %}Your Email{% endtrans %}\"
                                         class=\"form-control ng-untouched ng-pristine ng-invalid\" autocomplete=\"email\" value=\"{{ last_username}}\" required autofocus>

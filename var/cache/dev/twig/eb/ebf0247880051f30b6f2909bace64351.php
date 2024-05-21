@@ -92,24 +92,24 @@ class __TwigTemplate_ebd99573317f5c85913044c37e3486cc extends Template
     <div class=\"section\">
         <div class=\"container\">
             <div class=\"row\">
-                    <div class=\"col-lg-12\"> 
-                        <div  class=\"row\">
-                            <div  class=\"col-12\">
-                                <div  class=\"heading_s1\">
-                                    <h2 >";
+                <div class=\"col-lg-12\"> 
+                    <div  class=\"row\">
+                        <div  class=\"col-12\">
+                            <div  class=\"heading_s1\">
+                                <h2 >";
         // line 14
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, (isset($context["products"]) || array_key_exists("products", $context) ? $context["products"] : (function () { throw new RuntimeError('Variable "products" does not exist.', 14, $this->source); })()), "getTotalItemCount", [], "any", false, false, false, 14), "html", null, true);
         yield " ";
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("products found", [], "messages");
         yield "</h2>
-                                </div>
                             </div>
                         </div>
-                        <div  class=\"tab-content\">
-                            <div  id=\"arrival\" role=\"tabpanel\" aria-labelledby=\"arrival-tab\"
-                                class=\"tab-pane fade show active\">
-                                <div  class=\"row shop_container\">
-                                    ";
+                    </div>
+                    <div  class=\"tab-content\">
+                        <div  id=\"arrival\" role=\"tabpanel\" aria-labelledby=\"arrival-tab\"
+                            class=\"tab-pane fade show active\">
+                            <div  class=\"row shop_container\">
+                                ";
         // line 22
         $context['_parent'] = $context;
         $context['_seq'] = CoreExtension::ensureTraversable((isset($context["products"]) || array_key_exists("products", $context) ? $context["products"] : (function () { throw new RuntimeError('Variable "products" does not exist.', 22, $this->source); })()));
@@ -128,11 +128,11 @@ class __TwigTemplate_ebd99573317f5c85913044c37e3486cc extends Template
         }
         foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
             yield " 
-                                        ";
+                                    ";
             // line 23
             yield from             $this->loadTemplate("product/display_product.html.twig", "search/index.html.twig", 23)->unwrap()->yield($context);
             // line 24
-            yield "                                    ";
+            yield "                                ";
             ++$context['loop']['index0'];
             ++$context['loop']['index'];
             $context['loop']['first'] = false;
@@ -146,24 +146,22 @@ class __TwigTemplate_ebd99573317f5c85913044c37e3486cc extends Template
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['product'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         yield " 
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class=\"row\">
-                <div class=\"pagination\">
-                    ";
+        </div>
+        <div class=\"row\">
+            <div class=\"pagination\">
+                ";
         // line 33
         yield $this->env->getRuntime('Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationRuntime')->render($this->env, (isset($context["products"]) || array_key_exists("products", $context) ? $context["products"] : (function () { throw new RuntimeError('Variable "products" does not exist.', 33, $this->source); })()));
         yield "
-                </div>
             </div>
-            
-        </div>
-        
-    </div>
+        </div> 
+    </div>    
+</div>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -209,36 +207,34 @@ class __TwigTemplate_ebd99573317f5c85913044c37e3486cc extends Template
     <div class=\"section\">
         <div class=\"container\">
             <div class=\"row\">
-                    <div class=\"col-lg-12\"> 
-                        <div  class=\"row\">
-                            <div  class=\"col-12\">
-                                <div  class=\"heading_s1\">
-                                    <h2 >{{ products.getTotalItemCount }} {% trans %}products found{% endtrans %}</h2>
-                                </div>
+                <div class=\"col-lg-12\"> 
+                    <div  class=\"row\">
+                        <div  class=\"col-12\">
+                            <div  class=\"heading_s1\">
+                                <h2 >{{ products.getTotalItemCount }} {% trans %}products found{% endtrans %}</h2>
                             </div>
                         </div>
-                        <div  class=\"tab-content\">
-                            <div  id=\"arrival\" role=\"tabpanel\" aria-labelledby=\"arrival-tab\"
-                                class=\"tab-pane fade show active\">
-                                <div  class=\"row shop_container\">
-                                    {% for product in products %} 
-                                        {% include \"product/display_product.html.twig\" %}
-                                    {% endfor %} 
-                                </div>
+                    </div>
+                    <div  class=\"tab-content\">
+                        <div  id=\"arrival\" role=\"tabpanel\" aria-labelledby=\"arrival-tab\"
+                            class=\"tab-pane fade show active\">
+                            <div  class=\"row shop_container\">
+                                {% for product in products %} 
+                                    {% include \"product/display_product.html.twig\" %}
+                                {% endfor %} 
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class=\"row\">
-                <div class=\"pagination\">
-                    {{ knp_pagination_render(products) }}
-                </div>
-            </div>
-            
         </div>
-        
-    </div>
+        <div class=\"row\">
+            <div class=\"pagination\">
+                {{ knp_pagination_render(products) }}
+            </div>
+        </div> 
+    </div>    
+</div>
 {% endblock %}
 ", "search/index.html.twig", "C:\\WEB_DEVELOPER\\AFAMIA\\AfamiaShop_TFE_2023_2024\\templates\\search\\index.html.twig");
     }
