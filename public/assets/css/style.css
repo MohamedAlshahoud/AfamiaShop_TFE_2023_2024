@@ -1173,6 +1173,7 @@ button:focus:not(:focus-visible) {
 	margin: 0;
 	display:inline-block;
 }
+
 .navbar-brand .name{
 	color: #0090e3;
 }
@@ -1284,6 +1285,9 @@ button:focus:not(:focus-visible) {
 	text-transform: capitalize;
 	font-size: 17px;
 	color: #0090e3;
+}
+.navbar .navbar-nav > li > .nav-link:hover {
+	color: #000;
 }
 .navbar .navbar-nav > li > a.active, 
 .navbar .navbar-nav > li:hover > a,
