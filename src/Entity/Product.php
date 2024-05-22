@@ -50,15 +50,6 @@ class Product
     private ?bool $isNewProduct = null;
 
 
-    #[ORM\ManyToMany(targetEntity: Category::class, inversedBy: 'products')]
-    private Collection $categories;
-
-    #[ORM\ManyToMany(targetEntity: Gender::class, inversedBy: 'products')]
-    private Collection $genders;
-
-    #[ORM\ManyToMany(targetEntity: Color::class, inversedBy: 'products')]
-    private Collection $colors;
-
     #[ORM\Column(nullable: true)]
     private ?\DateTimeImmutable $createdAt = null;
 
@@ -68,11 +59,17 @@ class Product
     #[ORM\OneToMany(mappedBy: 'annonces', targetEntity: Comments::class, orphanRemoval: true)]
     private Collection $comments;
 
+    #[ORM\ManyToOne(inversedBy: 'products')]
+    private ?Category $categories = null;
+
+    #[ORM\ManyToOne(inversedBy: 'products')]
+    private ?Color $colors = null;
+
+    #[ORM\ManyToOne(inversedBy: 'products')]
+    private ?Gender $genders = null;
+
     public function __construct()
     {
-        $this->categories = new ArrayCollection();
-        $this->genders = new ArrayCollection();
-        $this->colors = new ArrayCollection();
         $this->createdAt = new \DateTimeImmutable();
         $this->comments = new ArrayCollection();
         
@@ -156,79 +153,7 @@ class Product
         return $this;
     }
 
-    /**
-     * @return Collection<int, Category>
-     */
-    public function getCategories(): Collection
-    {
-        return $this->categories;
-    }
-
-    public function addCategory(Category $category): static
-    {
-        if (!$this->categories->contains($category)) {
-            $this->categories->add($category);
-        }
-
-        return $this;
-    }
-
-    public function removeCategory(Category $category): static
-    {
-        $this->categories->removeElement($category);
-
-        return $this;
-    }
-
-    /**
-     * @return Collection<int, Gender>
-     */
-    public function getGenders(): Collection
-    {
-        return $this->genders;
-    }
-
-    public function addGender(Gender $gender): static
-    {
-        if (!$this->genders->contains($gender)) {
-            $this->genders->add($gender);
-        }
-
-        return $this;
-    }
-
-    public function removeGender(Gender $gender): static
-    {
-        $this->genders->removeElement($gender);
-
-        return $this;
-    }
-
-
-    /**
-     * @return Collection<int, Color>
-     */
-    public function getColors(): Collection
-    {
-        return $this->colors;
-    }
-
-    public function addColor(Color $color): static
-    {
-        if (!$this->colors->contains($color)) {
-            $this->colors->add($color);
-        }
-
-        return $this;
-    }
-
-    public function removeColor(Color $color): static
-    {
-        $this->colors->removeElement($color);
-
-        return $this;
-    }
-
+    
 
     public function getCreatedAt(): ?\DateTimeImmutable
     {
@@ -280,6 +205,42 @@ class Product
                 $comment->setAnnonces(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getCategories(): ?Category
+    {
+        return $this->categories;
+    }
+
+    public function setCategories(?Category $categories): static
+    {
+        $this->categories = $categories;
+
+        return $this;
+    }
+
+    public function getColors(): ?Color
+    {
+        return $this->colors;
+    }
+
+    public function setColors(?Color $colors): static
+    {
+        $this->colors = $colors;
+
+        return $this;
+    }
+
+    public function getGenders(): ?Gender
+    {
+        return $this->genders;
+    }
+
+    public function setGenders(?Gender $genders): static
+    {
+        $this->genders = $genders;
 
         return $this;
     }
