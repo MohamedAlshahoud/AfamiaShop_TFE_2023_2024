@@ -23,11 +23,12 @@ class Category
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $description = null;
 
-    #[ORM\ManyToMany(targetEntity: Product::class, mappedBy: 'categories')]
-    private Collection $products;
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $image = null;
+
+    #[ORM\OneToMany(mappedBy: 'categories', targetEntity: Product::class)]
+    private Collection $products;
 
     public function __construct()
     {
@@ -63,33 +64,6 @@ class Category
         return $this;
     }
 
-    /**
-     * @return Collection<int, Product>
-     */
-    public function getProducts(): Collection
-    {
-        return $this->products;
-    }
-
-    public function addProduct(Product $product): static
-    {
-        if (!$this->products->contains($product)) {
-            $this->products->add($product);
-            $product->addCategory($this);
-        }
-
-        return $this;
-    }
-
-    public function removeProduct(Product $product): static
-    {
-        if ($this->products->removeElement($product)) {
-            $product->removeCategory($this);
-        }
-
-        return $this;
-    }
-
     public function getimage(): ?string
     {
         return $this->image;
@@ -105,5 +79,35 @@ class Category
     public function __toString()
     {
         return $this->name;
+    }
+
+    /**
+     * @return Collection<int, Product>
+     */
+    public function getProducts(): Collection
+    {
+        return $this->products;
+    }
+
+    public function addProduct(Product $product): static
+    {
+        if (!$this->products->contains($product)) {
+            $this->products->add($product);
+            $product->setCategories($this);
+        }
+
+        return $this;
+    }
+
+    public function removeProduct(Product $product): static
+    {
+        if ($this->products->removeElement($product)) {
+            // set the owning side to null (unless already changed)
+            if ($product->getCategories() === $this) {
+                $product->setCategories(null);
+            }
+        }
+
+        return $this;
     }
 }
