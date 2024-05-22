@@ -2400,10 +2400,6 @@
         <source>You already have an account</source>
         <target>Vous avez déjà un compte</target>
       </trans-unit>
-      <trans-unit id="L3Q" resname="Sign up now">
-        <source>Sign up now</source>
-        <target>S'inscrire maintenant</target>
-      </trans-unit>
     </body>
   </file>
 </xliff>
