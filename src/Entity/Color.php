@@ -22,14 +22,13 @@ class Color
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $description = null;
 
-    #[ORM\OneToMany(mappedBy: 'colors', targetEntity: Product::class)]
+    #[ORM\ManyToMany(targetEntity: Product::class, mappedBy: 'colors')]
     private Collection $products;
 
     public function __construct()
     {
         $this->products = new ArrayCollection();
     }
-
 
     public function getId(): ?int
     {
@@ -60,12 +59,6 @@ class Color
         return $this;
     }
 
-
-    public function __toString()
-    {
-        return $this->name;
-    }
-
     /**
      * @return Collection<int, Product>
      */
@@ -78,7 +71,7 @@ class Color
     {
         if (!$this->products->contains($product)) {
             $this->products->add($product);
-            $product->setColors($this);
+            $product->addColor($this);
         }
 
         return $this;
@@ -87,12 +80,14 @@ class Color
     public function removeProduct(Product $product): static
     {
         if ($this->products->removeElement($product)) {
-            // set the owning side to null (unless already changed)
-            if ($product->getColors() === $this) {
-                $product->setColors(null);
-            }
+            $product->removeColor($this);
         }
 
         return $this;
+    }
+
+    public function __toString()
+    {
+        return $this->name;
     }
 }

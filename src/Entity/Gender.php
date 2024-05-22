@@ -21,7 +21,7 @@ class Gender
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $description = null;
 
-    #[ORM\OneToMany(mappedBy: 'genders', targetEntity: Product::class)]
+    #[ORM\ManyToMany(targetEntity: Product::class, mappedBy: 'genders')]
     private Collection $products;
 
     public function __construct()
@@ -58,11 +58,6 @@ class Gender
         return $this;
     }
 
-    public function __toString()
-    {
-        return $this->name;
-    }
-
     /**
      * @return Collection<int, Product>
      */
@@ -75,7 +70,7 @@ class Gender
     {
         if (!$this->products->contains($product)) {
             $this->products->add($product);
-            $product->setGenders($this);
+            $product->addGender($this);
         }
 
         return $this;
@@ -84,12 +79,14 @@ class Gender
     public function removeProduct(Product $product): static
     {
         if ($this->products->removeElement($product)) {
-            // set the owning side to null (unless already changed)
-            if ($product->getGenders() === $this) {
-                $product->setGenders(null);
-            }
+            $product->removeGender($this);
         }
 
         return $this;
+    }
+
+    public function __toString()
+    {
+        return $this->name;
     }
 }
