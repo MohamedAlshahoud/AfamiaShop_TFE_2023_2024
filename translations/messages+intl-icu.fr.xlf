@@ -2392,6 +2392,14 @@
         <source>DHL , Fast delivery - 1 day - 6,99€</source>
         <target>DHL , raprid- 1 jour - 6,99€</target>
       </trans-unit>
+      <trans-unit id="T1j3H0b" resname="Order confirmation">
+        <source>Order confirmation</source>
+        <target>Confirmation de commande</target>
+      </trans-unit>
+      <trans-unit id="KZhH7FL" resname="You already have an account. Reset your password if you forgot it.">
+        <source>You already have an account. Reset your password if you forgot it.</source>
+        <target>Vous avez déjà un compte. Réinitialisez votre mot de passe si vous l'avez oublié.</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
