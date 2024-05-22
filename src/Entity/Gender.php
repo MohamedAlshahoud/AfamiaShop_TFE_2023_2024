@@ -29,7 +29,7 @@ class Gender
         $this->products = new ArrayCollection();
     }
 
-
+    
     public function getId(): ?int
     {
         return $this->id;
@@ -58,7 +58,6 @@ class Gender
 
         return $this;
     }
-
 
     public function __toString()
     {

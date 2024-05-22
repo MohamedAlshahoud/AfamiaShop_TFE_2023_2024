@@ -30,7 +30,6 @@ class Color
         $this->products = new ArrayCollection();
     }
 
-    
 
     public function getId(): ?int
     {
@@ -60,7 +59,6 @@ class Color
 
         return $this;
     }
-
 
     public function __toString()
     {

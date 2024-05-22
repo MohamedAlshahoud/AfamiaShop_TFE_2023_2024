@@ -35,7 +35,6 @@ class Category
         $this->products = new ArrayCollection();
     }
 
-
     public function getId(): ?int
     {
         return $this->id;
@@ -64,8 +63,6 @@ class Category
 
         return $this;
     }
-
-    
 
     public function getimage(): ?string
     {

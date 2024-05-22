@@ -50,6 +50,7 @@ class Product
     private ?bool $isNewProduct = null;
 
 
+
     #[ORM\Column(nullable: true)]
     private ?\DateTimeImmutable $createdAt = null;
 
@@ -63,10 +64,10 @@ class Product
     private ?Category $categories = null;
 
     #[ORM\ManyToOne(inversedBy: 'products')]
-    private ?Gender $genders = null;
+    private ?Color $colors = null;
 
     #[ORM\ManyToOne(inversedBy: 'products')]
-    private ?Color $colors = null;
+    private ?Gender $genders = null;
 
     public function __construct()
     {
@@ -153,8 +154,6 @@ class Product
         return $this;
     }
 
-    
-
 
     public function getCreatedAt(): ?\DateTimeImmutable
     {
@@ -222,18 +221,6 @@ class Product
         return $this;
     }
 
-    public function getGenders(): ?Gender
-    {
-        return $this->genders;
-    }
-
-    public function setGenders(?Gender $genders): static
-    {
-        $this->genders = $genders;
-
-        return $this;
-    }
-
     public function getColors(): ?Color
     {
         return $this->colors;
@@ -242,6 +229,18 @@ class Product
     public function setColors(?Color $colors): static
     {
         $this->colors = $colors;
+
+        return $this;
+    }
+
+    public function getGenders(): ?Gender
+    {
+        return $this->genders;
+    }
+
+    public function setGenders(?Gender $genders): static
+    {
+        $this->genders = $genders;
 
         return $this;
     }
