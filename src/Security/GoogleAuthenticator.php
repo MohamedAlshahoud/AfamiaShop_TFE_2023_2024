@@ -7,7 +7,6 @@ use App\Repository\UserRepository;
 use League\OAuth2\Client\Provider\GoogleUser;
 use League\OAuth2\Client\Provider\ResourceOwnerInterface;
 use RuntimeException;
-use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\Security\Core\Exception\AuthenticationException;
 
 class GoogleAuthenticator extends AbstractOAuthAuthenticator
@@ -18,14 +17,10 @@ class GoogleAuthenticator extends AbstractOAuthAuthenticator
     {
 
         if(!($resourceOwner instanceof GoogleUser)) {
-          $session = new Session();
-          $session->getFlashBag()->add("loginError", "You have not a valid Google account.");
-          throw new AuthenticationException("Google user expected");
+          throw new RuntimeException("Google user expected");
         }
 
         if(($resourceOwner->toArray()['email_verified'] ?? null) !== true) {
-          $session = new Session();
-          $session->getFlashBag()->add("loginError", "You have not validated your gmail account.");
           throw new AuthenticationException("email not verified");
         }
 
