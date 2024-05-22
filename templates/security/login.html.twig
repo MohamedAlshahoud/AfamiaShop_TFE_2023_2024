@@ -23,11 +23,6 @@
                                         {% trans %}You are logged in as{% endtrans %} {{ app.user.userIdentifier}}, <a href="{{ path('app_logout') }}">{% trans %}Logout{% endtrans %}</a>
                                     </div>
                                 {% endif %}
-                                {% for message in app.flashes('loginError') %}
-                                    <div class="alert alert-danger">
-                                        {{ message }}
-                                    </div>
-                                {% endfor %}
                                 <div class="form-group mb-3"><input type="text" required="" name="email"
                                         formcontrolname="email" placeholder="{% trans %}Your Email{% endtrans %}"
                                         class="form-control ng-untouched ng-pristine ng-invalid" autocomplete="email" value="{{ last_username}}" required autofocus>
@@ -49,7 +44,9 @@
                                 <span>{% trans %}or{% endtrans %}</span>
                             </div>
                             
-                            <div class="form-note text-center">{% trans %}Don't Have an Account?{% endtrans %} <a href="/register">{% trans %}Sign up now{% endtrans %}</a></div>
+                            <div class="form-note text-center">{% trans %}Don't Have an Account?{% endtrans %} <a href="/register">{% trans %}Sign up
+                                now{% endtrans %}</a>
+                            </div>
                         </div>
                     </div>
                 </div>

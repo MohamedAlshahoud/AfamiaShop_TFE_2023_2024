@@ -1164,16 +1164,12 @@ button:focus:not(:focus-visible) {
  ----------------------- header--------------------------------------------------------
  
  **/
-.d-flex {
-	justify-content: end;
-}
 .navbar-brand {
 	padding: 10px 0;
 	vertical-align: top;
 	margin: 0;
 	display:inline-block;
 }
-
 .navbar-brand .name{
 	color: #0090e3;
 }
@@ -1285,9 +1281,6 @@ button:focus:not(:focus-visible) {
 	text-transform: capitalize;
 	font-size: 17px;
 	color: #0090e3;
-}
-.navbar .navbar-nav > li > .nav-link:hover {
-	color: #000;
 }
 .navbar .navbar-nav > li > a.active, 
 .navbar .navbar-nav > li:hover > a,
@@ -1898,9 +1891,6 @@ button:focus:not(:focus-visible) {
 .header_list > li:last-child {
 	padding-right: 0;
 }
-.header_list {
-	padding-left: 0;
-}
 .social_icons li {
 	display: inline-block;
 	padding: 0px 5px 5px 0;
@@ -1931,9 +1921,8 @@ button:focus:not(:focus-visible) {
 	color: #fff;
 	border-color: #fff;
 }
-
 .social_white .social_icons li a:hover, .social_white.social_icons li a:hover {
-	color: #000;
+	color: #0090e3;
 }
 .border_social .social_icons li a:hover, .border_social.social_icons li a:hover {
 	background-color: #0090e3;
@@ -2627,10 +2616,6 @@ input.text {
 }
 .lng_dropdown .ddcommon .ddChild li {
 	padding-left: 33px;
-	
-}
-.lng_dropdown a:hover {
-	color: #000;
 }
 .ddcommon .ddChild li img {
 	position: absolute;
@@ -4230,7 +4215,7 @@ footer .widget_title {
 	color: #fff;
 }
 .footer_dark a:hover, .footer_dark .widget_links li a:hover, .widget_links li a:hover, .footer_dark .footer_link li a:hover,.footer_link li a:hover {
-	color: #000;
+	color: #0090e3;
 }
 .widget_contact_form {
 	background-color: #fff;

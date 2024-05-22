@@ -29,11 +29,15 @@ class PaymentController extends AbstractController
 
     private EntityManagerInterface $entityManagerInterface;
     private UrlGeneratorInterface $urlGeneratorInterface;
+    private EmailOrderConfirmation $emailOrderConfirmation;
+    private EmailVerifier $emailVerifier;
 
-    public function __construct(EntityManagerInterface $entityManagerInterface, UrlGeneratorInterface $urlGeneratorInterface)
+    public function __construct(EntityManagerInterface $entityManagerInterface, UrlGeneratorInterface $urlGeneratorInterface, EmailOrderConfirmation $emailOrderConfirmation, EmailVerifier $emailVerifier)
     {
         $this->entityManagerInterface = $entityManagerInterface;
         $this->urlGeneratorInterface = $urlGeneratorInterface;
+        $this->emailOrderConfirmation = $emailOrderConfirmation;
+        $this->emailVerifier = $emailVerifier;
     }
     
     #[Route('/order/create-session-stripe/{reference}', name: 'payment_stripe')]
@@ -99,16 +103,31 @@ class PaymentController extends AbstractController
 
 
     #[Route('/order/success/{reference}', name:'payment_success')]
-    public function stripeSuccess(CartServices $cartServices, EntityManagerInterface $manager, Request $request, $reference): Response
+    public function stripeSuccess(CartServices $cartServices, EntityManagerInterface $manager, Request $request, $reference, TranslatorInterface $translator): Response
     {
         $order = $this->entityManagerInterface->getRepository(Order::class)->findOneBy(['reference' => $reference]);
-        if(!$order || $order->getUser() !== $this->getUser()){
+        $user = $this->getUser();
+        if(!$order || $order->getUser() !== $user){
             return $this->redirectToRoute('/cart');
         }
         if(!$order->isIsPaid()){
             $cartServices->clearCart();
             $order->setIsPaid(1);
             $this->entityManagerInterface->flush();
+            $subject = $translator->trans('Order confirmation');
+            $contact = $translator->trans('\"Afamia Contact\"');
+
+            $email = (new TemplatedEmail())
+                ->from(new Address('contact@afamiashop.be', $contact))
+                ->to($user->getEmail()) // Utiliser l'email de l'utilisateur connecté
+                ->subject($subject)
+                 // Assurez-vous que ce template existe
+                ->context([
+                    'order' => $order,
+                    'user' => $user,
+                ]);
+
+            $this->emailVerifier->sendEmailConfirmation('orderconfirm', $user, $email);
         }
         
         return $this->render('payment/success.html.twig', [
@@ -129,7 +148,12 @@ class PaymentController extends AbstractController
             'order' => $order,
         ]);
     }
-    
+    #[Route('/orderconfirm', name:'orderconfirm')]
+    public function orderConirm(): Response
+    {
+        
+        return $this->render('emailOrderConfirmation/index.html.twig');
+    }
 }
 
 

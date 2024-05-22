@@ -1,20 +1,22 @@
 <header  class="header_wrap fixed-top header_with_topbar active">
     <div  class="top-header" style="">
         <div  class="container">
-            <div  class="row">
-                <div  class="col-lg-6 col-md-6 col-sm-12">
-                    <ul  class="header_list">
-                        <li ><i class="ti-time"></i><span>{% trans %} Monday - Friday : 8:00 - 20:00{% endtrans %}</span></li>
-                    </ul>
+            <div  class="row align-items-center">
+                <div  class="col-md-6">
+                    <div  class="text-center text-md-start">
+                        <ul  class="header_list">
+                            <li ><i  class="ti-time"></i><span>{% trans %} Monday - Friday : 8:00 - 20:00{% endtrans %}</span></li>
+                        </ul>
+                    </div>
                 </div>
-                <div  class="col-lg-4 col-md-4 col-sm-12">
-                    <div class="d-flex">
+                <div  class="col-md-6">
+                    <div class="d-flex align-items-center justify-content-center justify-content-md-end">
                         {% for locale in locales %}
                             <div class="lng_dropdown mr-2">
                                 <a class="{% if app.request.locale == locale %}active{% endif %}" href="{{ path('change_locale', {'locale': locale})}}">{{locale}}</a>
                             </div>
                         {% endfor %}
-                        <ul  class="contact_detail">
+                        <ul  class="contact_detail text-center text-lg-start">
                             <li ><i  class="ti-mobile"></i><span>{{app.session.get('siteInformation').phone}}</span></li>
                         </ul>
                     </div>
