@@ -22,9 +22,17 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 class SearchProductType extends AbstractType
 {
+
+    private TranslatorInterface $translator;
+
+    public function __construct(TranslatorInterface $translator)
+    {
+        $this->translator = $translator;
+    }
 
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
@@ -32,11 +40,15 @@ class SearchProductType extends AbstractType
             ->add('product', TextType::class,[
                 'label' => false,
                 'required' => false,
-                'label' => 'name, description or keyword'
+                'attr' => [
+                    'placeholder' => 'name, description or keyword',
+                ],
             ])
             ->add('category', EntityType::class,[
                 'class' =>Category::class,
-                'choice_label' => 'name',
+                'choice_label' => function (Category $category) {
+                    return $this->translator->trans(strtolower($category->getName()), [], 'messages');
+                },
                 'required' => false,
                 'attr' =>[
                     'class' => 'js-categorie-multiple'
@@ -45,7 +57,9 @@ class SearchProductType extends AbstractType
 
             ->add('gender', EntityType::class,[
                 'class' =>Gender::class,
-                'choice_label' => 'name',
+                'choice_label' => function (Gender $gender) {
+                    return $this->translator->trans(strtolower($gender->getName()), [], 'messages');
+                },
                 'required' => false,
                 'attr' =>[
                     'class' => 'js-categorie-multiple'
@@ -53,7 +67,9 @@ class SearchProductType extends AbstractType
             ])
             ->add('color', EntityType::class,[
                 'class' =>Color::class,
-                'choice_label' => 'name',
+                'choice_label' => function (Color $color) {
+                    return $this->translator->trans(strtolower($color->getName()), [], 'messages');
+                },
                 'required' => false,
                 'attr' =>[
                     'class' => 'js-categorie-multiple'
