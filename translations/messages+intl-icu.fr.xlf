@@ -2500,9 +2500,9 @@
         <source>fast delivery - 1 day</source>
         <target>Livraison rapide - 1 jour</target>
       </trans-unit>
-      <trans-unit id="VsM2lMo" resname="Delivery from 4 to 7 days">
-        <source>Delivery from 4 to 7 days</source>
-        <target>Livraison de 4 à 7 jours</target>
+      <trans-unit id="H4saFYy" resname="Fast delivery - 1 day">
+        <source>Fast delivery - 1 day</source>
+        <target>Livraison rapide - 1 jour</target>
       </trans-unit>
       <trans-unit id="TEyFWUb" resname="Select an address">
         <source>Select an address</source>
@@ -2511,6 +2511,10 @@
       <trans-unit id="c_nnBpm" resname="Select a transporter">
         <source>Select a transporter</source>
         <target>Sélectionnez un transporteur</target>
+      </trans-unit>
+      <trans-unit id="hVVUd.i" resname="transporter">
+        <source>transporter</source>
+        <target>Transporteur</target>
       </trans-unit>
     </body>
   </file>
