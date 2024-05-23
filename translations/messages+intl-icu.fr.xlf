@@ -1323,7 +1323,7 @@
       </trans-unit>
       <trans-unit id="rg0lEO3" resname="New Categories">
         <source>New Categories</source>
-        <target>Nouvelles Catégories</target>
+        <target>Nouvelles catégories</target>
       </trans-unit>
       <trans-unit id="7.I6EIv" resname="Secure Payment">
         <source>Secure Payment</source>
@@ -2471,6 +2471,18 @@
       <trans-unit id="pZz9IIj" resname="color.">
         <source>color.</source>
         <target>couleur.</target>
+      </trans-unit>
+      <trans-unit id="5KZlgiy" resname="categories.">
+        <source>categories.</source>
+        <target>catégories.</target>
+      </trans-unit>
+      <trans-unit id="lhcpdy8" resname="New categories">
+        <source>New categories</source>
+        <target>Nouvelles catégories</target>
+      </trans-unit>
+      <trans-unit id="444Mz0H" resname="Event announcements">
+        <source>Event announcements</source>
+        <target>Annonces d'événements</target>
       </trans-unit>
     </body>
   </file>
