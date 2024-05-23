@@ -6,6 +6,16 @@
     <div class="section">
         <div class="container">
             <div class="row">
+                <div class="col-lg-3 order-lg-first mt-4 pt-2 mt-lg-0 pt-lg-0">
+                    <div class="sidebar">
+                        <div class="widget">
+                            <div>
+                            <h3>{% trans %}Filter our products...{% endtrans %}</h3>
+                            </div>
+                            {{ form(filterForm)}}
+                        </div>
+                    </div>
+                </div>
                 {% if products %}
                     <div class="col-lg-9"> 
                         <div  class="tab-content">
@@ -29,16 +39,6 @@
                         <p>{% trans %}No result found.{% endtrans %}</p>
                     </div>
                 {% endif %}
-                <div class="col-lg-3 order-lg-first mt-4 pt-2 mt-lg-0 pt-lg-0">
-                    <div class="sidebar">
-                        <div class="widget">
-                            <div>
-                            <h3>{% trans %}Filter our products...{% endtrans %}</h3>
-                            </div>
-                            {{ form(filterForm)}}
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

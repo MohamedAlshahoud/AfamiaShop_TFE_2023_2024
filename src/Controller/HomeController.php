@@ -100,7 +100,7 @@ class HomeController extends AbstractController
         $products = $paginator->paginate(
             $products, /* query NOT result */
             $request->query->getInt('page', 1),
-            12
+            16
         );  
 
         return $this->render('search/index.html.twig', [

@@ -86,7 +86,7 @@ class ShopController extends AbstractController
         $products = $paginator->paginate(
             $products, /* query NOT result */
             $request->query->getInt('page', 1),
-            12
+            24
         );
         return $this->render('shop/index.html.twig', [
             'products' => $products,
