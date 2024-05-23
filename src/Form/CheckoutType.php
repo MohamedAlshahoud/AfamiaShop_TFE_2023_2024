@@ -11,9 +11,17 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 class CheckoutType extends AbstractType
 {
+    private TranslatorInterface $translator;
+
+    public function __construct(TranslatorInterface $translator)
+    {
+        $this->translator = $translator;
+    }
+
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $user = $options['user'];
@@ -21,7 +29,7 @@ class CheckoutType extends AbstractType
         $builder 
             ->add('address', EntityType::class, [
                 'class'=> Address::class,
-                'label'=> false,
+                'label'=> $this->translator->trans('Select an address', [], 'messages'),
                 'required'=>true,
                 'multiple'=>false,
                 'choices'=>$user->getAddresses(),
@@ -29,10 +37,16 @@ class CheckoutType extends AbstractType
             ])
             ->add('transporter', EntityType::class, [
                 'class'=> Transporter::class,
-                'label'=> false,
-                'required'=>true,
+                'choice_label' => function (Transporter $transporter) {
+                    $name = $transporter->getName();
+                    $description = $this->translator->trans(strtolower($transporter->getDescription()), [], 'messages');
+                    $price = $transporter->getPrice(); // Assume getPrice returns a formatted price string
+
+                    return sprintf('%s - %s - %s', $name, $description, $price);
+                },
                 'multiple'=>false,
-                'expanded'=>true
+                'expanded'=>true,
+                'label'=> $this->translator->trans('Select a transporter', [], 'messages'),
             ]);
         
     }
