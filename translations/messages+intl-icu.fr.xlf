@@ -2408,6 +2408,70 @@
         <source>Total amount paid:</source>
         <target>Montant total payé:</target>
       </trans-unit>
+      <trans-unit id="2R7Uq61" resname="bracelets">
+        <source>bracelets</source>
+        <target>Bracelets</target>
+      </trans-unit>
+      <trans-unit id="1pNtdPp" resname="charms">
+        <source>charms</source>
+        <target>Charmes</target>
+      </trans-unit>
+      <trans-unit id="q51Ylu_" resname="necklaces">
+        <source>necklaces</source>
+        <target>Colliers</target>
+      </trans-unit>
+      <trans-unit id="Oc7DcP0" resname="earrings">
+        <source>earrings</source>
+        <target>Boucles d'oeilles</target>
+      </trans-unit>
+      <trans-unit id="NxpJdsN" resname="medals">
+        <source>medals</source>
+        <target>Médailles</target>
+      </trans-unit>
+      <trans-unit id="DvSaPJL" resname="women">
+        <source>women</source>
+        <target>Femme</target>
+      </trans-unit>
+      <trans-unit id="SLZ24rE" resname="man">
+        <source>man</source>
+        <target>Homme</target>
+      </trans-unit>
+      <trans-unit id="AY_pakR" resname="white">
+        <source>white</source>
+        <target>Blanc</target>
+      </trans-unit>
+      <trans-unit id="eM3mTD5" resname="silver">
+        <source>silver</source>
+        <target>Argent</target>
+      </trans-unit>
+      <trans-unit id="JEoLKSp" resname="silver white">
+        <source>silver white</source>
+        <target>Argent blanc</target>
+      </trans-unit>
+      <trans-unit id="wAbH46s" resname="black">
+        <source>black</source>
+        <target>Noir</target>
+      </trans-unit>
+      <trans-unit id="xoWiybq" resname="yellow">
+        <source>yellow</source>
+        <target>Jaune</target>
+      </trans-unit>
+      <trans-unit id="0r4TYBx" resname="white black">
+        <source>white black</source>
+        <target>Blanc Noir</target>
+      </trans-unit>
+      <trans-unit id="WoGv4l_" resname="category.">
+        <source>category.</source>
+        <target>categorie.</target>
+      </trans-unit>
+      <trans-unit id="LupB.JO" resname="gender.">
+        <source>gender.</source>
+        <target>genre.</target>
+      </trans-unit>
+      <trans-unit id="pZz9IIj" resname="color.">
+        <source>color.</source>
+        <target>couleur.</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
