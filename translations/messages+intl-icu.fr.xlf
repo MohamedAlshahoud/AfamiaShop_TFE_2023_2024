@@ -2476,13 +2476,41 @@
         <source>categories.</source>
         <target>catégories.</target>
       </trans-unit>
-      <trans-unit id="lhcpdy8" resname="New categories">
-        <source>New categories</source>
+      <trans-unit id="8D4eqb3" resname="new categories">
+        <source>new categories</source>
         <target>Nouvelles catégories</target>
       </trans-unit>
-      <trans-unit id="444Mz0H" resname="Event announcements">
-        <source>Event announcements</source>
+      <trans-unit id="AdXU0h2" resname="event announcements">
+        <source>event announcements</source>
         <target>Annonces d'événements</target>
+      </trans-unit>
+      <trans-unit id="Jv261Eb" resname="new products">
+        <source>new products</source>
+        <target>Nouveaux produits</target>
+      </trans-unit>
+      <trans-unit id="pKIRS6B" resname="transporter.">
+        <source>transporter.</source>
+        <target>Transporteur.</target>
+      </trans-unit>
+      <trans-unit id=".JVURJX" resname="Select an transporter">
+        <source>Select an transporter</source>
+        <target>Sélectionnez un transporteur</target>
+      </trans-unit>
+      <trans-unit id="NmeJIjM" resname="fast delivery - 1 day">
+        <source>fast delivery - 1 day</source>
+        <target>Livraison rapide - 1 jour</target>
+      </trans-unit>
+      <trans-unit id="VsM2lMo" resname="Delivery from 4 to 7 days">
+        <source>Delivery from 4 to 7 days</source>
+        <target>Livraison de 4 à 7 jours</target>
+      </trans-unit>
+      <trans-unit id="TEyFWUb" resname="Select an address">
+        <source>Select an address</source>
+        <target>Sélectionnez une adresse</target>
+      </trans-unit>
+      <trans-unit id="c_nnBpm" resname="Select a transporter">
+        <source>Select a transporter</source>
+        <target>Sélectionnez un transporteur</target>
       </trans-unit>
     </body>
   </file>
