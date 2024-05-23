@@ -1647,9 +1647,9 @@
         <source>Faceted Black Ceramic Bracelet</source>
         <target>Bracelet Céramique Noire Facetté</target>
       </trans-unit>
-      <trans-unit id="5wiv_sp" resname="Black Faceted Ceramic Bangle">
-        <source>Black Faceted Ceramic Bangle</source>
-        <target>Bracelet Jonc Céramique Facetté Noir</target>
+      <trans-unit id="hrXvcms" resname="Eleastic bracelet Black Faceted">
+        <source>Eleastic bracelet Black Faceted</source>
+        <target>Bracelet élastique Noir Facetté</target>
       </trans-unit>
       <trans-unit id="d0fkFki" resname="White Bracelet Openwork Waves">
         <source>White Bracelet Openwork Waves</source>
@@ -1871,13 +1871,13 @@
         <source>White Steel Cuff Bracelet of one piece</source>
         <target>Bracelet manchette en acier blanc d'une seule pièce</target>
       </trans-unit>
-      <trans-unit id="QWZpuLd" resname="White Steel Necklace Chiseled Venetian Mesh Plate for women">
-        <source>White Steel Necklace Chiseled Venetian Mesh Plate for women</source>
-        <target>Collier en acier blanc plaque maille vénitienne ciselée pour femme</target>
+      <trans-unit id="3W8nHCL" resname="White Steel Necklace Chiseled Venetian Mesh Plate for men">
+        <source>White Steel Necklace Chiseled Venetian Mesh Plate for men</source>
+        <target>Collier en acier blanc plaque maille vénitienne ciselée pour homme</target>
       </trans-unit>
-      <trans-unit id="fSpJGGc" resname="White Steel Necklace Chiseled Venetian Mesh Plate for women of very good quality and in one piece">
-        <source>White Steel Necklace Chiseled Venetian Mesh Plate for women of very good quality and in one piece</source>
-        <target>Collier en Acier Blanc Plaque Maille Vénitienne Ciselée pour femme de très bonne qualité et en une seule pièce</target>
+      <trans-unit id="kF_KyIq" resname="White Steel Necklace Chiseled Venetian Mesh Plate for men of very good quality and in one piece">
+        <source>White Steel Necklace Chiseled Venetian Mesh Plate for men of very good quality and in one piece</source>
+        <target>Collier en Acier Blanc Plaque Maille Vénitienne Ciselée pour homme de très bonne qualité et en une seule pièce</target>
       </trans-unit>
       <trans-unit id="5AYjGnS" resname="Silver white Twisted Drop Earrings for women">
         <source>Silver white Twisted Drop Earrings for women</source>
