@@ -43,19 +43,19 @@
                         <div class="pr_desc">
                             <p>{{product.description | trans}} </p>
                             <ul class="product-meta">
-                                {% for category in product.categories %}
-                                    <li>{% trans %}Category : {% endtrans %}{{category.name | trans}}</a></li>
-                                {% endfor %}
+                                {% if product.categories %}
+                                    <li>{% trans %}Category : {% endtrans %}{{product.categories.name | trans}}</a></li>
+                                {% endif %}
                             </ul>
                             <ul class="product-meta">
-                                {% for color in product.colors %}
-                                     <li>{% trans %}Color : {% endtrans %} {{color.name | trans}}</li> 
-                                {% endfor %}
+                                {% if product.colors %}
+                                     <li>{% trans %}Color : {% endtrans %} {{product.colors.name | trans}}</li> 
+                                {% endif %}
                             </ul>
                             <ul class="product-meta">
-                                {% for gender in product.genders %}
-                                     <li>{% trans %}Gender : {% endtrans %} {{gender.name | trans}}</li> 
-                                {% endfor %}
+                                {% if product.genders %}
+                                     <li>{% trans %}Gender : {% endtrans %} {{product.genders.name | trans}}</li> 
+                                {% endif %}
                             </ul>
                         </div>
                         <div class="cart_extra">
