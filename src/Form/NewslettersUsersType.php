@@ -12,18 +12,29 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\IsTrue;
+use Symfony\Contracts\Translation\TranslatorInterface;
 
 class NewslettersUsersType extends AbstractType
 {
+    private TranslatorInterface $translator;
+
+    public function __construct(TranslatorInterface $translator)
+    {
+        $this->translator = $translator;
+    }
+
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
             ->add('email', EmailType::class)
             ->add('categories', EntityType::class, [
                 'class' => Categories::class,
-                'choice_label' => 'name',
+                'choice_label' => function (Categories $categories) {
+                    return $this->translator->trans(strtolower($categories->getName()), [], 'messages');
+                },
                 'multiple' => true,
-                'expanded' => true
+                'expanded' => true,
+                'label' => $this->translator->trans('categories', [], 'messages')
             ])
             ->add('is_rgpd', CheckboxType::class, [
                 'constraints' => [
