@@ -103,35 +103,28 @@ class PaymentController extends AbstractController
 
 
     #[Route('/order/success/{reference}', name:'payment_success')]
-    public function stripeSuccess(CartServices $cartServices, EntityManagerInterface $manager, Request $request, $reference, TranslatorInterface $translator): Response
+    public function stripeSuccess(CartServices $cartServices, EntityManagerInterface $manager, Request $request, $reference): Response
     {
         $order = $this->entityManagerInterface->getRepository(Order::class)->findOneBy(['reference' => $reference]);
-        $user = $this->getUser();
-        if(!$order || $order->getUser() !== $user){
+        if(!$order || $order->getUser() !== $this->getUser()){
             return $this->redirectToRoute('/cart');
         }
         if(!$order->isIsPaid()){
             $cartServices->clearCart();
             $order->setIsPaid(1);
             $this->entityManagerInterface->flush();
-            $subject = $translator->trans('Order confirmation');
-            $contact = $translator->trans('\"Afamia Contact\"');
-
-            $email = (new TemplatedEmail())
-                ->from(new Address('contact@afamiashop.be', $contact))
-                ->to($user->getEmail()) // Utiliser l'email de l'utilisateur connecté
-                ->subject($subject)
-                 // Assurez-vous que ce template existe
-                ->context([
-                    'order' => $order,
-                    'user' => $user,
-                ]);
-
-            $this->emailVerifier->sendEmailConfirmation('orderconfirm', $user, $email);
         }
+
+        // Calculer le montant total de la commande
+        $totalAmount = 0;
+        foreach ($order->getOrderDetails()->getValues() as $product) {
+            $totalAmount += $product->getPrice() * $product->getQuantity();
+        }
+        $totalAmount += $order->getTransporterPrice();
         
         return $this->render('payment/success.html.twig', [
             'order' => $order,
+            'totalAmount' => $totalAmount,
         ]);
     }
 
@@ -148,12 +141,7 @@ class PaymentController extends AbstractController
             'order' => $order,
         ]);
     }
-    #[Route('/orderconfirm', name:'orderconfirm')]
-    public function orderConirm(): Response
-    {
-        
-        return $this->render('emailOrderConfirmation/index.html.twig');
-    }
+    
 }
 
 
