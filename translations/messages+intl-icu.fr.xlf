@@ -2496,6 +2496,10 @@
         <source>Select an transporter</source>
         <target>Sélectionnez un transporteur</target>
       </trans-unit>
+      <trans-unit id="_ntbnGk" resname="delivery from 3-6 days">
+        <source>delivery from 3-6 days</source>
+        <target>Livraison de 3-6 jours</target>
+      </trans-unit>
       <trans-unit id="NmeJIjM" resname="fast delivery - 1 day">
         <source>fast delivery - 1 day</source>
         <target>Livraison rapide - 1 jour</target>
