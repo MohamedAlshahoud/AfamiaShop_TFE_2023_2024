@@ -45,8 +45,7 @@
                             <h1 >{% trans %}The last four categories added{% endtrans %}</h1>
                         </div>
                         <div  class="tab-content">
-                            <div  id="arrival" role="tabpanel" aria-labelledby="arrival-tab"
-                                class="tab-pane fade show active">
+                            <div  id="arrival" role="tabpanel" class="tab-pane fade show active">
                                 <div  class="row shop_container">
                                     {% for categorie in categories%} 
                                         {{include('category/partials/_intro_single.html.twig')}}
@@ -55,7 +54,7 @@
                             </div>
                         </div>
                         <div class="btn-discover">
-                            <a href="{{ path('app_category') }}" class="btn btn-fill-out ">{% trans %}Discover all our categories{% endtrans %}</a>
+                            <a href="/category" class="btn btn-fill-out ">{% trans %}Discover all our categories{% endtrans %}</a>
                         </div>
                     </div>
                     <div  class="col-12">
@@ -63,7 +62,7 @@
                             <h1 >{% trans %}New Products{% endtrans %}</h1>
                         </div>
                         <div  class="tab-content">
-                            <div class="tab-pane fade show active" id="arrival" role="tabpanel" aria-labelledby="arrival-tab">
+                            <div class="tab-pane fade show active" id="arrival" role="tabpanel">
                                 <div  class="row shop_container">
                                     {% for product in newProduct%} 
                                         {% include "product/display_product.html.twig" %}
@@ -72,7 +71,7 @@
                             </div>
                         </div>
                         <div class="btn-discover">
-                            <a href="{{ path('app_shop') }}" class="btn btn-fill-out ">{% trans %}Discover all our products{% endtrans %}</a>
+                            <a href="/shop" class="btn btn-fill-out ">{% trans %}Discover all our products{% endtrans %}</a>
                         </div>
                     </div>
                 </div>
