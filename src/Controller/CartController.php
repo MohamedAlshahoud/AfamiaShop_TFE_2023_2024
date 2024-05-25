@@ -101,27 +101,4 @@ class CartController extends AbstractController
         return $this->json($cart);
         
     }
-
-    // #[Route('/cart/transporter', name: 'app_update_cart_transporter', methods: ["POST"])]
-    // public function updateCartTransporter(Request $request): Response
-    // {
-    //     $id = $request->get("transporterId");
-        
-    //     $transporter = $this->transporterRepository->findOneById($id);
-
-    //     if(!$transporter){
-    //         return $this->redirectToRoute("app_home");
-    //     }
-    //     $this->cartServices->update("transporter", [
-    //         "id"=> $transporter->getId(),
-    //         "name"=> $transporter->getName(),
-    //         "description"=> $transporter->getDescription(),
-    //         "price"=> $transporter->getPrice(),
-    //     ]);
-
-    //     return $this->redirectToRoute("app_cart");
-
-    //     // return $this->json($cart);
-        
-    // }
 }

@@ -57,8 +57,9 @@ class DashboardController extends AbstractDashboardController
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle('AFAMIA');
+            ->setTitle('AFAMIASHOP');
     }
+
 
     public function configureMenuItems(): iterable
     {
@@ -80,35 +81,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Site Information', 'fas fa-information', SiteInformation::class);
         yield MenuItem::linkToCrud('Payment', 'fas fa-landmark', Payment::class);
         yield MenuItem::linkToCrud('Transporter', 'fas fa-truck', Transporter::class);
-    
-    //     public function configureFields(string $pageName): iterable
-    // {
-    //     return [
-    //         IdField::new('id')->hideOnForm(),
-    //         TextField::new('name'),
-    //     ];
-    // }
-
-    // public function configureFields(string $pageName): iterable
-    // {
-    //     return [
-    //         IdField::new('id')->hideOnForm(),
-    //         TextField::new('name'),
-    //         TextField::new('content'),
-    //         AssociationField::new('categories'),
-    //         BooleanField::new('isSent', 'Send')
-    //     ];
-    // }
-    
-
-    // public function configureFields(string $pageName): iterable
-    // {
-    //     return [
-    //         IdField::new('id')->hideOnForm(),
-    //         EmailField::new('email'),
-    //         AssociationField::new('categories'),
-    //     ];
-    // }
 
     }
 }

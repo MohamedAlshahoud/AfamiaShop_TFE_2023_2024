@@ -50,13 +50,9 @@ class CheckoutController extends AbstractController
             return $this->redirectToRoute("app_login");
         }
 
-        // if($this->session->get('checkout_data')){
-        //     return $this->redirectToRoute('checkoutConfirm');
-        // }
+        
 
         $form = $this->createForm(CheckoutType::class, null, ['user'=>$this->getUser()]);
-        //$form->handleRequest($request);
-        //traitement du formulaire
 
         return $this->render('checkout/index.html.twig', [
             'form' => $form->createView(),

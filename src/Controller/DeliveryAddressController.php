@@ -34,19 +34,12 @@ class DeliveryAddressController extends AbstractController
         $user = $this->getUser();    
         $cart = $this->cartServices->getCartDetails();
 
-        
-        // if(!$user->getAddresses()->getValues()){
-        //     $this->addFlash('checkout_message', 'Merci de renseigner une adresse de livraison avant de continuer !');
-        //     return $this->redirectToRoute("address_new");
-        // }
 
         if($this->session->get('checkout_data')){
             return $this->redirectToRoute('checkoutConfirm');
         }
 
         $form = $this->createForm(CheckoutType::class, null, ['user'=>$user]);
-        //$form->handleRequest($request);
-        //traitement du formulaire
 
         return $this->render('delivery_address/index.html.twig', [
             'cart'=>$cart,
