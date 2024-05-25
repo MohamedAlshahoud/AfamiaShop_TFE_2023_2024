@@ -9,15 +9,15 @@
         <div class="row">
             <div class="col-lg-3 col-md-4">
                 <div class="dashboard_menu">
-                    <ul class="nav nav-tabs flex-column" role="">
-                        <li  class="nav-item"><a  routerlink="/"
-                            class="nav-link " ng-reflect-router-link="/" href="{{path('app_account')}}"><i class="ti-id-badge"></i>{% trans %}Account details{% endtrans %}</a>
+                    <ul class="nav nav-tabs flex-column">
+                        <li  class="nav-item">
+                            <a class="nav-link " href="/account"><i class="fas fa-user"></i>{% trans %}Account details{% endtrans %}</a>
                         </li>
-                        <li  class="nav-item"><a  routerlink="/"
-                            class="nav-link active" ng-reflect-router-link="/" href="{{path('app_account_orders')}}"><i class="ti-shopping-cart-full"></i>{% trans %}Your Orders{% endtrans %}</a>
+                        <li  class="nav-item">
+                            <a class="nav-link active" href="/orders"><i class="ti-shopping-cart-full"></i>{% trans %}Your Orders{% endtrans %}</a>
                         </li>
-                        <li  class="nav-item"><a  routerlink="/"
-                            class="nav-link " ng-reflect-router-link="/" href="{{path('app_account_address')}}"><i class="ti-location-pin"></i>{% trans %}Your Addresses{% endtrans %}</a>
+                        <li  class="nav-item">
+                            <a class="nav-link " href="/account-address"><i class="ti-location-pin"></i>{% trans %}Your Addresses{% endtrans %}</a>
                         </li>
                     </ul>
                 </div>
@@ -87,7 +87,7 @@
                                             {{orderDetails.createdAt | date('d/m/Y')}}
                                         </div>
                                         <div class="col-md-12">
-                                            <a href="{{ path('app_account_orders') }}" class="btn btn-fill-out">{% trans %}Retour page orders{%endtrans %}</a>
+                                            <a href="/orders" class="btn btn-fill-out">{% trans %}Retour page orders{%endtrans %}</a>
                                         </div>
                                     </div>
                                 </form>
