@@ -94,8 +94,7 @@ class PaymentController extends AbstractController
             'cancel_url' => $this->urlGeneratorInterface->generate('payment_error', ['reference' => $order->getReference()],
             UrlGeneratorInterface::ABSOLUTE_URL)
         ]);
-        //$order->setStripeSessionId($checkout_session->id);
-
+        
         $this->entityManagerInterface->flush();
 
         return new RedirectResponse($checkout_session->url);

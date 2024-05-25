@@ -61,25 +61,4 @@ class SearchController extends AbstractController
             'search' => $form->createView()
         ]);
     }
-
-
-    // #[Route('/search/{name}/{categorie}/{gender}/{color}', name: 'app_search_result')]
-    // public function search_result( EntityManagerInterface $entityManager, Request $request, PaginatorInterface $paginator, $name, $categorie, $gender, $color)
-    // {
-
-    //     $form = $this->createForm(SearchProductType::class, null);
-    //     $form->handleRequest($request);
-
-    //     $products = $entityManager->getRepository(Product::class)->findWithSearch($name, $categorie, $gender, $color);
-    //     $products = $paginator->paginate(
-    //         $products, /* query NOT result */
-    //         $request->query->getInt('page', 1),
-    //         4
-    //     );  
-
-    //     return $this->render('search/index.html.twig', [
-    //         'products' => $products,
-    //         'search' => $form->createView()
-    //     ]);
-    // }
 }

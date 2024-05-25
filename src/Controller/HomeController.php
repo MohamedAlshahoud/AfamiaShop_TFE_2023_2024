@@ -42,12 +42,7 @@ class HomeController extends AbstractController
         $session->set('siteInformation', $data[0]);
 
         $categories = $entityManager->getRepository(Category::class)->findBy([],['id' => 'DESC'],4);
-        // $newProduct = $productRepository->findByIsNewProduct(1);
-        // $newProduct =  $paginator->paginate(
-        //     $productRepository->paginationQuery(),
-        //     $request->query->get('page', 1),
-        //     12
-        // );
+        
         $form = $this->createForm(SearchProductType::class, null);
         $form->handleRequest($request);
 
