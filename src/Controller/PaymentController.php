@@ -29,15 +29,11 @@ class PaymentController extends AbstractController
 
     private EntityManagerInterface $entityManagerInterface;
     private UrlGeneratorInterface $urlGeneratorInterface;
-    private EmailOrderConfirmation $emailOrderConfirmation;
-    private EmailVerifier $emailVerifier;
 
     public function __construct(EntityManagerInterface $entityManagerInterface, UrlGeneratorInterface $urlGeneratorInterface, EmailOrderConfirmation $emailOrderConfirmation, EmailVerifier $emailVerifier)
     {
         $this->entityManagerInterface = $entityManagerInterface;
         $this->urlGeneratorInterface = $urlGeneratorInterface;
-        $this->emailOrderConfirmation = $emailOrderConfirmation;
-        $this->emailVerifier = $emailVerifier;
     }
     
     #[Route('/order/create-session-stripe/{reference}', name: 'payment_stripe')]
