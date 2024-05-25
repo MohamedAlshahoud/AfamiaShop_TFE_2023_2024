@@ -24,40 +24,45 @@
     </div>
     <div  class="bottom_header dark_skin main_menu_uppercase">
         <div  class="container">
-            <nav  class="navbar navbar-expand-lg"><a 
-                    routerlink="/" class="navbar-brand" ng-reflect-router-link="/" href="/">
+            <nav  class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="/">
                     <h1 class="name">{{app.session.get('siteInformation').name}}</h1>
-                </a><button  type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-expanded="false"
-                    class="navbar-toggler collapsed"><span 
-                        class="ion-android-menu"></span></button>
+                </a>
+                <button  type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-expanded="false"
+                    class="navbar-toggler collapsed"><span class="ion-android-menu"></span>
+                </button>
                 <div  id="navbarSupportedContent"
                     class="navbar-collapse justify-content-end collapse" style="">
                     <ul  class="navbar-nav">
-                        <li  class="dropdown"><a  routerlink="/"
-                            class="nav-link" ng-reflect-router-link="/" href="/">{% trans %}Home{% endtrans %}</a></li>
+                        <li  class="dropdown">
+                            <a class="nav-link" href="/">{% trans %}Home{% endtrans %}</a></li>
                         <li  class="dropdown">
                             {% if is_granted("ROLE_ADMIN")%}
-                                <a  routerlink="/" class="nav-link" ng-reflect-router-link="/" href="{{path('admin')}}">{% trans %}Admin{% endtrans %}</a></li>
+                                <a class="nav-link" href="/admin">{% trans %}Admin{% endtrans %}</a>
                             {% endif %}
+                        </li>
                         <li  class="dropdown">
                             {% if is_granted("ROLE_ADMIN")%}
-                                <a  routerlink="/" class="nav-link" ng-reflect-router-link="/" href="{{path('newsletters_list')}}">{% trans %}Newsletters{% endtrans %}</a></li>
+                                <a class="nav-link" href="/newsletters/list">{% trans %}Newsletters{% endtrans %}</a>
                             {% endif %}
-                        <li  class="dropdown"><a  routerlink="/"
-                            class="nav-link" ng-reflect-router-link="/" href="{{path('app_category')}}">{% trans %}Categories{% endtrans %}</a></li>
-                        <li  class="dropdown"><a  routerlink="/"
-                            class="nav-link" ng-reflect-router-link="/" href="{{path('app_shop')}}">{% trans %}Shop{% endtrans %}</a></li>
-                        <li ><a  routerlink="/contact"
-                            class="nav-link nav_item" ng-reflect-router-link="/contact" href="{{path('app_contact')}}">{% trans %}Contact Us{% endtrans %}</a></li>
+                        </li>
+                        <li  class="dropdown">
+                            <a class="nav-link" href="/category">{% trans %}Categories{% endtrans %}</a>
+                        </li>
+                        <li  class="dropdown">
+                            <a class="nav-link" href="/shop">{% trans %}Shop{% endtrans %}</a>
+                        </li>
+                        <li >
+                            <a class="nav-link nav_item" href="/contact">{% trans %}Contact Us{% endtrans %}</a>
+                        </li>
                         {% if app.user %}
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                {{app.user.username}}
+                                <a class="nav-link dropdown-toggle id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    {{app.user.username}}
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="{{path('app_account')}}">{% trans %}Your Account{% endtrans %}</a></li>
-                                    <li><a class="dropdown-item" href="{{path('app_logout')}}">{% trans %}Log out{% endtrans %}</a></li>
+                                    <li><a class="dropdown-item" href="/account">{% trans %}Your Account{% endtrans %}</a></li>
+                                    <li><a class="dropdown-item" href="/logout">{% trans %}Log out{% endtrans %}</a></li>
                                 </ul>
                             </li> 
                         {% else %}
@@ -66,8 +71,8 @@
                                 {% trans %}Account{% endtrans %}
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="{{path('app_login')}}">{% trans %}Log in{% endtrans %}</a></li>
-                                    <li><a class="dropdown-item" href="{{path('app_register')}}">{% trans %}Register{% endtrans %}</a></li>
+                                    <li><a class="dropdown-item" href="/login">{% trans %}Log in{% endtrans %}</a></li>
+                                    <li><a class="dropdown-item" href="register">{% trans %}Register{% endtrans %}</a></li>
                                 </ul>
                             </li> 
                         {% endif %}
@@ -115,7 +120,7 @@
                             <div class="search_overlay"></div>
                             <div class="search_overlay"></div>
                         </li>
-                        <a class="nav-link" href="{{ path('app_cart')}}"><span><i class="linearicons-cart"></i></a>
+                        <a class="nav-link" href="/cart"><span><i class="linearicons-cart"></i></a>
                     </ul>
                 </div>
             </nav>

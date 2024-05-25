@@ -50,16 +50,16 @@
                                 </thead>
                                 <tbody >
                                     {% for item in cart.items %}
-                                    <tr >
-                                        <td >
-                                            {{ item.product.name | trans }} 
-                                            <span class="product-qty"> {{item.quantity}}</span>
-                                            <span class="product-price">x {{(item.product.price/100) |format_currency('EUR')}}</span>
-                                        </td>
-                                        <td >
-                                            {{(item.product.price*item.quantity/100) |format_currency('EUR')}}
-                                        </td>
-                                    </tr>
+                                        <tr >
+                                            <td >
+                                                {{ item.product.name | trans }} 
+                                                <span class="product-qty"> {{item.quantity}}</span>
+                                                <span class="product-price">x {{(item.product.price/100) |format_currency('EUR')}}</span>
+                                            </td>
+                                            <td >
+                                                {{(item.product.price*item.quantity/100) |format_currency('EUR')}}
+                                            </td>
+                                        </tr>
                                     {% endfor %}
                                 </tbody>
                                 <tfoot >
@@ -81,9 +81,6 @@
                                     </tr>
                                 </tfoot>
                             </table>
-                        </div>
-                        <div  class="payment_method">
-                           
                         </div>
                         <div class="payment-button">
                             <a href="{{ path('payment_stripe', {reference: reference})}}" class="btn btn-fill-out btn-block">

@@ -1,19 +1,19 @@
-<footer  class="footer_dark">
-    <div  class="footer_top">
-        <div  class="container">
-            <div  class="row">
-                <div  class="col-lg-2 col-md-5 col-sm-12">
-                    <div  class="widget">
+<footer class="footer_dark">
+    <div class="footer_top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-5 col-sm-12">
+                    <div class="widget">
                         <div class="footer_logo">
                             <h2 >{{app.session.get('siteInformation').name}}</h2>
                         </div>
                         <p >{{app.session.get('siteInformation').description | trans}}</p>
                     </div>
                 </div>
-                <div  class="col-lg-2 col-md-3 col-sm-6">
-                    <div  class="widget">
-                        <h6  class="widget_title">{{app.session.get('siteInformation').nameCategory | trans}}</h6>
-                        <ul  class="widget_links">
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h6 class="widget_title">{{app.session.get('siteInformation').nameCategory | trans}}</h6>
+                        <ul class="widget_links">
                             <li><a href="{{app.session.get('siteInformation').categoryLinkOne}}">{{app.session.get('siteInformation').categoryOne | trans}}</a></li>
                             <li><a href="{{app.session.get('siteInformation').categoryLinkTwo}}">{{app.session.get('siteInformation').categoryTwo | trans}}</a></li>
                             <li><a href="{{app.session.get('siteInformation').categoryLinkThree}}">{{app.session.get('siteInformation').categoryThree | trans}}</a></li>
@@ -22,25 +22,25 @@
                         </ul>
                     </div>
                 </div>
-                <div  class="col-lg-2 col-md-4 col-sm-6">
-                    <div  class="widget">
-                        <h6  class="widget_title">{{app.session.get('siteInformation').nameAddress | trans}}</h6>
-                        <ul  class="contact_info contact_info_light">
-                            <li >
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="widget">
+                        <h6 class="widget_title">{{app.session.get('siteInformation').nameAddress | trans}}</h6>
+                        <ul class="contact_info contact_info_light">
+                            <li>
                                 <i class="ti-location-pin"></i>
                                 <p>{{app.session.get('siteInformation').street}},{{app.session.get('siteInformation').codePostal}}{{app.session.get('siteInformation').city}}</p>
                             </li>
-                            <li ><i  class="ti-email"></i><a
-                                     href="#">{{app.session.get('siteInformation').email}}</a>
+                            <li >
+                                <i class="ti-email"></i><a href="#">{{app.session.get('siteInformation').email}}</a>
                             </li>
-                            <li ><i  class="ti-mobile"></i>
+                            <li ><i class="ti-mobile"></i>
                                 <p >{{app.session.get('siteInformation').phone}}</p>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div  class="col-lg-3 col-md-6 col-sm-6">
-                    <div  class="widget">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="widget">
                         <h6 class="widget_title">{{app.session.get('siteInformation').question | trans}}</h6>
                         <p>{{app.session.get('siteInformation').descrrptionQuestion | trans}}</p   >
                         <form class="widget_links">
@@ -48,11 +48,11 @@
                         </form>
                     </div>
                 </div>
-                <div  class="col-lg-3 col-md-4 col-sm-6">
-                    <div  class="widget">
-                        <h6  class="widget_title">{{app.session.get('siteInformation').nameSubscribe | trans}}</h6>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="widget">
+                        <h6 class="widget_title">{{app.session.get('siteInformation').nameSubscribe | trans}}</h6>
                         <p>{{app.session.get('siteInformation').descriptionSubscribe | trans}}</p>
-                            <form class="widget_links">
+                        <form class="widget_links">
                             <a href="{{app.session.get('siteInformation').subscribeLink}}" class="btn btn-fill-out-footer">{% trans %}Subscribe{% endtrans %}</a> 
                         </form>
                     </div>
@@ -60,37 +60,34 @@
             </div>
         </div>
     </div>
-    <div  class="bottom_footer border-top-tran">
-        <div  class="container">
-            <div  class="row">
-                <div  class="col-lg-4 col-md-3 col-sm-4">
-                    <p  class="mb-md-0 text-center text-md-start">{{app.session.get('siteInformation').copyright}}</p>
+    <div class="bottom_footer border-top-tran">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-3 col-sm-4">
+                    <p class="mb-md-0 text-center text-md-start">{{app.session.get('siteInformation').copyright}}</p>
                 </div>
-                
-                <div  class="col-lg-4 col-md-3 col-sm-4">
-                    <ul  class="social_icons social_white">
-                        <li >
-                            <a  target="_blank" href="{{app.session.get('siteInformation').facebookLink}}">
+                <div class="col-lg-4 col-md-3 col-sm-4">
+                    <ul class="social_icons social_white">
+                        <li>
+                            <a target="_blank" href="{{app.session.get('siteInformation').facebookLink}}">
                                 <i class="ion-social-facebook"></i>
                             </a>
-                        </li>
-                            
-                        <li >
-                            <a  target="_blank" href="{{app.session.get('siteInformation').youtube}}">
+                        </li>    
+                        <li>
+                            <a target="_blank" href="{{app.session.get('siteInformation').youtube}}">
                                 <i class="ion-social-youtube-outline"></i>
                             </a>
                         </li>
-                        <li >
-                            <a  target="_blank" href="{{app.session.get('siteInformation').instagram}}">
+                        <li>
+                            <a target="_blank" href="{{app.session.get('siteInformation').instagram}}">
                                 <i class="ion-social-instagram-outline"></i>
                             </a>
                         </li>
-                    </ul>
-                    
+                    </ul> 
                 </div>
-                <div  class="col-lg-4 col-md-3 col-sm-4">
-                    <a  href="{{ path('terms_conditions')}}"> 
-                        <p  class="mb-md-0 text-center text-md-end">{{app.session.get('siteInformation').termsConditions}}</p>
+                <div class="col-lg-4 col-md-3 col-sm-4">
+                    <a href="/terms-conditions"> 
+                        <p class="mb-md-0 text-center text-md-end">{{app.session.get('siteInformation').termsConditions}}</p>
                     </a>
                 </div>
             </div>

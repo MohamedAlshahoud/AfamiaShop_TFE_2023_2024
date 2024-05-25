@@ -27,13 +27,13 @@
                                     </div>
                                 </div>
                                 <div class="btn-add-address">
-                                    <a class="btn btn-fill-out  mt-1" href="{{ path('address_new') }}">{% trans %}Add new address{% endtrans %}</a>
+                                    <a class="btn btn-fill-out  mt-1" href="/address/new">{% trans %}Add new address{% endtrans %}</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="tab-content dashboard_content">
-                        <div class="tab-pane fade active show" id="orders" role="tabpanel" aria-labelledby="orders-tab">
+                        <div class="tab-pane fade active show" role="tabpanel" aria-labelledby="orders-tab">
                             <div class="card transporter">
                                 <div class="card-header">
                                     <h3>{% trans %}Transporter{% endtrans %}</h3>
@@ -106,8 +106,7 @@
         <div class="different_login">
             <span><a href="{{path('app_home')}}">{% trans %}Cancel{% endtrans %}</a></span>
         </div>
-        </div>
-        
+        </div>  
     </div>
 </div>
 {% endblock %}
