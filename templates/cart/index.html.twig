@@ -23,8 +23,8 @@
                                 </thead>
                                 <tbody >
                                     <tr >
-                                        <td class="product-thumbnail"><a><img  width="50" alt="product1"
-                                            src="/assets/images/products/{{ item.product.imageUrls[0]}}"></a>
+                                        <td class="product-thumbnail">
+                                            <a><img  width="50" alt="product1" src="/assets/images/products/{{ item.product.imageUrls[0]}}"></a>
                                         </td>
                                         <td data-title="Product" class="product-name"><a>{{item.product.name | trans}}</a></td>
                                         <td data-title="Price" class="product-price">{{(item.product.price/100) | format_currency('EUR')}}</td>
@@ -40,7 +40,7 @@
                                             </div>
                                         </td>
                                         <td data-title="Total" class="product-subtotal">{{ (item.sub_total/100) | format_currency('EUR') }}</td>
-                                        <td data-title="Remove" class="product-remove"><a href="/cart/remove/{{item.product.id}}/{{item.quantity}}""><i class="fa fa-trash"></i></a></td>
+                                        <td data-title="Remove" class="product-remove"><a href="/cart/remove/{{item.product.id}}/{{item.quantity}}"><i class="fa fa-trash"></i></a></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -78,8 +78,8 @@
                                 </table>
                             </div>
                             <div class="btns-group">
-                                <a href="{{ path('app_home') }}" class="btn btn-fill-out">{% trans %}Continue Shopping{% endtrans %}</a>
-                                <a  routerlink="/order/create" class="btn btn-fill-out" ng-reflect-router-link="/order/create" href="/order/create">{% trans %}Proceed To CheckOut{% endtrans %}</a>
+                                <a href="/" class="btn btn-fill-out">{% trans %}Continue Shopping{% endtrans %}</a>
+                                <a href="/order/create" class="btn btn-fill-out">{% trans %}Proceed To CheckOut{% endtrans %}</a>
                             </div>
                         </div>
                     </div>
@@ -92,7 +92,7 @@
                   	            <h3>{% trans %}Your AfamiaShop Cart is empty {% endtrans %}</h3>
                             </div>
                   	        <p>{% trans %}Press the button and discover our products{% endtrans %}</p>
-                            <a href="{{ path('app_shop') }}" class="btn btn-fill-out ">{% trans %}Discover our products{% endtrans %}</a>
+                            <a href="/shop" class="btn btn-fill-out ">{% trans %}Discover our products{% endtrans %}</a>
                         </div>
                     </div>
                 </div>
