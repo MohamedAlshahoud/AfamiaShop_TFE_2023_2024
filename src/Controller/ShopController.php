@@ -88,6 +88,7 @@ class ShopController extends AbstractController
             $request->query->getInt('page', 1),
             24
         );
+        
         return $this->render('shop/index.html.twig', [
             'products' => $products,
             'search' => $form->createView(),
