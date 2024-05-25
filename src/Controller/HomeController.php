@@ -102,6 +102,34 @@ class HomeController extends AbstractController
             $request->query->getInt('page', 1),
             16
         );  
+        if ($request->isMethod('post')) {
+            if($form->isSubmitted() && $form->isValid()){
+
+                $data = $form->getData();
+
+                if ($data["product"] != null) {
+                    $name = $data["product"];
+                } else {
+                    $name = "all";
+                }
+                if ($data["category"] != null) {
+                    $categorie = $data["category"]->getId();
+                } else {
+                    $categorie = "all";
+                }
+                if ($data["gender"] != null) {
+                    $gendre = $data["gender"]->getId();
+                } else {
+                    $gendre = "all";
+                }
+                if ($data["color"] != null) {
+                    $color = $data["color"]->getId();
+                } else {
+                    $color = "all";
+                }
+            }
+            return $this->redirect($this->generateUrl('app_search_result', array('name' => $name, 'categorie' => $categorie, 'gendre' => $gendre, 'color' => $color)));
+        }
 
         return $this->render('search/index.html.twig', [
             'products' => $products,
