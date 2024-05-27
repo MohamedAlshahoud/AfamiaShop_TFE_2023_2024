@@ -116,60 +116,6 @@ class NewslettersController extends AbstractController
 
         return $this->redirectToRoute('newsletter_subscription_confirm');
     }
-
-    #[Route('/newsletters/prepare', name: 'newsletters_prepare')]
-    public function prepare(Request $request, EntityManagerInterface $entityManager): Response
-    {
-        $newsletter = new Newsletters();
-        
-        $form = $this->createForm(NewslettersType::class, $newsletter);
-
-        $form->handleRequest($request);
-
-        $Search = $this->createForm(SearchProductType::class, null);
-        $Search->handleRequest($request);
-        if ($request->isMethod('post')) {
-            if($Search->isSubmitted() && $Search->isValid()){
-
-                $data = $Search->getData();
-
-                if ($data["product"] != null) {
-                    $name = $data["product"];
-                } else {
-                    $name = "all";
-                }
-                if ($data["category"] != null) {
-                    $categorie = $data["category"]->getId();
-                } else {
-                    $categorie = "all";
-                }
-                if ($data["gender"] != null) {
-                    $gendre = $data["gender"]->getId();
-                } else {
-                    $gendre = "all";
-                }
-                if ($data["color"] != null) {
-                    $color = $data["color"]->getId();
-                } else {
-                    $color = "all";
-                }
-                return $this->redirect($this->generateUrl('app_search_result', array('name' => $name, 'categorie' => $categorie, 'gendre' => $gendre, 'color' => $color)));
-            }
-        }
-
-        if($form->isSubmitted() && $form->isValid()){
-
-            $entityManager->persist($newsletter);
-            $entityManager->flush();
-
-            return $this->redirectToRoute('newsletters_list');
-        }
-
-        return $this->render('newsletters/prepare.html.twig', [
-            'form' => $form->createView(),
-            'search' => $Search->createView()
-        ]);
-    }
     
     #[Route('/newsletters/list', name: 'newsletters_list')]
     public function list(NewslettersRepository $newsletters, Request $request): Response
