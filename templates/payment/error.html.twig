@@ -1,55 +1,21 @@
-{% extends 'base.html.twig' %}
-
-{% block title %}Paiment mode échec!{% endblock %}
-
-{% block body %}
-   {% include "page_head/page_head.html.twig" with {'page_name': 'Paiement refusé'} %}
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="text-center order_complete">
-                        <i class="fas fa-ban"></i>
-                        <div class="heading_s1">
-                          <h3>We are sorry . Your payment has been rejected !</h3>
-                        <div>
-                        <div>Payment for order number <strong>{{ order.reference}}</strong> was rejected.
-                        </div>
-                            <div>
-                            You have tried to pay for your order and we thank you.
-                            Your payment has not been accepted. Your order has not been confirmed.
-                            We invite you to check the validation of your bank card, and to connect to our site and renew your order.
-                            </div>
-                            <div>
-                                <a href="{{ path('app_checkout')}}" class="btn btn-fill-out ">Resume payment</a>
-                            </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-{% endblock %}
-
 {% extends 'basePayment.html.twig' %}
 
 {% block title %}AfamiaShop | Payment failure mode {% endblock %}
 
 {% block body %}
-
-{% include "page_head/page_head.html.twig" with {'page_name': "Order Not Completed" } %}
 <div class="section">
 	<div class="container">
-        <div class="row justify-content-center">
+        <div class="row">
             <div class="col-md-8">
                 <div class="text-center order_complete">
                 	<i class="fas fa-check-circle"></i>
                     <div class="heading_s1">
-                  	<h3>Your order is not completed!</h3>
+                  	    <h3>Your order is not completed!</h3>
                     </div>
                   	<p>You have tried to pay for your order and we thank you.
                         Your payment has not been accepted. Your order has not been confirmed.
                         We invite you to check the validation of your bank card, and to connect to our site and renew your order.</p>
-                    <a href="{{ path('payment_stripe', {orderId: orderId})}}" class="btn btn-fill-out ">Resume payment</a>
+                    <a href="{{ path('payment_stripe')}}" class="btn btn-fill-out ">Resume payment</a>
                 </div>
             </div>
         </div>
