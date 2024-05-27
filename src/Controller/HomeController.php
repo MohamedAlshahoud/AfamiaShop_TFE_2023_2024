@@ -201,54 +201,6 @@ class HomeController extends AbstractController
         ]);
     }
 
-     /**
-     * @Route("/produit/{id}", name="produit_detail")
-     */
-    public function detail(ProductRepository $productRepository, int $id, Request $request, EntityManagerInterface $entityManager): Response
-    {
-        $products = $entityManager->getRepository(Product::class)->find($id);
-        $form = $this->createForm(SearchProductType::class, null);
-        $form->handleRequest($request);
-
-        if (!$products) {
-            throw $this->createNotFoundException('The product does not exist');
-        }
-
-        if ($request->isMethod('post')) {
-            if($form->isSubmitted() && $form->isValid()){
-
-                $data = $form->getData();
-
-                if ($data["product"] != null) {
-                    $name = $data["product"];
-                } else {
-                    $name = "all";
-                }
-                if ($data["category"] != null) {
-                    $categorie = $data["category"]->getId();
-                } else {
-                    $categorie = "all";
-                }
-                if ($data["gender"] != null) {
-                    $gendre = $data["gender"]->getId();
-                } else {
-                    $gendre = "all";
-                }
-                if ($data["color"] != null) {
-                    $color = $data["color"]->getId();
-                } else {
-                    $color = "all";
-                }
-                return $this->redirect($this->generateUrl('app_search_result', array('name' => $name, 'categorie' => $categorie, 'gendre' => $gendre, 'color' => $color)));
-            }
-        }
-
-        return $this->render('product/show.html.twig', [
-            'product' => $products,
-            'search' =>$form->createView(), 
-        ]);
-    }
-
 
     #[Route('/change-locale/{locale}', name: 'change_locale')]
     public function changeLocale($locale, Request $request)
