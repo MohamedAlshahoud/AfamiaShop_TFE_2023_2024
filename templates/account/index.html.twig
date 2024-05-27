@@ -4,82 +4,81 @@
 
 {% block body %}
 <div class="main_content">
-<div class="section">
-	<div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-4">
-                <div class="dashboard_menu">
-                    <ul class="nav nav-tabs flex-column">
-                        <li  class="nav-item">
-                            <a class="nav-link active " href="/account"><i class="fas fa-user"></i>{% trans %}Account details{% endtrans %}</a>
-                        </li>
-                        <li  class="nav-item">
-                            <a class="nav-link" href="/orders"><i class="ti-shopping-cart-full"></i>{% trans %}Your Orders{% endtrans %}</a>
-                        </li>
-                        <li  class="nav-item">
-                            <a class="nav-link " href="/account-address"><i class="ti-location-pin"></i>{% trans %}Your Addresses{% endtrans %}</a>
-                        </li>
-                    </ul>
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4">
+                    <div class="dashboard_menu">
+                        <ul class="nav nav-tabs flex-column">
+                            <li  class="nav-item">
+                                <a class="nav-link active " href="/account"><i class="fas fa-user"></i>{% trans %}Account details{% endtrans %}</a>
+                            </li>
+                            <li  class="nav-item">
+                                <a class="nav-link" href="/orders"><i class="ti-shopping-cart-full"></i>{% trans %}Your Orders{% endtrans %}</a>
+                            </li>
+                            <li  class="nav-item">
+                                <a class="nav-link " href="/account-address"><i class="ti-location-pin"></i>{% trans %}Your Addresses{% endtrans %}</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-9 col-md-8">
-                <div class="tab-content dashboard_content">
-                  	<div class="tab-pane fade active show" id="account-detail" role="tabpanel" aria-labelledby="account-detail-tab">
-                        {% for message in app.flashes('address_message') %}
-                            <div class="alert alert-success alert-dismissible fade show" role="alert"> {{ message }}
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                        {% endfor %}
-						<div class="card">
-                        	<div class="heading_s1">
-                                <h1>{%trans %}Profile of {%endtrans %} {{app.user.firstname}} {{app.user.lastname}} </h1>
-                            </div>
-                            <div class="card-body">
-                                <form method="post" name="enq">
-                                    <div class="row">
-                                        <div class="form-group col-md-6 mb-3">
-                                        	<label>{%trans %}User Name {%endtrans %}<span class="required"></span></label>
-                                        </div>
-                                        <div class="form-group col-md-6 mb-3">
-                                            {{app.user.username}}
-                                        </div>
+                <div class="col-lg-9 col-md-8">
+                    <div class="tab-content dashboard_content">
+                        <div class="tab-pane fade active show" id="account-detail" role="tabpanel" aria-labelledby="account-detail-tab">
+                            {% for message in app.flashes('address_message') %}
+                                <div class="alert alert-success alert-dismissible fade show" role="alert"> {{ message }}
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            {% endfor %}
+                            <div class="card">
+                                <div class="heading_s1">
+                                    <h1>{%trans %}Profile of {%endtrans %} {{app.user.firstname}} {{app.user.lastname}} </h1>
+                                </div>
+                                <div class="card-body">
+                                    <form method="post" name="enq">
+                                        <div class="row">
+                                            <div class="form-group col-md-6 mb-3">
+                                                <label>{%trans %}User Name {%endtrans %}<span class="required"></span></label>
+                                            </div>
+                                            <div class="form-group col-md-6 mb-3">
+                                                {{app.user.username}}
+                                            </div>
 
-                                        <div class="form-group col-md-6 mb-3">
-                                        	<label>{% trans %}First Name{%endtrans %} <span class="required"></span></label>
-                                        </div>
-                                        <div class="form-group col-md-6 mb-3">
-                                            {{app.user.firstname}}
-                                        </div>
+                                            <div class="form-group col-md-6 mb-3">
+                                                <label>{% trans %}First Name{%endtrans %} <span class="required"></span></label>
+                                            </div>
+                                            <div class="form-group col-md-6 mb-3">
+                                                {{app.user.firstname}}
+                                            </div>
 
-                                        <div class="form-group col-md-6 mb-3">
-                                        	<label>{%trans %}Last Name {%endtrans %}<span class="required"></span></label>
+                                            <div class="form-group col-md-6 mb-3">
+                                                <label>{%trans %}Last Name {%endtrans %}<span class="required"></span></label>
+                                            </div>
+                                            <div class="form-group col-md-6 mb-3">
+                                                {{app.user.lastname}}
+                                            </div>
+                                            
+                                            <div class="form-group col-md-6 mb-3">
+                                                <label>{%trans %}Email Address {%endtrans %}<span class="required"></span></label>
+                                            </div>
+                                            <div class="form-group col-md-6 mb-3">
+                                                {{app.user.email}}
+                                            </div>
+                                            <div class="btns-group">
+                                                <a href="/account/profile/change" class="btn btn-fill-out">{% trans %}Edit your profile{%endtrans %}</a>
+                                                <a href="/account/password/change" class="btn btn-fill-out">{%trans %}Edit your password{%endtrans %}</a>
+                                            </div>
                                         </div>
-                                        <div class="form-group col-md-6 mb-3">
-                                            {{app.user.lastname}}
-                                        </div>
-                                        
-                                        <div class="form-group col-md-6 mb-3">
-                                        	<label>{%trans %}Email Address {%endtrans %}<span class="required"></span></label>
-                                        </div>
-                                        <div class="form-group col-md-6 mb-3">
-                                            {{app.user.email}}
-                                        </div>
-                                        <div class="btns-group">
-                                            <a href="/account/profile/change" class="btn btn-fill-out">{% trans %}Edit your profile{%endtrans %}</a>
-                                            <a href="/account/password/change" class="btn btn-fill-out">{%trans %}Edit your password{%endtrans %}</a>
-                                        </div>
-                                    </div>
-                                </form>
+                                    </form>
+                                </div>
                             </div>
                         </div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}

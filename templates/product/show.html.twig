@@ -19,7 +19,7 @@
                                 <div class="slick-track" role="listbox" style="opacity: 1; width: 556px; left: 0px;">
                                     {% for imageUrl in product.imageUrls%}
                                         <div class="item slick-slide slick-current slick-active" data-slick-index="0"
-                                            aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide20"
+                                            aria-hidden="false" tabindex="-1" role="option"
                                             style="width: 129px;"><a href="#" class="product_gallery_item active"
                                                 data-image="/assets/images/products/{{ imageUrl }}"
                                                 data-zoom-image="/assets/images/products/{{ imageUrl }}"
@@ -42,21 +42,21 @@
                         </div>
                         <div class="pr_desc">
                             <p>{{product.description | trans}} </p>
-                            <ul class="product-meta">
-                                {% if product.categories %}
-                                    <li>{% trans %}Category : {% endtrans %}{{product.categories.name | trans}}</a></li>
-                                {% endif %}
-                            </ul>
-                            <ul class="product-meta">
-                                {% if product.colors %}
-                                     <li>{% trans %}Color : {% endtrans %} {{product.colors.name | trans}}</li> 
-                                {% endif %}
-                            </ul>
-                            <ul class="product-meta">
-                                {% if product.genders %}
-                                     <li>{% trans %}Gender : {% endtrans %} {{product.genders.name | trans}}</li> 
-                                {% endif %}
-                            </ul>
+                            {% if product.categories %}
+                                <ul class="product-meta">                            
+                                    <li>{% trans %}Category : {% endtrans %}{{product.categories.name | trans}}</li>
+                                </ul>
+                            {% endif %}
+                            {% if product.colors %}
+                                <ul class="product-meta">
+                                    <li>{% trans %}Color : {% endtrans %} {{product.colors.name | trans}}</li> 
+                                </ul>
+                            {% endif %}
+                            {% if product.genders %}
+                                <ul class="product-meta">
+                                    <li>{% trans %}Gender : {% endtrans %} {{product.genders.name | trans}}</li> 
+                                </ul>
+                            {% endif %}
                         </div>
                         <div class="cart_extra">
                             {% if product.quantity > 0 %}
@@ -99,8 +99,7 @@
                             <div id="Additional-info" role="tabpanel" aria-labelledby="Additional-info-tab"
                                 class="tab-pane fade show active"> {{ product.moreInformation | trans}}
                             </div>
-                            <div id="List-comments" role="tabpanel" aria-labelledby="List-comments-tab"
-                                class="tab-pane fade">
+                            <div id="List-comments" role="tabpanel" class="tab-pane fade">
                                 {% for comment in product.comments %}
                                    <div class="border_form list_comments">
                                         <div class="content_infos">
@@ -109,13 +108,10 @@
                                         <div class="content_infos">{{comment.content|raw}}</div>
                                    </div>
                                 {% else %}
-                                <tr>
-                                    <td colspan="6" class="text-center">{% trans %}----------No comments----------{% endtrans %}</td>
-                                </tr>
+                                    <p class="text-center">{% trans %}----------No comments----------{% endtrans %}</p> 
                                 {% endfor %}
                             </div>
-                            <div id="Add-comment" role="tabpanel" aria-labelledby="Add-comment-tab"
-                                class="tab-pane fade"> 
+                            <div id="Add-comment" role="tabpanel" class="tab-pane fade"> 
                                 <div class="row">
                                     <div class="col-xl-6 col-md-10">
                                         <div class="border_form">
@@ -126,7 +122,7 @@
                                                 <div class="row">
                                                     {% for message in app.flashes('comment_success') %}
                                                         <div class=" col-md-12 alert alert-success alert-dismissible fade show" role="alert">{{message}}
-                                                            <button type="button" class="close" date-dismiss="alert" aria-label="Close">
+                                                            <button type="button" class="close" aria-label="Close">
                                                                 <span aria-hidden="true">&times;</span>
                                                             </button>
                                                         </div> 
@@ -156,7 +152,6 @@
                     <div class="medium_divider"></div>
                 </div>
             </div>
-            
         </div>
     </div>
 </div>

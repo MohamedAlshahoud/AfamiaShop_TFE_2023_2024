@@ -5,19 +5,19 @@
 {% block body %}
 <div class="section">
 	<div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="text-center order_complete">
-                	<i class="fas fa-check-circle"></i>
-                    <div class="heading_s1">
-                  	<h3>{% trans %}Your order number {% endtrans %} {{ order.reference}} {% trans %}is completed!{% endtrans %}</h3>
-                    </div>
-                  	<p>{% trans %}Thank you for your order!{% endtrans %}</p>
-                    <p>{% trans %}Total amount paid: {% endtrans %} {{ (totalAmount / 100) | format_currency ('EUR') }}</p>
-                    <a href="/orders" class="btn btn-fill-out ">{% trans %}View order{% endtrans %}</a> <a href="/" class="btn btn-fill-out ">{% trans %}To the site AfamiaShop{% endtrans %}</a>
-                </div>
-            </div>
+    <div class="row">
+      <div class="col-md-8">
+        <div class="text-center order_complete">
+          <i class="fas fa-check-circle"></i>
+          <div class="heading_s1">
+            <h3>{% trans %}Your order number {% endtrans %} {{ order.reference}} {% trans %}is completed!{% endtrans %}</h3>
+          </div>
+          <p>{% trans %}Thank you for your order!{% endtrans %}</p>
+          <p>{% trans %}Total amount paid: {% endtrans %} {{ (totalAmount / 100) | format_currency ('EUR') }}</p>
+          <a href="/orders" class="btn btn-fill-out ">{% trans %}View order{% endtrans %}</a> <a href="/" class="btn btn-fill-out ">{% trans %}To the site AfamiaShop{% endtrans %}</a>
         </div>
+      </div>
     </div>
+  </div>
 </div>
 {% endblock %}

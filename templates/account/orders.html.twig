@@ -4,66 +4,65 @@
 
 {% block body %}
 <div class="main_content">
-<div class="section">
-	<div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-4">
-                <div class="dashboard_menu">
-                    <ul class="nav nav-tabs flex-column">
-                        <li  class="nav-item">
-                            <a class="nav-link " href="/account"><i class="fas fa-user"></i>{% trans %}Account details{% endtrans %}</a>
-                        </li>
-                        <li  class="nav-item">
-                            <a class="nav-link active" href="/orders"><i class="ti-shopping-cart-full"></i>{% trans %}Your Orders{% endtrans %}</a>
-                        </li>
-                        <li  class="nav-item">
-                            <a class="nav-link " href="/account-address"><i class="ti-location-pin"></i>{% trans %}Your Addresses{% endtrans %}</a>
-                        </li>
-                    </ul>
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4">
+                    <div class="dashboard_menu">
+                        <ul class="nav nav-tabs flex-column">
+                            <li  class="nav-item">
+                                <a class="nav-link " href="/account"><i class="fas fa-user"></i>{% trans %}Account details{% endtrans %}</a>
+                            </li>
+                            <li  class="nav-item">
+                                <a class="nav-link active" href="/orders"><i class="ti-shopping-cart-full"></i>{% trans %}Your Orders{% endtrans %}</a>
+                            </li>
+                            <li  class="nav-item">
+                                <a class="nav-link " href="/account-address"><i class="ti-location-pin"></i>{% trans %}Your Addresses{% endtrans %}</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-9 col-md-8">
-                <div class="tab-content dashboard_content">
-                  	<div class="tab-pane fade active show" id="orders" role="tabpanel" aria-labelledby="orders-tab">
-                    	<div class="card">
-                        	<div class="heading_s1">
-                                <h1>{% trans %}Orders{% endtrans %}</h1>
-                            </div>
-                            <div class="card-body">
-                    			<div class="table-responsive">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th>{% trans %}Reference{% endtrans %}</th>
-                                                <th>{% trans %}Quantity{% endtrans %}</th>
-                                                <th>Total</th>
-                                                <th>Actions</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            {% for order in orders %}
+                <div class="col-lg-9 col-md-8">
+                    <div class="tab-content dashboard_content">
+                        <div class="tab-pane fade active show" id="orders" role="tabpanel" aria-labelledby="orders-tab">
+                            <div class="card">
+                                <div class="heading_s1">
+                                    <h1>{% trans %}Orders{% endtrans %}</h1>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
                                                 <tr>
-                                                    <td>{{order.reference}}</td>
-                                                    <td>{{order.quantity}}</td>
-                                                    <td>{{(order.orderCostTtc/100)}}</td> 
-                                                    <td><a href="{{ path('order_details', {'reference': order.reference}) }}" class="btn btn-fill-out">{% trans %}See{% endtrans %}</a></td>
+                                                    <th>{% trans %}Reference{% endtrans %}</th>
+                                                    <th>{% trans %}Quantity{% endtrans %}</th>
+                                                    <th>Total</th>
+                                                    <th>Actions</th>
                                                 </tr>
-                                            {% else %}
-                                                <tr>
-                                                    <td colspan="6" class="text-center">{% trans %}You haven't placed an order yet!{% endtrans %}</td>
-                                                </tr>
-                                            {% endfor%}
-                                        </tbody>
-                                    </table>
+                                            </thead>
+                                            <tbody>
+                                                {% for order in orders %}
+                                                    <tr>
+                                                        <td>{{order.reference}}</td>
+                                                        <td>{{order.quantity}}</td>
+                                                        <td>{{(order.orderCostTtc/100)}}</td> 
+                                                        <td><a href="{{ path('order_details', {'reference': order.reference}) }}" class="btn btn-fill-out">{% trans %}See{% endtrans %}</a></td>
+                                                    </tr>
+                                                {% else %}
+                                                    <tr>
+                                                        <td colspan="6" class="text-center">{% trans %}You haven't placed an order yet!{% endtrans %}</td>
+                                                    </tr>
+                                                {% endfor%}
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                  	</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}
