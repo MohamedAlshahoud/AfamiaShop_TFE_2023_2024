@@ -1,20 +1,20 @@
-<header  class="header_wrap fixed-top header_with_topbar active">
-    <div  class="top-header" style="">
-        <div  class="container">
-            <div  class="row">
-                <div  class="col-lg-6 col-md-6 col-sm-12">
-                    <ul  class="header_list">
-                        <li ><i class="ti-time"></i><span>{% trans %} Monday - Friday : 8:00 - 20:00{% endtrans %}</span></li>
+<header class="header_wrap fixed-top header_with_topbar active">
+    <div class="top-header" style="">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <ul class="header_list">
+                        <li><i class="ti-time"></i><span>{% trans %} Monday - Friday : 8:00 - 20:00{% endtrans %}</span></li>
                     </ul>
                 </div>
-                <div  class="col-lg-4 col-md-4 col-sm-12">
+                <div class="col-lg-4 col-md-4 col-sm-12">
                     <div class="d-flex">
                         {% for locale in locales %}
                             <div class="lng_dropdown mr-2">
                                 <a class="{% if app.request.locale == locale %}active{% endif %}" href="{{ path('change_locale', {'locale': locale})}}">{{locale}}</a>
                             </div>
                         {% endfor %}
-                        <ul  class="contact_detail">
+                        <ul class="contact_detail">
                             <li ><i  class="ti-mobile"></i><span>{{app.session.get('siteInformation').phone}}</span></li>
                         </ul>
                     </div>
@@ -22,75 +22,74 @@
             </div>
         </div>
     </div>
-    <div  class="bottom_header dark_skin main_menu_uppercase">
-        <div  class="container">
-            <nav  class="navbar navbar-expand-lg">
+    <div class="bottom_header dark_skin main_menu_uppercase">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
                 <a class="navbar-brand" href="/">
                     <h1 class="name">{{app.session.get('siteInformation').name}}</h1>
                 </a>
-                <button  type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-expanded="false"
+                <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-expanded="false"
                     class="navbar-toggler collapsed"><span class="ion-android-menu"></span>
                 </button>
-                <div  id="navbarSupportedContent"
+                <div id="navbarSupportedContent"
                     class="navbar-collapse justify-content-end collapse" style="">
-                    <ul  class="navbar-nav">
-                        <li  class="dropdown">
+                    <ul class="navbar-nav">
+                        <li class="dropdown">
                             <a class="nav-link" href="/">{% trans %}Home{% endtrans %}</a>
                         </li>
-                        <li  class="dropdown">
+                        <li class="dropdown">
                             {% if is_granted("ROLE_ADMIN")%}
                                 <a class="nav-link" href="/admin">{% trans %}Admin{% endtrans %}</a>
                             {% endif %}
                         </li>
-                        <li  class="dropdown">
+                        <li class="dropdown">
                             {% if is_granted("ROLE_ADMIN")%}
                                 <a class="nav-link" href="/newsletters/list">{% trans %}Newsletters{% endtrans %}</a>
                             {% endif %}
                         </li>
-                        <li  class="dropdown">
+                        <li class="dropdown">
                             <a class="nav-link" href="/category">{% trans %}Categories{% endtrans %}</a>
                         </li>
-                        <li  class="dropdown">
+                        <li class="dropdown">
                             <a class="nav-link" href="/shop">{% trans %}Shop{% endtrans %}</a>
                         </li>
                         <li >
                             <a class="nav-link nav_item" href="/contact">{% trans %}Contact Us{% endtrans %}</a>
                         </li>
-                        {% if app.user %}
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    {{app.user.username}}
+                        <li class="nav-item dropdown">
+                            {% if app.user %}
+                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    {{ app.user.username }}
                                 </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="/account">{% trans %}Your Account{% endtrans %}</a></li>
                                     <li><a class="dropdown-item" href="/logout">{% trans %}Log out{% endtrans %}</a></li>
                                 </ul>
-                            </li> 
-                        {% else %}
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                {% trans %}Account{% endtrans %}
+                            {% else %}
+                                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    {% trans %}Account{% endtrans %}
                                 </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="/login">{% trans %}Log in{% endtrans %}</a></li>
                                     <li><a class="dropdown-item" href="register">{% trans %}Register{% endtrans %}</a></li>
                                 </ul>
-                            </li> 
-                        {% endif %}
+                            {% endif %}
+                        </li> 
                     </ul>
                     <ul class="navbar-nav attr-nav align-items-center">          
-                        <li><a href="javascript:void(0);" class="nav-link search_trigger"><i class="linearicons-magnifier"></i></a>
-                            <div class="search_wrap"><span class="close-search"><i class="ion-ios-close-empty"></i></span>
+                        <li>
+                            <a href="javascript:void(0);" class="nav-link search_trigger"><i class="linearicons-magnifier"></i></a>
+                            <div class="search_wrap">
+                                <span class="close-search"><i class="ion-ios-close-empty"></i></span>
                                 <div class="click-closed"></div>
-                                    <div class="box-collapse">
-                                        <div class="title-box-d">
-                                            <h3 class="title-d">{% trans %}Advanced search ...{% endtrans %}</h3>
-                                        </div>
-                                        <span class="close-box-collapse right-boxed bi bi-x"></span>
-                                        <div class="box-collapse-wrap form">
-                                            <div class="row">
-                                                {{form(search)}}
-                                            </div>
+                                <div class="box-collapse">
+                                    <div class="title-box-d">
+                                        <h3 class="title-d">{% trans %}Advanced search ...{% endtrans %}</h3>
+                                    </div>
+                                    <span class="close-box-collapse right-boxed bi bi-x"></span>
+                                    <div class="box-collapse-wrap form">
+                                        <div class="row">
+                                            {{form(search)}}
                                         </div>
                                     </div>
                                 </div>
@@ -121,7 +120,9 @@
                             <div class="search_overlay"></div>
                             <div class="search_overlay"></div>
                         </li>
-                        <a class="nav-link" href="/cart"><span><i class="linearicons-cart"></i></a>
+                        <a class="nav-link" href="/cart">
+                            <span><i class="linearicons-cart"></i></span>
+                        </a>
                     </ul>
                 </div>
             </nav>
