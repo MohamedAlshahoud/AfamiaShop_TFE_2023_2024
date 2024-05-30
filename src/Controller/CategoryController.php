@@ -6,6 +6,7 @@ use App\Entity\Category;
 use App\Entity\Product;
 use App\Form\SearchProductType;
 use App\Repository\ProductRepository;
+use App\Services\CartServices;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -16,10 +17,18 @@ use Symfony\Component\HttpFoundation\Request;
 class CategoryController extends AbstractController
 {
 
+    private $cartServices;
+ 
+    public function __construct(CartServices $cartServices)
+    {
+        $this->cartServices = $cartServices;
+    }
+
     //afficher une categorie par ID 
     #[Route('/category/{id}', name: 'show_category')]
     public function show(Category $category, PaginatorInterface $paginator, ProductRepository $productRepository, Request $request, EntityManagerInterface $entityManagerInterface): Response
     {
+        $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
 
         $products = $category ->getProducts();
         $form = $this->createForm(SearchProductType::class, null);
@@ -62,7 +71,8 @@ class CategoryController extends AbstractController
         return $this->render('category/show.html.twig', [
             'products' => $products,
             'category' => $category,
-            'search' => $form->createView()
+            'search' => $form->createView(),
+            'quantity' => $cartDetails['quantity']
         ]);
     }
 
@@ -72,6 +82,8 @@ class CategoryController extends AbstractController
     {
 
         $categories = $entityManager->getRepository(Category::class)->findAll();
+
+        $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
 
         $products = $entityManager->getRepository(Product::class)->findAll();
         $form = $this->createForm(SearchProductType::class, null);
@@ -108,7 +120,8 @@ class CategoryController extends AbstractController
         return $this->render('category/index.html.twig', [
             'categories' => $categories,
             'products' => $products,
-            'search' => $form->createView()
+            'search' => $form->createView(),
+            'quantity' => $cartDetails['quantity']
         ]);
     }
 

@@ -33,6 +33,7 @@ class DeliveryAddressController extends AbstractController
     {
         $user = $this->getUser();    
         $cart = $this->cartServices->getCartDetails();
+        $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
 
 
         if($this->session->get('checkout_data')){
@@ -43,7 +44,8 @@ class DeliveryAddressController extends AbstractController
 
         return $this->render('delivery_address/index.html.twig', [
             'cart'=>$cart,
-            'checkout'=>$form->createView()
+            'checkout'=>$form->createView(),
+            'quantity' => $cartDetails['quantity']
         ]);
     }
 }

@@ -29,11 +29,13 @@ class PaymentController extends AbstractController
 
     private EntityManagerInterface $entityManagerInterface;
     private UrlGeneratorInterface $urlGeneratorInterface;
+    private $cartServices;
 
-    public function __construct(EntityManagerInterface $entityManagerInterface, UrlGeneratorInterface $urlGeneratorInterface, EmailOrderConfirmation $emailOrderConfirmation, EmailVerifier $emailVerifier)
+    public function __construct(EntityManagerInterface $entityManagerInterface, UrlGeneratorInterface $urlGeneratorInterface, CartServices $cartServices, EmailVerifier $emailVerifier)
     {
         $this->entityManagerInterface = $entityManagerInterface;
         $this->urlGeneratorInterface = $urlGeneratorInterface;
+        $this->cartServices = $cartServices;
     }
     
     #[Route('/order/create-session-stripe/{reference}', name: 'payment_stripe')]
@@ -100,6 +102,8 @@ class PaymentController extends AbstractController
     #[Route('/order/success/{reference}', name:'payment_success')]
     public function stripeSuccess(CartServices $cartServices, EntityManagerInterface $manager, Request $request, $reference): Response
     {
+        $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
+
         $order = $this->entityManagerInterface->getRepository(Order::class)->findOneBy(['reference' => $reference]);
         if(!$order || $order->getUser() !== $this->getUser()){
             return $this->redirectToRoute('/cart');
@@ -120,6 +124,7 @@ class PaymentController extends AbstractController
         return $this->render('payment/success.html.twig', [
             'order' => $order,
             'totalAmount' => $totalAmount,
+            'quantity' => $cartDetails['quantity']
         ]);
     }
 
@@ -127,13 +132,15 @@ class PaymentController extends AbstractController
     public function paymentcancel($reference): Response
     {
         $order = $this->entityManagerInterface->getRepository(Order::class)->findOneBy(['reference' => $reference]);
-        
+        $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
+
         if(!$order || $order->getUser() !== $this->getUser()){
             return $this->redirectToRoute('app_cart');
         }
         
         return $this->render('payment/error.html.twig', [
             'order' => $order,
+            'quantity' => $cartDetails['quantity']
         ]);
     }
     

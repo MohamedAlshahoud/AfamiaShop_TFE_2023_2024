@@ -41,6 +41,8 @@ class CheckoutController extends AbstractController
         $user = $this->getUser();    
         $cart = $this->cartServices->getCartDetails();
 
+        $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
+
         if(!count($cart["items"])){
             return $this->redirectToRoute("app_home");
         }
@@ -56,7 +58,8 @@ class CheckoutController extends AbstractController
 
         return $this->render('checkout/index.html.twig', [
             'form' => $form->createView(),
-            'cart' => $cart
+            'cart' => $cart,
+            'quantity' => $cartDetails['quantity']
         ]);
     }
 
@@ -71,6 +74,7 @@ class CheckoutController extends AbstractController
         $form = $this->createForm(CheckoutType::class, null, ['user'=>$this->getUser()]);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
+            $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
             $datetime = new \DateTime('now');
             $transporter = $form->get('transporter')->getData();
             $delivery = $form->get('address')->getData();
@@ -120,6 +124,7 @@ class CheckoutController extends AbstractController
                 'delivery' => $deliveryForOrder,
                 'subTotalWithTransporter' => $subTotalWithTransporter,
                 'reference' => $order->getReference(),
+                'quantity' => $cartDetails['quantity']
             ]);
         }
 

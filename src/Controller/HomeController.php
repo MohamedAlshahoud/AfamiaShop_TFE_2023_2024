@@ -12,6 +12,7 @@ use App\Repository\ProductRepository;
 use App\Repository\SiteInformationRepository;
 use App\Repository\SliderRepository;
 use App\Repository\UserRepository;
+use App\Services\CartServices;
 use DateTime;
 use Doctrine\ORM\EntityManagerInterface;
 use Knp\Component\Pager\PaginatorInterface;
@@ -27,11 +28,13 @@ class HomeController extends AbstractController
 
     private $productRepository;
     private $provider;
+    private $cartServices;
  
-        public function __construct(ProductRepository $productRepository)
-        {
-            $this->productRepository = $productRepository;
-        }
+    public function __construct(ProductRepository $productRepository, CartServices $cartServices)
+    {
+        $this->productRepository = $productRepository;
+        $this->cartServices = $cartServices;
+    }
 
     #[Route('/', name: 'app_home')]
     public function index(EntityManagerInterface $entityManager, SliderRepository $sliderRepository,Request $request, PaginatorInterface $paginator, ProductRepository $productRepository, SiteInformationRepository $siteInformationRepository): Response
@@ -42,6 +45,7 @@ class HomeController extends AbstractController
         $session->set('siteInformation', $data[0]);
 
         $categories = $entityManager->getRepository(Category::class)->findBy([],['id' => 'DESC'],4);
+        $cartDetails = $this->cartServices->getCartDetails();
         
         $form = $this->createForm(SearchProductType::class, null);
         $form->handleRequest($request);
@@ -80,7 +84,8 @@ class HomeController extends AbstractController
             'slider' => $slider,
             'categories' => $categories,
             'newProduct' => $this->productRepository->findBy(['isNewProduct'=>true]),
-            'search' => $form->createView()
+            'search' => $form->createView(),
+            'quantity' => $cartDetails['quantity']
         ]);
     }
 
@@ -90,6 +95,7 @@ class HomeController extends AbstractController
 
         $form = $this->createForm(SearchProductType::class, null);
         $form->handleRequest($request);
+        $cartDetails = $this->cartServices->getCartDetails();
 
         $products = $entityManager->getRepository(Product::class)->findWithSearch($name, $categorie, $gendre, $color);
         $products = $paginator->paginate(
@@ -128,7 +134,8 @@ class HomeController extends AbstractController
 
         return $this->render('search/index.html.twig', [
             'products' => $products,
-            'search' => $form->createView()
+            'search' => $form->createView(),
+            'quantity' => $cartDetails['quantity']
         ]);
     }
 
@@ -136,8 +143,9 @@ class HomeController extends AbstractController
     #[Route('/product/{name}', name: 'show')]
     public function show(string $name, Product $produc, Request $request, EntityManagerInterface $entityManager,  TranslationTranslatorInterface $translator, PaginatorInterface $paginator): Response
     {
-       $product = $this->productRepository->findOneBy(['name'=>$name]);
-       $category = $produc->getCategories();
+        $product = $this->productRepository->findOneBy(['name'=>$name]);
+        $category = $produc->getCategories();
+        $cartDetails = $this->cartServices->getCartDetails();
         $form = $this->createForm(SearchProductType::class, null);
         $form->handleRequest($request);
 
@@ -196,7 +204,8 @@ class HomeController extends AbstractController
             'commentForm' =>$commentForm->createView(),
             'search' =>$form->createView(), 
             'category' => $category,
-            'produc' => $produc
+            'produc' => $produc,
+            'quantity' => $cartDetails['quantity']
             
         ]);
     }
@@ -219,6 +228,7 @@ class HomeController extends AbstractController
         $products = $this->productRepository->findAll();
         $form = $this->createForm(SearchProductType::class, null);
         $form->handleRequest($request);
+        $cartDetails = $this->cartServices->getCartDetails();
 
         if ($request->isMethod('post')) {
             if($form->isSubmitted() && $form->isValid()){
@@ -250,7 +260,8 @@ class HomeController extends AbstractController
         }
         return $this->render('terms_conditions/term_condition.html.twig', [
             'products' => $products,
-            'search' => $form->createView()
+            'search' => $form->createView(),
+            'quantity' => $cartDetails['quantity']
         ]);
     }
 

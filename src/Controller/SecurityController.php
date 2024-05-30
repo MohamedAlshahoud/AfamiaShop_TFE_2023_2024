@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Product;
 use App\Form\SearchProductType;
+use App\Services\CartServices;
 use Doctrine\ORM\EntityManagerInterface;
 use KnpU\OAuth2ClientBundle\Client\ClientRegistry;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -15,6 +16,13 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class SecurityController extends AbstractController
 {
+    private $cartServices;
+ 
+    public function __construct(CartServices $cartServices)
+    {
+        $this->cartServices = $cartServices;
+    }
+
     public const SCOPES = [
       'google' => []
     ];
@@ -22,6 +30,8 @@ class SecurityController extends AbstractController
     #[Route(path: '/login', name: 'app_login')]
     public function login(AuthenticationUtils $authenticationUtils, EntityManagerInterface $entityManagerInterface, Request $request): Response
     {
+        $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
+
         // get the login error if there is one
         $error = $authenticationUtils->getLastAuthenticationError();
         // last username entered by the user
@@ -63,7 +73,8 @@ class SecurityController extends AbstractController
             'last_username' => $lastUsername,
             'error' => $error,
             'products' => $products,
-            'search' => $form->createView()
+            'search' => $form->createView(),
+            'quantity' => $cartDetails['quantity']
         ]);
     }
 
