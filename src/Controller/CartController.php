@@ -21,9 +21,11 @@ class CartController extends AbstractController
     public function __construct(
         private CartServices $cartServices,
         private TransporterRepository $transporterRepository,
+        private RequestStack $requestStack,
     )
     {
         $this->cartServices = $cartServices;
+        $this->requestStack = $requestStack;
 
     }
 
@@ -85,7 +87,9 @@ class CartController extends AbstractController
     {
         $this->cartServices->addToCart($productId,$count);
         
-        return $this->redirectToRoute("app_cart");
+        $request = $this->requestStack->getCurrentRequest();
+        $referer = $request->headers->get('referer');
+        return $this->redirect($referer ?? $this->generateUrl('show'));
     }
 
     #[Route('/cart/remove/{productId}/{count}', name: 'app_remove_to_cart')]
