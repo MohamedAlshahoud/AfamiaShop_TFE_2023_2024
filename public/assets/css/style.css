@@ -30,6 +30,21 @@ p {
 	margin-bottom: 25px;
 }
 
+.nav-link .cart-amount {
+    position: relative;  
+    top: -13px; 
+	left: -13px;  
+    background-color: #0090e3;  
+    padding: 2px 5px;  
+    border-radius: 50%;  
+    font-size: 0.8em;  
+    color: #fffefe;  
+}
+
+.nav-link .cart-icon-container {
+	position: relative;
+}
+
 .text-description{
 	margin-top: 20px;
 }
