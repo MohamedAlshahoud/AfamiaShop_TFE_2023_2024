@@ -8,6 +8,7 @@ use App\Form\NewslettersType;
 use App\Form\NewslettersUsersType;
 use App\Form\SearchProductType;
 use App\Repository\Newsletters\NewslettersRepository;
+use App\Services\CartServices;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Persistence\ManagerRegistry;
 use Swift_Image;
@@ -24,10 +25,12 @@ class NewslettersController extends AbstractController
 {
 
     private $doctrine;
+    private $cartServices;
 
-    public function __construct(ManagerRegistry $doctrine)
+    public function __construct(ManagerRegistry $doctrine, CartServices $cartServices)
     {
         $this->doctrine = $doctrine;
+        $this->cartServices = $cartServices;
     }
 
 
@@ -35,6 +38,7 @@ class NewslettersController extends AbstractController
     public function index(Request $request, MailerInterface $mailer, EntityManagerInterface $entityManager, TranslatorInterface $translator): Response
     {
         $user = new Users();
+        $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
         $form = $this->createForm(NewslettersUsersType::class, $user);
 
         $form->handleRequest($request);
@@ -97,7 +101,8 @@ class NewslettersController extends AbstractController
 
         return $this->render('newsletters/index.html.twig', [
             'form' => $form->createView(),
-            'search' => $Search->createView()
+            'search' => $Search->createView(),
+            'quantity' => $cartDetails['quantity']
         ]);
     }
 
@@ -122,6 +127,9 @@ class NewslettersController extends AbstractController
     {
         $Search = $this->createForm(SearchProductType::class, null);
         $Search->handleRequest($request);
+
+        $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
+
         if ($request->isMethod('post')) {
             if($Search->isSubmitted() && $Search->isValid()){
 
@@ -152,7 +160,8 @@ class NewslettersController extends AbstractController
         }
         return $this->render('newsletters/list.html.twig', [
             'newsletters' => $newsletters->findAll(),
-            'search' => $Search->createView()
+            'search' => $Search->createView(),
+            'quantity' => $cartDetails['quantity']
         ]);
     }
 
@@ -187,6 +196,7 @@ class NewslettersController extends AbstractController
     {
         $Search = $this->createForm(SearchProductType::class, null);
         $Search->handleRequest($request);
+
         if ($request->isMethod('post')) {
             if($Search->isSubmitted() && $Search->isValid()){
 
@@ -238,6 +248,8 @@ class NewslettersController extends AbstractController
     #[Route('/check-email', name: 'check_email')]
     public function checkEmail(Request $request): Response
     {
+        $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
+
         $Search = $this->createForm(SearchProductType::class, null);
         $Search->handleRequest($request);
         if ($request->isMethod('post')) {
@@ -269,13 +281,16 @@ class NewslettersController extends AbstractController
             }
         }
         return $this->render('emails/check_newsletters.html.twig', [
-            'search' => $Search->createView()
+            'search' => $Search->createView(),
+            'quantity' => $cartDetails['quantity']
         ]);
     }
 
     #[Route('/subscription_confirm', name: 'newsletter_subscription_confirm')]
     public function subscriptionConfirm(Request $request): Response
     {
+        $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
+
         $Search = $this->createForm(SearchProductType::class, null);
         $Search->handleRequest($request);
         if ($request->isMethod('post')) {
@@ -307,13 +322,16 @@ class NewslettersController extends AbstractController
             }
         }
         return $this->render('emails/newsletter_subscription_confirmation.html.twig', [
-            'search' => $Search->createView()
+            'search' => $Search->createView(),
+            'quantity' => $cartDetails['quantity']
         ]);
     }
 
     #[Route('/unsubscribe_newsletters', name: 'unsubscribe_newsletters')]
     public function unsubscribeNewsletters(Request $request): Response
     {
+        $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
+
         $Search = $this->createForm(SearchProductType::class, null);
         $Search->handleRequest($request);
         if ($request->isMethod('post')) {
@@ -346,7 +364,8 @@ class NewslettersController extends AbstractController
         }
 
         return $this->render('emails/unsubscribe_newsletters.html.twig', [
-            'search' =>$Search->createView()
+            'search' =>$Search->createView(),
+            'quantity' => $cartDetails['quantity']
         ]);
     }
 }

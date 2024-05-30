@@ -17,9 +17,18 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 #[Route('/address')]
 class AddressController extends AbstractController
 {
+    private $cartServices;
+ 
+    public function __construct(CartServices $cartServices)
+    {
+        $this->cartServices = $cartServices;
+    }
+
     #[Route('/', name: 'address_index', methods: ['GET'])]
     public function index(AddressRepository $addressRepository, Request $request): Response
     {
+        $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
+
         $Search = $this->createForm(SearchProductType::class, null);
         $Search->handleRequest($request);
         if ($request->isMethod('post')) {
@@ -53,7 +62,8 @@ class AddressController extends AbstractController
 
         return $this->render('address/index.html.twig', [
             'addresses' => $addressRepository->findAll(),
-            'search' => $Search->createView()
+            'search' => $Search->createView(),
+            'quantity' => $cartDetails['quantity']
         ]);
     }
 
@@ -65,6 +75,8 @@ class AddressController extends AbstractController
         $Search = $this->createForm(SearchProductType::class, null);
         $form->handleRequest($request);
         $Search->handleRequest($request);
+
+        $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
 
         if ($form->isSubmitted() && $form->isValid()) {
             $user = $this->getUser();
@@ -108,7 +120,8 @@ class AddressController extends AbstractController
         return $this->renderForm('address/new.html.twig', [
             'address' => $address,
             'form' => $form,
-            'search' =>$Search
+            'search' =>$Search,
+            'quantity' => $cartDetails['quantity']
         ]);
     }
 
@@ -127,6 +140,8 @@ class AddressController extends AbstractController
         $Search->handleRequest($request);
         $form = $this->createForm(AddressType::class, $address);
         $form->handleRequest($request);
+
+        $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->flush();
@@ -168,7 +183,8 @@ class AddressController extends AbstractController
         return $this->renderForm('address/edit.html.twig', [
             'address' => $address,
             'form' => $form,
-            'search' =>$Search
+            'search' =>$Search,
+            'quantity' => $cartDetails['quantity']
         ]);
     }
 

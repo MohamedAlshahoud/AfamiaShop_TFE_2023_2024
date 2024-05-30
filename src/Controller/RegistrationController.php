@@ -8,6 +8,7 @@ use App\Form\SearchProductType;
 use App\Repository\UserRepository;
 use App\Security\EmailVerifier;
 use App\Security\LoginAuthenticator;
+use App\Services\CartServices;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -23,15 +24,19 @@ use SymfonyCasts\Bundle\VerifyEmail\Exception\VerifyEmailExceptionInterface;
 class RegistrationController extends AbstractController
 {
     private EmailVerifier $emailVerifier;
+    private $cartServices;
 
-    public function __construct(EmailVerifier $emailVerifier)
+    public function __construct(EmailVerifier $emailVerifier, CartServices $cartServices)
     {
         $this->emailVerifier = $emailVerifier;
+        $this->cartServices = $cartServices;
     }
 
     #[Route('/register', name: 'app_register')]
     public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, UserAuthenticatorInterface $userAuthenticator, LoginAuthenticator $authenticator, EntityManagerInterface $entityManager, TranslatorInterface $translator): Response
     {
+        $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
+
         $user = new User();
         $Search = $this->createForm(SearchProductType::class, null);
         $form = $this->createForm(RegistrationFormType::class, $user);
@@ -94,7 +99,8 @@ class RegistrationController extends AbstractController
 
         return $this->render('registration/register.html.twig', [
             'registrationForm' => $form->createView(),
-            'search' => $Search->createView()
+            'search' => $Search->createView(),
+            'quantity' => $cartDetails['quantity']
         ]);
     }
 
@@ -131,6 +137,8 @@ class RegistrationController extends AbstractController
     #[Route('/send_email', name: 'send_email_register')]
     public function unsubscribeNewsletters(Request $request): Response
     {
+        $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
+
         $Search = $this->createForm(SearchProductType::class, null);
         $Search->handleRequest($request);
         if ($request->isMethod('post')) {
@@ -163,13 +171,16 @@ class RegistrationController extends AbstractController
         }
 
         return $this->render('registration/send_email.html.twig', [
-            'search' => $Search->createView()
+            'search' => $Search->createView(),
+            'quantity' => $cartDetails['quantity']
         ]);
     }
 
     #[Route('/confirm_after_email', name: 'confirm_after_email')]
     public function confirmUserAfterEmail(Request $request): Response
     {
+        $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
+
         $Search = $this->createForm(SearchProductType::class, null);
         $Search->handleRequest($request);
         if ($request->isMethod('post')) {
@@ -202,7 +213,8 @@ class RegistrationController extends AbstractController
         }
 
         return $this->render('registration/confirmUserAfterEmail.html.twig', [
-            'search' => $Search->createView()
+            'search' => $Search->createView(),
+            'quantity' => $cartDetails['quantity']
         ]);
     }
 }

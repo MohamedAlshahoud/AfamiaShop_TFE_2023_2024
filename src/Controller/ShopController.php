@@ -6,6 +6,7 @@ use App\Entity\Product;
 use App\Form\FilterProductType;
 use App\Form\SearchProductType;
 use App\Repository\ProductRepository;
+use App\Services\CartServices;
 use Doctrine\ORM\EntityManagerInterface;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -16,14 +17,19 @@ use Symfony\Component\Routing\Annotation\Route;
 class ShopController extends AbstractController
 {
     private $productRepository;
-        public function __construct(ProductRepository $productRepository)
-        {
-            $this->productRepository = $productRepository;
-        }
+    private $cartServices;
+    
+    public function __construct(ProductRepository $productRepository, CartServices $cartServices)
+    {
+        $this->productRepository = $productRepository;
+        $this->cartServices = $cartServices;
+    }
 
     #[Route('/shop', name: 'app_shop')]
     public function index(Request $request, PaginatorInterface $paginator, ProductRepository $productRepository, EntityManagerInterface $entityManager): Response
     {
+
+        $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
 
         $products = $entityManager->getRepository(Product::class)->findAll();
         $filterForm = $this->createForm(FilterProductType::class, null);
@@ -92,7 +98,8 @@ class ShopController extends AbstractController
         return $this->render('shop/index.html.twig', [
             'products' => $products,
             'search' => $form->createView(),
-            'filterForm' => $filterForm->createView()
+            'filterForm' => $filterForm->createView(),
+            'quantity' => $cartDetails['quantity']
         ]);
     }
 

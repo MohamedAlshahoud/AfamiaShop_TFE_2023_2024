@@ -30,8 +30,10 @@ class CartController extends AbstractController
     #[Route('/cart', name: 'app_cart')]
     public function index(EntityManagerInterface $entityManagerInterface, Request $request): Response
     {
-         $cart = $this->cartServices->getCartDetails();
-         $transporters = $this->transporterRepository->findAll();
+        $cart = $this->cartServices->getCartDetails();
+        $transporters = $this->transporterRepository->findAll();
+
+        $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
 
         $cart_json = json_encode($cart);
         $products = $entityManagerInterface->getRepository(Product::class)->findAll();
@@ -73,7 +75,8 @@ class CartController extends AbstractController
             'transporters' => $transporters,
             "cart_json" => $cart_json,
             'products' => $products,
-            'search' => $form->createView()
+            'search' => $form->createView(),
+            'quantity' => $cartDetails['quantity']
         ]);
     }
 
@@ -100,5 +103,17 @@ class CartController extends AbstractController
 
         return $this->json($cart);
         
+    }
+
+
+    //Display of product number in the cart icon
+
+    #[Route('/cart/amount', name: 'cart_amount')]
+    public function cartAmount(): Response
+    {
+        $cartDetails = $this->cartServices->getCartDetails();
+        return $this->render('cartamount/index.html.twig', [
+            'quantity' => $cartDetails['quantity'],
+        ]);
     }
 }

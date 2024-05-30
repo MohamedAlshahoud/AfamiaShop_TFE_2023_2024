@@ -6,6 +6,7 @@ use App\Entity\Contact;
 use App\Form\ContactType;
 use App\Form\SearchProductType;
 use App\Repository\ContactRepository;
+use App\Services\CartServices;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -14,6 +15,13 @@ use Symfony\Contracts\Translation\TranslatorInterface as TranslationTranslatorIn
 
 class ContactController extends AbstractController
 {
+    private $cartServices;
+ 
+    public function __construct(CartServices $cartServices)
+    {
+        $this->cartServices = $cartServices;
+    }
+
     #[Route('/contact', name: 'app_contact', methods: ['GET', 'POST'])]
     public function index(Request $request, ContactRepository $contactRepository, TranslationTranslatorInterface $translator): Response
     {
@@ -23,6 +31,8 @@ class ContactController extends AbstractController
         $form = $this->createForm(ContactType::class, $contact);
         $form->handleRequest($request);
         $Search->handleRequest($request);
+
+        $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
 
         if ($form->isSubmitted() && $form->isValid()) {
             $contactRepository->save($contact, true);
@@ -70,7 +80,8 @@ class ContactController extends AbstractController
         return $this->render('contact/index.html.twig', [
             'contact' => $contact,
             'form' => $form->createView(),
-            'search' => $Search->createView()
+            'search' => $Search->createView(),
+            'quantity' => $cartDetails['quantity']
         ]);
     }
 }

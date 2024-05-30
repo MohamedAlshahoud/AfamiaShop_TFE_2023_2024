@@ -14,6 +14,7 @@ use App\Form\SearchProductType;
 use App\Repository\AddressRepository;
 use App\Repository\OrderRepository;
 use App\Security\LoginAuthenticator;
+use App\Services\CartServices;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\Mapping\Id;
 use Doctrine\Persistence\ObjectManager;
@@ -34,12 +35,14 @@ class AccountController extends AbstractController
 
     private $orderRepository;
     private EntityManagerInterface $entityManager;
+    private $cartServices;
  
-        public function __construct(OrderRepository $orderRepository, EntityManagerInterface $entityManager)
-        {
-            $this->orderRepository = $orderRepository;
-            $this->entityManager = $entityManager;
-        }
+    public function __construct(OrderRepository $orderRepository, EntityManagerInterface $entityManager, CartServices $cartServices)
+    {
+        $this->orderRepository = $orderRepository;
+        $this->entityManager = $entityManager;
+        $this->cartServices = $cartServices;
+    }
 
     #[Route('/account', name: 'app_account')]
     public function index(AddressRepository $addressRepository, OrderRepository $orderRepository, EntityManagerInterface $entityManagerInterface, Request $request): Response
@@ -50,6 +53,7 @@ class AccountController extends AbstractController
         $products = $entityManagerInterface->getRepository(Product::class)->findAll();
         $form = $this->createForm(SearchProductType::class, null);
         $form->handleRequest($request);
+        $cartDetails = $this->cartServices->getCartDetails();
 
         if ($request->isMethod('post')) {
             if($form->isSubmitted() && $form->isValid()){
@@ -85,7 +89,8 @@ class AccountController extends AbstractController
             'addresses' => $addresses,
             'orders' => $orders,
             'products' => $products,
-            'search' => $form->createView()
+            'search' => $form->createView(),
+            'quantity' => $cartDetails['quantity']
         ]);
     }
 
@@ -98,6 +103,7 @@ class AccountController extends AbstractController
         $products = $entityManagerInterface->getRepository(Product::class)->findAll();
         $form = $this->createForm(SearchProductType::class, null);
         $form->handleRequest($request);
+        $cartDetails = $this->cartServices->getCartDetails();
 
         if ($request->isMethod('post')) {
             if($form->isSubmitted() && $form->isValid()){
@@ -133,7 +139,8 @@ class AccountController extends AbstractController
             'addresses' => $addresses,
             'orders' => $orders,
             'products' => $products,
-            'search' => $form->createView()
+            'search' => $form->createView(),
+            'quantity' => $cartDetails['quantity']
         ]);
     }
 
@@ -146,6 +153,7 @@ class AccountController extends AbstractController
         $products = $entityManagerInterface->getRepository(Product::class)->findAll();
         $form = $this->createForm(SearchProductType::class, null);
         $form->handleRequest($request);
+        $cartDetails = $this->cartServices->getCartDetails();
 
         if ($request->isMethod('post')) {
             if($form->isSubmitted() && $form->isValid()){
@@ -181,7 +189,8 @@ class AccountController extends AbstractController
             'addresses' => $addresses,
             'orders' => $orders,
             'products' => $products,
-            'search' => $form->createView()
+            'search' => $form->createView(),
+            'quantity' => $cartDetails['quantity']
         ]);
     }
 
@@ -193,6 +202,7 @@ class AccountController extends AbstractController
         $Search = $this->createForm(SearchProductType::class, null);
         $form->handleRequest($request);
         $Search->handleRequest($request);
+        $cartDetails = $this->cartServices->getCartDetails();
 
         if ($form->isSubmitted() && $form->isValid()) {
             
@@ -234,7 +244,8 @@ class AccountController extends AbstractController
 
         return $this->render('account/change_profile.html.twig', [
             'profileForm' => $form->createView(),
-            'search' => $Search->createView()
+            'search' => $Search->createView(),
+            'quantity' => $cartDetails['quantity']
         ]);
     }
 
@@ -248,6 +259,7 @@ class AccountController extends AbstractController
         $form = $this->createForm(ChangePasswordType::class, $user);
         $Search->handleRequest($request);
         $form->handleRequest($request);
+        $cartDetails = $this->cartServices->getCartDetails();
 
         if ($form->isSubmitted() && $form->isValid()) {
             $oldPassword = $form->get('oldPassword')->getData();
@@ -315,6 +327,7 @@ class AccountController extends AbstractController
         $products = $entityManagerInterface->getRepository(Product::class)->findAll();
         $form = $this->createForm(SearchProductType::class, null);
         $form->handleRequest($request);
+        $cartDetails = $this->cartServices->getCartDetails();
 
         if ($request->isMethod('post')) {
             if($form->isSubmitted() && $form->isValid()){
