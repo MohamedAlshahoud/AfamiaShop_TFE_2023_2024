@@ -44,6 +44,7 @@ class AccountController extends AbstractController
         $this->cartServices = $cartServices;
     }
 
+    // Créer la page compte 
     #[Route('/account', name: 'app_account')]
     public function index(AddressRepository $addressRepository, OrderRepository $orderRepository, EntityManagerInterface $entityManagerInterface, Request $request): Response
     {
@@ -94,6 +95,7 @@ class AccountController extends AbstractController
         ]);
     }
 
+    // créer la page compte qui contient une/des adresses
     #[Route('/account-address', name: 'app_account_address')]
     public function indexAddress(AddressRepository $addressRepository, OrderRepository $orderRepository, EntityManagerInterface $entityManagerInterface, Request $request): Response
     {
@@ -144,6 +146,7 @@ class AccountController extends AbstractController
         ]);
     }
 
+    // / créer la page compte qui contient une/des commandes
     #[Route('/orders', name: 'app_account_orders')]
     public function accountOrders(AddressRepository $addressRepository, OrderRepository $orderRepository, EntityManagerInterface $entityManagerInterface, Request $request): Response
     {
@@ -194,6 +197,7 @@ class AccountController extends AbstractController
         ]);
     }
 
+    // Changer le profile d'un compte
     #[Route('/account/profile/change', name: 'change_profile')]
     public function changeProfile(Request $request, UserPasswordHasherInterface $userPasswordHasher, UserAuthenticatorInterface $userAuthenticator, LoginAuthenticator $authenticator, EntityManagerInterface $entityManager, TranslationTranslatorInterface $translator): Response
     {
@@ -250,7 +254,7 @@ class AccountController extends AbstractController
     }
 
     
-
+    // Changer le mot de passe d'un compte
     #[Route('/account/password/change', name: 'change_password')]
     public function changePassword(Request $request, UserPasswordHasherInterface $userPasswordHasher, TranslationTranslatorInterface $translator, UserAuthenticatorInterface $userAuthenticator, LoginAuthenticator $authenticator, EntityManagerInterface $entityManager, AuthenticationUtils $authenticationUtils): Response
     {
@@ -316,7 +320,8 @@ class AccountController extends AbstractController
         ]);
     }
     
-
+    
+    // Afficher les détails d'une commande
     #[Route('/order/details/{reference}', name: 'order_details')]
     public function detailsOrder(Order $orders, AddressRepository $addressRepository, OrderRepository $orderRepository, EntityManagerInterface $entityManagerInterface, Request $request, $reference): Response
     {
@@ -324,7 +329,7 @@ class AccountController extends AbstractController
         
         $user = $this->getUser();
         $addresses = $addressRepository->findByUser($user);
-        // $orderDetails = $this->orderRepository->findOneBy(['id']);
+        
         $products = $entityManagerInterface->getRepository(Product::class)->findAll();
         $form = $this->createForm(SearchProductType::class, null);
         $form->handleRequest($request);
