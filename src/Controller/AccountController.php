@@ -311,7 +311,8 @@ class AccountController extends AbstractController
 
         return $this->render('account/change_password.html.twig', [
             'passwordForm' => $form->createView(),
-            'search' => $Search->createView()
+            'search' => $Search->createView(),
+            'quantity' => $cartDetails['quantity']
         ]);
     }
     
@@ -363,7 +364,8 @@ class AccountController extends AbstractController
             'addresses' => $addresses,
             'orderDetails' => $orders,
             'products' => $products,
-            'search' => $form->createView()
+            'search' => $form->createView(),
+            'quantity' => $cartDetails['quantity']
         ]);
     }
 
