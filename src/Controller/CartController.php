@@ -87,9 +87,7 @@ class CartController extends AbstractController
     {
         $this->cartServices->addToCart($productId,$count);
         
-        $request = $this->requestStack->getCurrentRequest();
-        $referer = $request->headers->get('referer');
-        return $this->redirect($referer ?? $this->generateUrl('show'));
+        return $this->redirectToRoute("app_cart");
     }
 
     #[Route('/cart/remove/{productId}/{count}', name: 'app_remove_to_cart')]
