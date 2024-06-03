@@ -29,7 +29,7 @@ class SearchController extends AbstractController
     public function search(EntityManagerInterface $entityManager,PaginatorInterface $paginator, Request $request, ProductRepository $productRepository): Response
     {
 
-        $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
+        $cartDetails = $this->cartServices->getCartDetails(); //numéro de produit dans l'icône du panier
 
         $products = $entityManager->getRepository(Product::class)->findAll();
         $form = $this->createForm(SearchProductType::class, null);

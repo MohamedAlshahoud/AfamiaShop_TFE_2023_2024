@@ -30,11 +30,11 @@ class SecurityController extends AbstractController
     #[Route(path: '/login', name: 'app_login')]
     public function login(AuthenticationUtils $authenticationUtils, EntityManagerInterface $entityManagerInterface, Request $request): Response
     {
-        $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
+        $cartDetails = $this->cartServices->getCartDetails(); //numéro de produit dans l'icône du panier
 
-        // get the login error if there is one
+        // obtenir l'erreur de connexion s'il y en a une
         $error = $authenticationUtils->getLastAuthenticationError();
-        // last username entered by the user
+        // dernier nom d'utilisateur saisi par l'utilisateur
         $lastUsername = $authenticationUtils->getLastUsername();
         $products = $entityManagerInterface->getRepository(Product::class)->findAll();
         $form = $this->createForm(SearchProductType::class, null);

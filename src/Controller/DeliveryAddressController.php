@@ -33,7 +33,7 @@ class DeliveryAddressController extends AbstractController
     {
         $user = $this->getUser();    
         $cart = $this->cartServices->getCartDetails();
-        $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
+        $cartDetails = $this->cartServices->getCartDetails(); //numéro de produit dans l'icône du panier
 
 
         if($this->session->get('checkout_data')){

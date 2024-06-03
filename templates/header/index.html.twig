@@ -1,5 +1,5 @@
 <header class="header_wrap fixed-top header_with_topbar active">
-    <div class="top-header" style="">
+    <div class="top-header">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12">
@@ -15,7 +15,7 @@
                             </div>
                         {% endfor %}
                         <ul class="contact_detail">
-                            <li ><i  class="ti-mobile"></i><span>{{app.session.get('siteInformation').phone}}</span></li>
+                            <li><i class="ti-mobile"></i><span>{{app.session.get('siteInformation').phone}}</span></li>
                         </ul>
                     </div>
                 </div>
@@ -26,23 +26,23 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg">
                 <a class="navbar-brand" href="/">
-                    <h1 class="name">{{app.session.get('siteInformation').name}}</h1>
+                    <h1 class="name">{{ app.session.get('siteInformation').name }}</h1>
                 </a>
-                <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-expanded="false"
-                    class="navbar-toggler collapsed"><span class="ion-android-menu"></span>
+                <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-expanded="false" class="navbar-toggler collapsed">
+                    <span class="ion-android-menu"></span>
                 </button>
-                <div id="navbarSupportedContent" class="navbar-collapse justify-content-end collapse" style="">
+                <div id="navbarSupportedContent" class="navbar-collapse justify-content-end collapse">
                     <ul class="navbar-nav">
                         <li class="dropdown">
                             <a class="nav-link" href="/">{% trans %}Home{% endtrans %}</a>
                         </li>
                         <li class="dropdown">
-                            {% if is_granted("ROLE_ADMIN")%}
-                                <a class="nav-link" href="/admin">{% trans %}Admin{% endtrans %}</a>
+                            {% if is_granted("ROLE_ADMIN") %}
+                                <a class="nav-link" href="/admin">Admin</a>
                             {% endif %}
                         </li>
                         <li class="dropdown">
-                            {% if is_granted("ROLE_ADMIN")%}
+                            {% if is_granted("ROLE_ADMIN") %}
                                 <a class="nav-link" href="/newsletters/list">{% trans %}Newsletters{% endtrans %}</a>
                             {% endif %}
                         </li>
@@ -52,7 +52,7 @@
                         <li class="dropdown">
                             <a class="nav-link" href="/shop">{% trans %}Shop{% endtrans %}</a>
                         </li>
-                        <li >
+                        <li>
                             <a class="nav-link nav_item" href="/contact">{% trans %}Contact Us{% endtrans %}</a>
                         </li>
                         <li class="nav-item dropdown">
@@ -73,36 +73,33 @@
                                     <li><a class="dropdown-item" href="register">{% trans %}Register{% endtrans %}</a></li>
                                 </ul>
                             {% endif %}
-                        </li> 
+                        </li>
                     </ul>
                     <ul class="navbar-nav attr-nav align-items-center">          
                         <li>
-                            <a href="javascript:void(0);" class="nav-link search_trigger"><i class="linearicons-magnifier"></i></a>
+                            <a href="javascript:void(0);" class="nav-link search_trigger">
+                                <i class="linearicons-magnifier"></i>
+                            </a>
                             <div class="search_wrap">
                                 <span class="close-search"><i class="ion-ios-close-empty"></i></span>
                                 <div class="click-closed"></div>
-                                    <div class="box-collapse">
-                                        <div class="title-box-d">
-                                            <h3 class="title-d">{% trans %}Advanced search ...{% endtrans %}</h3>
-                                        </div>
-                                        <span class="close-box-collapse right-boxed bi bi-x"></span>
-                                        <div class="box-collapse-wrap form">
-                                            <div class="row">
-                                                {{form(search)}}
-                                            </div>
+                                <div class="box-collapse">
+                                    <div class="title-box-d">
+                                        <h3 class="title-d">{% trans %}Advanced search ...{% endtrans %}</h3>
+                                    </div>
+                                    <span class="close-box-collapse right-boxed bi bi-x"></span>
+                                    <div class="box-collapse-wrap form">
+                                        <div class="row">
+                                            {{form(search)}}
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="search_overlay"></div>
-                            <div class="search_overlay"></div>
-                            <div class="search_overlay"></div>
-                            <div class="search_overlay"></div>
-                            <div class="search_overlay"></div>
                         </li>
-                        {% include 'cartQuantity/index.html.twig' %}
                     </ul>
                 </div>
+                {% include 'cartQuantity/index.html.twig' %}
             </nav>
         </div>
     </div>

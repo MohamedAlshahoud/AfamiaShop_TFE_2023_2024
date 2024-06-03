@@ -29,7 +29,7 @@ class ShopController extends AbstractController
     public function index(Request $request, PaginatorInterface $paginator, ProductRepository $productRepository, EntityManagerInterface $entityManager): Response
     {
 
-        $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
+        $cartDetails = $this->cartServices->getCartDetails(); //numéro de produit dans l'icône du panier
 
         $products = $entityManager->getRepository(Product::class)->findAll();
         $filterForm = $this->createForm(FilterProductType::class, null);
