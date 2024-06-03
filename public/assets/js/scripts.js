@@ -17,34 +17,41 @@
 	
 	//Search 
     
-	$(".close-search").on("click", function() {
-		$(".search_wrap,.search_overlay").removeClass('open');
-		$("body").removeClass('search_open');
-	});
-	
-	var removeClass = true;
-	$(".search_wrap").after('<div class="search_overlay"></div>');
-	$(".search_trigger").on('click', function () {
-		$(".search_wrap,.search_overlay").toggleClass('open');
-		$("body").toggleClass('search_open');
-		removeClass = false;
-		if($('.navbar-collapse').hasClass('show'))
-		{
-			$(".navbar-collapse").removeClass('show');
-			$(".navbar-toggler")?.addClass('collapsed');
-			$(".navbar-toggler").attr("aria-expanded", false);
-		}
-	});
-	$(".search_wrap form").on('click', function() {
-		removeClass = false;
-	});
-	$("html").on('click', function () {
-		if (removeClass) {
-			$("body").removeClass('open');
-			$(".search_wrap,.search_overlay").removeClass('open');
+	$(document).ready(function() {
+		$(".close-search").on("click", function() {
+			$(".search_wrap, .search_overlay").removeClass('open');
 			$("body").removeClass('search_open');
-		}
-		removeClass = true;
+		});
+	
+		var removeClass = true;
+		$(".search_wrap").after('<div class="search_overlay"></div>');
+		$(".search_trigger").on('click', function() {
+			$(".search_wrap, .search_overlay").toggleClass('open');
+			$("body").toggleClass('search_open');
+			removeClass = false;
+			if ($('.navbar-collapse').hasClass('show')) {
+				$(".navbar-collapse").removeClass('show');
+				$(".navbar-toggler").addClass('collapsed');
+				$(".navbar-toggler").attr("aria-expanded", false);
+			}
+		});
+	
+		$(".search_wrap form").on('click', function() {
+			removeClass = false;
+		});
+	
+		$("html").on('click', function() {
+			if (removeClass) {
+				$("body").removeClass('open');
+				$(".search_wrap, .search_overlay").removeClass('open');
+				$("body").removeClass('search_open');
+			}
+			removeClass = true;
+		});
+	
+		$(".search_wrap, .search_trigger, .search_wrap form").on('click', function(e) {
+			e.stopPropagation();
+		});
 	});
 	
 })(jQuery);
