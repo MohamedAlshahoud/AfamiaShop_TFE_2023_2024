@@ -5166,10 +5166,27 @@ footer .widget_title {
 	z-index: 1;
 }
 
+
 .product_info {
 	padding: 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	text-align: center;
+	height: 100%;
 }
+
+.product_title {
+	height: 3em; /* Ajustez cette valeur en fonction de vos besoins */
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2; /* Limite le texte à 2 lignes */
+	-webkit-box-orient: vertical;
+}
+
+
+
 .price {
 	color: #0090e3;
 	font-weight: 600;
