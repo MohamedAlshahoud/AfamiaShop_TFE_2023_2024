@@ -108,7 +108,7 @@ class CartController extends AbstractController
     }
 
 
-    //Display of product number in the cart icon
+    //Affichage du numéro de produit dans l'icône du panier
 
     #[Route('/cart/amount', name: 'cart_amount')]
     public function cartAmount(): Response

@@ -178,7 +178,7 @@ class HomeController extends AbstractController
             }
         }
 
-    // comments
+    // Commentaires
     $comment = new Comments;
 
     $commentForm = $this->createForm(CommentsType::class, $comment);

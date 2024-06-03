@@ -32,7 +32,7 @@ class ContactController extends AbstractController
         $form->handleRequest($request);
         $Search->handleRequest($request);
 
-        $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
+        $cartDetails = $this->cartServices->getCartDetails(); //numéro de produit dans l'icône du panier
 
         if ($form->isSubmitted() && $form->isValid()) {
             $contactRepository->save($contact, true);

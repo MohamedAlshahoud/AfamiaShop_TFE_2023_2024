@@ -38,7 +38,7 @@ class NewslettersController extends AbstractController
     public function index(Request $request, MailerInterface $mailer, EntityManagerInterface $entityManager, TranslatorInterface $translator): Response
     {
         $user = new Users();
-        $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
+        $cartDetails = $this->cartServices->getCartDetails(); //numéro de produit dans l'icône du panier
         $form = $this->createForm(NewslettersUsersType::class, $user);
 
         $form->handleRequest($request);
@@ -128,7 +128,7 @@ class NewslettersController extends AbstractController
         $Search = $this->createForm(SearchProductType::class, null);
         $Search->handleRequest($request);
 
-        $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
+        $cartDetails = $this->cartServices->getCartDetails(); //numéro de produit dans l'icône du panier
 
         if ($request->isMethod('post')) {
             if($Search->isSubmitted() && $Search->isValid()){
@@ -248,7 +248,7 @@ class NewslettersController extends AbstractController
     #[Route('/check-email', name: 'check_email')]
     public function checkEmail(Request $request): Response
     {
-        $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
+        $cartDetails = $this->cartServices->getCartDetails(); //numéro de produit dans l'icône du panier
 
         $Search = $this->createForm(SearchProductType::class, null);
         $Search->handleRequest($request);
@@ -289,8 +289,7 @@ class NewslettersController extends AbstractController
     #[Route('/subscription_confirm', name: 'newsletter_subscription_confirm')]
     public function subscriptionConfirm(Request $request): Response
     {
-        $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
-
+        $cartDetails = $this->cartServices->getCartDetails(); //numéro de produit dans l'icône du panier
         $Search = $this->createForm(SearchProductType::class, null);
         $Search->handleRequest($request);
         if ($request->isMethod('post')) {
@@ -330,7 +329,7 @@ class NewslettersController extends AbstractController
     #[Route('/unsubscribe_newsletters', name: 'unsubscribe_newsletters')]
     public function unsubscribeNewsletters(Request $request): Response
     {
-        $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
+        $cartDetails = $this->cartServices->getCartDetails(); //numéro de produit dans l'icône du panier
 
         $Search = $this->createForm(SearchProductType::class, null);
         $Search->handleRequest($request);

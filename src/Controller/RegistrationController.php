@@ -35,7 +35,7 @@ class RegistrationController extends AbstractController
     #[Route('/register', name: 'app_register')]
     public function register(Request $request, UserPasswordHasherInterface $userPasswordHasher, UserAuthenticatorInterface $userAuthenticator, LoginAuthenticator $authenticator, EntityManagerInterface $entityManager, TranslatorInterface $translator): Response
     {
-        $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
+        $cartDetails = $this->cartServices->getCartDetails(); //numéro de produit dans l'icône du panier
 
         $user = new User();
         $Search = $this->createForm(SearchProductType::class, null);
@@ -44,7 +44,7 @@ class RegistrationController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            // encode the plain password
+            // encoder le mot de passe simple
             $user->setPassword(
                 $userPasswordHasher->hashPassword(
                     $user,
@@ -56,7 +56,7 @@ class RegistrationController extends AbstractController
             $entityManager->flush();
             $subject = $translator->trans('Please Confirm your Email');
             $contact = $translator->trans('\"Afamia Contact\"');
-            // generate a signed url and email it to the user
+            // générer une URL signée et l'envoyer par e-mail à l'utilisateur
             $this->emailVerifier->sendEmailConfirmation('app_verify_email', $user,
                 (new TemplatedEmail())
                     ->from(new Address('contact@afamiashop.be', $contact))
@@ -64,7 +64,7 @@ class RegistrationController extends AbstractController
                     ->subject($subject)
                     ->htmlTemplate('registration/confirmation_email.html.twig')
             );
-            // do anything else you need here, like send an email
+            // faites tout ce dont vous avez besoin ici, comme envoyer un e-mail
             return $this->redirectToRoute('send_email_register');
         }
 
@@ -119,7 +119,7 @@ class RegistrationController extends AbstractController
             return $this->redirectToRoute('app_register');
         }
 
-        // validate email confirmation link, sets User::isVerified=true and persists
+        // valider le lien de confirmation par e-mail, définit User::isVerified=true et persiste
         try {
             $this->emailVerifier->handleEmailConfirmation($request, $user);
         } catch (VerifyEmailExceptionInterface $exception) {
@@ -128,7 +128,7 @@ class RegistrationController extends AbstractController
             return $this->redirectToRoute('app_register');
         }
 
-        // @TODO Change the redirect on success and handle or remove the flash message in your templates
+        // Modifier la redirection en cas de succès et gérez ou supprimez le message flash dans vos modèles
         $this->addFlash('success', 'Your email address has been verified.');
 
         return $this->redirectToRoute('confirm_after_email');
@@ -137,7 +137,7 @@ class RegistrationController extends AbstractController
     #[Route('/send_email', name: 'send_email_register')]
     public function unsubscribeNewsletters(Request $request): Response
     {
-        $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
+        $cartDetails = $this->cartServices->getCartDetails(); //numéro de produit dans l'icône du panier
 
         $Search = $this->createForm(SearchProductType::class, null);
         $Search->handleRequest($request);
@@ -179,7 +179,7 @@ class RegistrationController extends AbstractController
     #[Route('/confirm_after_email', name: 'confirm_after_email')]
     public function confirmUserAfterEmail(Request $request): Response
     {
-        $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
+        $cartDetails = $this->cartServices->getCartDetails(); //numéro de produit dans l'icône du panier
 
         $Search = $this->createForm(SearchProductType::class, null);
         $Search->handleRequest($request);

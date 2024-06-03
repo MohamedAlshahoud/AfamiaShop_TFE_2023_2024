@@ -102,7 +102,7 @@ class PaymentController extends AbstractController
     #[Route('/order/success/{reference}', name:'payment_success')]
     public function stripeSuccess(CartServices $cartServices, EntityManagerInterface $manager, Request $request, $reference): Response
     {
-        $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
+        $cartDetails = $this->cartServices->getCartDetails(); //numéro de produit dans l'icône du panier
 
         $order = $this->entityManagerInterface->getRepository(Order::class)->findOneBy(['reference' => $reference]);
         if(!$order || $order->getUser() !== $this->getUser()){
@@ -132,7 +132,7 @@ class PaymentController extends AbstractController
     public function paymentcancel($reference): Response
     {
         $order = $this->entityManagerInterface->getRepository(Order::class)->findOneBy(['reference' => $reference]);
-        $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
+        $cartDetails = $this->cartServices->getCartDetails(); //numéro de produit dans l'icône du panier
 
         if(!$order || $order->getUser() !== $this->getUser()){
             return $this->redirectToRoute('app_cart');
