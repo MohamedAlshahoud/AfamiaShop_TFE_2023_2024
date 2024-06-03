@@ -16,7 +16,6 @@
 	
 	
 	//Search 
-    
 	$(document).ready(function() {
 		$(".close-search").on("click", function() {
 			$(".search_wrap, .search_overlay").removeClass('open');
@@ -53,5 +52,6 @@
 			e.stopPropagation();
 		});
 	});
+	
 	
 })(jQuery);
