@@ -95,7 +95,6 @@ class NewslettersController extends AbstractController
 
             $mailer->send($email);
 
-            $this->addFlash('message', 'Registration awaiting validation');
             return $this->redirectToRoute('check_email');
         }
 
@@ -116,8 +115,6 @@ class NewslettersController extends AbstractController
 
         $entityManager->persist($user);
         $entityManager->flush();
-
-        $this->addFlash('message', 'Account activated');
 
         return $this->redirectToRoute('newsletter_subscription_confirm');
     }
@@ -239,8 +236,6 @@ class NewslettersController extends AbstractController
             $em->remove($user);
         }
         $em->flush();
-
-        $this->addFlash('message', 'Newsletter deleted');
 
         return $this->redirectToRoute('unsubscribe_newsletters');
     }
