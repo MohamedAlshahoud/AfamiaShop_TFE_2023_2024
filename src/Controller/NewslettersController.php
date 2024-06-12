@@ -2,11 +2,13 @@
 
 namespace App\Controller;
 
+use App\Entity\Newsletters\Categories;
 use App\Entity\Newsletters\Newsletters;
 use App\Entity\Newsletters\Users;
 use App\Form\NewslettersType;
 use App\Form\NewslettersUsersType;
 use App\Form\SearchProductType;
+use App\Repository\Newsletters\CategoriesRepository;
 use App\Repository\Newsletters\NewslettersRepository;
 use App\Services\CartServices;
 use Doctrine\ORM\EntityManagerInterface;
@@ -362,4 +364,5 @@ class NewslettersController extends AbstractController
             'quantity' => $cartDetails['quantity']
         ]);
     }
+
 }

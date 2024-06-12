@@ -53,6 +53,8 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $googleId = null;
 
+    
+
 
     public function __construct()
     {

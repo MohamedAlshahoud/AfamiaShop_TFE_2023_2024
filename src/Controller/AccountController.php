@@ -28,6 +28,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Authentication\UserAuthenticatorInterface;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
+use App\Service\NewsletterUserService;
 use Symfony\Contracts\Translation\TranslatorInterface as TranslationTranslatorInterface;
 
 class AccountController extends AbstractController
