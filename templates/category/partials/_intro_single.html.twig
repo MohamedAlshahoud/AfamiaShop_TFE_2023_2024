@@ -1,12 +1,12 @@
 <div  class="col-lg-3 col-md-4 col-6">
     <div  class="product category">
         <div  class="product_img category">
-            <a href="{{ path('show_category', { id: categorie.id }) }}" class="btn-fill-out">
+            <a href="{{ path('show_category', { name: categorie.name }) }}" class="btn-fill-out">
                 <img alt="product_img1" src="/assets/images/categories/{{ categorie.image }}">
             </a>
         </div>
         <div  class="product_info category_name">
-            <h4 class="category_title"><a href="{{ path('show_category', { id: categorie.id }) }}">{{ categorie.name | trans }}</a></h4>
+            <h4 class="category_title"><a href="{{ path('show_category', { name: categorie.name }) }}">{{ categorie.name | trans }}</a></h4>
         </div>
     </div>
 </div>
