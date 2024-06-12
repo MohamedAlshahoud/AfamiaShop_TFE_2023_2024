@@ -12,6 +12,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\Security;
 use Symfony\Contracts\Translation\TranslatorInterface;
 
 #[Route('/address')]
@@ -68,7 +69,7 @@ class AddressController extends AbstractController
     }
 
     #[Route('/new', name: 'address_new', methods: ['GET', 'POST'])]
-    public function new(Request $request, EntityManagerInterface $entityManager, CartServices $cartServices, TranslatorInterface $translator): Response
+    public function new(Request $request, EntityManagerInterface $entityManager, CartServices $cartServices, TranslatorInterface $translator, Security $security): Response
     {
         $address = new Address();
         $form = $this->createForm(AddressType::class, $address);
@@ -79,8 +80,14 @@ class AddressController extends AbstractController
         $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $user = $this->getUser();
-            $address->getUser($user);
+
+            // Récupérer l'utilisateur connecté
+            $user = $security->getUser();
+
+            // Assigner l'utilisateur à l'adresse
+            $address->setUser($user);
+
+            // Persister l'adresse
             $entityManager->persist($address);
             $entityManager->flush();
             $message = $translator->trans('Your address has been registered successfully');

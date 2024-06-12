@@ -9,11 +9,21 @@ use Symfony\Component\Form\Extension\Core\Type\CountryType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Security\Core\Security;
 
 class AddressType extends AbstractType
 {
+    private $security;
+
+    public function __construct(Security $security)
+    {
+        $this->security = $security;
+    }
+
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
+        $user = $this->security->getUser();
+
         $builder
             ->add('firstName')
             ->add('lastName')
@@ -22,7 +32,10 @@ class AddressType extends AbstractType
             ->add('codePostal')
             ->add('country', CountryType::class)
             ->add('phone')
-            ->add('user')
+            ->add('user', null, [
+                'data' => $user,
+                'disabled' => true,
+            ])
         ;
     }
 
