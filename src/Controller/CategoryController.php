@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Category;
 use App\Entity\Product;
 use App\Form\SearchProductType;
+use App\Repository\CategoryRepository;
 use App\Repository\ProductRepository;
 use App\Services\CartServices;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -25,9 +26,10 @@ class CategoryController extends AbstractController
     }
 
     //afficher une categorie par ID 
-    #[Route('/category/{id}', name: 'show_category')]
-    public function show(Category $category, PaginatorInterface $paginator, ProductRepository $productRepository, Request $request, EntityManagerInterface $entityManagerInterface): Response
+    #[Route('/category/{name}', name: 'show_category')]
+    public function show(Category $category, PaginatorInterface $paginator, ProductRepository $productRepository, Request $request, EntityManagerInterface $entityManagerInterface, string $name, CategoryRepository $categoryRepository): Response
     {
+        $category = $categoryRepository->findOneBy(['name' => $name]);
         $cartDetails = $this->cartServices->getCartDetails(); //product number in the cart icon
 
         $products = $category ->getProducts();
