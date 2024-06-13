@@ -48,15 +48,6 @@ class SiteInformation
     private ?string $termsConditions = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    private ?string $facebookLink = null;
-
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $youtube = null;
-
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $instagram = null;
-
-    #[ORM\Column(length: 255, nullable: true)]
     private ?string $nameCategory = null;
 
     #[ORM\Column(length: 255, nullable: true)]
@@ -76,42 +67,6 @@ class SiteInformation
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $descriptionSubscribe = null;
-
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $categoryOne = null;
-
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $categoryTwo = null;
-
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $categoryThree = null;
-
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $categoryFour = null;
-
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $categoryFive = null;
-
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $questionLink = null;
-
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $subscribeLink = null;
-
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $categoryLinkOne = null;
-
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $categoryLinkTwo = null;
-
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $categoryLinkThree = null;
-
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $categoryLinkFour = null;
-
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $categoryLinkFive = null;
 
 
     public function __construct()
@@ -258,42 +213,6 @@ class SiteInformation
         return $this;
     }
 
-    public function getFacebookLink(): ?string
-    {
-        return $this->facebookLink;
-    }
-
-    public function setFacebookLink(?string $facebookLink): static
-    {
-        $this->facebookLink = $facebookLink;
-
-        return $this;
-    }
-
-    public function getYoutube(): ?string
-    {
-        return $this->youtube;
-    }
-
-    public function setYoutube(?string $youtube): static
-    {
-        $this->youtube = $youtube;
-
-        return $this;
-    }
-
-    public function getInstagram(): ?string
-    {
-        return $this->instagram;
-    }
-
-    public function setInstagram(?string $instagram): static
-    {
-        $this->instagram = $instagram;
-
-        return $this;
-    }
-
     public function getNameCategory(): ?string
     {
         return $this->nameCategory;
@@ -374,150 +293,6 @@ class SiteInformation
     public function setDescriptionSubscribe(?string $descriptionSubscribe): static
     {
         $this->descriptionSubscribe = $descriptionSubscribe;
-
-        return $this;
-    }
-
-    public function getCategoryOne(): ?string
-    {
-        return $this->categoryOne;
-    }
-
-    public function setCategoryOne(?string $categoryOne): static
-    {
-        $this->categoryOne = $categoryOne;
-
-        return $this;
-    }
-
-    public function getCategoryTwo(): ?string
-    {
-        return $this->categoryTwo;
-    }
-
-    public function setCategoryTwo(?string $categoryTwo): static
-    {
-        $this->categoryTwo = $categoryTwo;
-
-        return $this;
-    }
-
-    public function getCategoryThree(): ?string
-    {
-        return $this->categoryThree;
-    }
-
-    public function setCategoryThree(?string $categoryThree): static
-    {
-        $this->categoryThree = $categoryThree;
-
-        return $this;
-    }
-
-    public function getCategoryFour(): ?string
-    {
-        return $this->categoryFour;
-    }
-
-    public function setCategoryFour(?string $categoryFour): static
-    {
-        $this->categoryFour = $categoryFour;
-
-        return $this;
-    }
-
-    public function getCategoryFive(): ?string
-    {
-        return $this->categoryFive;
-    }
-
-    public function setCategoryFive(?string $categoryFive): static
-    {
-        $this->categoryFive = $categoryFive;
-
-        return $this;
-    }
-
-    public function getQuestionLink(): ?string
-    {
-        return $this->questionLink;
-    }
-
-    public function setQuestionLink(?string $questionLink): static
-    {
-        $this->questionLink = $questionLink;
-
-        return $this;
-    }
-
-    public function getSubscribeLink(): ?string
-    {
-        return $this->subscribeLink;
-    }
-
-    public function setSubscribeLink(?string $subscribeLink): static
-    {
-        $this->subscribeLink = $subscribeLink;
-
-        return $this;
-    }
-
-    public function getCategoryLinkOne(): ?string
-    {
-        return $this->categoryLinkOne;
-    }
-
-    public function setCategoryLinkOne(?string $categoryLinkOne): static
-    {
-        $this->categoryLinkOne = $categoryLinkOne;
-
-        return $this;
-    }
-
-    public function getCategoryLinkTwo(): ?string
-    {
-        return $this->categoryLinkTwo;
-    }
-
-    public function setCategoryLinkTwo(?string $categoryLinkTwo): static
-    {
-        $this->categoryLinkTwo = $categoryLinkTwo;
-
-        return $this;
-    }
-
-    public function getCategoryLinkThree(): ?string
-    {
-        return $this->categoryLinkThree;
-    }
-
-    public function setCategoryLinkThree(?string $categoryLinkThree): static
-    {
-        $this->categoryLinkThree = $categoryLinkThree;
-
-        return $this;
-    }
-
-    public function getCategoryLinkFour(): ?string
-    {
-        return $this->categoryLinkFour;
-    }
-
-    public function setCategoryLinkFour(?string $categoryLinkFour): static
-    {
-        $this->categoryLinkFour = $categoryLinkFour;
-
-        return $this;
-    }
-
-    public function getCategoryLinkFive(): ?string
-    {
-        return $this->categoryLinkFive;
-    }
-
-    public function setCategoryLinkFive(?string $categoryLinkFive): static
-    {
-        $this->categoryLinkFive = $categoryLinkFive;
 
         return $this;
     }
