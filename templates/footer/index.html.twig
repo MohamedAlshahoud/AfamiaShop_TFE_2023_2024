@@ -14,11 +14,11 @@
                     <div class="widget">
                         <h6 class="widget_title">{{app.session.get('siteInformation').nameCategory | trans}}</h6>
                         <ul class="widget_links">
-                            <li><a href="{{app.session.get('siteInformation').categoryLinkOne}}">{{app.session.get('siteInformation').categoryOne | trans}}</a></li>
-                            <li><a href="{{app.session.get('siteInformation').categoryLinkTwo}}">{{app.session.get('siteInformation').categoryTwo | trans}}</a></li>
-                            <li><a href="{{app.session.get('siteInformation').categoryLinkThree}}">{{app.session.get('siteInformation').categoryThree | trans}}</a></li>
-                            <li><a href="{{app.session.get('siteInformation').categoryLinkFour}}">{{app.session.get('siteInformation').categoryFour | trans}}</a></li>
-                            <li><a href="{{app.session.get('siteInformation').categoryLinkFive}}">{{app.session.get('siteInformation').categoryFive | trans}}</a></li>
+                            <li><a href="/category/Bracelets">{% trans %}Bracelets{% endtrans %}</a></li>
+                            <li><a href="/category/Charms">{% trans %}Charms{% endtrans %}</a></li>
+                            <li><a href="/category/Necklaces">{% trans %}Necklaces{% endtrans %}</a></li>
+                            <li><a href="/category/Earrings">{% trans %}Earrings{% endtrans %}</a></li>
+                            <li><a href="/category/Medals">{% trans %}Medals{% endtrans %}</a></li>
                         </ul>
                     </div>
                 </div>
@@ -44,7 +44,7 @@
                         <h6 class="widget_title">{{app.session.get('siteInformation').question | trans}}</h6>
                         <p>{{app.session.get('siteInformation').descrrptionQuestion | trans}}</p   >
                         <form class="widget_links">
-                            <a href="{{app.session.get('siteInformation').questionLink}}" class="btn btn-fill-out-footer">{% trans %}Contact Us {% endtrans %}</a>
+                            <a href="/contact" class="btn btn-fill-out-footer">{% trans %}Contact Us {% endtrans %}</a>
                         </form>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                         <h6 class="widget_title">{{app.session.get('siteInformation').nameSubscribe | trans}}</h6>
                         <p>{{app.session.get('siteInformation').descriptionSubscribe | trans}}</p>
                         <form class="widget_links">
-                            <a href="{{app.session.get('siteInformation').subscribeLink}}" class="btn btn-fill-out-footer">{% trans %}Subscribe{% endtrans %}</a> 
+                            <a href="/newsletters" class="btn btn-fill-out-footer">{% trans %}Subscribe{% endtrans %}</a> 
                         </form>
                     </div>
                 </div>
@@ -69,17 +69,17 @@
                 <div class="col-lg-4 col-md-3 col-sm-4">
                     <ul class="social_icons social_white">
                         <li>
-                            <a target="_blank" href="{{app.session.get('siteInformation').facebookLink}}">
+                            <a target="_blank" href="https://www.facebook.com/">
                                 <i class="ion-social-facebook"></i>
                             </a>
                         </li>    
                         <li>
-                            <a target="_blank" href="{{app.session.get('siteInformation').youtube}}">
+                            <a target="_blank" href="https://www.youtube.com/">
                                 <i class="ion-social-youtube-outline"></i>
                             </a>
                         </li>
                         <li>
-                            <a target="_blank" href="{{app.session.get('siteInformation').instagram}}">
+                            <a target="_blank" href="https://www.instagram.com/">
                                 <i class="ion-social-instagram-outline"></i>
                             </a>
                         </li>
@@ -87,7 +87,7 @@
                 </div>
                 <div class="col-lg-4 col-md-3 col-sm-4">
                     <a href="/terms-conditions"> 
-                        <p class="mb-md-0 text-center text-md-end">{{app.session.get('siteInformation').termsConditions}}</p>
+                        <p class="mb-md-0 text-center text-md-end">{{app.session.get('siteInformation').termsConditions | trans}}</p>
                     </a>
                 </div>
             </div>
