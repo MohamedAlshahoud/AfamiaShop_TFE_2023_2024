@@ -44,7 +44,7 @@
                         <h6 class="widget_title">{{app.session.get('siteInformation').question | trans}}</h6>
                         <p>{{app.session.get('siteInformation').descrrptionQuestion | trans}}</p   >
                         <form class="widget_links">
-                            <a href="{{app.session.get('siteInformation').questionLink}}" class="btn btn-fill-out-footer">{% trans %}Contact Us {% endtrans %}</a>
+                            <a href="/contact" class="btn btn-fill-out-footer">{% trans %}Contact Us {% endtrans %}</a>
                         </form>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                         <h6 class="widget_title">{{app.session.get('siteInformation').nameSubscribe | trans}}</h6>
                         <p>{{app.session.get('siteInformation').descriptionSubscribe | trans}}</p>
                         <form class="widget_links">
-                            <a href="{{app.session.get('siteInformation').subscribeLink}}" class="btn btn-fill-out-footer">{% trans %}Subscribe{% endtrans %}</a> 
+                            <a href="/newsletters" class="btn btn-fill-out-footer">{% trans %}Subscribe{% endtrans %}</a> 
                         </form>
                     </div>
                 </div>
