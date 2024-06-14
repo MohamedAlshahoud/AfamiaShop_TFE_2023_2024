@@ -72,10 +72,10 @@
                                         <td>
                                             {{ item.product.name | trans }}
                                             <span class="product-qty"> {{ item.quantity }}</span>
-                                            <span class="product-price">x {{ (item.product.price / 100) | format_currency('EUR') }}</span>
+                                            <span class="product-price">x € {{ (item.product.price / 100) | number_format(2, '.', ',')}}</span>
                                         </td>
                                         <td>
-                                            {{ (item.product.price * item.quantity / 100) | format_currency('EUR') }}
+                                            € {{ (item.product.price * item.quantity / 100) | number_format(2, '.', ',')}}
                                         </td>
                                     </tr>
                                     {% endfor %}
@@ -83,19 +83,23 @@
                                 <tfoot>
                                     <tr>
                                         <th>{% trans %}SubTotal Htva{% endtrans %}</th>
-                                        <td class="product-subtotal">{{ (cart.sub_total_htva / 100) | format_currency('EUR') }}</td>
+                                        <td class="product-subtotal">€ {{ (cart.sub_total_htva / 100) | number_format(2, '.', ',')}}</td>
                                     </tr>
                                     <tr>
                                         <th>{% trans %}Tva{% endtrans %}</th>
-                                        <td class="product-subtotal">{{ (cart.tva / 100) | format_currency('EUR') }}</td>
+                                        <td class="product-subtotal">€ {{ (cart.tva / 100) | number_format(2, '.', ',')}}</td>
                                     </tr>
                                     <tr>
                                         <th>{% trans %}SubTotal{% endtrans %}</th>
-                                        <td class="product-subtotal" id="cart-subtotal">{{ (cart.sub_total / 100) | format_currency('EUR') }}</td>
+                                        <td class="product-subtotal" id="cart-subtotal">€ {{ (cart.sub_total / 100) | number_format(2, '.', ',')}}</td>
+                                    </tr>
+                                    <tr id="transporter-row" style="display: none;">
+                                        <th id="transporter-name">{% trans %}Transporter{% endtrans %}</th>
+                                        <th id="transporter-price"></th>
                                     </tr>
                                     <tr>
                                         <th>{% trans %}Total{% endtrans %}</th>
-                                        <td class="product-subtotal" id="total">{{ ((cart.sub_total + 0) / 100) | format_currency('EUR') }}</td>
+                                        <td class="product-subtotal" id="total">€ {{ ((cart.sub_total + 0) / 100) | number_format(2, '.', ',') }}</td>
                                     </tr>
                                 </tfoot>
                             </table>
@@ -117,11 +121,16 @@
 <script>
     document.querySelectorAll('input[name="checkout[transporter]"]').forEach((input) => {
         input.addEventListener('change', (event) => {
+            const transporterName = event.target.nextElementSibling.innerText.split(' - ')[0];
             const transporterPrice = parseFloat(event.target.dataset.price) / 100; // Assuming price is in cents
             const subTotal = parseFloat('{{ cart.sub_total / 100 }}'); // Assuming subtotal is in cents
             const total = subTotal + transporterPrice;
             
-            document.getElementById('total').innerText = 'Total: ' + total.toFixed(2) + ' €';
+            document.getElementById('transporter-name').innerText = transporterName;
+            document.getElementById('transporter-price').innerText = '€ ' + transporterPrice.toFixed(2);
+            document.getElementById('total').innerText = '€ ' + total.toFixed(2);
+
+            document.getElementById('transporter-row').style.display = 'table-row';
         });
     });
 </script>

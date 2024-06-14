@@ -36,20 +36,20 @@ class CheckoutType extends AbstractType
                 'expanded'=>true
             ])
             ->add('transporter', EntityType::class, [
-                'class'=> Transporter::class,
+                'class' => Transporter::class,
                 'choice_label' => function (Transporter $transporter) {
                     $name = $transporter->getName();
                     $description = $this->translator->trans(strtolower($transporter->getDescription()), [], 'messages');
-                    $price = ( $transporter->getPrice() / 100 ) . ' € '; // getPrice renvoie une chaîne de prix formatée
+                    $price = $transporter->getPrice(); // Assume getPrice returns a value in cents
             
-                    return sprintf('%s - %s - %s', $name, $description, $price);
+                    return sprintf('%s - %s - %s €', $name, $description, $price / 100);
                 },
-                'choice_attr' => function(Transporter $transporter) {
+                'choice_attr' => function (Transporter $transporter) {
                     return ['data-price' => $transporter->getPrice()];
                 },
-                'multiple'=>false,
-                'expanded'=>true,
-                'label'=> $this->translator->trans('Select a transporter', [], 'messages'),
+                'multiple' => false,
+                'expanded' => true,
+                'label' => $this->translator->trans('Select a transporter', [], 'messages'),
             ]);
         
     }
