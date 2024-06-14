@@ -42,7 +42,7 @@ class CheckoutType extends AbstractType
                     $description = $this->translator->trans(strtolower($transporter->getDescription()), [], 'messages');
                     $price = $transporter->getPrice(); // Assume getPrice returns a value in cents
             
-                    return sprintf('%s - %s - %s €', $name, $description, $price / 100);
+                    return sprintf('%s - %s - € %s', $name, $description, $price / 100);
                 },
                 'choice_attr' => function (Transporter $transporter) {
                     return ['data-price' => $transporter->getPrice()];
