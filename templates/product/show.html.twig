@@ -37,7 +37,7 @@
                         <div class="product_description">
                             <h4 class="product_title"><a href="#">{{product.name | trans}}</a></h4>
                             <div class="product_price">
-                                <span class="price_description">{{(product.price/100) | format_currency('EUR')}}</span>
+                                <span class="price_description">€ {{(product.price/100) | number_format(2, '.', ',')}}</span>
                             </div>
                         </div>
                         <div class="pr_desc">

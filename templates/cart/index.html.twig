@@ -28,7 +28,7 @@
                                                 <a><img width="50" alt="product1" src="/assets/images/products/{{ item.product.imageUrls[0] }}"></a>
                                             </td>
                                             <td data-title="Product" class="product-name"><a>{{ item.product.name | trans }}</a></td>
-                                            <td data-title="Price" class="product-price">{{ (item.product.price / 100) | format_currency('EUR') }}</td>
+                                            <td data-title="Price" class="product-price">€ {{ (item.product.price / 100) | number_format(2, '.', ',') }}</td>
                                             <td data-title="Quantity" class="product-quantity">
                                                 <div class="quantity">
                                                     <a href="/cart/remove/{{ item.product.id }}/1">
@@ -40,7 +40,7 @@
                                                     </a>
                                                 </div>
                                             </td>
-                                            <td data-title="Total" class="product-subtotal">{{ (item.sub_total / 100) | format_currency('EUR') }}</td>
+                                            <td data-title="Total" class="product-subtotal">€ {{ (item.sub_total / 100) | number_format(2, '.', ',') }}</td>
                                             <td data-title="Remove" class="product-remove"><a href="/cart/remove/{{ item.product.id }}/{{ item.quantity }}"><i class="fa fa-trash"></i></a></td>
                                         </tr>
                                     {% endfor %}
@@ -64,17 +64,17 @@
                                     <tbody>
                                         <tr>
                                             <td class="cart_total_htva">{% trans %}Cart Subtotal Htva{% endtrans %}</td>
-                                            <td class="cart_sub_total_amount_htva">{{ (cart.sub_total_htva / 100) | format_currency('EUR') }}</td>
+                                            <td class="cart_sub_total_amount_htva">€ {{ (cart.sub_total_htva / 100) | number_format(2, '.', ',') }}</td>
                                         </tr>
                                         <tr>
                                             <td class="cart_tva">{% trans %}TVA{% endtrans %}</td>
-                                            <td class="cart_tva">{{ (cart.tva / 100) | format_currency('EUR') }}</td>
+                                            <td class="cart_tva">€ {{ (cart.tva / 100) | number_format(2, '.', ',') }}</td>
                                         </tr>
                                     </tbody>
                                     <tbody>
                                         <tr>
-                                            <td class="cart_total_label">{% trans %}Cart Subtotal {% endtrans %}</td>
-                                            <td class="cart_sub_total_amount">{{ (cart.sub_total / 100) | format_currency('EUR') }}</td>
+                                            <th class="cart_total_label">{% trans %}Cart Subtotal {% endtrans %}</th>
+                                            <th class="cart_sub_total_amount">€ {{ (cart.sub_total / 100) | number_format(2, '.', ',') }}</th>
                                         </tr>
                                     </tbody>
                                 </table>
