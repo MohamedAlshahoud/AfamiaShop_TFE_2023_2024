@@ -6187,6 +6187,10 @@ footer .widget_title {
 .shop_cart_table td.product-subtotal {
 	font-weight: 600;
 }
+.product-total-order{
+	color: #0090e3;
+
+}
 .shop_cart_table .table {
 	margin: 0;
 }

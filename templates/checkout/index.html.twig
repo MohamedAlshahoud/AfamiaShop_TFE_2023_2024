@@ -98,8 +98,8 @@
                                         <th id="transporter-price"></th>
                                     </tr>
                                     <tr>
-                                        <th>{% trans %}Total{% endtrans %}</th>
-                                        <td class="product-subtotal" id="total">€ {{ ((cart.sub_total + 0) / 100) | number_format(2, '.', ',') }}</td>
+                                        <th class="product-total-order">{% trans %}Total{% endtrans %}</th>
+                                        <th class="product-total-order" id="total">€ {{ ((cart.sub_total + 0) / 100) | number_format(2, '.', ',') }}</th>
                                     </tr>
                                 </tfoot>
                             </table>
