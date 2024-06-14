@@ -4,10 +4,10 @@
 
 {% block body %}
 <div class="main_content">
-    <div  class="section">
-        <div  class="container">
-            <div  class="row">
-                <div  class="col-md-6">
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
                 {{ form_start(form, {action:path('order_prepare')})}}
                     <div class="tab-content dashboard_content">
                         <div class="tab-pane fade active show" id="orders" role="tabpanel" aria-labelledby="orders-tab">
@@ -20,7 +20,7 @@
                                         <table class="table">
                                             <tbody>
                                                 <tr>
-                                                    <td>{{ form_row(form.address)}}</td>
+                                                    <td>{{ form_row(form.address) }}</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -54,59 +54,75 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div  class="order_review">
-                        <div  class="heading_s1">
-                            <h4 >{% trans %}Your Order{% endtrans %}</h4>
+                    <div class="order_review">
+                        <div class="heading_s1">
+                            <h4>{% trans %}Your Order{% endtrans %}</h4>
                         </div>
-                        <div  class="table-responsive order_table">
-                            <table  class="table">
-                                <thead >
-                                    <tr >
-                                        <th >{% trans %}Product{% endtrans %}</th>
-                                        <th >Total</th>
+                        <div class="table-responsive order_table">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>{% trans %}Product{% endtrans %}</th>
+                                        <th>Total</th>
                                     </tr>
                                 </thead>
-                                <tbody >
+                                <tbody>
                                     {% for item in cart.items %}
-                                    <tr >
-                                        <td >
-                                            {{ item.product.name | trans}} 
-                                            <span class="product-qty"> {{item.quantity}}</span>
-                                            <span class="product-price">x {{(item.product.price/100) |format_currency('EUR')}}</span>
+                                    <tr>
+                                        <td>
+                                            {{ item.product.name | trans }}
+                                            <span class="product-qty"> {{ item.quantity }}</span>
+                                            <span class="product-price">x {{ (item.product.price / 100) | format_currency('EUR') }}</span>
                                         </td>
-                                        <td >
-                                            {{(item.product.price*item.quantity/100) |format_currency('EUR')}}
+                                        <td>
+                                            {{ (item.product.price * item.quantity / 100) | format_currency('EUR') }}
                                         </td>
                                     </tr>
                                     {% endfor %}
                                 </tbody>
-                                <tfoot >
-                                    <tr >
-                                        <th >{% trans %}SubTotal Htva{% endtrans %}</th>
-                                        <td  class="product-subtotal">{{(cart.sub_total_htva/100) |format_currency('EUR')}}</td>
+                                <tfoot>
+                                    <tr>
+                                        <th>{% trans %}SubTotal Htva{% endtrans %}</th>
+                                        <td class="product-subtotal">{{ (cart.sub_total_htva / 100) | format_currency('EUR') }}</td>
                                     </tr>
-                                    <tr >
-                                        <th >{% trans %}Tva{% endtrans %}</th>
-                                        <td  class="product-subtotal">{{(cart.tva/100) |format_currency('EUR')}}</td>
+                                    <tr>
+                                        <th>{% trans %}Tva{% endtrans %}</th>
+                                        <td class="product-subtotal">{{ (cart.tva / 100) | format_currency('EUR') }}</td>
                                     </tr>
-                                    <tr >
-                                        <th >{% trans %}SubTotal{% endtrans %}</th>
-                                        <td  class="product-subtotal">{{(cart.sub_total/100) |format_currency('EUR')}}</td>
+                                    <tr>
+                                        <th>{% trans %}SubTotal{% endtrans %}</th>
+                                        <td class="product-subtotal" id="cart-subtotal">{{ (cart.sub_total / 100) | format_currency('EUR') }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>{% trans %}Total{% endtrans %}</th>
+                                        <td class="product-subtotal" id="total">{{ ((cart.sub_total + 0) / 100) | format_currency('EUR') }}</td>
                                     </tr>
                                 </tfoot>
                             </table>
                         </div>
                         <div class="mt-5 text-center">
-                            <button class="btn btn-fill-out  btn-block type="submit" style="...">{% trans %}Validate my order{% endtrans %}</button>
+                            <button class="btn btn-fill-out btn-block" type="submit">{% trans %}Validate my order{% endtrans %}</button>
                         </div>
                     </div>
                 </div>
             </div>
-        {{ form_end(form)}}
-        <div class="different_login">
-            <span><a href="{{path('app_home')}}">{% trans %}Cancel{% endtrans %}</a></span>
+            {{ form_end(form) }}
+            <div class="different_login">
+                <span><a href="{{ path('app_home') }}">{% trans %}Cancel{% endtrans %}</a></span>
+            </div>
         </div>
-        </div>  
     </div>
 </div>
+
+<script>
+    document.querySelectorAll('input[name="checkout[transporter]"]').forEach((input) => {
+        input.addEventListener('change', (event) => {
+            const transporterPrice = parseFloat(event.target.dataset.price) / 100; // Assuming price is in cents
+            const subTotal = parseFloat('{{ cart.sub_total / 100 }}'); // Assuming subtotal is in cents
+            const total = subTotal + transporterPrice;
+            
+            document.getElementById('total').innerText = 'Total: ' + total.toFixed(2) + ' €';
+        });
+    });
+</script>
 {% endblock %}

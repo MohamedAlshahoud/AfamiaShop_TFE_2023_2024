@@ -40,9 +40,12 @@ class CheckoutType extends AbstractType
                 'choice_label' => function (Transporter $transporter) {
                     $name = $transporter->getName();
                     $description = $this->translator->trans(strtolower($transporter->getDescription()), [], 'messages');
-                    $price = ( $transporter->getPrice() / 100 ) . ' € '; // Assume getPrice returns a formatted price string
-
+                    $price = ( $transporter->getPrice() / 100 ) . ' € '; // getPrice renvoie une chaîne de prix formatée
+            
                     return sprintf('%s - %s - %s', $name, $description, $price);
+                },
+                'choice_attr' => function(Transporter $transporter) {
+                    return ['data-price' => $transporter->getPrice()];
                 },
                 'multiple'=>false,
                 'expanded'=>true,

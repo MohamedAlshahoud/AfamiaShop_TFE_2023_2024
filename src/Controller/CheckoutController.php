@@ -6,6 +6,7 @@ use App\Entity\Order;
 use App\Entity\OrderDetail;
 use App\Entity\OrderDetails;
 use App\Entity\Orders;
+use App\Entity\Transporter;
 use App\Form\CheckoutType;
 use App\Repository\AddressRepository;
 use App\Repository\TransporterRepository;
@@ -129,6 +130,12 @@ class CheckoutController extends AbstractController
         }
 
         return $this->redirectToRoute('app_cart');
+    }
+
+    #[Route('/order/get-transporter-price/{id}', name: 'get_transporter_price', methods:['GET'])]
+    public function getTransporterPrice(Transporter $transporter): Response
+    {
+        return new Response($transporter->getPrice());
     }
     
 }
