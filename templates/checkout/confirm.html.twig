@@ -19,16 +19,16 @@
                             </div>
                         </div>
                     </div>
-                    <div  class="order_review">
-                        <div  class="heading_s1">
+                    <div class="order_review">
+                        <div class="heading_s1">
                             <h4 >{% trans %}Your Order{% endtrans %}</h4>
                         </div>
-                        <div  class="table-responsive order_table">
-                            <table  class="table">
+                        <div class="table-responsive order_table">
+                            <table class="table">
                                 <tfoot >
-                                    <tr >
-                                        <th >{% trans %}Total{% endtrans %}</th>
-                                        <td  class="product-subtotal">€ {{(subTotalWithTransporter/100)| number_format(2, '.', ',') }}</td>
+                                    <tr>
+                                        <th>{% trans %}Total{% endtrans %}</th>
+                                        <th class="product-subtotal">€ {{(subTotalWithTransporter/100)| number_format(2, '.', ',') }}</th>
                                     </tr>
                                 </tfoot>
                             </table>
