@@ -2,7 +2,6 @@
 
 namespace App\Entity;
 
-use App\Entity\Newsletters\Categories;
 use App\Repository\UserRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -54,26 +53,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $googleId = null;
 
-    #[ORM\Column]
-    private ?\DateTime $createdAt = null;
-
-    #[ORM\Column]
-    private ?bool $is_rgpd = false;
-
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $validation_token = null;
-
-    #[ORM\Column]
-    private ?bool $is_valid = false;
-
-    #[ORM\ManyToMany(targetEntity: Categories::class, inversedBy: 'user')]
-    private Collection $categories;
 
     public function __construct()
     {
         $this->addresses = new ArrayCollection();
         $this->orders = new ArrayCollection();
-        $this->categories = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -275,67 +259,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-
-    public function isIsRgpd(): ?bool
-    {
-        return $this->is_rgpd;
-    }
-
-    public function setIsRgpd(bool $is_rgpd): static
-    {
-        $this->is_rgpd = $is_rgpd;
-
-        return $this;
-    }
-
-    public function getValidationToken(): ?string
-    {
-        return $this->validation_token;
-    }
-
-    public function setValidationToken(string $validation_token): static
-    {
-        $this->validation_token = $validation_token;
-
-        return $this;
-    }
-
-    public function getIsValid(): ?bool
-    {
-        return $this->is_valid;
-    }
-
-    public function setIsValid(bool $is_valid): static
-    {
-        $this->is_valid = $is_valid;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection<int, Categories>
-     */
-    public function getCategories(): Collection
-    {
-        return $this->categories;
-    }
-
-    public function addCategory(Categories $category): static
-    {
-        if (!$this->categories->contains($category)) {
-            $this->categories[] = $category;
-            // $category->addUser($this);
-        }
-
-        return $this;
-    }
-
-    public function removeCategory(Categories $category): static
-    {
-        $this->categories->removeElement($category);
-
-        return $this;
-    }
 
     
 
