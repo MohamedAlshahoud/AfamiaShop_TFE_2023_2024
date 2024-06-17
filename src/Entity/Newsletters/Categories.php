@@ -2,6 +2,7 @@
 
 namespace App\Entity\Newsletters;
 
+use App\Entity\User;
 use App\Repository\Newsletters\CategoriesRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -21,7 +22,7 @@ class Categories
     #[ORM\Column(length: 255)]
     private ?string $description = null;
 
-    #[ORM\ManyToMany(targetEntity: Users::class, mappedBy: 'categories')]
+    #[ORM\ManyToMany(targetEntity: User::class, mappedBy: 'categories')]
     private Collection $users;
 
     #[ORM\OneToMany(mappedBy: 'categories', targetEntity: Newsletters::class, orphanRemoval: true)]
@@ -63,14 +64,14 @@ class Categories
     }
 
     /**
-     * @return Collection<int, Users>
+     * @return Collection<int, User>
      */
     public function getUsers(): Collection
     {
         return $this->users;
     }
 
-    public function addUser(Users $user): static
+    public function addUser(User $user): static
     {
         if (!$this->users->contains($user)) {
             $this->users->add($user);
@@ -80,7 +81,7 @@ class Categories
         return $this;
     }
 
-    public function removeUser(Users $user): static
+    public function removeUser(User $user): static
     {
         if($this->users->removeElement($user)){
             $user->removeCategory($this);

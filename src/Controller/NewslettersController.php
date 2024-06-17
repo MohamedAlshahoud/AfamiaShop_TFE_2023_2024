@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Newsletters\Categories;
 use App\Entity\Newsletters\Newsletters;
 use App\Entity\Newsletters\Users;
+use App\Entity\User;
 use App\Form\NewslettersType;
 use App\Form\NewslettersUsersType;
 use App\Form\SearchProductType;
@@ -39,7 +40,7 @@ class NewslettersController extends AbstractController
     #[Route('/newsletters', name: 'app_newsletters')]
     public function index(Request $request, MailerInterface $mailer, EntityManagerInterface $entityManager, TranslatorInterface $translator): Response
     {
-        $user = new Users();
+        $user = new User();
         $cartDetails = $this->cartServices->getCartDetails(); //numéro de produit dans l'icône du panier
         $form = $this->createForm(NewslettersUsersType::class, $user);
 
@@ -108,7 +109,7 @@ class NewslettersController extends AbstractController
     }
 
     #[Route('/newsletters/confirm/{id}/{token}', name: 'newsletters_confirm')]
-    public function confirm(Users $user, $token, EntityManagerInterface $entityManager): Response
+    public function confirm(User $user, $token, EntityManagerInterface $entityManager): Response
     {
         if($user->getValidationToken() != $token){
             throw $this->createNotFoundException('Page not found');
@@ -191,7 +192,7 @@ class NewslettersController extends AbstractController
 
 
     #[Route('/newsletters/unsubscribe/{id}/{newsletter}/{token}', name: 'newsletters_unsubscribe')]
-    public function unsubscribe(Users $user, Newsletters $newsletter, $token, Request $request): Response
+    public function unsubscribe(User $user, Newsletters $newsletter, $token, Request $request): Response
     {
         $Search = $this->createForm(SearchProductType::class, null);
         $Search->handleRequest($request);
