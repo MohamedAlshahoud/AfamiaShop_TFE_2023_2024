@@ -61,10 +61,10 @@
                         <div class="cart_extra">
                             {% if product.quantity > 0 %}
                                 <div class="cart_btn">
-                                    <a href="/cart/add/{{ product.id }}/1" class="btn btn-fill-out btn-addtocart" type="button">
+                                    <button class="btn btn-fill-out btn-addtocart" type="button" data-product-id="{{ product.id }}">
                                         <i class="icon-basket-loaded"></i> 
                                         {% trans %}Add to cart{% endtrans %}
-                                    </a>
+                                    </button>
                                 </div>
                             {% else %}
                                 <p class="text-danger">{% trans %}Temporarily out of stock{% endtrans %}</p>
@@ -155,4 +155,32 @@
         </div>
     </div>
 </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const addToCartButtons = document.querySelectorAll('.btn-addtocart');
+
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', async (event) => {
+                event.preventDefault();
+                const productId = button.getAttribute('data-product-id');
+                const response = await fetch(`/cart/add/${productId}/1`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-Requested-With': 'XMLHttpRequest',
+                    }
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    // Handle the response data as needed
+                    console.log('Cart updated:', data);
+                } else {
+                    console.error('Failed to add product to cart');
+                    alert('Failed to add product to cart');
+                }
+            });
+        });
+    });
+</script>
 {% endblock %}

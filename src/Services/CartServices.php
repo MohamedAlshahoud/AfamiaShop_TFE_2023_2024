@@ -120,24 +120,6 @@ class CartServices
                 $this->update("cart", $cart);
             }
         }
-
-        // $transporter = $this->get("transporter");
-        // if(!$transporter){
-        //     $transporter = $this->transporterRepository->findAll()[0];
-        //     $transporter = [
-        //         "id"=> $transporter->getId(),
-        //         "name"=> $transporter->getName(),
-        //         "description"=> $transporter->getDescription(),
-        //         "price"=> $transporter->getPrice(),
-        //     ];
-        //     $transporter = $this->update("transporter", $transporter);
-
-        // }
-        
-        // $result["transporter"] = $transporter;
-        // $result['sub_total_with_transporter'] = $result['sub_total'] + $result['transporter']['price'];
-        // {{ (cart.sub_total /100 + (transporter.price / 100)) |format_currency('EUR') }}
-
         return $result;
     }
 

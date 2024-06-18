@@ -10,6 +10,8 @@ use App\Repository\ProductRepository;
 use App\Services\CartServices;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Response;
@@ -82,20 +84,22 @@ class CartController extends AbstractController
         ]);
     }
 
-    #[Route('/cart/add/{productId}/{count}', name: 'app_add_to_cart')]
-    public function addToCart(string $productId, $count = 1): Response
+    #[Route('/cart/add/{productId}/{count}', name: 'app_add_to_cart', methods:['POST'])]
+    public function addToCart(string $productId, int $count = 1): JsonResponse
     {
-        $this->cartServices->addToCart($productId,$count);
-        
-        return $this->redirectToRoute("app_cart");
+        $this->cartServices->addToCart($productId, $count);
+        $cart = $this->cartServices->getCartDetails();
+
+        return $this->json($cart);
     }
 
-    #[Route('/cart/remove/{productId}/{count}', name: 'app_remove_to_cart')]
-    public function removeToCart(string $productId, $count = 1): Response
+    #[Route('/cart/remove/{productId}/{count}', name: 'app_remove_to_cart', methods: ['POST'])]
+    public function removeToCart(string $productId, int $count = 1): JsonResponse
     {
-        $this->cartServices->removeToCart($productId,$count);
-        
-        return $this->redirectToRoute("app_cart");
+        $this->cartServices->removeToCart($productId, $count);
+        $cart = $this->cartServices->getCartDetails();
+
+        return $this->json($cart);
     }
 
     #[Route('/cart/get', name: 'app_get_cart')]
@@ -114,7 +118,7 @@ class CartController extends AbstractController
     public function cartAmount(): Response
     {
         $cartDetails = $this->cartServices->getCartDetails();
-        return $this->render('cartamount/index.html.twig', [
+        return $this->render('cartQuantity/index.html.twig', [
             'quantity' => $cartDetails['quantity'],
         ]);
     }
