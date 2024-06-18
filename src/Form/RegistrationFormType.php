@@ -40,8 +40,14 @@ class RegistrationFormType extends AbstractType
                         'max' => 4096,
                     ]),
                 ],
-                'first_options' =>['label' => 'Password'],
-                'second_options' =>['label' => 'Repeat Password'],
+                'first_options' => [
+                    'label' => 'Mot de passe',
+                    'attr' => ['minlength' => 6, 'required' => true]
+                ],
+                'second_options' => [
+                    'label' => 'Repeat password',
+                    'attr' => ['minlength' => 6, 'required' => true]
+                ],
             ])
         ;
     }
