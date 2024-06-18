@@ -4,6 +4,3 @@ controllers:
 
 search:
   path: /search
-cart_amount:
-    path: '/cart/amount'
-    controller: 'App\Controller\CartController::cartAmount'

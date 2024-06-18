@@ -122,4 +122,5 @@ class CartController extends AbstractController
             'quantity' => $cartDetails['quantity'],
         ]);
     }
+
 }
