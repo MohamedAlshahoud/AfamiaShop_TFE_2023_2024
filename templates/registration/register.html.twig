@@ -35,6 +35,7 @@
                             <div class="form-group">
                                 {{ form_row(registrationForm.plainPassword.second) }}
                             </div>
+                            
                             <div class="form-group">
                                 <button type="submit" class="btn btn-fill-out btn-block" name="register">{% trans %}Register{% endtrans %}</button>
                             </div>
@@ -53,13 +54,13 @@
             const passwordConfirmField = document.querySelector('#registration_form_plainPassword_second');
             
             if (passwordField.value.length < 6) {
-                alert('Your password should be at least 6 characters');
+                alert('Le mot de passe doit contenir au moins 6 caractères.');
                 passwordField.focus();
                 event.preventDefault(); // Empêche la soumission du formulaire
             }
             
             if (passwordField.value !== passwordConfirmField.value) {
-                alert('Passwords do not match.');
+                alert('Les mots de passe ne correspondent pas.');
                 passwordConfirmField.focus();
                 event.preventDefault(); // Empêche la soumission du formulaire
             }

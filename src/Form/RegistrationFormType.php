@@ -24,8 +24,6 @@ class RegistrationFormType extends AbstractType
             ->add('lastname')
             ->add('email', EmailType::class)
             ->add('plainPassword', RepeatedType::class, [
-                // instead of being set onto the object directly,
-                // this is read and encoded in the controller
                 'type' => PasswordType::class,
                 'mapped' => false,
                 'attr' => ['autocomplete' => 'new-password'],
@@ -41,11 +39,11 @@ class RegistrationFormType extends AbstractType
                     ]),
                 ],
                 'first_options' => [
-                    'label' => 'Mot de passe',
+                    'label' => 'Password',
                     'attr' => ['minlength' => 6, 'required' => true]
                 ],
                 'second_options' => [
-                    'label' => 'Repeat password',
+                    'label' => 'Repeat Password',
                     'attr' => ['minlength' => 6, 'required' => true]
                 ],
             ])
