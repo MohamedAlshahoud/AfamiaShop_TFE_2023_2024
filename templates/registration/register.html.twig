@@ -54,13 +54,13 @@
             const passwordConfirmField = document.querySelector('#registration_form_plainPassword_second');
             
             if (passwordField.value.length < 6) {
-                alert('Le mot de passe doit contenir au moins 6 caractères.');
+                alert('The password must contain at least 6 characters.');
                 passwordField.focus();
                 event.preventDefault(); // Empêche la soumission du formulaire
             }
             
             if (passwordField.value !== passwordConfirmField.value) {
-                alert('Les mots de passe ne correspondent pas.');
+                alert('Passwords do not match.');
                 passwordConfirmField.focus();
                 event.preventDefault(); // Empêche la soumission du formulaire
             }

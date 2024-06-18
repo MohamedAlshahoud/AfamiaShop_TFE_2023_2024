@@ -541,6 +541,10 @@
         <source>Your password should be at least 6 characters</source>
         <target>Votre mot de passe doit comporter au moins 6 caractères</target>
       </trans-unit>
+      <trans-unit id="YRKYC4." resname="There is already an account with this email">
+        <source>There is already an account with this email</source>
+        <target>Il existe déjà un compte avec cette email</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

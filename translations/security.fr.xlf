@@ -81,6 +81,10 @@
         <source>Too many failed login attempts, please try again in %minutes% minutes.</source>
         <target>Plusieurs tentatives de connexion ont échoué, veuillez réessayer dans %minutes% minutes.</target>
       </trans-unit>
+      <trans-unit id="YRKYC4." resname="There is already an account with this email">
+        <source>There is already an account with this email</source>
+        <target>Il existe déjà un compte avec cette email</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
