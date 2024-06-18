@@ -15,7 +15,8 @@
                         </div>
                         <div class="content">
                             {{ form_start(resetForm) }}
-                                {{ form_row(resetForm.plainPassword) }}
+                                {{ form_row(resetForm.plainPassword.first) }}
+                                {{ form_row(resetForm.plainPassword.second) }}
                                 <button class="btn btn-fill-out btn-block">{% trans %}Reset password{% endtrans %}</button>
                             {{ form_end(resetForm) }}
                         </div>
@@ -25,4 +26,25 @@
         </div>
     </div>
 </div>
+<script>
+    window.onload = function() {
+        
+        document.querySelector('form').addEventListener('submit', function(event) {
+            const passwordField = document.querySelector('#password_form_plainPassword_first');
+            const passwordConfirmField = document.querySelector('#password_form_plainPassword_second');
+            
+            if (passwordField.value.length < 6) {
+                alert('The password must contain at least 6 characters.');
+                passwordField.focus();
+                event.preventDefault(); // Empêche la soumission du formulaire
+            }
+            
+            if (passwordField.value !== passwordConfirmField.value) {
+                alert('Passwords do not match.');
+                passwordConfirmField.focus();
+                event.preventDefault(); // Empêche la soumission du formulaire
+            }
+        });
+    };
+</script>
 {% endblock %}
