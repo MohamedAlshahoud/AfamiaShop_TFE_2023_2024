@@ -6,6 +6,7 @@ use App\Entity\User;
 use App\Form\ChangePasswordFormType;
 use App\Form\ResetPasswordRequestFormType;
 use App\Form\SearchProductType;
+use App\Services\CartServices;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bridge\Twig\Mime\TemplatedEmail;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -28,8 +29,10 @@ class ResetPasswordController extends AbstractController
 
     public function __construct(
         private ResetPasswordHelperInterface $resetPasswordHelper,
-        private EntityManagerInterface $entityManager
+        private EntityManagerInterface $entityManager,
+        private CartServices $cartServices
     ) {
+        $this->cartServices = $cartServices;
     }
 
     // Afficher et traiter le formulaire pour demander une réinitialisation du mot de passe.
@@ -40,7 +43,8 @@ class ResetPasswordController extends AbstractController
         $form = $this->createForm(ResetPasswordRequestFormType::class);
         $Search->handleRequest($request);
         $form->handleRequest($request);
-
+        $cartDetails = $this->cartServices->getCartDetails();
+        
         if ($form->isSubmitted() && $form->isValid()) {
             return $this->processSendingPasswordResetEmail(
                 $form->get('email')->getData(),
@@ -80,7 +84,8 @@ class ResetPasswordController extends AbstractController
 
         return $this->render('reset_password/request.html.twig', [
             'requestForm' => $form->createView(),
-            'search' => $form->createView()
+            'search' => $form->createView(),
+            'quantity' => $cartDetails['quantity']
         ]);
     }
 
@@ -92,6 +97,7 @@ class ResetPasswordController extends AbstractController
     {
         $Search = $this->createForm(SearchProductType::class, null);
         $Search->handleRequest($request);
+        $cartDetails = $this->cartServices->getCartDetails();
         // Générer un faux jeton si l'utilisateur n'existe pas ou si quelqu'un accède directement à cette page.
         // Cela évite de révéler si un utilisateur a été trouvé avec l'adresse e-mail donnée ou non.
         if (null === ($resetToken = $this->getTokenObjectFromSession())) {
@@ -129,7 +135,8 @@ class ResetPasswordController extends AbstractController
 
         return $this->render('reset_password/check_email.html.twig', [
             'resetToken' => $resetToken,
-            'search' => $Search->createView()
+            'search' => $Search->createView(),
+            'quantity' => $cartDetails['quantity']
         ]);
     }
 
@@ -140,6 +147,7 @@ class ResetPasswordController extends AbstractController
     {
         $Search = $this->createForm(SearchProductType::class, null);
         $Search->handleRequest($request);
+        $cartDetails = $this->cartServices->getCartDetails();
 
         if ($request->isMethod('post')) {
             if($Search->isSubmitted() && $Search->isValid()){
@@ -219,7 +227,8 @@ class ResetPasswordController extends AbstractController
 
         return $this->render('reset_password/reset.html.twig', [
             'resetForm' => $form->createView(),
-            'search' =>$Search->createView()
+            'search' =>$Search->createView(),
+            'quantity' => $cartDetails['quantity']
         ]);
     }
 

@@ -39,8 +39,14 @@ class ChangePasswordType extends AbstractType
                     'max' => 4096,
                 ]),
             ],
-            'first_options' =>['label' => 'New password'],
-            'second_options' =>['label' => 'Confirm new Password'],
+            'first_options' => [
+                'label' => 'Password',
+                'attr' => ['minlength' => 6, 'required' => true]
+            ],
+            'second_options' => [
+                'label' => 'Repeat Password',
+                'attr' => ['minlength' => 6, 'required' => true]
+            ],
         ])
         ;
     }
