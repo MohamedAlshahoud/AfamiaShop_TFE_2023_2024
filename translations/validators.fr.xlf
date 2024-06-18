@@ -545,6 +545,10 @@
         <source>There is already an account with this email</source>
         <target>Il existe déjà un compte avec cette email</target>
       </trans-unit>
+      <trans-unit id="t.0eUL_" resname="Please include in the email address. There is an symbol missing in ">
+        <source>Please include in the email address. There is an symbol missing in </source>
+        <target>Veuillez inclure dans l'adresse e-mail. Il manque un symbole  dans </target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
