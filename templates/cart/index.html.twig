@@ -21,9 +21,9 @@
                                         <th class="product-remove">{% trans %}Remove{% endtrans %}</th>
                                     </tr>
                                 </thead>
-                                <tbody id="cart-items">
+                                <tbody>
                                     {% for item in cart.items %}
-                                        <tr data-product-id="{{ item.product.id }}">
+                                        <tr>
                                             <td class="product-thumbnail">
                                                 <a><img width="50" alt="product1" src="/assets/images/products/{{ item.product.imageUrls[0] }}"></a>
                                             </td>
@@ -31,13 +31,17 @@
                                             <td data-title="Price" class="product-price">€ {{ (item.product.price / 100) | number_format(2, '.', ',') }}</td>
                                             <td data-title="Quantity" class="product-quantity">
                                                 <div class="quantity">
-                                                    <input type="button" value="-" class="minus" data-product-id="{{ item.product.id }}">
-                                                    <input type="text" name="quantity" value="{{ item.quantity }}" title="Qty" size="4" class="qty" data-product-id="{{ item.product.id }}" readonly>
-                                                    <input type="button" value="+" class="plus" data-product-id="{{ item.product.id }}">
+                                                    <a href="/cart/remove/{{ item.product.id }}/1">
+                                                        <input type="button" value="-" class="minus">
+                                                    </a>
+                                                    <input type="text" name="quantity" value="{{ item.quantity }}" title="Qty" size="4" class="qty">
+                                                    <a href="/cart/add/{{ item.product.id }}/1">
+                                                        <input type="button" value="+" class="plus">
+                                                    </a>
                                                 </div>
                                             </td>
                                             <td data-title="Total" class="product-subtotal">€ {{ (item.sub_total / 100) | number_format(2, '.', ',') }}</td>
-                                            <td data-title="Remove" class="product-remove"><a href="#" class="remove" data-product-id="{{ item.product.id }}"><i class="fa fa-trash"></i></a></td>
+                                            <td data-title="Remove" class="product-remove"><a href="/cart/remove/{{ item.product.id }}/{{ item.quantity }}"><i class="fa fa-trash"></i></a></td>
                                         </tr>
                                     {% endfor %}
                                 </tbody>
@@ -98,70 +102,4 @@
         </div>
     </div>
 </div>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const updateQuantity = async (productId, action) => {
-        try {
-            const response = await fetch(`/cart/${action}/${productId}/1`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-Requested-With': 'XMLHttpRequest',
-                },
-            });
-            const data = await response.json();
-
-            if (response.ok) {
-                console.log('Response Data:', data);
-                const cartItem = document.querySelector(`tr[data-product-id="${productId}"]`);
-
-                // Update quantity and subtotal in the table row
-                cartItem.querySelector('.qty').value = data.items.find(item => item.product.id == productId).quantity;
-                cartItem.querySelector('.product-subtotal').innerText = `€ ${(data.items.find(item => item.product.id == productId).sub_total / 100).toFixed(2)}`;
-
-                // Update cart totals
-                document.querySelector('.cart_sub_total_amount_htva').innerText = `€ ${(data.sub_total_htva / 100).toFixed(2)}`;
-                document.querySelector('.cart_tva').innerText = `€ ${(data.tva / 100).toFixed(2)}`;
-                document.querySelector('.cart_sub_total_amount').innerText = `€ ${(data.sub_total / 100).toFixed(2)}`;
-            } else {
-                console.error('Failed to update quantity');
-            }
-        } catch (error) {
-            console.error('Error:', error);
-        }
-    };
-
-    document.querySelectorAll('.plus').forEach(button => {
-        button.addEventListener('click', () => {
-            const productId = button.getAttribute('data-product-id');
-            console.log(`Plus button clicked for product ID: ${productId}`);
-            updateQuantity(productId, 'add');
-        });
-    });
-
-    document.querySelectorAll('.minus').forEach(button => {
-        button.addEventListener('click', () => {
-            const productId = button.getAttribute('data-product-id');
-            console.log(`Minus button clicked for product ID: ${productId}`);
-            updateQuantity(productId, 'remove');
-        });
-    });
-
-    document.addEventListener('DOMContentLoaded', function() {
-            const updateQuantity = async (productId, action) => {
-                const response = await fetch(`/cart/${action}/${productId}/1`, { method: 'POST' });
-                if (response.ok) {
-                    location.reload(); // Recharge la page après la mise à jour du panier
-                }
-            };
-
-            document.querySelectorAll('.btn-addtocart').forEach(button => {
-                button.addEventListener('click', () => {
-                    const productId = button.getAttribute('data-product-id');
-                    updateQuantity(productId, 'add'); // Ici, 'add' est l'action pour ajouter au panier
-                });
-            });
-    });
-});
-</script>
 {% endblock %}

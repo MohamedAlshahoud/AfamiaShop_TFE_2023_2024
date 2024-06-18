@@ -1,10 +1,10 @@
-<a class="nav-link" href="{{ path('app_cart') }}">
+<a class="nav-link" href="/cart">
     <span class="cart-icon-container">
         <i class="linearicons-cart"></i>
-        {% if quantity > 0 %}
-            <span class="cart-amount" id="cart-amount">{{ quantity }}</span>
+        {% if quantity  > 0 %}
+            <span class="cart-amount">{{ quantity }}</span>
         {% else %}
-            <span class="cart-amount" id="cart-amount">0</span>
+            <span class="cart-amount">0</span>
         {% endif %}
     </span>
 </a>

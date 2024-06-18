@@ -120,6 +120,7 @@ class CartServices
                 $this->update("cart", $cart);
             }
         }
+        
         return $result;
     }
 
