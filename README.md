@@ -55,7 +55,7 @@ Acheteurs en ligne à la recherche de produits de qualité et d’une navigation
 - **Doctrine ORM** 💾
 - **Twig** 🧩
 - **EasyAdmin** 🛠️
--- **Déploiement via IONOS**
+- **Déploiement via IONOS**
 
 ## 🌐 Démo en ligne
 👉 Lien vers la version en ligne 🔗[AfamiaShop](https://www.afamiashop.be/)
