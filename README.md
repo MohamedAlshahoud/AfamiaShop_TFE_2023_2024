@@ -47,33 +47,62 @@ Passionnés de mode & fashionistas
 Acheteurs en ligne à la recherche de produits de qualité et d’une navigation intuitive
 
 ## ⚙️ Technologies utilisées
-Symfony 6.1
 
-HTML / CSS / JavaScript
-
-MySQL
-
-Déploiement via IONOS
+- **Symfony 6.1** ⚡️
+- **JavaScript (JS)** 💻
+- **Bootstrap** 🎨
+- **CSS personnalisé** 🎨 : Personnalisation des styles pour un rendu visuel unique et adapté aux besoins du projet.
+- **Doctrine ORM** 💾
+- **Twig** 🧩
+- **EasyAdmin** 🛠️
+-- **Déploiement via IONOS**
 
 ## 🌐 Démo en ligne
 👉 Lien vers la version en ligne 🔗[AfamiaShop](https://www.afamiashop.be/)
 
 ## 📦 Installation 
+### Prérequis
 
-git clone https://github.com/tonutilisateur/afamiashop.git
-cd afamiashop
-composer install
-npm install
-npm run dev
-symfony server:start
+- **PHP** 8.0 ou version supérieure ☕
+- **Composer** (gestionnaire de dépendances PHP) 💾
+- **MySQL** (pour la base de données) 🗃️
+
+### Étapes pour démarrer le projet
+
+1. Clone ce dépôt sur ton ordinateur :
+
+   ```bash
+   git clone https://github.com/MohamedAlshahoud/AfamiaShop_TFE_2023_2024
+
+2. Installe les dépendances PHP via Composer :
+
+   ```bash
+   composer install
+   
+3. Crée et configure la base de données :
+
+   ```bash
+   php bin/console doctrine:database:create
+   php bin/console doctrine:schema:update --force
+
+4. Lancer le serveur Symfony :
+
+   ```bash
+   symfony server:start
+   
+5. L'application sera disponible à l'adresse suivante : http://localhost:8000
 
 ## ⚠️ Remarque
 **Le fichier .env a été supprimé du dépôt pour des raisons de sécurité.
 Veuillez créer votre propre fichier .env en vous basant sur le fichier .env.example si disponible, ou en configurant vos variables d’environnement manuellement (base de données, mailer, etc.).**
 
 
+## 📝 Licence
+
+Ce projet est sous la licence MIT.
+
 ## 📬 Contact
-👤 Mohamed
+👤 Mohamed Alshahoud - Développeur Web Full Stack
 🔗[LinkedIn](https://www.linkedin.com/in/mohamed-alshahoud/)
 🔗[Portfolio](https://mohamedalshahoud.com/)
 📧[Email](alshahoudmohamed95@gmail.com)
