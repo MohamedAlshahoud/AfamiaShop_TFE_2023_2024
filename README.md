@@ -57,7 +57,7 @@ MySQL
 Déploiement via IONOS
 
 ## 🌐 Démo en ligne
-👉 Lien vers la version en ligne (AfamiaShop)
+👉 Lien vers la version en ligne 🔗 - [LinkedIn](https://www.linkedin.com/in/mohamed-alshahoud/)
 
 ## 📦 Installation 
 
@@ -71,6 +71,7 @@ symfony server:start
 
 ## 📬 Contact
 👤 Mohamed
-📧 Email : [alshahoudmohamed95@gmail.com]
-🔗 Portfolio(https://www.linkedin.com/in/mohamed-alshahoud/)| LinkedIn | GitHub
+🔗 - [LinkedIn](https://www.linkedin.com/in/mohamed-alshahoud/)
+🔗- [Portfolio](https://mohamedalshahoud.com/)
+📧- [Email](alshahoudmohamed95@gmail.com)
 
