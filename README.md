@@ -32,22 +32,22 @@ Le site offre une **expérience d’achat fluide**, enrichie par des fonctionnal
 🔒 Paiement sécurisé
 
 ## 🎯 Objectifs du projet
-Générer des ventes en ligne via une plateforme accessible et ergonomique.
+**Générer des ventes en ligne** via une plateforme accessible et ergonomique.
 
-Renforcer la présence en ligne de la marque et sa notoriété.
+Renforcer **la présence en ligne de la marque** et sa notoriété.
 
-Offrir une expérience utilisateur fluide et agréable, de la navigation à la finalisation de la commande.
+Offrir une **expérience utilisateur fluide et agréable**, de la navigation à la finalisation de la commande.
 
-Mettre en œuvre une architecture robuste et sécurisée, respectant les bonnes pratiques du développement web.
+Mettre en œuvre une architecture **robuste et sécurisée**, respectant les bonnes pratiques du développement web.
 
-👥 Public cible
+## 👥 Public cible
 Amateurs de bijoux et d'accessoires
 
 Passionnés de mode & fashionistas
 
 Acheteurs en ligne à la recherche de produits de qualité et d’une navigation intuitive
 
-⚙️ Technologies utilisées
+## ⚙️ Technologies utilisées
 Symfony 6.1
 
 HTML / CSS / JavaScript
@@ -56,25 +56,21 @@ MySQL
 
 Déploiement via IONOS
 
-🌐 Démo en ligne
+## 🌐 Démo en ligne
 👉 Lien vers la version en ligne (Remplace par l’URL réelle une fois déployé)
 
-📸 Captures d’écran
-(Tu peux insérer ici quelques screenshots du site pour illustrer ton README)
+## 📦 Installation 
 
-📦 Installation (optionnel pour les développeurs)
-bash
-Copier
-Modifier
 git clone https://github.com/tonutilisateur/afamiashop.git
 cd afamiashop
 composer install
 npm install
 npm run dev
 symfony server:start
-📬 Contact
+
+
+## 📬 Contact
 👤 Mohamed
-📧 Email : [ton@email.com]
+📧 Email : [alshahoudmohamed95@gmail.com]
 🔗 Portfolio | LinkedIn | GitHub
 
-Tu veux que je t’en fasse aussi une version en anglais pour ton repo ou pour LinkedIn ?
