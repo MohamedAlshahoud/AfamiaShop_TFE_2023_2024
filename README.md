@@ -1,4 +1,3 @@
-The .env file has been deleted for security reasons
 ## 💎 AfamiaShop – Site e-commerce d'accessoires
 **AfamiaShop** est un site e-commerce développé dans le cadre de mon projet de fin d’études pour l’obtention du **brevet d’enseignement supérieur en Web Development.**
 
