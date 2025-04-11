@@ -68,6 +68,10 @@ npm install
 npm run dev
 symfony server:start
 
+## ⚠️ Remarque
+**Le fichier .env a été supprimé du dépôt pour des raisons de sécurité.
+Veuillez créer votre propre fichier .env en vous basant sur le fichier .env.example si disponible, ou en configurant vos variables d’environnement manuellement (base de données, mailer, etc.).**
+
 
 ## 📬 Contact
 👤 Mohamed
