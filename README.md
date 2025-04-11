@@ -6,15 +6,15 @@ Ce projet a été conçu avec le framework **Symfony 6.1**, en utilisant égalem
 ## 🛍️ Thème & Description
 **AfamiaShop** propose une plateforme **conviviale et sécurisée** dédiée à la vente **d’accessoires de mode**. Les utilisateurs peuvent y découvrir une sélection variée de produits répartis en **cinq catégories** :
 
-Médailles
+- **Médailles**
 
-Boucles d’oreilles
+- **Boucles d’oreilles**
 
-Colliers
+- **Colliers**
 
-Charmes
+- **Charmes**
 
-Bracelets
+- **Bracelets**
 
 Le site offre une **expérience d’achat fluide**, enrichie par des fonctionnalités modernes :
 
@@ -40,11 +40,12 @@ Offrir une **expérience utilisateur fluide et agréable**, de la navigation à 
 Mettre en œuvre une architecture **robuste et sécurisée**, respectant les bonnes pratiques du développement web.
 
 ## 👥 Public cible
-Amateurs de bijoux et d'accessoires
+- **Amateurs de bijoux et d'accessoires**
 
-Passionnés de mode & fashionistas
+- **Passionnés de mode & fashionistas**
 
-Acheteurs en ligne à la recherche de produits de qualité et d’une navigation intuitive
+- **Acheteurs en ligne à la recherche de produits de qualité et d’une navigation intuitive**
+- **Administrateurs : supervisant la gestion des utilisateurs et toute partie de ce site**
 
 ## ⚙️ Technologies utilisées
 
