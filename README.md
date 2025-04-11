@@ -57,7 +57,7 @@ MySQL
 Déploiement via IONOS
 
 ## 🌐 Démo en ligne
-👉 Lien vers la version en ligne 🔗 - [LinkedIn](https://www.linkedin.com/in/mohamed-alshahoud/)
+👉 Lien vers la version en ligne 🔗 - [AfamiaShop](https://www.afamiashop.be/)
 
 ## 📦 Installation 
 
