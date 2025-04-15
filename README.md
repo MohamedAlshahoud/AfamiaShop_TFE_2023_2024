@@ -94,7 +94,7 @@ Mettre en œuvre une architecture **robuste et sécurisée**, respectant les bon
 5. L'application sera disponible à l'adresse suivante : http://localhost:8000
 
 ## ⚠️ Remarque
-**Le fichier .env a été supprimé du dépôt pour des raisons de sécurité.
+**Le fichier ( .env ) a été supprimé du dépôt pour des raisons de sécurité.
 Veuillez créer votre propre fichier .env en vous basant sur le fichier .env.example si disponible, ou en configurant vos variables d’environnement manuellement (base de données, mailer, etc.).**
 
 
