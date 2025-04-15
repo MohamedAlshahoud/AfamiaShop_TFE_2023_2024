@@ -1,5 +1,5 @@
 ## 💎 AfamiaShop – Site e-commerce d'accessoires
-**AfamiaShop** est un site e-commerce développé dans le cadre de mon projet de fin d’études pour l’obtention du **brevet d’enseignement supérieur en Web Development.**
+**AfamiaShop** est un site e-commerce **développé** dans le cadre de mon projet de fin d’études pour l’obtention du **brevet d’enseignement supérieur en Web Development.**
 
 Ce projet a été conçu avec le framework **Symfony 6.1**, en utilisant également **HTML, CSS, JavaScript et MySQL** pour la gestion des données. Le site est actuellement **déployé en ligne via IONOS.**
 
