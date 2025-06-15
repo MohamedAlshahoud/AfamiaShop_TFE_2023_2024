@@ -4,7 +4,7 @@
 Ce projet a été conçu avec le framework **Symfony 6.1**, en utilisant également **HTML, CSS, JavaScript et MySQL** pour la gestion des données. Le site est actuellement **déployé en ligne via IONOS.**
 
 ## 🛍️ Thème & Description
-**AfamiaShop** propose une plateforme **conviviale et sécurisée** dédiée à la vente **d’accessoires de mode**. Les utilisateurs peuvent y découvrir une sélection variée de produits répartis en **cinq catégories** :
+**AfamiaShop** propose une plateforme **conviviale et sécurisée** dédiée à la vente **d’accessoires de mode**. Les utilisateurs peuvent y découvrir une sélection variée de **produits répartis** en **cinq catégories** :
 
 - **Médailles**
 
