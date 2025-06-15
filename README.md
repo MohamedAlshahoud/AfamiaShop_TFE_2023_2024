@@ -22,7 +22,7 @@ Le site offre une **expérience d’achat fluide**, enrichie par des fonctionnal
 
 🗂️ **Filtres de catégories**
 
-↕️ Options de tri
+↕️ **Options de tri**
 
 ⭐ Évaluations et commentaires clients
 
