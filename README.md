@@ -20,7 +20,7 @@ Le site offre une **expérience d’achat fluide**, enrichie par des fonctionnal
 
 🔍 **Recherche par mots-clés**
 
-🗂️ Filtres de catégories
+🗂️ **Filtres de catégories**
 
 ↕️ Options de tri
 
