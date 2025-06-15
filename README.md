@@ -28,7 +28,7 @@ Le site offre une **expérience d’achat fluide**, enrichie par des fonctionnal
 
 🖼️ **Pages produit détaillées avec images haute résolution**
 
-🔒 Paiement sécurisé
+🔒 **Paiement sécurisé**
 
 ## 🎯 Objectifs du projet
 **Générer des ventes en ligne** via une plateforme accessible et ergonomique.
