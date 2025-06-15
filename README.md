@@ -24,7 +24,7 @@ Le site offre une **expérience d’achat fluide**, enrichie par des fonctionnal
 
 ↕️ **Options de tri**
 
-⭐ Évaluations et commentaires clients
+⭐ **Évaluations et commentaires clients**
 
 🖼️ Pages produit détaillées avec images haute résolution
 
