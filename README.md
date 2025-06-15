@@ -26,7 +26,7 @@ Le site offre une **expérience d’achat fluide**, enrichie par des fonctionnal
 
 ⭐ **Évaluations et commentaires clients**
 
-🖼️ Pages produit détaillées avec images haute résolution
+🖼️ **Pages produit détaillées avec images haute résolution**
 
 🔒 Paiement sécurisé
 
