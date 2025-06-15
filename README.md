@@ -18,7 +18,7 @@ Ce projet a été conçu avec le framework **Symfony 6.1**, en utilisant égalem
 
 Le site offre une **expérience d’achat fluide**, enrichie par des fonctionnalités modernes :
 
-🔍 Recherche par mots-clés
+🔍 **Recherche par mots-clés**
 
 🗂️ Filtres de catégories
 
